@@ -679,8 +679,8 @@ video {
   gap: 2rem !important;
 }
 
-.rounded-3xl {
-  border-radius: 1.5rem !important;
+.rounded {
+  border-radius: 0.25rem !important;
 }
 
 .rounded-full {
@@ -689,10 +689,6 @@ video {
 
 .rounded-xl {
   border-radius: 0.75rem !important;
-}
-
-.rounded {
-  border-radius: 0.25rem !important;
 }
 
 .bg-red-500 {
@@ -710,9 +706,46 @@ video {
   background-color: rgb(255 255 255 / var(--tw-bg-opacity, 1)) !important;
 }
 
+.bg-zinc-700 {
+  --tw-bg-opacity: 1 !important;
+  background-color: rgb(63 63 70 / var(--tw-bg-opacity, 1)) !important;
+}
+
 .bg-zinc-800 {
   --tw-bg-opacity: 1 !important;
   background-color: rgb(39 39 42 / var(--tw-bg-opacity, 1)) !important;
+}
+
+.bg-zinc-400 {
+  --tw-bg-opacity: 1 !important;
+  background-color: rgb(161 161 170 / var(--tw-bg-opacity, 1)) !important;
+}
+
+.bg-zinc-600 {
+  --tw-bg-opacity: 1 !important;
+  background-color: rgb(82 82 91 / var(--tw-bg-opacity, 1)) !important;
+}
+
+.bg-gradient-to-tr {
+  background-image: linear-gradient(to top right, var(--tw-gradient-stops)) !important;
+}
+
+.from-zinc-800 {
+  --tw-gradient-from: #27272a var(--tw-gradient-from-position) !important;
+  --tw-gradient-to: rgb(39 39 42 / 0) var(--tw-gradient-to-position) !important;
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to) !important;
+}
+
+.from-zinc-900 {
+  --tw-gradient-from: #18181b var(--tw-gradient-from-position) !important;
+  --tw-gradient-to: rgb(24 24 27 / 0) var(--tw-gradient-to-position) !important;
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to) !important;
+}
+
+.from-zinc-950 {
+  --tw-gradient-from: #09090b var(--tw-gradient-from-position) !important;
+  --tw-gradient-to: rgb(9 9 11 / 0) var(--tw-gradient-to-position) !important;
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to) !important;
 }
 
 .px-8 {
@@ -834,12 +867,12 @@ video {
     gap: 1rem !important;
   }
 
-  .md\:rounded-xl {
-    border-radius: 0.75rem !important;
-  }
-
   .md\:rounded-3xl {
     border-radius: 1.5rem !important;
+  }
+
+  .md\:rounded-xl {
+    border-radius: 0.75rem !important;
   }
 
   .md\:text-6xl {

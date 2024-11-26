@@ -20,7 +20,7 @@ const MainBB = () => {
 
         <div className="w-full text-center flex justify-between items-center flex-col md:flex-row ">
 
-            <div className="relative -bottom-10 md:-bottom-0 bg-zinc-800 rounded-full w-36 h-36 m-w-36 m-h-36 md:w-52 md:h-52 md:m-w-52 md:m-h-52 lg:w-60 lg:h-60 lg:m-w-60 lg:m-h-60"></div>
+        <div className="relative -bottom-10 md:-bottom-0 bg-gradient-to-tr from-zinc-950 to bg-zinc-700 rounded-full w-36 h-36 m-w-36 m-h-36 md:w-52 md:h-52 md:m-w-52 md:m-h-52 lg:w-60 lg:h-60 lg:m-w-60 lg:m-h-60"></div>
             
             <div className="z-10 rounded-xl md:rounded-3xl md:left-1/2 md:-translate-x-1/2 relative md:absolute bg-red-500   md:w-5/6 md:h-24 w-12 h-96 flex justify-center ">
                 <div className="transition-all  bg-white rounded-full w-60 h-60 md:w-80 md:h-80 lg:w-96 lg:h-96 absolute top-1/2 -translate-y-1/2 flex items-center justify-center ">
@@ -30,7 +30,7 @@ const MainBB = () => {
                 </div>
             </div>
 
-            <div className="relative -top-10 md:-top-0 bg-zinc-800 rounded-full w-36 h-36 m-w-36 m-h-36 md:w-52 md:h-52 md:m-w-52 md:m-h-52 lg:w-60 lg:h-60 lg:m-w-60 lg:m-h-60"></div>
+            <div className="relative -top-10 md:-top-0 bg-gradient-to-tr from-zinc-950 to bg-zinc-700 rounded-full w-36 h-36 m-w-36 m-h-36 md:w-52 md:h-52 md:m-w-52 md:m-h-52 lg:w-60 lg:h-60 lg:m-w-60 lg:m-h-60"></div>
 
         </div>
 
