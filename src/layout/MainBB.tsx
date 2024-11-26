@@ -1,7 +1,6 @@
-// import H1element from "../components/headers/H1element"
-
 import H1element from "../components/headers/H1element"
 import H2element from "../components/headers/H2element"
+import jakeCartoon from "../assets/cartoon-jm.png"
 
 // type Props = {}
 
@@ -19,7 +18,17 @@ const MainBB = () => {
             </div>
         </div>
 
-        <div className="w-full text-center"></div>
+        <div className="w-full text-center flex justify-between items-center ">
+            <div className="bg-zinc-800 rounded-full w-48 h-48"></div>
+            <div className="bg-red-500 w-4/6 h-20 max-h-20 flex justify-center relative">
+                <div className="bg-white rounded-full w-72 h-72 absolute top-1/2 -translate-y-1/2 flex items-center justify-center ">
+                    <div className="bg-red-600 rounded-full w-3/4 h-3/4 flex items-center justify-center">
+                        <img src={jakeCartoon} alt="jake" className="w-1/2"/>
+                    </div>
+                </div>
+            </div>
+            <div className="bg-zinc-800 rounded-full w-48 h-48"></div>
+        </div>
 
         <div className="w-full flex gap-8">
       
