@@ -606,8 +606,8 @@ video {
   height: 9rem !important;
 }
 
-.h-56 {
-  height: 14rem !important;
+.h-48 {
+  height: 12rem !important;
 }
 
 .h-60 {
@@ -616,10 +616,6 @@ video {
 
 .h-96 {
   height: 24rem !important;
-}
-
-.h-48 {
-  height: 12rem !important;
 }
 
 .min-h-screen {
@@ -638,8 +634,8 @@ video {
   width: 9rem !important;
 }
 
-.w-56 {
-  width: 14rem !important;
+.w-48 {
+  width: 12rem !important;
 }
 
 .w-60 {
@@ -648,10 +644,6 @@ video {
 
 .w-full {
   width: 100% !important;
-}
-
-.w-48 {
-  width: 12rem !important;
 }
 
 .-translate-y-1\/2 {
@@ -687,8 +679,20 @@ video {
   gap: 2rem !important;
 }
 
+.rounded-3xl {
+  border-radius: 1.5rem !important;
+}
+
 .rounded-full {
   border-radius: 9999px !important;
+}
+
+.rounded-xl {
+  border-radius: 0.75rem !important;
+}
+
+.rounded {
+  border-radius: 0.25rem !important;
 }
 
 .bg-red-500 {
@@ -737,11 +741,6 @@ video {
   font-family: Danfo, serif !important;
 }
 
-.text-3xl {
-  font-size: 1.875rem !important;
-  line-height: 2.25rem !important;
-}
-
 .text-4xl {
   font-size: 2.25rem !important;
   line-height: 2.5rem !important;
@@ -767,11 +766,6 @@ video {
   .sm\:-mt-6 {
     margin-top: -1.5rem !important;
   }
-
-  .sm\:text-4xl {
-    font-size: 2.25rem !important;
-    line-height: 2.5rem !important;
-  }
 }
 
 @media (min-width: 768px) {
@@ -779,28 +773,16 @@ video {
     position: absolute !important;
   }
 
-  .md\:relative {
-    position: relative !important;
-  }
-
-  .md\:left-1\/2 {
-    left: 50% !important;
-  }
-
-  .md\:-top-10 {
-    top: -2.5rem !important;
+  .md\:-bottom-0 {
+    bottom: -0px !important;
   }
 
   .md\:-top-0 {
     top: -0px !important;
   }
 
-  .md\:-bottom-10 {
-    bottom: -2.5rem !important;
-  }
-
-  .md\:-bottom-0 {
-    bottom: -0px !important;
+  .md\:left-1\/2 {
+    left: 50% !important;
   }
 
   .md\:-mt-8 {
@@ -850,6 +832,14 @@ video {
 
   .md\:gap-4 {
     gap: 1rem !important;
+  }
+
+  .md\:rounded-xl {
+    border-radius: 0.75rem !important;
+  }
+
+  .md\:rounded-3xl {
+    border-radius: 1.5rem !important;
   }
 
   .md\:text-6xl {
