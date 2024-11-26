@@ -19,15 +19,17 @@ const MainBB = () => {
         </div>
 
         <div className="w-full text-center flex justify-between items-center ">
-            <div className="bg-zinc-800 rounded-full w-48 h-48"></div>
-            <div className="bg-red-500 w-4/6 h-20 max-h-20 flex justify-center relative">
-                <div className="bg-white rounded-full w-72 h-72 absolute top-1/2 -translate-y-1/2 flex items-center justify-center ">
-                    <div className="bg-red-600 rounded-full w-3/4 h-3/4 flex items-center justify-center">
-                        <img src={jakeCartoon} alt="jake" className="w-1/2"/>
+            <div className="bg-zinc-800 rounded-full w-60 h-60 m-w-60 m-h-60"></div>
+            
+            <div className="z-10 left-1/2 -translate-x-1/2 absolute bg-red-500 w-5/6 h-24 flex justify-center ">
+                <div className="bg-white rounded-full w-96 h-96 absolute top-1/2 -translate-y-1/2 flex items-center justify-center ">
+                    <div className="bg-red-600 rounded-full w-80 h-80 flex items-center justify-center">
+                        <img src={jakeCartoon} alt="jake" className="w-1/2 pointer-events-none"/>
                     </div>
                 </div>
             </div>
-            <div className="bg-zinc-800 rounded-full w-48 h-48"></div>
+
+            <div className="bg-zinc-800 rounded-full w-60 h-60"></div>
         </div>
 
         <div className="w-full flex gap-8">
