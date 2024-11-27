@@ -28,6 +28,7 @@ export default {
         wiggle: 'wiggle 1s 2s ease-in-out infinite',
 
         expand: 'expand .5s 2.25s ease-in-out forwards',
+        expandOne: 'expandOne .5s 2.25s ease-in-out forwards',
       },
       keyframes: {
         wiggle: {
@@ -63,7 +64,10 @@ export default {
           '0%,': { width: '0%', opacity:'0' },
           '100%': { width: '83.333333%', opacity:'1' },
         },
-
+        expandOne: {
+          '0%,': { height: '0rem', opacity:'0' },
+          '100%': { height: '24rem', opacity:'1' },
+        },
       },
 
     },
