@@ -23,12 +23,12 @@ export default {
         grow:'grow .2s 1.45s ease-out forwards',
         growOne:'grow .2s 1.65s ease-out forwards',
 
-        fallTen: 'fall2 .4s 1.85s ease-out forwards',
+        fallTen: 'fall2 .4s 1.45s ease-out forwards',
 
         wiggle: 'wiggle 1s 2s ease-in-out infinite',
 
-        expand: 'expand .5s 2.25s ease-in-out forwards',
-        expandOne: 'expandOne .5s 2.25s ease-in-out forwards',
+        expand: 'expand .6s 1.75s ease-in-out forwards',
+        expandOne: 'expandOne .6s 1.75s ease-in-out forwards',
       },
       keyframes: {
         wiggle: {
@@ -61,12 +61,12 @@ export default {
         },
 
         expand: {
-          '0%,': { width: '0%', opacity:'0' },
-          '100%': { width: '83.333333%', opacity:'1' },
+          '0%,': { width: '0%', opacity:'0', padding:'0rem'},
+          '100%': { width: '83.333333%', opacity:'1', padding:'1rem ' },
         },
         expandOne: {
-          '0%,': { height: '0rem', opacity:'0' },
-          '100%': { height: '24rem', opacity:'1' },
+          '0%,': { height: '0rem', opacity:'0', padding:'0rem'},
+          '100%': { height: '36rem', opacity:'1', padding:'1rem ' },
         },
       },
 
