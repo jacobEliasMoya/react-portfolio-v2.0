@@ -20,8 +20,11 @@ export default {
         fallEight: 'fall .4s 1.45s ease-out forwards',
         fallNine: 'fall .4s 1.65s ease-out forwards',
         
-        grow:'grow .2s 1.45s ease-out forwards',
-        growOne:'grow .2s 1.65s ease-out forwards',
+        grow:'grow .3s 2.25s ease-out forwards',
+        growOne:'grow .3s 2.45s ease-out forwards',
+        growTwo:'grow .3s 2.65s ease-out forwards',
+        growThree:'grow .3s 2.85s ease-out forwards',
+        growFour:'grow .3s 3.05s ease-out forwards',
 
         fallTen: 'fall2 .4s 1.45s ease-out forwards',
 
@@ -51,19 +54,20 @@ export default {
           '90%': { top: '40%', opacity:'1' },
           '100%': { top: '50%', opacity:'1' },
         },
+
         grow: {
-          '0%,': { scale: '0', opacity:'0' },
-          '60%,': { scale: '1.4', opacity:'1' },
-          '70%,': { scale: '.8', opacity:'1' },
-          '80%,': { scale: '1.2', opacity:'1' },
-          '90%,': { scale: '.9', opacity:'1' },
-          '100%': { scale: '1', opacity:'1' },
+          '0%,': { scale: '0;' },
+          '40%': { scale: '1.4'},
+          '60%': { scale: '1'},
+          '80%': { scale: '1.2'},
+          '100%': { scale: '1'},
         },
 
         expand: {
           '0%,': { width: '0%', opacity:'0', padding:'0rem'},
-          '100%': { width: '83.333333%', opacity:'1', padding:'1rem ' },
+          '100%': { width: '73.333333%', opacity:'1', padding:'1rem' },
         },
+
         expandOne: {
           '0%,': { height: '0rem', opacity:'0', padding:'0rem'},
           '100%': { height: '36rem', opacity:'1', padding:'1rem ' },
