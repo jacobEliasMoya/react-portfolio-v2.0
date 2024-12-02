@@ -31,9 +31,9 @@ return (
 
             <div className="w-2/3 flex items-center justify-start gap-4 flex-col md:flex-row opacity-[inherit]">
 
-                <FaMobile className="[scale:0] animate-grow text-4xl sm:text-5xl  text-white transition-all  active:scale-125  md:hover:-translate-y-2 md:hover:drop-shadow-md"/> 
+                <a href="tel:+19096446073" title=" Call Jacob Now" className="cursor-none"><FaMobile className="[scale:0] animate-grow text-4xl sm:text-5xl  text-white transition-all  active:scale-125  md:hover:-translate-y-2 md:hover:drop-shadow-md"/> </a>
 
-                <FaEnvelope className="[scale:0] animate-growOne text-4xl md:text-5xl lg:text-7xl text-white transition-all  active:scale-125  md:hover:-translate-y-2 md:hover:drop-shadow-md"/> 
+                <a href="mailto:jemoya1994@gmail.com" target="_blank" rel="noopener noreferrer" title="JacobMoya Email" className="cursor-none"><FaEnvelope className="[scale:0] animate-growOne text-4xl md:text-5xl lg:text-7xl text-white transition-all  active:scale-125  md:hover:-translate-y-2 md:hover:drop-shadow-md"/></a>
             </div>
 
             <div className="opacity-0  active:scale-105 animate-fallTen -top-[200%] shadow-[0em_0.25em_rgba(0,0,0,0.15)] hover:shadow-[0em_1em_rgba(0,0,0,0.15)] transition-all ease  bg-red-500  rounded-full w-72 h-72 md:w-80 md:h-80 lg:min-w-96 lg:min-h-96 absolute -translate-y-[50%] -translate-x-[50%] md:hover:-translate-y-[calc(50%+15px)] md:hover:drop-shadow-lg flex justify-center left-1/2 items-center z-10 group ">
@@ -48,9 +48,8 @@ return (
             </div>
 
             <div className="w-2/3 flex items-center justify-end gap-4 flex-col md:flex-row">
-                <FaLinkedin className=" [scale:0] animate-growTwo  text-4xl md:text-5xl lg:text-7xl text-white transition-all  active:scale-125  md:hover:-translate-y-2 md:hover:drop-shadow-md "/> 
-
-                <FaGithub className="[scale:0] animate-growThree  text-4xl md:text-5xl lg:text-7xl text-white transition-all  active:scale-125  md:hover:-translate-y-2 md:hover:drop-shadow-md"/> 
+                <a href="https://www.linkedin.com/in/jacob-moya-317998174/" target="_blank" rel="noopener noreferrer" title="JacobMoya Linked-In" className="cursor-none"><FaLinkedin className=" [scale:0] animate-growTwo  text-4xl md:text-5xl lg:text-7xl text-white transition-all  active:scale-125  md:hover:-translate-y-2 md:hover:drop-shadow-md "/></a>
+                <a href="https://github.com/jacobEliasMoya/" target="_blank" rel="noopener noreferrer" title="JacobMoya Github" className="cursor-none"><FaGithub className="[scale:0] animate-growThree  text-4xl md:text-5xl lg:text-7xl text-white transition-all  active:scale-125  md:hover:-translate-y-2 md:hover:drop-shadow-md"/></a>
             </div>
 
         </div>

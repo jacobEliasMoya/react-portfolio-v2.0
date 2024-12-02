@@ -602,6 +602,10 @@ video {
   display: flex;
 }
 
+.hidden {
+  display: none;
+}
+
 .h-1\/6 {
   height: 16.666667%;
 }
@@ -1154,6 +1158,10 @@ video {
   animation: wiggle 1s 2s ease-in-out infinite;
 }
 
+.cursor-default {
+  cursor: default;
+}
+
 .cursor-none {
   cursor: none;
 }
@@ -1283,11 +1291,6 @@ video {
   font-family: Danfo, serif;
 }
 
-.text-3xl {
-  font-size: 1.875rem;
-  line-height: 2.25rem;
-}
-
 .text-4xl {
   font-size: 2.25rem;
   line-height: 2.5rem;
@@ -1296,10 +1299,6 @@ video {
 .text-xl {
   font-size: 1.25rem;
   line-height: 1.75rem;
-}
-
-.font-thin {
-  font-weight: 100;
 }
 
 .text-white {
@@ -1328,6 +1327,12 @@ video {
   --tw-shadow: 0em 0.25em rgba(0,0,0,0.15);
   --tw-shadow-colored: 0em 0.25em var(--tw-shadow-color);
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+.backdrop-invert {
+  --tw-backdrop-invert: invert(100%);
+  -webkit-backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
+  backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
 }
 
 .transition-all {
@@ -1365,16 +1370,6 @@ video {
   border-width: 20px;
 }
 
-.before\:border-r-0::before {
-  content: var(--tw-content);
-  border-right-width: 0px;
-}
-
-.before\:border-l-0::before {
-  content: var(--tw-content);
-  border-left-width: 0px;
-}
-
 .before\:border-transparent::before {
   content: var(--tw-content);
   border-color: transparent;
@@ -1384,12 +1379,6 @@ video {
   content: var(--tw-content);
   --tw-border-opacity: 1;
   border-top-color: rgb(255 255 255 / var(--tw-border-opacity, 1));
-}
-
-.before\:drop-shadow-none::before {
-  content: var(--tw-content);
-  --tw-drop-shadow: drop-shadow(0 0 #0000);
-  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
 }
 
 .before\:content-\[\'\'\]::before {
@@ -1446,15 +1435,27 @@ video {
   border-radius: 100%;
 }
 
-.after\:border-2::after {
+.after\:border-4::after {
   content: var(--tw-content);
-  border-width: 2px;
+  border-width: 4px;
 }
 
 .after\:border-white::after {
   content: var(--tw-content);
   --tw-border-opacity: 1;
   border-color: rgb(255 255 255 / var(--tw-border-opacity, 1));
+}
+
+.after\:bg-opacity-85::after {
+  content: var(--tw-content);
+  --tw-bg-opacity: 0.85;
+}
+
+.after\:backdrop-invert::after {
+  content: var(--tw-content);
+  --tw-backdrop-invert: invert(100%);
+  -webkit-backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
+  backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
 }
 
 .after\:content-\[\'\'\]::after {
@@ -1510,12 +1511,12 @@ video {
     left: 14rem;
   }
 
-  .md\:left-5 {
-    left: 1.25rem;
-  }
-
   .md\:-mt-8 {
     margin-top: -2rem;
+  }
+
+  .md\:block {
+    display: block;
   }
 
   .md\:h-24 {
@@ -1565,6 +1566,10 @@ video {
     animation: expand .6s 1.75s ease-in-out forwards;
   }
 
+  .md\:cursor-none {
+    cursor: none;
+  }
+
   .md\:flex-row {
     flex-direction: row;
   }
@@ -1577,6 +1582,11 @@ video {
     border-radius: 0.75rem;
   }
 
+  .md\:text-2xl {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+
   .md\:text-5xl {
     font-size: 3rem;
     line-height: 1;
@@ -1585,16 +1595,6 @@ video {
   .md\:text-6xl {
     font-size: 3.75rem;
     line-height: 1;
-  }
-
-  .md\:text-2xl {
-    font-size: 1.5rem;
-    line-height: 2rem;
-  }
-
-  .md\:before\:border-l-0::before {
-    content: var(--tw-content);
-    border-left-width: 0px;
   }
 
   .md\:hover\:-translate-y-2:hover {
@@ -1643,6 +1643,11 @@ video {
     min-width: 24rem;
   }
 
+  .lg\:text-3xl {
+    font-size: 1.875rem;
+    line-height: 2.25rem;
+  }
+
   .lg\:text-7xl {
     font-size: 4.5rem;
     line-height: 1;
@@ -1651,10 +1656,5 @@ video {
   .lg\:text-8xl {
     font-size: 6rem;
     line-height: 1;
-  }
-
-  .lg\:text-3xl {
-    font-size: 1.875rem;
-    line-height: 2.25rem;
   }
 }
