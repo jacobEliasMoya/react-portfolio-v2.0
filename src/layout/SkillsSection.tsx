@@ -77,8 +77,8 @@ const SkillsSection = () => {
                             }}
                         ></div>
 
-                        <div className="duration-700 transition-all w-full h-20 bg-red-500 p-4 text-xl flex items-center text-opacity-30 text-white group-hover/main:text-opacity-100">
-                            <H3element additionalClasses={'relative '} headerText={item.projectName} spanClasses={''} spanText={''}/>
+                        <div className="duration- transition-all w-full h-20 bg-red-500 p-4 text-xl flex items-center text-opacity-30 text-white group-hover/main:text-opacity-100">
+                            <H3element additionalClasses={'relative transition-all duration-75'} headerText={item.projectName} spanClasses={''} spanText={''}/>
                         </div>
 
                         <div className="duration-700 transition-all w-full h-10 p-4 hover:h-1/2 text-opacity-20 text-white relative hover:text-opacity-100 group" >
