@@ -3,7 +3,7 @@ import H2element from "../components/headers/H2element"
 import jakeCartoon from "../assets/cartoon-jm.png"
 import { FaEnvelope, FaGithub, FaMobile } from "react-icons/fa"
 import { useEffect } from "react"
-import { FaHeartCircleBolt, FaLinkedin } from "react-icons/fa6"
+import { FaLinkedin } from "react-icons/fa6"
 
 // type Props = {}
 
