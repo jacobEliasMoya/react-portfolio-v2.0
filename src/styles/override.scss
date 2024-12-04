@@ -2,3 +2,29 @@
     filter: drop-shadow(1px 3px 0px #00000030);
     box-sizing: border-box;
 }
+
+/* width */
+::-webkit-scrollbar {
+    cursor: none;
+    width: 17px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    cursor: none;
+    background: #fff;
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    cursor: none;
+    background: #222;
+    border:2px solid white;
+    border-radius: 6px;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    cursor: none;
+    background: #27272ae7;
+  }
