@@ -50,8 +50,8 @@ const SkillsSection = () => {
                 </div>
 
                 <div className="flex flex-col gap-2 md:gap-4  w-full justify-center ">
-                    <div className="rounded md:rounded-xl h-2 md:h-4 lg:h-6 bg-red-600 w-full opacity-0 animate-fallSix relative -top-[400px]"></div>
-                    <div className="rounded md:rounded-xl h-6 md:h-10 lg:h-20 bg-white w-full opacity-0 animate-fallSeven relative -top-[400px]"></div>
+                    <div className="rounded md:rounded-xl h-2 md:h-4 lg:h-6 bg-red-600 w-full opacity-0 animate-fallTwo relative -top-[400px]"></div>
+                    <div className="rounded md:rounded-xl h-6 md:h-10 lg:h-20 bg-white w-full opacity-0 animate-fallThree relative -top-[400px]"></div>
                 </div>
                 
             </div>
