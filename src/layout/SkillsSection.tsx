@@ -13,28 +13,28 @@ const SkillsSection = () => {
     {
         id:1,
         projectName: "Kelseys Bar",
-        projectLink: "../src/assets/projects/kelseysplacebar.webp",
+        projectLink: "../assets/projects/kelseysplacebar.webp",
         codeLink: "https://kelseysplacebar.com/",
         projectDexcription: "Are you searching for the perfect spot to have a fantastic night out with friends and family? Well look no further than Kelsey’s Place, the premier family-owned sports bar conveniently located in North Platte, NE.",
     },
     {
         id:2,
         projectName: "Plaza’s Italian Bistro",
-        projectLink: "../src/assets/projects/plazasbistro.jpg",
+        projectLink: "../assets/projects/plazasbistro.jpg",
         codeLink: "https://plazasbistro.com/",
         projectDexcription: "Welcome to Plaza’s Italian Bistro, where every bite offers you a little piece of Italy. We’re pleased that you decided to stop by our site and consider dining with us. We are not your typical run-of-the-mill pizza shop.",
     },
     {
         id:3,
         projectName: "Ocean Drive Designs",
-        projectLink: "../src/assets/projects/oceandrivedesigns.webp",
+        projectLink: "../assets/projects/oceandrivedesigns.webp",
         codeLink: "https://oceandrivedesigns.com/",
         projectDexcription: "Ocean Drive Designs has been a premiere provider of high-end turnkey residential and hospitality interiors across the globe.",
     },
     {
         id:4,
         projectName: "Kids Kingdom",
-        projectLink: "../src/assets/projects/kidskingdom1.png",
+        projectLink: "../assets/projects/kidskingdom1.png",
         codeLink: "https://kidskingdom1.com/",
         projectDexcription: "Kids Kingdom Early Learning Center is the premier Biblically-based early child care center in Greenwood, IN. We’re proud to teach the youngest minds skills that last a lifetime. Our supportive and dedicated staff are members of your community, fully invested in helping each student succeed in a loving, safe environment.",
     },
@@ -64,7 +64,7 @@ const SkillsSection = () => {
                     {spotlight.map((item)=>(
                         <div id={`${item.id}`} className="min-w-80 rounded-lg w-full relative drop-shadow-[-.25em_.25em_.05em_rgba(0,0,0,0.4)] overflow-hidden flex flex-col item-center justify-end hover:-translate-y-3 group/main group/alt h-[400px] transition-all duration-200 ">
                             
-                            <div className="duration-500 transition-all  bg-cover bg-center absolute top-0 left-0 w-full h-full"
+                            <div className="duration-500 transition-all bg-cover bg-center absolute top-0 left-0 w-full h-full"
                                 style={{
                                 backgroundImage:`url(${item.projectLink})`, 
                                 }}
