@@ -6,35 +6,39 @@ import H3element from "../components/headers/H3element"
 // import InfiniteScroll from 'react-infinite-scroll-component';
 import Draggable from 'react-draggable';
 
-const SkillsSection = () => {
+import p1Img from "../assets/projects/kelseysplacebar.webp";
+import p2Img from "../assets/projects/plazasbistro.jpg";
+import p3Img from "../assets/projects/oceandrivedesigns.webp";
+import p4Img from "../assets/projects/kidskingdom1.png";
 
+const SkillsSection = () => {
 
   const spotlight = [
     {
         id:1,
         projectName: "Kelseys Bar",
-        projectLink: "../assets/projects/kelseysplacebar.webp",
+        projectLink: p1Img,
         codeLink: "https://kelseysplacebar.com/",
         projectDexcription: "Are you searching for the perfect spot to have a fantastic night out with friends and family? Well look no further than Kelsey’s Place, the premier family-owned sports bar conveniently located in North Platte, NE.",
     },
     {
         id:2,
         projectName: "Plaza’s Italian Bistro",
-        projectLink: "../assets/projects/plazasbistro.jpg",
+        projectLink: p2Img,
         codeLink: "https://plazasbistro.com/",
         projectDexcription: "Welcome to Plaza’s Italian Bistro, where every bite offers you a little piece of Italy. We’re pleased that you decided to stop by our site and consider dining with us. We are not your typical run-of-the-mill pizza shop.",
     },
     {
         id:3,
         projectName: "Ocean Drive Designs",
-        projectLink: "../assets/projects/oceandrivedesigns.webp",
+        projectLink: p3Img,
         codeLink: "https://oceandrivedesigns.com/",
         projectDexcription: "Ocean Drive Designs has been a premiere provider of high-end turnkey residential and hospitality interiors across the globe.",
     },
     {
         id:4,
         projectName: "Kids Kingdom",
-        projectLink: "../assets/projects/kidskingdom1.png",
+        projectLink: p4Img,
         codeLink: "https://kidskingdom1.com/",
         projectDexcription: "Kids Kingdom Early Learning Center is the premier Biblically-based early child care center in Greenwood, IN. We’re proud to teach the youngest minds skills that last a lifetime. Our supportive and dedicated staff are members of your community, fully invested in helping each student succeed in a loving, safe environment.",
     },
