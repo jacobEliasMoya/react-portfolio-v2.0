@@ -1,9 +1,8 @@
-// import React from 'react'
+import { useEffect, useState } from "react";
 
 import { FaCaretDown } from "react-icons/fa"
 import H2element from "../components/headers/H2element"
 import H3element from "../components/headers/H3element"
-// import InfiniteScroll from 'react-infinite-scroll-component';
 import Draggable from 'react-draggable';
 
 import p1Img from "../assets/projects/kelseysplacebar.webp";
@@ -13,40 +12,61 @@ import p4Img from "../assets/projects/kidskingdom1.png";
 
 const SkillsSection = () => {
 
-  const spotlight = [
-    {
-        id:1,
-        projectName: "Kelseys Bar",
-        projectLink: p1Img,
-        codeLink: "https://kelseysplacebar.com/",
-        projectDexcription: "Are you searching for the perfect spot to have a fantastic night out with friends and family? Well look no further than Kelsey’s Place, the premier family-owned sports bar conveniently located in North Platte, NE.",
-    },
-    {
-        id:2,
-        projectName: "Plaza’s Italian Bistro",
-        projectLink: p2Img,
-        codeLink: "https://plazasbistro.com/",
-        projectDexcription: "Welcome to Plaza’s Italian Bistro, where every bite offers you a little piece of Italy. We’re pleased that you decided to stop by our site and consider dining with us. We are not your typical run-of-the-mill pizza shop.",
-    },
-    {
-        id:3,
-        projectName: "Ocean Drive Designs",
-        projectLink: p3Img,
-        codeLink: "https://oceandrivedesigns.com/",
-        projectDexcription: "Ocean Drive Designs has been a premiere provider of high-end turnkey residential and hospitality interiors across the globe.",
-    },
-    {
-        id:4,
-        projectName: "Kids Kingdom",
-        projectLink: p4Img,
-        codeLink: "https://kidskingdom1.com/",
-        projectDexcription: "Kids Kingdom Early Learning Center is the premier Biblically-based early child care center in Greenwood, IN. We’re proud to teach the youngest minds skills that last a lifetime. Our supportive and dedicated staff are members of your community, fully invested in helping each student succeed in a loving, safe environment.",
-    },
-   
-  ]  
+ 
+    const [spotlight,setSpotlight] = useState([
+        {
+            id:1,
+            projectName: "Kelseys Bar",
+            projectLink: p1Img,
+            codeLink: "https://kelseysplacebar.com/",
+            projectDexcription: "Are you searching for the perfect spot to have a fantastic night out with friends and family? Well look no further than Kelsey’s Place, the premier family-owned sports bar conveniently located in North Platte, NE.",
+        },
+        {
+            id:2,
+            projectName: "Plaza’s Italian Bistro",
+            projectLink: p2Img,
+            codeLink: "https://plazasbistro.com/",
+            projectDexcription: "Welcome to Plaza’s Italian Bistro, where every bite offers you a little piece of Italy. We’re pleased that you decided to stop by our site and consider dining with us. We are not your typical run-of-the-mill pizza shop.",
+        },
+        {
+            id:3,
+            projectName: "Ocean Drive Designs",
+            projectLink: p3Img,
+            codeLink: "https://oceandrivedesigns.com/",
+            projectDexcription: "Ocean Drive Designs has been a premiere provider of high-end turnkey residential and hospitality interiors across the globe.",
+        },
+        {
+            id:4,
+            projectName: "Kids Kingdom",
+            projectLink: p4Img,
+            codeLink: "https://kidskingdom1.com/",
+            projectDexcription: "Kids Kingdom Early Learning Center is the premier Biblically-based early child care center in Greenwood, IN. We’re proud to teach the youngest minds skills that last a lifetime. Our supportive and dedicated staff are members of your community, fully invested in helping each student succeed in a loving, safe environment.",
+        },
+      ]  
+    ) 
+
+    const [scrollItemLeft, setScrollItemLeft] = useState<number>();
+    const [scrollItemRight, setScrollItemRight] = useState<number>();
+    const [containerWidth, setContainerWidth] = useState<number>();
+
+    const handleScroll = () => {
+        setScrollItemLeft(document.querySelector("#drag-item")?.getBoundingClientRect().left)
+        setScrollItemRight(document.querySelector("#drag-item")?.getBoundingClientRect().right)
+    }
+
+    // troubleshooting logs
+    useEffect(()=>{
+        scrollItemLeft ? scrollItemLeft < 0 ? setSpotlight(prevArr => [...prevArr,...prevArr]) : null : null;
+        console.log(scrollItemLeft,scrollItemRight)
+
+    },[scrollItemLeft,scrollItemRight])
+
+    useEffect(()=>{
+        setContainerWidth(document.querySelector("#outer-scroll")?.getBoundingClientRect().width)
+    },[])
 
   return (
-    <section className='transition-all w-full min-h-max bg-zinc-800 flex items-center justify-start flex-wrap flex-col overflow-hidden py-6'>
+    <section id="outer-scroll" className='transition-all w-full min-h-max bg-zinc-800 flex items-center justify-start flex-wrap flex-col overflow-hidden py-6'>
             <div className="w-full flex gap-8 px-8 pb-10">
 
                 <div className="flex flex-col" >            
@@ -61,12 +81,16 @@ const SkillsSection = () => {
             </div>
 
             {/* <div className="w-full min-w-56 mx-auto text-white  justify-center grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 px-4 gap-4 mb-6  "> */}
-            <Draggable axis="x">
-                <div className="w-full h-auto mx-auto text-white  justify-center flex px-4 gap-4 mb-6 pt-3 -mt-3 ">
-
+            <Draggable 
+            axis="x"
+            defaultPosition={{x: 0, y: 0}}
+            onDrag={handleScroll}
+            >
+                <div id="drag-item" className="w-full h-auto mx-auto text-white  justify-center flex px-8 gap-8 mb-6 pt-3 -mt-3 ">
                     {/* mapping out projects, no need to fetch anything */}
                     {spotlight.map((item)=>(
-                        <div id={`${item.id}`} className="min-w-80 rounded-lg w-full relative drop-shadow-[-.25em_.25em_.05em_rgba(0,0,0,0.4)] overflow-hidden flex flex-col item-center justify-end hover:-translate-y-3 group/main group/alt h-[400px] transition-all duration-200 ">
+
+                        <div id={`${item.id}`} className="min-w-96 rounded-lg w-full relative drop-shadow-[-.25em_.25em_.05em_rgba(0,0,0,0.4)] overflow-hidden flex flex-col item-center justify-end hover:-translate-y-3 group/main group/alt h-[400px] transition-all duration-200 ">
                             
                             <div className="duration-500 transition-all bg-cover bg-center absolute top-0 left-0 w-full h-full"
                                 style={{
@@ -85,7 +109,6 @@ const SkillsSection = () => {
 
                         </div>
                     ))}
-                    
                 </div>
             </Draggable>
     </section>
