@@ -42,77 +42,98 @@ const SkillsSection = () => {
             codeLink: "https://kidskingdom1.com/",
             projectDexcription: "Kids Kingdom Early Learning Center is the premier Biblically-based early child care center in Greenwood, IN. We’re proud to teach the youngest minds skills that last a lifetime. Our supportive and dedicated staff are members of your community, fully invested in helping each student succeed in a loving, safe environment.",
         },
+        
       ]  
     ) 
 
+    // initial count of items in array to base measurements on
+    const [startingArrNum,setStartingArrNum] = useState<number>();
     const [scrollItemLeft, setScrollItemLeft] = useState<number>();
     const [scrollItemRight, setScrollItemRight] = useState<number>();
     const [containerWidth, setContainerWidth] = useState<number>();
+    const [draggerWidth, setDraggerWidth] = useState<number>();
 
     const handleScroll = () => {
+
         setScrollItemLeft(document.querySelector("#drag-item")?.getBoundingClientRect().left)
         setScrollItemRight(document.querySelector("#drag-item")?.getBoundingClientRect().right)
+        setDraggerWidth(document.querySelector("#drag-item")?.getBoundingClientRect().width)        
+
     }
 
-    // troubleshooting logs
+    const handleAdditionalItems = () =>{
+        // need to get inner width of container, if left is less the screens inner width add more
+        if(containerWidth && startingArrNum&& scrollItemRight && scrollItemRight < containerWidth / 2){
+          setSpotlight(prev=>[...spotlight,...prev.slice(-spotlight.length - startingArrNum)])
+        }
+        if(containerWidth && scrollItemLeft && scrollItemLeft > containerWidth / 2 ){
+            setSpotlight(spotlight.slice(-4))    
+        }
+    }
+    
     useEffect(()=>{
-        scrollItemLeft ? scrollItemLeft < 0 ? setSpotlight(prevArr => [...prevArr,...prevArr]) : null : null;
-        console.log(scrollItemLeft,scrollItemRight)
+    },[spotlight])
 
+    useEffect(()=>{
+        handleAdditionalItems();
     },[scrollItemLeft,scrollItemRight])
 
     useEffect(()=>{
+        setStartingArrNum(spotlight.length);
+        setDraggerWidth(document.querySelector("#drag-item")?.getBoundingClientRect().width)
         setContainerWidth(document.querySelector("#outer-scroll")?.getBoundingClientRect().width)
     },[])
 
-  return (
-    <section id="outer-scroll" className='transition-all w-full min-h-max bg-zinc-800 flex items-center justify-start flex-wrap flex-col overflow-hidden py-6'>
-            <div className="w-full flex gap-8 px-8 pb-10">
 
-                <div className="flex flex-col" >            
-                    <H2element additionalClasses={'text-white text-4xl md:text-6xl lg:text-8xl flex flex-col text-left opacity-0 animate-fall relative -top-[400px]'} headerText={"spot-"} spanClasses={'text-red-600 -mt-5 sm:-mt-6 md:-mt-8 lg:-mt-14 opacity-0 animate-fallOne relative -top-[400px]'} spanText={'light'}/>
+
+    return (
+        <section id="outer-scroll" className='transition-all w-full min-h-max bg-zinc-800 flex justify-start flex-wrap flex-col overflow-hidden py-6'>
+                <div className="w-full flex gap-8 px-8 pb-10 ">
+
+                    <div className="flex flex-col" >            
+                        <H2element additionalClasses={'text-white text-4xl md:text-6xl lg:text-8xl flex flex-col text-left opacity-0 animate-fall relative -top-[400px]'} headerText={"spot-"} spanClasses={'text-red-600 -mt-5 sm:-mt-6 md:-mt-8 lg:-mt-14 opacity-0 animate-fallOne relative -top-[400px]'} spanText={'light'}/>
+                    </div>
+
+                    <div className="flex flex-col gap-2 md:gap-4  w-full justify-center ">
+                        <div className="rounded md:rounded-xl h-2 md:h-4 lg:h-6 bg-red-600 w-full opacity-0 animate-fallTwo relative -top-[400px]"></div>
+                        <div className="rounded md:rounded-xl h-6 md:h-10 lg:h-20 bg-white w-full opacity-0 animate-fallThree relative -top-[400px]"></div>
+                    </div>
+                    
                 </div>
 
-                <div className="flex flex-col gap-2 md:gap-4  w-full justify-center ">
-                    <div className="rounded md:rounded-xl h-2 md:h-4 lg:h-6 bg-red-600 w-full opacity-0 animate-fallTwo relative -top-[400px]"></div>
-                    <div className="rounded md:rounded-xl h-6 md:h-10 lg:h-20 bg-white w-full opacity-0 animate-fallThree relative -top-[400px]"></div>
-                </div>
+                {/* <div className="w-full min-w-56 mx-auto text-white  justify-center grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 px-4 gap-4 mb-6  "> */}
+                <Draggable 
+                axis="x"
+                onDrag={handleScroll}
                 
-            </div>
+                >
+                    <div id="drag-item" className="min-w-full w-max h-auto mx-auto text-white  flex justify-start items-start px-8 gap-8 mb-6 pt-3 -mt-3 ">
+                        {/* mapping out projects, no need to fetch anything */}
+                        {spotlight.map((item)=>(
 
-            {/* <div className="w-full min-w-56 mx-auto text-white  justify-center grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 px-4 gap-4 mb-6  "> */}
-            <Draggable 
-            axis="x"
-            defaultPosition={{x: 0, y: 0}}
-            onDrag={handleScroll}
-            >
-                <div id="drag-item" className="w-full h-auto mx-auto text-white  justify-center flex px-8 gap-8 mb-6 pt-3 -mt-3 ">
-                    {/* mapping out projects, no need to fetch anything */}
-                    {spotlight.map((item)=>(
+                            <div id={`${item.id}`} className=" rounded-lg max-w-[550px] relative drop-shadow-[-.25em_.25em_.05em_rgba(0,0,0,0.4)] flex flex-col item-center justify-end hover:-translate-y-3 group/main group/alt h-[400px] transition-all duration-200 overflow-hidden">
+                                
+                                <div className="duration-500 transition-all bg-cover bg-center absolute top-0 left-0 w-full h-full"
+                                    style={{
+                                    backgroundImage:`url(${item.projectLink})`, 
+                                    }}
+                                ></div>
 
-                        <div id={`${item.id}`} className="min-w-96 rounded-lg w-full relative drop-shadow-[-.25em_.25em_.05em_rgba(0,0,0,0.4)] overflow-hidden flex flex-col item-center justify-end hover:-translate-y-3 group/main group/alt h-[400px] transition-all duration-200 ">
-                            
-                            <div className="duration-500 transition-all bg-cover bg-center absolute top-0 left-0 w-full h-full"
-                                style={{
-                                backgroundImage:`url(${item.projectLink})`, 
-                                }}
-                            ></div>
+                                <div className="rounded-tl-lg rounded-tr-lg duration-200 transition-all w-full h-20 bg-red-500 p-4 text-xl flex items-center text-opacity-30 text-white group-hover/main:text-opacity-100">
+                                    <H3element additionalClasses={'relative transition-all duration-'} headerText={item.projectName} spanClasses={''} spanText={''}/>
+                                </div>
 
-                            <div className="duration-200 transition-all w-full h-20 bg-red-500 p-4 text-xl flex items-center text-opacity-30 text-white group-hover/main:text-opacity-100">
-                                <H3element additionalClasses={'relative transition-all duration-'} headerText={item.projectName} spanClasses={''} spanText={''}/>
+                                <div className="bg-red-700 duration-200 transition-all w-full h-20 p-4 hover:h-2/3 text-opacity-20 text-white relative hover:text-opacity-100 group" >
+                                    {item.projectDexcription}
+                                    <FaCaretDown className="duration-200 transition-all group-hover:opacity-0 absolute text-3xl rounded-full bg-zinc-800 text-white text-opacity-100 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"/>
+                                </div>
+
                             </div>
-
-                            <div className="bg-red-700 duration-200 transition-all w-full h-20 p-4 hover:h-2/3 text-opacity-20 text-white relative hover:text-opacity-100 group" >
-                                {item.projectDexcription}
-                                <FaCaretDown className="duration-200 transition-all group-hover:opacity-0 absolute text-3xl rounded-full bg-zinc-800 text-white text-opacity-100 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"/>
-                            </div>
-
-                        </div>
-                    ))}
-                </div>
-            </Draggable>
-    </section>
-  )
+                        ))}
+                    </div>
+                </Draggable>
+        </section>
+    )
 }
 
 export default SkillsSection
