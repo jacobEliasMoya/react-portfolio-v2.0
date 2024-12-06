@@ -51,13 +51,11 @@ const SkillsSection = () => {
     const [scrollItemLeft, setScrollItemLeft] = useState<number>();
     const [scrollItemRight, setScrollItemRight] = useState<number>();
     const [containerWidth, setContainerWidth] = useState<number>();
-    const [draggerWidth, setDraggerWidth] = useState<number>();
 
     const handleScroll = () => {
 
         setScrollItemLeft(document.querySelector("#drag-item")?.getBoundingClientRect().left)
         setScrollItemRight(document.querySelector("#drag-item")?.getBoundingClientRect().right)
-        setDraggerWidth(document.querySelector("#drag-item")?.getBoundingClientRect().width)        
 
     }
 
@@ -80,7 +78,6 @@ const SkillsSection = () => {
 
     useEffect(()=>{
         setStartingArrNum(spotlight.length);
-        setDraggerWidth(document.querySelector("#drag-item")?.getBoundingClientRect().width)
         setContainerWidth(document.querySelector("#outer-scroll")?.getBoundingClientRect().width)
     },[])
 
