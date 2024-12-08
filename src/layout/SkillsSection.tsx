@@ -64,7 +64,7 @@ const SkillsSection = () => {
     const handleAdditionalItems = () =>{
         // need to get inner width of container, if left is less the screens inner width add more
         if(containerWidth && startingArrNum&& scrollItemRight && scrollItemRight < containerWidth / 1.2){
-            spotlight.length > startingArrNum ? setSpotlight(prev=>[...prev, ...spotlight.slice(-startingArrNum)]) : setSpotlight(prev=>[...prev, ...spotlight]) ;
+            setSpotlight(prev=>[...prev, ...spotlight])        
         }
     }
     
@@ -101,11 +101,11 @@ const SkillsSection = () => {
                     onDrag={handleScroll}
                     bounds={{right:0}}
                 >
-                    <div id="drag-item" className=" min-w-full w-max h-auto mx-auto text-white justify-self-end flex justify-start items-start px-8 gap-8 mb-6 pt-3 ">
+                    <div id="drag-item" className=" min-w-full md:w-max h-auto mx-auto text-white justify-self-end flex justify-start items-start px-8 gap-8 mb-6 pt-3 ">
                         {/* mapping out projects, no need to fetch anything */}
                         {spotlight.map((item)=>(
 
-                            <div id={`${item.id}`} className={`${item.animation} [scale:0] rounded-lg max-w-[550px] relative drop-shadow-[-.25em_.25em_.05em_rgba(0,0,0,0.4)] flex flex-col item-center justify-end hover:-translate-y-3 group/main group/alt h-[600px] transition-all duration-200 overflow-hidden`}>
+                            <div id={`${item.id}`} className={`${item.animation} [scale:0] rounded-lg w-[80vw] max-w-[500px] relative drop-shadow-[-.25em_.25em_.05em_rgba(0,0,0,0.4)] flex flex-col item-center justify-end hover:-translate-y-3 group/main group/alt h-[600px] transition-all duration-200 overflow-hidden`}>
                                 
                                 <div className="duration-500 transition-all bg-cover bg-center absolute top-0 left-0 w-full h-full rounded-tl-lg rounded-tr-lg"
                                     style={{
@@ -117,7 +117,7 @@ const SkillsSection = () => {
                                     <H3element additionalClasses={'relative transition-all duration-'} headerText={item.projectName} spanClasses={''} spanText={''}/>
                                 </div>
 
-                                <div className="bg-red-700 duration-200 transition-all w-full h-20 p-4 hover:h-2/3 text-opacity-20 text-white relative hover:text-opacity-100 group" >
+                                <div className="rounded-bl-lg rounded-br-lg bg-red-700 duration-200 transition-all w-full h-20 p-4 hover:h-2/3 text-opacity-20 text-white relative hover:text-opacity-100 group" >
                                     {item.projectDexcription}
                                     <FaCaretDown className="duration-200 transition-all group-hover:opacity-0 absolute text-3xl rounded-full bg-zinc-800 text-white text-opacity-100 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"/>
                                 </div>
