@@ -653,6 +653,18 @@ video {
   margin-bottom: 1.5rem;
 }
 
+.mt-96 {
+  margin-top: 24rem;
+}
+
+.mt-40 {
+  margin-top: 10rem;
+}
+
+.mt-32 {
+  margin-top: 8rem;
+}
+
 .block {
   display: block;
 }
@@ -705,8 +717,8 @@ video {
   height: 0rem;
 }
 
-.h-\[400px\] {
-  height: 400px;
+.h-\[600px\] {
+  height: 600px;
 }
 
 .h-auto {
@@ -762,6 +774,18 @@ video {
 .w-max {
   width: -moz-max-content;
   width: max-content;
+}
+
+.w-screen {
+  width: 100vw;
+}
+
+.w-\[\] {
+  width: ;
+}
+
+.w-\[90vw\] {
+  width: 90vw;
 }
 
 .min-w-56 {
@@ -1196,6 +1220,110 @@ video {
   animation: grow .3s 2.45s ease-out forwards;
 }
 
+@keyframes grow2 {
+  0%, {
+    scale: 0;;
+  }
+
+  40% {
+    scale: 1.2;
+  }
+
+  60% {
+    scale: 1;
+  }
+
+  80% {
+    scale: 1.1;
+  }
+
+  100% {
+    scale: 1;
+  }
+}
+
+.animate-growProjectFour {
+  animation: grow2 .4s 1.05s ease-out forwards;
+}
+
+@keyframes grow2 {
+  0%, {
+    scale: 0;;
+  }
+
+  40% {
+    scale: 1.2;
+  }
+
+  60% {
+    scale: 1;
+  }
+
+  80% {
+    scale: 1.1;
+  }
+
+  100% {
+    scale: 1;
+  }
+}
+
+.animate-growProjectOne {
+  animation: grow2 .4s .55s ease-out forwards;
+}
+
+@keyframes grow2 {
+  0%, {
+    scale: 0;;
+  }
+
+  40% {
+    scale: 1.2;
+  }
+
+  60% {
+    scale: 1;
+  }
+
+  80% {
+    scale: 1.1;
+  }
+
+  100% {
+    scale: 1;
+  }
+}
+
+.animate-growProjectThree {
+  animation: grow2 .4s .95s ease-out forwards;
+}
+
+@keyframes grow2 {
+  0%, {
+    scale: 0;;
+  }
+
+  40% {
+    scale: 1.2;
+  }
+
+  60% {
+    scale: 1;
+  }
+
+  80% {
+    scale: 1.1;
+  }
+
+  100% {
+    scale: 1;
+  }
+}
+
+.animate-growProjectTwo {
+  animation: grow2 .4s .75s ease-out forwards;
+}
+
 @keyframes grow {
   0%, {
     scale: 0;;
@@ -1324,12 +1452,12 @@ video {
   gap: 2rem;
 }
 
-.overflow-hidden {
-  overflow: hidden;
+.justify-self-end {
+  justify-self: end;
 }
 
-.overflow-scroll {
-  overflow: scroll;
+.overflow-hidden {
+  overflow: hidden;
 }
 
 .rounded {
@@ -1756,6 +1884,10 @@ video {
 
   .md\:w-\[0\%\] {
     width: 0%;
+  }
+
+  .md\:max-w-\[550px\] {
+    max-width: 550px;
   }
 
   .md\:-translate-x-1\/2 {

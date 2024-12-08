@@ -26,6 +26,11 @@ export default {
         growThree:'grow .3s 2.85s ease-out forwards',
         growFour:'grow .3s 3.05s ease-out forwards',
 
+        growProjectOne:'grow2 .4s .55s ease-out forwards',
+        growProjectTwo:'grow2 .4s .75s ease-out forwards',
+        growProjectThree:'grow2 .4s .95s ease-out forwards',
+        growProjectFour:'grow2 .4s 1.05s ease-out forwards',
+
         fallTen: 'fall2 .4s 1.45s ease-out forwards',
 
         wiggle: 'wiggle 1s 2s ease-in-out infinite',
@@ -55,11 +60,21 @@ export default {
           '100%': { top: '50%', opacity:'1' },
         },
 
+        // grow for link icons
         grow: {
           '0%,': { scale: '0;' },
           '40%': { scale: '1.4'},
           '60%': { scale: '1'},
           '80%': { scale: '1.2'},
+          '100%': { scale: '1'},
+        },
+
+        // grow for project
+        grow2: {
+          '0%,': { scale: '0;' },
+          '40%': { scale: '1.2'},
+          '60%': { scale: '1'},
+          '80%': { scale: '1.1'},
           '100%': { scale: '1'},
         },
 

@@ -16,6 +16,7 @@ const SkillsSection = () => {
     const [spotlight,setSpotlight] = useState([
         {
             id:1,
+            animation:'animate-growProjectOne',
             projectName: "Kelseys Bar",
             projectLink: p1Img,
             codeLink: "https://kelseysplacebar.com/",
@@ -23,6 +24,7 @@ const SkillsSection = () => {
         },
         {
             id:2,
+            animation:'animate-growProjectTwo',
             projectName: "Plaza’s Italian Bistro",
             projectLink: p2Img,
             codeLink: "https://plazasbistro.com/",
@@ -30,6 +32,7 @@ const SkillsSection = () => {
         },
         {
             id:3,
+            animation:'animate-growProjectThree',
             projectName: "Ocean Drive Designs",
             projectLink: p3Img,
             codeLink: "https://oceandrivedesigns.com/",
@@ -37,6 +40,7 @@ const SkillsSection = () => {
         },
         {
             id:4,
+            animation:'animate-growProjectFour',
             projectName: "Kids Kingdom",
             projectLink: p4Img,
             codeLink: "https://kidskingdom1.com/",
@@ -53,19 +57,14 @@ const SkillsSection = () => {
     const [containerWidth, setContainerWidth] = useState<number>();
 
     const handleScroll = () => {
-
         setScrollItemLeft(document.querySelector("#drag-item")?.getBoundingClientRect().left)
         setScrollItemRight(document.querySelector("#drag-item")?.getBoundingClientRect().right)
-
     }
 
     const handleAdditionalItems = () =>{
         // need to get inner width of container, if left is less the screens inner width add more
-        if(containerWidth && startingArrNum&& scrollItemRight && scrollItemRight < containerWidth / 2){
-          setSpotlight(prev=>[...spotlight,...prev.slice(-spotlight.length - startingArrNum)])
-        }
-        if(containerWidth && scrollItemLeft && scrollItemLeft > containerWidth / 2 ){
-            setSpotlight(spotlight.slice(-4))    
+        if(containerWidth && startingArrNum&& scrollItemRight && scrollItemRight < containerWidth / 1.2){
+            spotlight.length > startingArrNum ? setSpotlight(prev=>[...prev, ...spotlight.slice(-startingArrNum)]) : setSpotlight(prev=>[...prev, ...spotlight]) ;
         }
     }
     
@@ -74,14 +73,13 @@ const SkillsSection = () => {
 
     useEffect(()=>{
         handleAdditionalItems();
+        startingArrNum && spotlight.length > startingArrNum ? '':'';
     },[scrollItemLeft,scrollItemRight])
 
     useEffect(()=>{
         setStartingArrNum(spotlight.length);
         setContainerWidth(document.querySelector("#outer-scroll")?.getBoundingClientRect().width)
     },[])
-
-
 
     return (
         <section id="outer-scroll" className='transition-all w-full min-h-max bg-zinc-800 flex justify-start flex-wrap flex-col overflow-hidden py-6'>
@@ -98,19 +96,18 @@ const SkillsSection = () => {
                     
                 </div>
 
-                {/* <div className="w-full min-w-56 mx-auto text-white  justify-center grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 px-4 gap-4 mb-6  "> */}
                 <Draggable 
-                axis="x"
-                onDrag={handleScroll}
-                
+                    axis="x"
+                    onDrag={handleScroll}
+                    bounds={{right:0}}
                 >
-                    <div id="drag-item" className="min-w-full w-max h-auto mx-auto text-white  flex justify-start items-start px-8 gap-8 mb-6 pt-3 -mt-3 ">
+                    <div id="drag-item" className=" min-w-full w-max h-auto mx-auto text-white justify-self-end flex justify-start items-start px-8 gap-8 mb-6 pt-3 ">
                         {/* mapping out projects, no need to fetch anything */}
                         {spotlight.map((item)=>(
 
-                            <div id={`${item.id}`} className=" rounded-lg max-w-[550px] relative drop-shadow-[-.25em_.25em_.05em_rgba(0,0,0,0.4)] flex flex-col item-center justify-end hover:-translate-y-3 group/main group/alt h-[400px] transition-all duration-200 overflow-hidden">
+                            <div id={`${item.id}`} className={`${item.animation} [scale:0] rounded-lg max-w-[550px] relative drop-shadow-[-.25em_.25em_.05em_rgba(0,0,0,0.4)] flex flex-col item-center justify-end hover:-translate-y-3 group/main group/alt h-[600px] transition-all duration-200 overflow-hidden`}>
                                 
-                                <div className="duration-500 transition-all bg-cover bg-center absolute top-0 left-0 w-full h-full"
+                                <div className="duration-500 transition-all bg-cover bg-center absolute top-0 left-0 w-full h-full rounded-tl-lg rounded-tr-lg"
                                     style={{
                                     backgroundImage:`url(${item.projectLink})`, 
                                     }}
