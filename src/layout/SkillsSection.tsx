@@ -105,7 +105,7 @@ const SkillsSection = () => {
 
                             <div id={`${item.id}`} className={`${item.animation} text-center [scale:0] rounded-lg w-[80vw] max-h-[70vh] max-w-[500px] relative drop-shadow-[-.25em_.25em_.05em_rgba(0,0,0,0.4)] flex flex-col item-center justify-end hover:-translate-y-3 group/main group/alt h-[600px] transition-all duration-200 overflow-hidden`}>
                                 
-                                <div className="duration-500 transition-all bg-cover bg-center absolute top-0 left-0 w-full h-full rounded-lg"
+                                <div className="duration-500 transition-all bg-cover bg-center absolute top-0 left-0 w-full h-full group-hover/main:opacity-100 opacity-85 rounded-lg"
                                     style={{
                                     backgroundImage:`url(${item.projectLink})`, 
                                     }}
