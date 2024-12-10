@@ -5,7 +5,10 @@ export default {
   ],
   theme: {
     fontFamily: {
-      'retro': ["Danfo", "serif"]
+      'retro': ["Danfo", "serif"],
+      'libre': ["Libre Baskerville", "serif"],
+      'ultra': ["Ultra", "serif"]
+
     },
     extend: {
       animation: {
@@ -26,10 +29,10 @@ export default {
         growThree:'grow .3s 2.85s ease-out forwards',
         growFour:'grow .3s 3.05s ease-out forwards',
 
-        growProjectOne:'grow2 .4s .55s ease-out forwards',
-        growProjectTwo:'grow2 .4s .75s ease-out forwards',
-        growProjectThree:'grow2 .4s .95s ease-out forwards',
-        growProjectFour:'grow2 .4s 1.05s ease-out forwards',
+        growProjectOne:'grow2 .4s .95s ease-out forwards',
+        growProjectTwo:'grow2 .4s 1.05s ease-out forwards',
+        growProjectThree:'grow2 .4s 1.25s ease-out forwards',
+        growProjectFour:'grow2 .4s 1.45s ease-out forwards',
 
         fallTen: 'fall2 .4s 1.45s ease-out forwards',
 

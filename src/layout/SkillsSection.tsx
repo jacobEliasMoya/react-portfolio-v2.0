@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-import { FaCaretDown } from "react-icons/fa"
+import { FaCaretDown, FaGithub } from "react-icons/fa"
 import H2element from "../components/headers/H2element"
 import H3element from "../components/headers/H3element"
 import Draggable from 'react-draggable';
@@ -9,9 +9,9 @@ import p1Img from "../assets/projects/kelseysplacebar.webp";
 import p2Img from "../assets/projects/plazasbistro.jpg";
 import p3Img from "../assets/projects/oceandrivedesigns.webp";
 import p4Img from "../assets/projects/kidskingdom1.png";
+import ButtonWhite from "../components/buttons/ButtonWhite";
 
 const SkillsSection = () => {
-
  
     const [spotlight,setSpotlight] = useState([
         {
@@ -46,7 +46,6 @@ const SkillsSection = () => {
             codeLink: "https://kidskingdom1.com/",
             projectDexcription: "Kids Kingdom Early Learning Center is the premier Biblically-based early child care center in Greenwood, IN. We’re proud to teach the youngest minds skills that last a lifetime. Our supportive and dedicated staff are members of your community, fully invested in helping each student succeed in a loving, safe environment.",
         },
-        
       ]  
     ) 
 
@@ -67,17 +66,16 @@ const SkillsSection = () => {
             setSpotlight(prev=>[...prev, ...spotlight])        
         }
     }
-    
+
     useEffect(()=>{
     },[spotlight])
 
     useEffect(()=>{
         handleAdditionalItems();
-        startingArrNum && spotlight.length > startingArrNum ? '':'';
     },[scrollItemLeft,scrollItemRight])
 
     useEffect(()=>{
-        setStartingArrNum(spotlight.length);
+        spotlight ? setStartingArrNum(spotlight.length) : null;
         setContainerWidth(document.querySelector("#outer-scroll")?.getBoundingClientRect().width)
     },[])
 
@@ -105,21 +103,29 @@ const SkillsSection = () => {
                         {/* mapping out projects, no need to fetch anything */}
                         {spotlight.map((item)=>(
 
-                            <div id={`${item.id}`} className={`${item.animation} [scale:0] rounded-lg w-[80vw] max-w-[500px] relative drop-shadow-[-.25em_.25em_.05em_rgba(0,0,0,0.4)] flex flex-col item-center justify-end hover:-translate-y-3 group/main group/alt h-[600px] transition-all duration-200 overflow-hidden`}>
+                            <div id={`${item.id}`} className={`${item.animation} text-center [scale:0] rounded-lg w-[80vw] max-h-[70vh] max-w-[500px] relative drop-shadow-[-.25em_.25em_.05em_rgba(0,0,0,0.4)] flex flex-col item-center justify-end hover:-translate-y-3 group/main group/alt h-[600px] transition-all duration-200 overflow-hidden`}>
                                 
-                                <div className="duration-500 transition-all bg-cover bg-center absolute top-0 left-0 w-full h-full rounded-tl-lg rounded-tr-lg"
+                                <div className="duration-500 transition-all bg-cover bg-center absolute top-0 left-0 w-full h-full rounded-lg"
                                     style={{
                                     backgroundImage:`url(${item.projectLink})`, 
                                     }}
                                 ></div>
 
-                                <div className="rounded-tl-lg rounded-tr-lg duration-200 transition-all w-full h-20 bg-red-500 p-4 text-xl flex items-center text-opacity-30 text-white group-hover/main:text-opacity-100">
-                                    <H3element additionalClasses={'relative transition-all duration-'} headerText={item.projectName} spanClasses={''} spanText={''}/>
+                                <div className=" duration-200 text-xl md:text-2xl transition-all w-full h-20 bg-red-500 p-4  flex justify-center items-center text-opacity-30 text-white group-hover/main:text-opacity-100">
+                                    <H3element additionalClasses={'relative transition-all tracking-normal group-hover/main:tracking-wider'} headerText={item.projectName} spanClasses={''} spanText={''}/>
                                 </div>
 
-                                <div className="rounded-bl-lg rounded-br-lg bg-red-700 duration-200 transition-all w-full h-20 p-4 hover:h-2/3 text-opacity-20 text-white relative hover:text-opacity-100 group" >
-                                    {item.projectDexcription}
-                                    <FaCaretDown className="duration-200 transition-all group-hover:opacity-0 absolute text-3xl rounded-full bg-zinc-800 text-white text-opacity-100 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"/>
+                                <div className="rounded-bl-lg font-ultra rounded-br-lg bg-red-700 duration-200 transition-all w-full h-20 p-4 hover:h-2/3 text-opacity-20 text-white relative hover:text-opacity-100 group" >
+
+                                    <div className="flex w-full items-center justify-center py-3">
+                                        {item.projectDexcription}
+                                    </div>
+                                    
+                                    <div className="flex w-full items-center justify-center mt-3">
+                                         <ButtonWhite buttonText={`View ${item.projectName}'s Website`} additionalClasses={"text-black !w-full"} buttonLink={item.codeLink} newWindow={true}/> 
+                                    </div>
+                                   
+                                    <FaCaretDown className="duration-200 transition-all group-hover:opacity-0 absolute text-4xl rounded-full bg-zinc-800 text-white text-opacity-100 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"/>
                                 </div>
 
                             </div>
