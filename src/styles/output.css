@@ -1627,24 +1627,12 @@ video {
   opacity: 1;
 }
 
-.opacity-95 {
-  opacity: 0.95;
+.opacity-85 {
+  opacity: 0.85;
 }
 
 .opacity-\[inherit\] {
   opacity: inherit;
-}
-
-.opacity-55 {
-  opacity: 0.55;
-}
-
-.opacity-90 {
-  opacity: 0.9;
-}
-
-.opacity-85 {
-  opacity: 0.85;
 }
 
 .shadow-\[0em_0\.25em_rgba\(0\2c 0\2c 0\2c 0\.15\)\] {
@@ -1655,6 +1643,10 @@ video {
 
 .drop-shadow-\[-\.25em_\.25em_\.05em_rgba\(0\2c 0\2c 0\2c 0\.4\)\] {
   --tw-drop-shadow: drop-shadow(-.25em .25em .05em rgba(0,0,0,0.4));
+  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
+}
+
+.filter {
   filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
 }
 

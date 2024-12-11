@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-import { FaCaretDown, FaGithub } from "react-icons/fa"
+import { FaCaretDown     } from "react-icons/fa"
 import H2element from "../components/headers/H2element"
 import H3element from "../components/headers/H3element"
 import Draggable from 'react-draggable';
@@ -9,6 +9,13 @@ import p1Img from "../assets/projects/kelseysplacebar.webp";
 import p2Img from "../assets/projects/plazasbistro.jpg";
 import p3Img from "../assets/projects/oceandrivedesigns.webp";
 import p4Img from "../assets/projects/kidskingdom1.png";
+import p5Img from "../assets/projects/wonderelectric.jpg";
+import p6Img from "../assets/projects/venolosapparel.webp";
+import p7Img from "../assets/projects/parsonsvalero.jpg";
+import p8Img from "../assets/projects/kidskingdom1.png";
+import p9Img from "../assets/projects/kidskingdom1.png";
+import p10Img from "../assets/projects/kidskingdom1.png";
+
 import ButtonWhite from "../components/buttons/ButtonWhite";
 
 const SkillsSection = () => {
@@ -46,8 +53,41 @@ const SkillsSection = () => {
             codeLink: "https://kidskingdom1.com/",
             projectDexcription: "Kids Kingdom Early Learning Center is the premier Biblically-based early child care center in Greenwood, IN. We’re proud to teach the youngest minds skills that last a lifetime. Our supportive and dedicated staff are members of your community, fully invested in helping each student succeed in a loving, safe environment.",
         },
+        {
+            id:5,
+            animation:'animate-growProjectOne',
+            projectName: "Wonder Electric",
+            projectLink: p5Img,
+            codeLink: "https://wonderelectric.com/",
+            projectDexcription: "For those that are either working on creating a new home or business or just revamping their old home, an electrical contractor is a necessity. At Wonder Electric Co. Inc, we work to help provide each and every customer with attention to detail and individual solutions that are going to work for you.",
+        },
+        {
+            id:6,
+            animation:'animate-growProjectTwo',
+            projectName: "Venolos Apparel",
+            projectLink: p6Img,
+            codeLink: "https://venolosapparel.com/",
+            projectDexcription: "At Venolos Apparel, we believe that apparel, art, and music go hand in hand. Drawing inspiration from the rich and diverse culture of hip hop, we create unique and authentic designs that resonate with the soul of the genre.",
+        },
+        {
+            id:7,
+            animation:'animate-growProjectThree',
+            projectName: "Parsons Valero",
+            projectLink: p7Img,
+            codeLink: "https://parsonsvalero.com/",
+            projectDexcription: "Pitts Exxon is a full-service gas station in Mountain View, AR, committed to keeping local-area drivers on the road in a vehicle they can rely on. We’ve been serving our community since 1964, offering affordable gas and a full range of vehicle maintenance services. We also offer snacks and sundries, so if there’s anything you need on the run, we’ve got it. ",
+        },
+        {
+            id:8,
+            animation:'animate-growProjectFour',
+            projectName: "Kids Kingdom",
+            projectLink: p4Img,
+            codeLink: "https://kidskingdom1.com/",
+            projectDexcription: "Kids Kingdom Early Learning Center is the premier Biblically-based early child care center in Greenwood, IN. We’re proud to teach the youngest minds skills that last a lifetime. Our supportive and dedicated staff are members of your community, fully invested in helping each student succeed in a loving, safe environment.",
+        },
       ]  
     ) 
+
 
     // initial count of items in array to base measurements on
     const [startingArrNum,setStartingArrNum] = useState<number>();
@@ -62,20 +102,22 @@ const SkillsSection = () => {
 
     const handleAdditionalItems = () =>{
         // need to get inner width of container, if left is less the screens inner width add more
-        if(containerWidth && startingArrNum&& scrollItemRight && scrollItemRight < containerWidth / 1.2){
-            setSpotlight(prev=>[...prev, ...spotlight])        
+        if(containerWidth && startingArrNum && scrollItemRight && scrollItemRight < containerWidth / 1){
+            setStartingArrNum( startingArrNum + 4);
         }
+
     }
 
     useEffect(()=>{
-    },[spotlight])
+        
+    },[startingArrNum])
 
     useEffect(()=>{
         handleAdditionalItems();
     },[scrollItemLeft,scrollItemRight])
 
     useEffect(()=>{
-        spotlight ? setStartingArrNum(spotlight.length) : null;
+        spotlight ? setStartingArrNum(5) : null;
         setContainerWidth(document.querySelector("#outer-scroll")?.getBoundingClientRect().width)
     },[])
 
@@ -101,7 +143,9 @@ const SkillsSection = () => {
                 >
                     <div id="drag-item" className=" min-w-full md:w-max h-auto mx-auto text-white justify-self-end flex justify-start items-start px-8 gap-8 mb-6 pt-3 ">
                         {/* mapping out projects, no need to fetch anything */}
-                        {spotlight.map((item)=>(
+                        {spotlight && startingArrNum ? spotlight
+                        .filter((item=>item.id < startingArrNum))
+                        .map((item)=>(
 
                             <div id={`${item.id}`} className={`${item.animation} text-center [scale:0] rounded-lg w-[80vw] max-h-[70vh] max-w-[500px] relative drop-shadow-[-.25em_.25em_.05em_rgba(0,0,0,0.4)] flex flex-col item-center justify-end hover:-translate-y-3 group/main group/alt h-[600px] transition-all duration-200 overflow-hidden`}>
                                 
@@ -111,7 +155,7 @@ const SkillsSection = () => {
                                     }}
                                 ></div>
 
-                                <div className=" duration-200 text-xl md:text-2xl transition-all w-full h-20 bg-red-500 p-4  flex justify-center items-center text-opacity-30 text-white group-hover/main:text-opacity-100">
+                                <div className=" duration-100 text-xl md:text-2xl transition-all w-full h-20 bg-red-500 p-4  flex justify-center items-center text-opacity-30 text-white group-hover/main:text-opacity-100">
                                     <H3element additionalClasses={'relative transition-all tracking-normal group-hover/main:tracking-wider'} headerText={item.projectName} spanClasses={''} spanText={''}/>
                                 </div>
 
@@ -129,7 +173,7 @@ const SkillsSection = () => {
                                 </div>
 
                             </div>
-                        ))}
+                        )) : null}
                     </div>
                 </Draggable>
         </section>

@@ -1,10 +1,8 @@
-
 type Props = {
     buttonText:string,
     additionalClasses:string,
     buttonLink:string | undefined,
     newWindow: boolean 
-
 }
 
 const ButtonWhite = (props: Props) => {
