@@ -722,11 +722,6 @@ video {
   max-height: 70vh;
 }
 
-.min-h-max {
-  min-height: -moz-max-content;
-  min-height: max-content;
-}
-
 .min-h-screen {
   min-height: 100vh;
 }
@@ -1422,6 +1417,10 @@ video {
   justify-content: space-between;
 }
 
+.justify-evenly {
+  justify-content: space-evenly;
+}
+
 .gap-2 {
   gap: 0.5rem;
 }
@@ -1914,6 +1913,11 @@ video {
   .md\:w-max {
     width: -moz-max-content;
     width: max-content;
+  }
+
+  .md\:w-fit {
+    width: -moz-fit-content;
+    width: fit-content;
   }
 
   .md\:-translate-x-1\/2 {

@@ -13,14 +13,21 @@ import p5Img from "../assets/projects/wonderelectric.jpg";
 import p6Img from "../assets/projects/venolosapparel.webp";
 import p7Img from "../assets/projects/parsonsvalero.jpg";
 import p8Img from "../assets/projects/kidskingdom1.png";
-import p9Img from "../assets/projects/kidskingdom1.png";
-import p10Img from "../assets/projects/kidskingdom1.png";
 
 import ButtonWhite from "../components/buttons/ButtonWhite";
+ 
+interface Spotlight {
+    id:number,
+    animation:string,
+    projectName: string,
+    projectLink: string,
+    codeLink: string,
+    projectDexcription: string
+}
 
 const SkillsSection = () => {
  
-    const [spotlight,setSpotlight] = useState([
+    const initialProjects = [
         {
             id:1,
             animation:'animate-growProjectOne',
@@ -81,20 +88,26 @@ const SkillsSection = () => {
             id:8,
             animation:'animate-growProjectFour',
             projectName: "Kids Kingdom",
-            projectLink: p4Img,
+            projectLink: p8Img,
             codeLink: "https://kidskingdom1.com/",
             projectDexcription: "Kids Kingdom Early Learning Center is the premier Biblically-based early child care center in Greenwood, IN. We’re proud to teach the youngest minds skills that last a lifetime. Our supportive and dedicated staff are members of your community, fully invested in helping each student succeed in a loving, safe environment.",
         },
-      ]  
-    ) 
+    ]  
 
+    const [spotlight,setSpotlight] = useState<Array<Spotlight>>() 
 
     // initial count of items in array to base measurements on
     const [startingArrNum,setStartingArrNum] = useState<number>();
     const [scrollItemLeft, setScrollItemLeft] = useState<number>();
     const [scrollItemRight, setScrollItemRight] = useState<number>();
     const [containerWidth, setContainerWidth] = useState<number>();
+    
+    // handling the drag limites based on projects
+    const [dragBoundsLeft,setDragBoundsLeft] = useState<number>();
+    const [dragWidth,setDragWidth] = useState<number>();
+    const [dragWidthCalc,setDragWidthCalc] = useState<number>();
 
+    // event handlers here
     const handleScroll = () => {
         setScrollItemLeft(document.querySelector("#drag-item")?.getBoundingClientRect().left)
         setScrollItemRight(document.querySelector("#drag-item")?.getBoundingClientRect().right)
@@ -104,27 +117,44 @@ const SkillsSection = () => {
         // need to get inner width of container, if left is less the screens inner width add more
         if(containerWidth && startingArrNum && scrollItemRight && scrollItemRight < containerWidth / 1){
             setStartingArrNum( startingArrNum + 4);
+            setDragWidth(document.getElementById("drag-item")?.offsetWidth)
         }
-
     }
 
-    useEffect(()=>{
-        
-    },[startingArrNum])
+    // all useeffects below here --------------------------------------------------------
 
     useEffect(()=>{
-        handleAdditionalItems();
-    },[scrollItemLeft,scrollItemRight])
-
-    useEffect(()=>{
-        spotlight ? setStartingArrNum(5) : null;
-        setContainerWidth(document.querySelector("#outer-scroll")?.getBoundingClientRect().width)
+        // setting spotlight
+        setSpotlight(initialProjects)
     },[])
 
-    return (
-        <section id="outer-scroll" className='transition-all w-full min-h-max bg-zinc-800 flex justify-start flex-wrap flex-col overflow-hidden py-6'>
-                <div className="w-full flex gap-8 px-8 pb-10 ">
+    useEffect(()=>{
+        // when spotlight is set, set number of items to show
+        spotlight ? setStartingArrNum(5) : null;
+        // set the width of the container
+        setContainerWidth(document.getElementById("outer-scroll")?.offsetWidth)
+    },[spotlight])
 
+    useEffect(()=>{
+        // on either scroll left or right, runs a check to increase the starting Arr num to show more projects
+        handleAdditionalItems();
+     },[scrollItemLeft,scrollItemRight])
+
+     useEffect(()=>{
+        dragWidth && containerWidth ? setDragWidthCalc(dragWidth - containerWidth) : '';
+    },[dragWidth])
+
+    useEffect(()=>{
+        dragWidthCalc ? setDragBoundsLeft(-dragWidthCalc) : ''
+    },[startingArrNum])
+
+
+
+
+
+    return (
+        <section id="outer-scroll" className='transition-all w-full min-h-screen bg-zinc-800 flex justify-evenly flex-wrap flex-col overflow-hidden py-6'>
+                <div className="w-full flex gap-8 px-8 pb-10 ">
                     <div className="flex flex-col" >            
                         <H2element additionalClasses={'text-white text-4xl md:text-6xl lg:text-8xl flex flex-col text-left opacity-0 animate-fall relative -top-[400px]'} headerText={"spot-"} spanClasses={'text-red-600 -mt-5 sm:-mt-6 md:-mt-8 lg:-mt-14 opacity-0 animate-fallOne relative -top-[400px]'} spanText={'light'}/>
                     </div>
@@ -133,13 +163,12 @@ const SkillsSection = () => {
                         <div className="rounded md:rounded-xl h-2 md:h-4 lg:h-6 bg-red-600 w-full opacity-0 animate-fallTwo relative -top-[400px]"></div>
                         <div className="rounded md:rounded-xl h-6 md:h-10 lg:h-20 bg-white w-full opacity-0 animate-fallThree relative -top-[400px]"></div>
                     </div>
-                    
                 </div>
 
                 <Draggable 
                     axis="x"
                     onDrag={handleScroll}
-                    bounds={{right:0}}
+                    bounds={{right:0, left:dragBoundsLeft}}
                 >
                     <div id="drag-item" className=" min-w-full md:w-max h-auto mx-auto text-white justify-self-end flex justify-start items-start px-8 gap-8 mb-6 pt-3 ">
                         {/* mapping out projects, no need to fetch anything */}
