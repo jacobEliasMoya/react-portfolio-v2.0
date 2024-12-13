@@ -1681,6 +1681,26 @@ video {
   transition-duration: 75ms;
 }
 
+.duration-0 {
+  transition-duration: 0s;
+}
+
+.duration-\[1\] {
+  transition-duration: 1;
+}
+
+.duration-\[\] {
+  transition-duration: ;
+}
+
+.duration-\[\.1s\] {
+  transition-duration: .1s;
+}
+
+.duration-\[\.01s\] {
+  transition-duration: .01s;
+}
+
 .ease-linear {
   transition-timing-function: linear;
 }
