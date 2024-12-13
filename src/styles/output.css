@@ -758,8 +758,8 @@ video {
   width: 2rem;
 }
 
-.w-\[85vw\] {
-  width: 85vw;
+.w-\[80vw\] {
+  width: 80vw;
 }
 
 .w-full {
@@ -771,12 +771,20 @@ video {
   width: max-content;
 }
 
+.w-\[85vw\] {
+  width: 85vw;
+}
+
 .min-w-full {
   min-width: 100%;
 }
 
 .max-w-\[550px\] {
   max-width: 550px;
+}
+
+.max-w-\[500px\] {
+  max-width: 500px;
 }
 
 .-translate-x-1\/2 {

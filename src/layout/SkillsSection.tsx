@@ -179,7 +179,7 @@ const SkillsSection = () => {
     // handles additional items/ will stop at end of project list
     const handleAdditionalItems = () =>{
         // need to get inner width of container, if left is less the screens inner width add more
-        if(containerWidth && startingArrNum && scrollItemRight && scrollItemRight < containerWidth * 1.1){
+        if(containerWidth && startingArrNum && scrollItemRight && scrollItemRight < containerWidth * 1.25){
             setStartingArrNum( startingArrNum + 4);
         }
     }
