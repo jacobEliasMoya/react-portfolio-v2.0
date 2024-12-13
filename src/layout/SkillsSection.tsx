@@ -233,7 +233,7 @@ const SkillsSection = () => {
                     onDrag={handleScroll}
                     bounds={{right:0, left:dragBoundsLeft}}
                 >
-                    <div id="drag-item" className=" min-w-full md:w-max h-auto mx-auto text-white justify-self-end flex justify-start items-start px-8 gap-12 mb-6 pt-3 ">
+                    <div id="drag-item" className=" min-w-full md:w-max h-auto mx-auto text-white justify-self-end flex justify-start items-start px-8 gap-12 mb-6 pt-3 transition-all ease-linear duration-75">
                         {/* mapping out projects, no need to fetch anything */}
                         {spotlight && startingArrNum ? spotlight
                         .filter((item=>item.id < startingArrNum))
