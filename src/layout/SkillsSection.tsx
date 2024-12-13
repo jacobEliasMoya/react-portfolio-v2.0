@@ -203,7 +203,7 @@ const SkillsSection = () => {
         handleAdditionalItems();
 
         // setting slightly before to ensure bounds are set seamlessly
-        if(scrollItemRight && scrollItemRight - window.innerWidth <= 20){
+        if(scrollItemRight && scrollItemRight - window.innerWidth <= 30){
             setBoundsLocked(true)
         } 
     },[scrollItemLeft,scrollItemRight])
