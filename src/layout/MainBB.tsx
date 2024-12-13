@@ -14,7 +14,7 @@ const MainBB = () => {
     },[])
 
 return (
-<section className='transition-all w-full min-h-screen  bg-red-600 flex items-center justify-between py-4 px-8 flex-wrap flex-col overflow-hidden'>
+<section className='transition-all w-full min-h-screen  bg-red-600 flex items-center justify-between p-8 flex-wrap flex-col overflow-hidden'>
     <div className="w-full flex gap-8 ">
         <div className="flex flex-col" >            
             <H1element additionalClasses={'text-4xl md:text-6xl lg:text-8xl flex flex-col text-left opacity-0 animate-fall relative -top-[400px]'} headerText={'Design'} spanClasses={'text-white -mt-5 sm:-mt-6 md:-mt-8 lg:-mt-14 opacity-0 animate-fallOne relative -top-[400px]'} spanText={'Develop'}/>

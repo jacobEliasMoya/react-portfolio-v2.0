@@ -216,7 +216,7 @@ const SkillsSection = () => {
      },[boundsLocked])
 
     return (
-        <section id="outer-scroll" className='transition-all w-full min-h-screen bg-zinc-800 flex justify-start flex-wrap flex-col overflow-hidden py-6'>
+        <section id="outer-scroll" className='transition-all w-full min-h-screen bg-zinc-800 flex justify-start flex-wrap flex-col overflow-hidden py-8'>
                 <div className="w-full flex gap-8 px-8 pb-10 ">
                     <div className="flex flex-col" >            
                         <H2element additionalClasses={'text-white text-4xl md:text-6xl lg:text-8xl flex flex-col text-left opacity-0 animate-fall relative -top-[400px]'} headerText={"spot-"} spanClasses={'text-red-600 -mt-5 sm:-mt-6 md:-mt-8 lg:-mt-14 opacity-0 animate-fallOne relative -top-[400px]'} spanText={'light'}/>
@@ -233,13 +233,13 @@ const SkillsSection = () => {
                     onDrag={handleScroll}
                     bounds={{right:0, left:dragBoundsLeft}}
                 >
-                    <div id="drag-item" className=" min-w-full md:w-max h-auto mx-auto text-white justify-self-end flex justify-start items-start px-8 gap-8 mb-6 pt-3 ">
+                    <div id="drag-item" className=" min-w-full md:w-max h-auto mx-auto text-white justify-self-end flex justify-start items-start px-8 gap-12 mb-6 pt-3 ">
                         {/* mapping out projects, no need to fetch anything */}
                         {spotlight && startingArrNum ? spotlight
                         .filter((item=>item.id < startingArrNum))
                         .map((item)=>(
 
-                            <div id={`${item.id}`} className={`${item.animation} text-center [scale:0] rounded-lg w-[80vw] max-h-[70vh] max-w-[500px] relative drop-shadow-[-.25em_.25em_.05em_rgba(0,0,0,0.4)] flex flex-col item-center justify-end hover:-translate-y-3 group/main group/alt h-[600px] transition-all duration-200 overflow-hidden`}>
+                            <div id={`${item.id}`} className={`${item.animation} text-center [scale:0] rounded-lg w-[85vw] min-h-[600px] max-h-[70vh] max-w-[550px] relative drop-shadow-[-.25em_.25em_.05em_rgba(0,0,0,0.4)] flex flex-col item-center justify-end hover:-translate-y-3 group/main group/alt h-[600px] transition-all duration-200 overflow-hidden`}>
                                 
                                 <div className="duration-500 transition-all bg-cover bg-center absolute top-0 left-0 w-full h-full group-hover/main:opacity-100 opacity-85 rounded-lg"
                                     style={{
@@ -247,7 +247,7 @@ const SkillsSection = () => {
                                     }}
                                 ></div>
 
-                                <div className=" duration-100 text-xl md:text-2xl transition-all w-full h-20 bg-red-500 p-4  flex justify-center items-center text-opacity-30 text-white group-hover/main:text-opacity-100">
+                                <div className=" duration-100 text-2xl md:text-3xl transition-all w-full h-20 bg-red-500 p-4  flex justify-center items-center text-opacity-30 text-white group-hover/main:text-opacity-100">
                                     <H3element additionalClasses={'relative transition-all tracking-normal group-hover/main:tracking-wider'} headerText={item.projectName} spanClasses={''} spanText={''}/>
                                 </div>
 
