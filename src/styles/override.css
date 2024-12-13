@@ -18,13 +18,13 @@
 /* Handle */
 ::-webkit-scrollbar-thumb {
   cursor: none;
-  background: #222;
-  border: 2px solid white;
+  background: #b91c1c;
+  border: 3px solid white;
   border-radius: 6px;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
   cursor: none;
-  background: rgba(39, 39, 42, 0.9058823529);
+  background: rgba(185, 28, 28, 0.9058823529);
 }/*# sourceMappingURL=override.css.map */

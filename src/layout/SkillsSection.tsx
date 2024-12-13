@@ -92,6 +92,70 @@ const SkillsSection = () => {
             codeLink: "https://kidskingdom1.com/",
             projectDexcription: "Kids Kingdom Early Learning Center is the premier Biblically-based early child care center in Greenwood, IN. We’re proud to teach the youngest minds skills that last a lifetime. Our supportive and dedicated staff are members of your community, fully invested in helping each student succeed in a loving, safe environment.",
         },
+        {
+            id:9,
+            animation:'animate-growProjectOne',
+            projectName: "Wonder Electric",
+            projectLink: p5Img,
+            codeLink: "https://wonderelectric.com/",
+            projectDexcription: "For those that are either working on creating a new home or business or just revamping their old home, an electrical contractor is a necessity. At Wonder Electric Co. Inc, we work to help provide each and every customer with attention to detail and individual solutions that are going to work for you.",
+        },
+        {
+            id:10,
+            animation:'animate-growProjectTwo',
+            projectName: "Venolos Apparel",
+            projectLink: p6Img,
+            codeLink: "https://venolosapparel.com/",
+            projectDexcription: "At Venolos Apparel, we believe that apparel, art, and music go hand in hand. Drawing inspiration from the rich and diverse culture of hip hop, we create unique and authentic designs that resonate with the soul of the genre.",
+        },
+        {
+            id:11,
+            animation:'animate-growProjectThree',
+            projectName: "Parsons Valero",
+            projectLink: p7Img,
+            codeLink: "https://parsonsvalero.com/",
+            projectDexcription: "Pitts Exxon is a full-service gas station in Mountain View, AR, committed to keeping local-area drivers on the road in a vehicle they can rely on. We’ve been serving our community since 1964, offering affordable gas and a full range of vehicle maintenance services. We also offer snacks and sundries, so if there’s anything you need on the run, we’ve got it. ",
+        },
+        {
+            id:12,
+            animation:'animate-growProjectFour',
+            projectName: "Kids Kingdom",
+            projectLink: p8Img,
+            codeLink: "https://kidskingdom1.com/",
+            projectDexcription: "Kids Kingdom Early Learning Center is the premier Biblically-based early child care center in Greenwood, IN. We’re proud to teach the youngest minds skills that last a lifetime. Our supportive and dedicated staff are members of your community, fully invested in helping each student succeed in a loving, safe environment.",
+        },
+        {
+            id:13,
+            animation:'animate-growProjectOne',
+            projectName: "Wonder Electric",
+            projectLink: p5Img,
+            codeLink: "https://wonderelectric.com/",
+            projectDexcription: "For those that are either working on creating a new home or business or just revamping their old home, an electrical contractor is a necessity. At Wonder Electric Co. Inc, we work to help provide each and every customer with attention to detail and individual solutions that are going to work for you.",
+        },
+        {
+            id:14,
+            animation:'animate-growProjectTwo',
+            projectName: "Venolos Apparel",
+            projectLink: p6Img,
+            codeLink: "https://venolosapparel.com/",
+            projectDexcription: "At Venolos Apparel, we believe that apparel, art, and music go hand in hand. Drawing inspiration from the rich and diverse culture of hip hop, we create unique and authentic designs that resonate with the soul of the genre.",
+        },
+        {
+            id:15,
+            animation:'animate-growProjectThree',
+            projectName: "Parsons Valero",
+            projectLink: p7Img,
+            codeLink: "https://parsonsvalero.com/",
+            projectDexcription: "Pitts Exxon is a full-service gas station in Mountain View, AR, committed to keeping local-area drivers on the road in a vehicle they can rely on. We’ve been serving our community since 1964, offering affordable gas and a full range of vehicle maintenance services. We also offer snacks and sundries, so if there’s anything you need on the run, we’ve got it. ",
+        },
+        {
+            id:16,
+            animation:'animate-growProjectFour',
+            projectName: "Kids Kingdom",
+            projectLink: p8Img,
+            codeLink: "https://kidskingdom1.com/",
+            projectDexcription: "Kids Kingdom Early Learning Center is the premier Biblically-based early child care center in Greenwood, IN. We’re proud to teach the youngest minds skills that last a lifetime. Our supportive and dedicated staff are members of your community, fully invested in helping each student succeed in a loving, safe environment.",
+        },
     ]  
 
     const [spotlight,setSpotlight] = useState<Array<Spotlight>>() 
@@ -104,20 +168,19 @@ const SkillsSection = () => {
     
     // handling the drag limites based on projects
     const [dragBoundsLeft,setDragBoundsLeft] = useState<number>();
-    const [dragWidth,setDragWidth] = useState<number>();
-    const [dragWidthCalc,setDragWidthCalc] = useState<number>();
+    const [boundsLocked,setBoundsLocked] = useState<boolean>(false);
 
     // event handlers here
     const handleScroll = () => {
         setScrollItemLeft(document.querySelector("#drag-item")?.getBoundingClientRect().left)
-        setScrollItemRight(document.querySelector("#drag-item")?.getBoundingClientRect().right)
+        setScrollItemRight(document.getElementById("drag-item")?.getBoundingClientRect().right)
     }
 
+    // handles additional items/ will stop at end of project list
     const handleAdditionalItems = () =>{
         // need to get inner width of container, if left is less the screens inner width add more
-        if(containerWidth && startingArrNum && scrollItemRight && scrollItemRight < containerWidth / 1){
+        if(containerWidth && startingArrNum && scrollItemRight && scrollItemRight < containerWidth * 1.1){
             setStartingArrNum( startingArrNum + 4);
-            setDragWidth(document.getElementById("drag-item")?.offsetWidth)
         }
     }
 
@@ -138,22 +201,22 @@ const SkillsSection = () => {
     useEffect(()=>{
         // on either scroll left or right, runs a check to increase the starting Arr num to show more projects
         handleAdditionalItems();
-     },[scrollItemLeft,scrollItemRight])
 
-     useEffect(()=>{
-        dragWidth && containerWidth ? setDragWidthCalc(dragWidth - containerWidth) : '';
-    },[dragWidth])
+        // setting slightly before to ensure bounds are set seamlessly
+        if(scrollItemRight && scrollItemRight - window.innerWidth <= 20){
+            setBoundsLocked(true)
+        } 
+    },[scrollItemLeft,scrollItemRight])
 
     useEffect(()=>{
-        dragWidthCalc ? setDragBoundsLeft(-dragWidthCalc) : ''
-    },[startingArrNum])
-
-
-
-
+        if(boundsLocked){
+            let x:any = document.getElementById("drag-item")?.offsetWidth;
+            x && containerWidth ? setDragBoundsLeft(containerWidth - x) : '';
+        }
+     },[boundsLocked])
 
     return (
-        <section id="outer-scroll" className='transition-all w-full min-h-screen bg-zinc-800 flex justify-evenly flex-wrap flex-col overflow-hidden py-6'>
+        <section id="outer-scroll" className='transition-all w-full min-h-screen bg-zinc-800 flex justify-start flex-wrap flex-col overflow-hidden py-6'>
                 <div className="w-full flex gap-8 px-8 pb-10 ">
                     <div className="flex flex-col" >            
                         <H2element additionalClasses={'text-white text-4xl md:text-6xl lg:text-8xl flex flex-col text-left opacity-0 animate-fall relative -top-[400px]'} headerText={"spot-"} spanClasses={'text-red-600 -mt-5 sm:-mt-6 md:-mt-8 lg:-mt-14 opacity-0 animate-fallOne relative -top-[400px]'} spanText={'light'}/>
