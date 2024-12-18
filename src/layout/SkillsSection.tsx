@@ -150,45 +150,7 @@ const SkillsSection = () => {
             categories:['test','test1','test2']
 
         },
-        {
-            id:13,
-            animation:'animate-growProjectOneNoDelay',
-            projectName: "Wonder Electric",
-            projectLink: p5Img,
-            codeLink: "https://wonderelectric.com/",
-            projectDexcription: "For those that are either working on creating a new home or business or just revamping their old home, an electrical contractor is a necessity. At Wonder Electric Co. Inc, we work to help provide each and every customer with attention to detail and individual solutions that are going to work for you.",
-            categories:['test','test1','test2']
 
-        },
-        {
-            id:14,
-            animation:'animate-growProjectTwoNoDelay',
-            projectName: "Venolos Apparel",
-            projectLink: p6Img,
-            codeLink: "https://venolosapparel.com/",
-            projectDexcription: "At Venolos Apparel, we believe that apparel, art, and music go hand in hand. Drawing inspiration from the rich and diverse culture of hip hop, we create unique and authentic designs that resonate with the soul of the genre.",
-            categories:['test','test1','test2']
-
-        },
-        {
-            id:15,
-            animation:'animate-growProjectThreeNoDelay',
-            projectName: "Parsons Valero",
-            projectLink: p7Img,
-            codeLink: "https://parsonsvalero.com/",
-            projectDexcription: "Pitts Exxon is a full-service gas station in Mountain View, AR, committed to keeping local-area drivers on the road in a vehicle they can rely on. We’ve been serving our community since 1964, offering affordable gas and a full range of vehicle maintenance services. We also offer snacks and sundries, so if there’s anything you need on the run, we’ve got it. ",
-            categories:['test','test1','test2']
-
-        },
-        {
-            id:16,
-            animation:'animate-growProjectFourNoDelay',
-            projectName: "Kids Kingdom",
-            projectLink: p8Img,
-            codeLink: "https://kidskingdom1.com/",
-            projectDexcription: "Kids Kingdom Early Learning Center is the premier Biblically-based early child care center in Greenwood, IN. We’re proud to teach the youngest minds skills that last a lifetime. Our supportive and dedicated staff are members of your community, fully invested in helping each student succeed in a loving, safe environment.",
-            categories:['test','test1','test2']
-        },
     ]  
 
     const [spotlight,setSpotlight] = useState<Array<Spotlight>>() 
@@ -262,8 +224,8 @@ const SkillsSection = () => {
                     </div>
                 </div>
 
-                <div className="w-full flex gap-8 px-8 py-10 font-ultra text-white  justify-center  relative z-10 opacity-0 animate-fallFour  -top-[200px]">
-                    <Paragraph text={"Be different and venture into the unknown, build something someone will remeber, & ensure that the client is reflected in their build. When I build something for a client ... I ensure your site speaks to your clientele."} classes={' !text-balance text-md lg:text-2xl text-center w-full mx-auto rounded-2xl text-white'}/>
+                <div className="w-full flex gap-8 px-8 py-10 md:py-20 font-ultra text-white  justify-center  relative z-10 opacity-0 animate-fallFour  -top-[200px]">
+                    <Paragraph text={"Drag or swipe right to view my selected work, enjoy, and if you like it so we can create some amazing work together. "} classes={' text-md lg:text-2xl text-center w-full mx-auto rounded-2xl text-white'}/>
                 </div>
 
                 <Draggable 
@@ -292,12 +254,10 @@ const SkillsSection = () => {
                                 <div className="rounded-bl-2xl font-ultra rounded-br-2xl bg-red-700 duration-200 transition-all w-full h-20 p-4 hover:h-2/3 text-opacity-20 text-white relative hover:text-opacity-100 group" >
 
                                     <div className="flex w-full items-center justify-center py-3">
-                                        {item.projectDexcription}
+                                        <Paragraph text={item.projectDexcription} classes={' text-lg text-center w-full mx-auto rounded-2xl'}/>
                                     </div>
                                     
-                                    <div className="flex w-full items-center justify-center mt-3">
-                                         <ButtonWhite buttonText={`View ${item.projectName}'s Website`} additionalClasses={"text-black !w-full"} buttonLink={item.codeLink} newWindow={true}/> 
-                                    </div>
+                                    <ButtonWhite buttonText={`View ${item.projectName}'s Website`} additionalClasses={"text-black !w-full mt-4"} buttonLink={item.codeLink} newWindow={true}/> 
                                    
                                     <FaCaretDown className="duration-200 transition-all group-hover:opacity-0 absolute text-4xl rounded-full bg-zinc-800 text-white text-opacity-100 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"/>
                                     
