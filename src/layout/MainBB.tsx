@@ -14,14 +14,14 @@ const MainBB = () => {
     },[])
 
 return (
-<section className='transition-all w-full min-h-screen  bg-red-600 flex items-center justify-between p-8 flex-wrap flex-col overflow-hidden'>
+<section className='transition-all w-full min-h-screen  bg-red-600 flex items-center justify-between p-8 py-10 flex-wrap flex-col overflow-hidden'>
     <div className="w-full flex gap-8 ">
         <div className="flex flex-col" >            
-            <H1element additionalClasses={'text-4xl md:text-6xl lg:text-8xl flex flex-col text-left opacity-0 animate-fall relative -top-[400px]'} headerText={'Design'} spanClasses={'text-white -mt-5 sm:-mt-6 md:-mt-8 lg:-mt-14 opacity-0 animate-fallOne relative -top-[400px]'} spanText={'Develop'}/>
+            <H1element additionalClasses={'text-5xl md:text-6xl lg:text-8xl flex flex-col text-left opacity-0 animate-fall relative -top-[400px]'} headerText={'Design'} spanClasses={'text-white -mt-5 sm:-mt-6 md:-mt-8 lg:-mt-14 opacity-0 animate-fallOne relative -top-[400px]'} spanText={'Develop'}/>
         </div>
         <div className="flex flex-col gap-2 md:gap-4  w-full justify-center ">
-            <div className="rounded md:rounded-xl h-1/6 bg-zinc-800 w-full opacity-0 animate-fallTwo relative -top-[400px]"></div>
-            <div className="rounded md:rounded-xl h-2/5 lg:h-3/6 bg-white w-full opacity-0 animate-fallThree relative -top-[400px]"></div>
+            <div className="rounded md:rounded-xl h-4 lg:h-6 bg-zinc-800 w-full opacity-0 animate-fallTwo relative -top-[400px]"></div>
+            <div className="rounded md:rounded-xl h-10 lg:h-20 bg-white w-full opacity-0 animate-fallThree relative -top-[400px]"></div>
         </div>
     </div>
 
@@ -58,12 +58,12 @@ return (
     <div className="w-full flex gap-8 ">
     
         <div className="flex flex-col gap-2 md:gap-4 w-full justify-center"> 
-            <div className="rounded md:rounded-xl h-1/6 bg-zinc-800 w-full opacity-0 animate-fallFour relative -top-[400px]"></div>
-            <div className="rounded md:rounded-xl h-2/5 lg:h-3/6 bg-white w-full opacity-0 animate-fallFive relative -top-[400px]"></div>
+            <div className="rounded md:rounded-xl h-4 lg:h-6 bg-zinc-800 w-full opacity-0 animate-fallFour relative -top-[400px]"></div>
+            <div className="rounded md:rounded-xl h-10 lg:h-20 bg-white w-full opacity-0 animate-fallFive relative -top-[400px]"></div>
         </div>
 
         <div className="flex flex-col">            
-            <H2element additionalClasses={'opacity-0 text-4xl md:text-6xl lg:text-8xl flex flex-col text-right animate-fallSix relative -top-[400px]'} headerText={"Jake"} spanClasses={'opacity-0 animate-fallSeven relative -top-[400px] text-white -mt-5 sm:-mt-6 md:-mt-8 lg:-mt-14'} spanText={'Moya'}/>
+            <H2element additionalClasses={'opacity-0 text-5xl md:text-6xl lg:text-8xl flex flex-col text-right animate-fallSix relative -top-[400px]'} headerText={"Jake"} spanClasses={'opacity-0 animate-fallSeven relative -top-[400px] text-white -mt-5 sm:-mt-6 md:-mt-8 lg:-mt-14'} spanText={'Moya'}/>
         </div>
     </div>
 

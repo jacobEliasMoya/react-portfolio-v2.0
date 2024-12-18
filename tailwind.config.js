@@ -34,6 +34,11 @@ export default {
         growProjectThree:'grow2 .4s 1.25s ease-out forwards',
         growProjectFour:'grow2 .4s 1.45s ease-out forwards',
 
+        growProjectOneNoDelay:'grow2 .4s .20s ease-out forwards',
+        growProjectTwoNoDelay:'grow2 .4s .40s ease-out forwards',
+        growProjectThreeNoDelay:'grow2 .4s .60s ease-out forwards',
+        growProjectFourNoDelay:'grow2 .4s .80s ease-out forwards',
+
         fallTen: 'fall2 .4s 1.45s ease-out forwards',
 
         wiggle: 'wiggle 1s 2s ease-in-out infinite',
