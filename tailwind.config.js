@@ -22,6 +22,9 @@ export default {
         fallSeven: 'fall .4s 1.25s ease-out forwards',
         fallEight: 'fall .4s 1.45s ease-out forwards',
         fallNine: 'fall .4s 1.65s ease-out forwards',
+        fallTen1: 'fall .4s 1.85s ease-out forwards',
+        fallEleven: 'fall .4s 2.05s ease-out forwards',
+        fallTwelve: 'fall .4s 2.25s ease-out forwards',
         
         grow:'grow .3s 2.25s ease-out forwards',
         growOne:'grow .3s 2.45s ease-out forwards',
@@ -29,10 +32,10 @@ export default {
         growThree:'grow .3s 2.85s ease-out forwards',
         growFour:'grow .3s 3.05s ease-out forwards',
 
-        growProjectOne:'grow2 .4s .95s ease-out forwards',
-        growProjectTwo:'grow2 .4s 1.05s ease-out forwards',
-        growProjectThree:'grow2 .4s 1.25s ease-out forwards',
-        growProjectFour:'grow2 .4s 1.45s ease-out forwards',
+        growProjectOne:'grow2 .4s 1s ease-out forwards',
+        growProjectTwo:'grow2 .4s 1.2s ease-out forwards',
+        growProjectThree:'grow2 .4s 1.4s ease-out forwards',
+        growProjectFour:'grow2 .4s 1.6s ease-out forwards',
 
         growProjectOneNoDelay:'grow2 .4s .20s ease-out forwards',
         growProjectTwoNoDelay:'grow2 .4s .40s ease-out forwards',

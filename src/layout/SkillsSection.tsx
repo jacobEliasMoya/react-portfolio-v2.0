@@ -212,7 +212,7 @@ const SkillsSection = () => {
     // handles additional items/ will stop at end of project list
     const handleAdditionalItems = () =>{
         // need to get inner width of container, if left is less the screens inner width add more
-        if(containerWidth && startingArrNum && scrollItemRight && scrollItemRight < containerWidth * 1.3){
+        if(containerWidth && startingArrNum && scrollItemRight && scrollItemRight < containerWidth * 1.35){
             setStartingArrNum( startingArrNum + 4);
         }
     }
@@ -253,16 +253,16 @@ const SkillsSection = () => {
         <section id="outer-scroll" className="transition-all w-full md:min-h-screen bg-zinc-800 flex justify-start flex-wrap flex-col overflow-hidden py-10 rounded-tl-2xl">
                 <div className="w-full flex gap-8 px-8 relative z-10">
                     <div className="flex flex-col gap-2 md:gap-4 w-full justify-center ">
-                        <div className="rounded md:rounded-xl h-4 lg:h-6 bg-red-600 w-full opacity-0 animate-fallTwo relative -top-[400px]"></div>
-                        <div className="rounded md:rounded-xl h-10 lg:h-20 bg-white w-full opacity-0 animate-fallThree relative -top-[400px]"></div>
+                        <div className="rounded md:rounded-xl h-4 lg:h-6 bg-red-600 w-full opacity-0 animate-fallTwo relative -top-[200px]"></div>
+                        <div className="rounded md:rounded-xl h-10 lg:h-20 bg-white w-full opacity-0 animate-fallThree relative -top-[200px]"></div>
                     </div>
                     
                     <div className="flex flex-col" >            
-                        <H2element additionalClasses={'text-white text-5xl md:text-6xl lg:text-8xl flex flex-col text-left opacity-0 animate-fall relative -top-[400px]'} headerText={"spot-"} spanClasses={'text-red-600 -mt-5 sm:-mt-6 md:-mt-8 lg:-mt-14 opacity-0 animate-fallOne relative -top-[400px]'} spanText={'light'}/>
+                        <H2element additionalClasses={'text-white text-5xl md:text-6xl lg:text-8xl flex flex-col text-left opacity-0 animate-fall relative -top-[200px]'} headerText={"spot-"} spanClasses={'text-red-600 -mt-5 sm:-mt-6 md:-mt-8 lg:-mt-14 opacity-0 animate-fallOne relative -top-[200px]'} spanText={'light'}/>
                     </div>
                 </div>
 
-                <div className="w-full flex gap-8 px-8 py-10 font-ultra text-white  justify-center  relative z-10">
+                <div className="w-full flex gap-8 px-8 py-10 font-ultra text-white  justify-center  relative z-10 opacity-0 animate-fallFour  -top-[200px]">
                     <Paragraph text={"Be different and venture into the unknown, build something someone will remeber, & ensure that the client is reflected in their build. When I build something for a client ... I ensure your site speaks to your clientele."} classes={' !text-balance text-md lg:text-2xl text-center w-full mx-auto rounded-2xl text-white'}/>
                 </div>
 
