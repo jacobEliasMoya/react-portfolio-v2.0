@@ -32,13 +32,12 @@ return (
             <div className="w-2/3 flex items-center justify-start gap-4 flex-col md:flex-row opacity-[inherit]">
 
                 <a href="tel:+19096446073" title=" Call Jacob Now" className="cursor-none" aria-label="Call Jacob Now"><FaMobile className="[scale:0] animate-grow text-4xl sm:text-5xl  text-white transition-all  active:scale-125  md:hover:-translate-y-2 md:hover:drop-shadow-md"/> </a>
-
                 <a href="mailto:jemoya1994@gmail.com" target="_blank" rel="noopener noreferrer" aria-label="Email Jacob Now" title="JacobMoya Email" className="cursor-none"><FaEnvelope className="[scale:0] animate-growOne text-4xl md:text-5xl lg:text-7xl text-white transition-all  active:scale-125  md:hover:-translate-y-2 md:hover:drop-shadow-md"/></a>
             </div>
 
-            <div className="opacity-0  active:scale-105 animate-fallTen -top-[200%] shadow-[0em_0.25em_rgba(0,0,0,0.15)] hover:shadow-[0em_1em_rgba(0,0,0,0.15)] transition-all ease  bg-red-500  rounded-full w-72 h-72 md:w-80 md:h-80 lg:min-w-96 lg:min-h-96 absolute -translate-y-[50%] -translate-x-[50%] md:hover:-translate-y-[calc(50%+15px)] md:hover:drop-shadow-lg flex justify-center left-1/2 items-center z-10 group ">
+            <div className="opacity-0  active:scale-105 animate-fallTen -top-[200%] shadow-[0em_0.25em_rgba(0,0,0,0.15)] hover:shadow-[0em_1em_rgba(0,0,0,0.15)] transition-all ease  bg-red-500  rounded-full w-52 h-52 md:w-80 md:h-80 lg:min-w-96 lg:min-h-96 absolute -translate-y-[50%] -translate-x-[50%] md:hover:-translate-y-[calc(50%+15px)] md:hover:drop-shadow-lg flex justify-center left-1/2 items-center z-10 group ">
                 
-                <div className=" bg-white rounded-full w-56 h-56 md:w-64 md:h-64 lg:w-80 lg:h-80 flex items-center justify-center animate-wiggle relative ">
+                <div className=" bg-white rounded-full w-44 h-44 md:w-64 md:h-64 lg:w-80 lg:h-80 flex items-center justify-center animate-wiggle relative ">
                     <div className="absolute z-20 bg-white p-8 text-xl md:text-2xl lg:text-3xl -top-20 md:left-56 w-max rounded-lg before:content-[''] before:absolute before:w-0 before:h-0 before:top-full before:border-[20px] before:border-transparent before:border-t-white   scale-0 group-hover:scale-100 transition-all ">
                        I Love Code
                     </div>

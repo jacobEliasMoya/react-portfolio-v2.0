@@ -93,7 +93,7 @@ export default {
 
         expandOne: {
           '0%,': { height: '0rem', opacity:'0', padding:'0rem'},
-          '100%': { height: '36rem', opacity:'1', padding:'1rem ' },
+          '100%': { height: '30rem', opacity:'1', padding:'1rem ' },
         },
       },
 
