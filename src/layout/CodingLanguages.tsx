@@ -1,12 +1,29 @@
 import { FaBootstrap, FaCss3Alt, FaFigma, FaHtml5, FaJs, FaReact, FaSass, FaWordpress } from 'react-icons/fa'
 import H2element from '../components/headers/H2element'
 import Paragraph from '../components/Paragraph'
+import { ReactElement, useEffect, useState } from 'react'
 
 const CodingLanguages = () => {
 
+    const skillsArr:Array<ReactElement> = [
 
+        <FaHtml5/>,
+        <FaBootstrap/>,
+        <FaCss3Alt/>,
+        <FaSass/>,
+        <FaJs />,
+        <FaReact/>,
+        <FaWordpress/>,
+        <FaFigma/>
+    ]
 
-  return (
+    const [usedTech,setUsedTech] = useState<Array<ReactElement>>(skillsArr);
+
+    useEffect(()=>{
+        console.log('bing')
+    },[usedTech])
+
+    return (
  
     <section className="transition-all w-full bg-white flex justify-center flex-wrap flex-col overflow-hidden py-10 ">
         <div className="w-full flex gap-8 px-8   relative z-10">
@@ -28,38 +45,13 @@ const CodingLanguages = () => {
         </div>
                 
         <div className="w-full gap-4 md:gap-8 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 flex-wrap px-8 text-white  relative z-10 text-5xl lg:text-9xl">
-            <div className="opacity-0 animate-fallFive relative -top-[200px] flex items-center justify-center gap-4 bg-red-600 p-4 rounded-2xl md:hover:-translate-y-2 md:hover:drop-shadow-md transition-all " >
-                <FaHtml5/>
-            </div>
 
-            <div className="opacity-0 animate-fallSix relative -top-[200px] flex items-center justify-center bg-red-600 p-4 rounded-2xl md:hover:-translate-y-2 md:hover:drop-shadow-md transition-all" >
-                <FaBootstrap/>
-            </div>
-
-            <div className="opacity-0 animate-fallSeven relative -top-[200px] flex items-center justify-center bg-red-600 p-4 rounded-2xl md:hover:-translate-y-2 md:hover:drop-shadow-md transition-all" >
-                <FaCss3Alt/>
-            </div>
-
-            <div className="opacity-0 animate-fallEight relative -top-[200px] flex items-center justify-center bg-red-600 p-4 rounded-2xl md:hover:-translate-y-2 md:hover:drop-shadow-md transition-all" >
-                <FaSass/>
-            </div>
-
-            <div className="opacity-0 animate-fallNine md:animate-fallTwelve relative -top-[200px] flex items-center justify-center bg-red-600 p-4 rounded-2xl md:hover:-translate-y-2 md:hover:drop-shadow-md transition-all" >
-                <FaJs />
-            </div>
-
-            <div className="opacity-0 animate-fallTen1 md:animate-fallEleven relative -top-[200px] flex items-center justify-center bg-red-600 p-4 rounded-2xl md:hover:-translate-y-2 md:hover:drop-shadow-md transition-all" >
-                <FaReact/>
-            </div>
-
-            <div className="opacity-0 animate-fallEleven md:animate-fallTen1 relative -top-[200px] flex items-center justify-center bg-red-600 p-4 rounded-2xl md:hover:-translate-y-2 md:hover:drop-shadow-md transition-all" >
-                <FaWordpress/>
-            </div>
-
-            <div className="opacity-0 animate-fallTwelve md:animate-fallNine relative -top-[200px] flex items-center justify-center bg-red-600 p-4 rounded-2xl md:hover:-translate-y-2 md:hover:drop-shadow-md transition-all" >
-                <FaFigma/>
-            </div>
-
+            {usedTech.map((item=>(
+                <div className="opacity-0 animate-fallFive relative -top-[200px] flex items-center justify-center gap-4 bg-red-600 p-4 rounded-2xl md:hover:-translate-y-2 md:hover:drop-shadow-md transition-all " >
+                    {item}
+                </div>
+            )))}
+           
         </div>
 
 
