@@ -1,6 +1,5 @@
-import { ReactEventHandler, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 
-import { FaCaretDown     } from "react-icons/fa"
 import H2element from "../components/headers/H2element"
 import H3element from "../components/headers/H3element"
 import Draggable from 'react-draggable';
@@ -16,7 +15,6 @@ import p8Img from "../assets/projects/kidskingdom1.png";
 
 import ButtonWhite from "../components/buttons/ButtonWhite";
 import Paragraph from "../components/Paragraph";
-import { IoIosGrid } from "react-icons/io";
  
 interface Spotlight {
     id:number,
@@ -259,7 +257,7 @@ const SkillsSection = () => {
 
                             <div id={`${item.id}`} className={`${item.animation} text-center [scale:0] rounded-2xl w-[85vw]  max-w-[550px] relative drop-shadow-[-.25em_.25em_.05em_rgba(0,0,0,0.4)] flex flex-col item-center justify-end md:hover:-translate-y-3  transition-all duration-200 `}>
                                 
-                                <div className="duration-500 transition-all bg-cover bg-center w-full rounded-tl-2xl rounded-tr-2xl min-h-56 lg:min-h-72 "
+                                <div className="duration-500 transition-all bg-cover bg-center w-full rounded-tl-2xl rounded-tr-2xl min-h-56 lg:min-h-96 "
                                     style={{
                                     backgroundImage:`url(${item.projectLink})`, 
                                     }}
@@ -271,11 +269,11 @@ const SkillsSection = () => {
 
                                 <div className="rounded-bl-2xl rounded-br-2xl font-ultra  bg-red-700 duration-200 transition-all w-full p-4 flex flex-col items-center justify-between text-white relative z-10 h-3/6" >
 
-                                    <div className="flex w-full items-center justify-center py-3 min-h-36">
+                                    {/* <div className="flex w-full items-center justify-center py-3 min-h-36">
                                         <Paragraph text={item.projectDexcription} classes={' md:text-md lg:text-lg text-center w-full mx-auto rounded-2xl'}/>
                                     </div>
-                                    
-                                    <ButtonWhite buttonText={`View ${item.projectName}`} additionalClasses={"text-sm md:text-lg text-black !w-full mt-4 relative z-10"} buttonLink={item.codeLink ? item.codeLink : ''} newWindow={true} clickHandle={allowClickThrough}/> 
+                                     */}
+                                    <ButtonWhite buttonText={`View ${item.projectName}`} additionalClasses={"text-sm md:text-lg text-black !w-full relative z-10"} buttonLink={item.codeLink ? item.codeLink : ''} newWindow={true} clickHandle={allowClickThrough}/> 
                                    
                                 </div>
 
