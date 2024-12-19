@@ -271,7 +271,7 @@ const SkillsSection = () => {
 
                                 <div className="rounded-bl-2xl rounded-br-2xl font-ultra  bg-red-700 duration-200 transition-all w-full p-4 flex flex-col items-center justify-between text-white relative z-10 h-3/6" >
 
-                                    <div className="flex w-full items-center justify-center py-3 min-h-40">
+                                    <div className="flex w-full items-center justify-center py-3 min-h-36">
                                         <Paragraph text={item.projectDexcription} classes={' md:text-md lg:text-lg text-center w-full mx-auto rounded-2xl'}/>
                                     </div>
                                     
