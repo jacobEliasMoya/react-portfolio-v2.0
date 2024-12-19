@@ -3,25 +3,56 @@ import H2element from '../components/headers/H2element'
 import Paragraph from '../components/Paragraph'
 import { ReactElement, useEffect, useState } from 'react'
 
+interface Skills {
+    icon: ReactElement,
+    animation: string
+}
+
 const CodingLanguages = () => {
 
-    const skillsArr:Array<ReactElement> = [
+    const skillsArr:Array<Skills> = [
 
-        <FaHtml5/>,
-        <FaBootstrap/>,
-        <FaCss3Alt/>,
-        <FaSass/>,
-        <FaJs />,
-        <FaReact/>,
-        <FaWordpress/>,
-        <FaFigma/>
+        {
+            icon:<FaHtml5/>,
+            animation: 'animate-fallFive'
+        },
+
+        {
+            icon:<FaBootstrap/>,
+            animation: 'animate-fallSix'
+        },
+
+        {
+            icon:<FaCss3Alt/>,
+            animation: 'animate-fallSeven'
+        },
+        {
+            icon:<FaSass/>,
+            animation: 'animate-fallEight'
+        },
+        {
+            icon:<FaJs/>,
+            animation: 'animate-fallNine md:animate-fallTwelve'
+        },
+        {
+            icon:<FaReact/>,
+            animation: 'animate-fallTen1 md:animate-fallEleven'
+        },
+        {
+            icon:<FaWordpress/>,
+            animation: 'animate-fallEleven md:animate-fallTen1'
+        },
+        {
+            icon:<FaFigma/>,
+            animation: 'animate-fallTwelve md:animate-fallNine'
+        },
     ]
 
-    const [usedTech,setUsedTech] = useState<Array<ReactElement>>(skillsArr);
+    const [usedTech,setUsedTech] = useState<Array<Skills>>();
 
     useEffect(()=>{
-        console.log('bing')
-    },[usedTech])
+        setUsedTech(skillsArr)
+    },[])
 
     return (
  
@@ -46,14 +77,13 @@ const CodingLanguages = () => {
                 
         <div className="w-full gap-4 md:gap-8 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 flex-wrap px-8 text-white  relative z-10 text-5xl lg:text-9xl">
 
-            {usedTech.map((item=>(
-                <div className="opacity-0 animate-fallFive relative -top-[200px] flex items-center justify-center gap-4 bg-red-600 p-4 rounded-2xl md:hover:-translate-y-2 md:hover:drop-shadow-md transition-all " >
-                    {item}
+            {usedTech ? usedTech.map((item)=>(
+                <div className={`opacity-0 ${item.animation} relative -top-[200px] flex items-center justify-center gap-4 bg-red-600 p-4 rounded-2xl md:hover:-translate-y-2 md:hover:drop-shadow-md transition-all`} >
+                    {item.icon}
                 </div>
-            )))}
-           
-        </div>
+            )) : null}
 
+        </div>
 
     </section>
     )
