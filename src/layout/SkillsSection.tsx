@@ -253,7 +253,7 @@ const SkillsSection = () => {
 
                             <div id={`${item.id}`} className={`${item.animation} text-center [scale:0] rounded-2xl w-[85vw] min-h-[600px] max-h-[70vh] max-w-[550px] relative drop-shadow-[-.25em_.25em_.05em_rgba(0,0,0,0.4)] flex flex-col item-center justify-end md:hover:-translate-y-3 h-[600px] transition-all duration-200 overflow-hidden`}>
                                 
-                                <div className="duration-500 transition-all bg-cover bg-center w-full rounded-tl-2xl rounded-tr-2xl min-h-60"
+                                <div className="duration-500 transition-all bg-cover bg-center w-full rounded-tl-2xl rounded-tr-2xl min-h-40 md:min-h-60"
                                     style={{
                                     backgroundImage:`url(${item.projectLink})`, 
                                     }}
@@ -266,7 +266,7 @@ const SkillsSection = () => {
                                 <div className="rounded-bl-2xl rounded-br-2xl font-ultra  bg-red-700 duration-200 transition-all w-full p-4 flex flex-col items-center justify-between text-white relative z-10 h-3/6" >
 
                                     <div className="flex w-full items-center justify-center py-3">
-                                        <Paragraph text={item.projectDexcription} classes={' text-lg text-center w-full mx-auto rounded-2xl'}/>
+                                        <Paragraph text={item.projectDexcription} classes={' text-md text-center w-full mx-auto rounded-2xl'}/>
                                     </div>
                                     
                                     <ButtonWhite buttonText={`View ${item.projectName}'s Website`} additionalClasses={"text-black !w-full mt-4 relative z-10"} buttonLink={item.codeLink} newWindow={true}/> 
