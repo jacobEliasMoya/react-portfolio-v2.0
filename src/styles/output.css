@@ -710,8 +710,8 @@ video {
   min-height: 10rem;
 }
 
-.min-h-44 {
-  min-height: 11rem;
+.min-h-56 {
+  min-height: 14rem;
 }
 
 .min-h-screen {
@@ -2136,10 +2136,6 @@ video {
 
   .md\:h-80 {
     height: 20rem;
-  }
-
-  .md\:min-h-56 {
-    min-height: 14rem;
   }
 
   .md\:min-h-screen {
