@@ -35,7 +35,7 @@ const SkillsSection = () => {
             projectName: "Kelseys Bar",
             projectLink: p1Img,
             codeLink: "https://kelseysplacebar.com/",
-            projectDexcription: "Are you searching for the perfect spot to have a fantastic night out with friends and family? Well look no further than Kelsey’s Place, the premier family-owned sports bar conveniently located in North Platte, NE.",
+            projectDexcription: "Are you searching for the perfect spot to have a fantastic night out with friends and family? Well look no further than Kelsey’s Place.",
             categories:['test','test1','test2']
 
         },
@@ -45,7 +45,7 @@ const SkillsSection = () => {
             projectName: "Plaza’s Italian Bistro",
             projectLink: p2Img,
             codeLink: "https://plazasbistro.com/",
-            projectDexcription: "Welcome to Plaza’s Italian Bistro, where every bite offers you a little piece of Italy. We’re pleased that you decided to stop by our site and consider dining with us. We are not your typical run-of-the-mill pizza shop.",
+            projectDexcription: "Welcome to Plaza’s Italian Bistro, where every bite offers you a little piece of Italy. We’re pleased that you decided to stop by our site and consider dining with us.",
             categories:['test','test1','test2']
 
         },
@@ -65,7 +65,7 @@ const SkillsSection = () => {
             projectName: "Kids Kingdom",
             projectLink: p4Img,
             codeLink: "https://kidskingdom1.com/",
-            projectDexcription: "Kids Kingdom Early Learning Center is the premier Biblically-based early child care center in Greenwood, IN. We’re proud to teach the youngest minds skills that last a lifetime. Our supportive and dedicated staff are members of your community, fully invested in helping each student succeed in a loving, safe environment.",
+            projectDexcription: "Kids Kingdom Early Learning Center is the premier Biblically-based early child care center in Greenwood, IN. ",
             categories:['test','test1','test2']
 
         },
@@ -75,7 +75,7 @@ const SkillsSection = () => {
             projectName: "Wonder Electric",
             projectLink: p5Img,
             codeLink: "https://wonderelectric.com/",
-            projectDexcription: "For those that are either working on creating a new home or business or just revamping their old home, an electrical contractor is a necessity. At Wonder Electric Co. Inc, we work to help provide each and every customer with attention to detail and individual solutions that are going to work for you.",
+            projectDexcription: "For those that are either working on creating a new home or business or just revamping their old home, an electrical contractor is a necessity.",
             categories:['test','test1','test2']
 
 
@@ -86,7 +86,7 @@ const SkillsSection = () => {
             projectName: "Venolos Apparel",
             projectLink: p6Img,
             codeLink: "https://venolosapparel.com/",
-            projectDexcription: "At Venolos Apparel, we believe that apparel, art, and music go hand in hand. Drawing inspiration from the rich and diverse culture of hip hop, we create unique and authentic designs that resonate with the soul of the genre.",
+            projectDexcription: "Drawing inspiration from the rich and diverse culture of hip hop, we create unique and authentic designs that resonate with the soul of the genre.",
             categories:['test','test1','test2']
 
         },
@@ -96,7 +96,7 @@ const SkillsSection = () => {
             projectName: "Parsons Valero",
             projectLink: p7Img,
             codeLink: "https://parsonsvalero.com/",
-            projectDexcription: "Pitts Exxon is a full-service gas station in Mountain View, AR, committed to keeping local-area drivers on the road in a vehicle they can rely on. We’ve been serving our community since 1964, offering affordable gas and a full range of vehicle maintenance services. We also offer snacks and sundries, so if there’s anything you need on the run, we’ve got it. ",
+            projectDexcription: "Pitts Exxon is a full-service gas station in Mountain View, AR, committed to keeping local-area drivers on the road in a vehicle they can rely on.",
             categories:['test','test1','test2']
 
         },
@@ -106,7 +106,7 @@ const SkillsSection = () => {
             projectName: "Kids Kingdom",
             projectLink: p8Img,
             codeLink: "https://kidskingdom1.com/",
-            projectDexcription: "Kids Kingdom Early Learning Center is the premier Biblically-based early child care center in Greenwood, IN. We’re proud to teach the youngest minds skills that last a lifetime. Our supportive and dedicated staff are members of your community, fully invested in helping each student succeed in a loving, safe environment.",
+            projectDexcription: "Kids Kingdom Early Learning Center is the premier Biblically-based early child care center in Greenwood, IN. ",
             categories:['test','test1','test2']
 
         },
@@ -116,7 +116,7 @@ const SkillsSection = () => {
             projectName: "Wonder Electric",
             projectLink: p5Img,
             codeLink: "https://wonderelectric.com/",
-            projectDexcription: "For those that are either working on creating a new home or business or just revamping their old home, an electrical contractor is a necessity. At Wonder Electric Co. Inc, we work to help provide each and every customer with attention to detail and individual solutions that are going to work for you.",
+            projectDexcription: " At Wonder Electric Co. Inc, we work to help provide each and every customer with attention to detail and individual solutions that are going to work for you.",
             categories:['test','test1','test2']
 
         },
@@ -126,7 +126,7 @@ const SkillsSection = () => {
             projectName: "Venolos Apparel",
             projectLink: p6Img,
             codeLink: "https://venolosapparel.com/",
-            projectDexcription: "At Venolos Apparel, we believe that apparel, art, and music go hand in hand. Drawing inspiration from the rich and diverse culture of hip hop, we create unique and authentic designs that resonate with the soul of the genre.",
+            projectDexcription: "Drawing inspiration from the rich and diverse culture of hip hop, we create unique and authentic designs that resonate with the soul of the genre.",
             categories:['test','test1','test2']
 
         },
@@ -136,7 +136,7 @@ const SkillsSection = () => {
             projectName: "Parsons Valero",
             projectLink: p7Img,
             codeLink: "https://parsonsvalero.com/",
-            projectDexcription: "Pitts Exxon is a full-service gas station in Mountain View, AR, committed to keeping local-area drivers on the road in a vehicle they can rely on. We’ve been serving our community since 1964, offering affordable gas and a full range of vehicle maintenance services. We also offer snacks and sundries, so if there’s anything you need on the run, we’ve got it. ",
+            projectDexcription: "Pitts Exxon is a full-service gas station in Mountain View, AR, committed to keeping local-area drivers on the road in a vehicle they can rely on.",
             categories:['test','test1','test2']
 
         },
@@ -146,7 +146,7 @@ const SkillsSection = () => {
             projectName: "Kids Kingdom",
             projectLink: p8Img,
             codeLink: "https://kidskingdom1.com/",
-            projectDexcription: "Kids Kingdom Early Learning Center is the premier Biblically-based early child care center in Greenwood, IN. We’re proud to teach the youngest minds skills that last a lifetime. Our supportive and dedicated staff are members of your community, fully invested in helping each student succeed in a loving, safe environment.",
+            projectDexcription: "Kids Kingdom Early Learning Center is the premier Biblically-based early child care center in Greenwood, ",
             categories:['test','test1','test2']
 
         },
@@ -241,17 +241,17 @@ const SkillsSection = () => {
 
                             <div id={`${item.id}`} className={`${item.animation} text-center [scale:0] rounded-2xl w-[85vw] min-h-[600px] max-h-[70vh] max-w-[550px] relative drop-shadow-[-.25em_.25em_.05em_rgba(0,0,0,0.4)] flex flex-col item-center justify-end md:hover:-translate-y-3 group/main group/alt h-[600px] transition-all duration-200 overflow-hidden`}>
                                 
-                                <div className="duration-500 transition-all bg-cover bg-center absolute top-0 left-0 w-full h-full group-hover/main:opacity-100 opacity-85 rounded-2xl"
+                                <div className="z-0 duration-500 transition-all bg-cover bg-center absolute top-0 left-0 w-full h-full group-hover/main:opacity-100 opacity-85 rounded-2xl"
                                     style={{
                                     backgroundImage:`url(${item.projectLink})`, 
                                     }}
                                 ></div>
 
-                                <div className=" duration-100 text-2xl md:text-3xl transition-all w-full h-20 bg-red-500 p-4  flex justify-center items-center text-opacity-30 text-white group-hover/main:text-opacity-100">
+                                <div className=" duration-100 text-2xl md:text-3xl transition-all w-full h-20 bg-red-500 p-4  flex justify-center items-center text-opacity-30 text-white group-hover/main:text-opacity-100 z-10">
                                     <H3element additionalClasses={'relative transition-all tracking-normal group-hover/main:tracking-wider'} headerText={item.projectName} spanClasses={''} spanText={''}/>
                                 </div>
 
-                                <div className="rounded-bl-2xl font-ultra rounded-br-2xl bg-red-700 duration-200 transition-all w-full h-20 p-4 hover:h-2/3 text-opacity-20 text-white relative hover:text-opacity-100 group" >
+                                <div className="rounded-bl-2xl font-ultra rounded-br-2xl bg-red-700 duration-200 transition-all w-full h-20 p-4 hover:h-2/3 text-opacity-20 text-white relative hover:text-opacity-100 group z-10" >
 
                                     <div className="flex w-full items-center justify-center py-3">
                                         <Paragraph text={item.projectDexcription} classes={' text-lg text-center w-full mx-auto rounded-2xl'}/>
