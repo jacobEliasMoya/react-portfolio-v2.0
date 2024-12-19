@@ -2178,6 +2178,10 @@ video {
     display: block;
   }
 
+  .md\:hidden {
+    display: none;
+  }
+
   .md\:h-24 {
     height: 6rem;
   }
@@ -2392,6 +2396,10 @@ video {
 
   .md\:flex-row {
     flex-direction: row;
+  }
+
+  .md\:justify-end {
+    justify-content: flex-end;
   }
 
   .md\:gap-12 {
