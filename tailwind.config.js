@@ -91,7 +91,7 @@ export default {
 
         expand: {
           '0%,': { width: '0%', opacity:'0', padding:'0rem'},
-          '100%': { width: '73.333333%', opacity:'1', padding:'1rem' },
+          '100%': { width: '100%', opacity:'1', padding:'1rem' },
         },
 
         expandOne: {
