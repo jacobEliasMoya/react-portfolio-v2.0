@@ -16,12 +16,10 @@ const CodingLanguages = () => {
             icon:<FaHtml5/>,
             animation: 'animate-fallFive'
         },
-
         {
             icon:<FaBootstrap/>,
             animation: 'animate-fallSix'
         },
-
         {
             icon:<FaCss3Alt/>,
             animation: 'animate-fallSeven'

@@ -23,11 +23,13 @@ interface Spotlight {
     projectName: string,
     projectLink: string,
     codeLink: string,
-    projectDexcription: string
+    projectDexcription: string,
+    categories: string[],
+    isActive: boolean
 }
 
 const SkillsSection = () => {
- 
+  
     const initialProjects = [
         {
             id:1,
@@ -36,8 +38,8 @@ const SkillsSection = () => {
             projectLink: p1Img,
             codeLink: "https://kelseysplacebar.com/",
             projectDexcription: "Are you searching for the perfect spot to have a fantastic night out with friends and family? Well look no further than Kelsey’s Place.",
-            categories:['test','test1','test2']
-
+            categories:['test','test1','test2'],
+            isActive: false
         },
         {
             id:2,
@@ -46,7 +48,8 @@ const SkillsSection = () => {
             projectLink: p2Img,
             codeLink: "https://plazasbistro.com/",
             projectDexcription: "Welcome to Plaza’s Italian Bistro, where every bite offers you a little piece of Italy. We’re pleased that you decided to stop by our site and consider dining with us.",
-            categories:['test','test1','test2']
+            categories:['test','test1','test2'],
+            isActive: false
 
         },
         {
@@ -56,7 +59,8 @@ const SkillsSection = () => {
             projectLink: p3Img,
             codeLink: "https://oceandrivedesigns.com/",
             projectDexcription: "Ocean Drive Designs has been a premiere provider of high-end turnkey residential and hospitality interiors across the globe.",
-            categories:['test','test1','test2']
+            categories:['test','test1','test2'],
+            isActive: false
 
         },
         {
@@ -66,7 +70,8 @@ const SkillsSection = () => {
             projectLink: p4Img,
             codeLink: "https://kidskingdom1.com/",
             projectDexcription: "Kids Kingdom Early Learning Center is the premier Biblically-based early child care center in Greenwood, IN. ",
-            categories:['test','test1','test2']
+            categories:['test','test1','test2'],
+            isActive: false
 
         },
         {
@@ -76,7 +81,8 @@ const SkillsSection = () => {
             projectLink: p5Img,
             codeLink: "https://wonderelectric.com/",
             projectDexcription: "For those that are either working on creating a new home or business or just revamping their old home, an electrical contractor is a necessity.",
-            categories:['test','test1','test2']
+            categories:['test','test1','test2'],
+            isActive: false
 
 
         },
@@ -87,7 +93,8 @@ const SkillsSection = () => {
             projectLink: p6Img,
             codeLink: "https://venolosapparel.com/",
             projectDexcription: "Drawing inspiration from the rich and diverse culture of hip hop, we create unique and authentic designs that resonate with the soul of the genre.",
-            categories:['test','test1','test2']
+            categories:['test','test1','test2'],
+            isActive: false
 
         },
         {
@@ -97,7 +104,8 @@ const SkillsSection = () => {
             projectLink: p7Img,
             codeLink: "https://parsonsvalero.com/",
             projectDexcription: "Pitts Exxon is a full-service gas station in Mountain View, AR, committed to keeping local-area drivers on the road in a vehicle they can rely on.",
-            categories:['test','test1','test2']
+            categories:['test','test1','test2'],
+            isActive: false
 
         },
         {
@@ -107,7 +115,8 @@ const SkillsSection = () => {
             projectLink: p8Img,
             codeLink: "https://kidskingdom1.com/",
             projectDexcription: "Kids Kingdom Early Learning Center is the premier Biblically-based early child care center in Greenwood, IN. ",
-            categories:['test','test1','test2']
+            categories:['test','test1','test2'],
+            isActive: false
 
         },
         {
@@ -117,7 +126,8 @@ const SkillsSection = () => {
             projectLink: p5Img,
             codeLink: "https://wonderelectric.com/",
             projectDexcription: " At Wonder Electric Co. Inc, we work to help provide each and every customer with attention to detail and individual solutions that are going to work for you.",
-            categories:['test','test1','test2']
+            categories:['test','test1','test2'],
+            isActive: false
 
         },
         {
@@ -127,7 +137,8 @@ const SkillsSection = () => {
             projectLink: p6Img,
             codeLink: "https://venolosapparel.com/",
             projectDexcription: "Drawing inspiration from the rich and diverse culture of hip hop, we create unique and authentic designs that resonate with the soul of the genre.",
-            categories:['test','test1','test2']
+            categories:['test','test1','test2'],
+            isActive: false
 
         },
         {
@@ -137,7 +148,8 @@ const SkillsSection = () => {
             projectLink: p7Img,
             codeLink: "https://parsonsvalero.com/",
             projectDexcription: "Pitts Exxon is a full-service gas station in Mountain View, AR, committed to keeping local-area drivers on the road in a vehicle they can rely on.",
-            categories:['test','test1','test2']
+            categories:['test','test1','test2'],
+            isActive: false
 
         },
         {
@@ -147,8 +159,8 @@ const SkillsSection = () => {
             projectLink: p8Img,
             codeLink: "https://kidskingdom1.com/",
             projectDexcription: "Kids Kingdom Early Learning Center is the premier Biblically-based early child care center in Greenwood, ",
-            categories:['test','test1','test2']
-
+            categories:['test','test1','test2'],
+            isActive: false
         },
 
     ]  
@@ -241,7 +253,7 @@ const SkillsSection = () => {
 
                             <div id={`${item.id}`} className={`${item.animation} text-center [scale:0] rounded-2xl w-[85vw] min-h-[600px] max-h-[70vh] max-w-[550px] relative drop-shadow-[-.25em_.25em_.05em_rgba(0,0,0,0.4)] flex flex-col item-center justify-end md:hover:-translate-y-3 group/main group/alt h-[600px] transition-all duration-200 overflow-hidden`}>
                                 
-                                <div className="z-0 duration-500 transition-all bg-cover bg-center absolute top-0 left-0 w-full h-full group-hover/main:opacity-100 opacity-85 rounded-2xl"
+                                <div className="z-0 duration-500 transition-all bg-cover bg-center  w-full h-full group-hover/main:opacity-100 opacity-85"
                                     style={{
                                     backgroundImage:`url(${item.projectLink})`, 
                                     }}
@@ -257,7 +269,7 @@ const SkillsSection = () => {
                                         <Paragraph text={item.projectDexcription} classes={' text-lg text-center w-full mx-auto rounded-2xl'}/>
                                     </div>
                                     
-                                    <ButtonWhite buttonText={`View ${item.projectName}'s Website`} additionalClasses={"text-black !w-full mt-4"} buttonLink={item.codeLink} newWindow={true}/> 
+                                    <ButtonWhite buttonText={`View ${item.projectName}'s Website`} additionalClasses={"text-black !w-full mt-4 relative z-10"} buttonLink={item.codeLink} newWindow={true}/> 
                                    
                                     <FaCaretDown className="duration-200 transition-all group-hover:opacity-0 absolute text-4xl rounded-full bg-zinc-800 text-white text-opacity-100 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"/>
                                     
