@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { ReactEventHandler, useEffect, useState } from "react";
 
 import { FaCaretDown     } from "react-icons/fa"
 import H2element from "../components/headers/H2element"
@@ -16,6 +16,7 @@ import p8Img from "../assets/projects/kidskingdom1.png";
 
 import ButtonWhite from "../components/buttons/ButtonWhite";
 import Paragraph from "../components/Paragraph";
+import { IoIosGrid } from "react-icons/io";
  
 interface Spotlight {
     id:number,
@@ -172,7 +173,7 @@ const SkillsSection = () => {
     const [scrollItemLeft, setScrollItemLeft] = useState<number>();
     const [scrollItemRight, setScrollItemRight] = useState<number>();
     const [containerWidth, setContainerWidth] = useState<number>();
-    
+
     // handling the drag limites based on projects
     const [dragBoundsLeft,setDragBoundsLeft] = useState<number>();
     const [boundsLocked,setBoundsLocked] = useState<boolean>(false);
@@ -189,6 +190,10 @@ const SkillsSection = () => {
         if(containerWidth && startingArrNum && scrollItemRight && scrollItemRight < containerWidth * 1.35){
             setStartingArrNum( startingArrNum + 4);
         }
+    }
+
+    const allowClickThrough = () =>{
+        console.log('mouse is down')
     }
 
     // all useeffects below here --------------------------------------------------------
@@ -242,10 +247,11 @@ const SkillsSection = () => {
 
                 <Draggable 
                     axis="x"
+                    cancel=".cancel-me-now"
                     onDrag={handleScroll}
                     bounds={{right:0, left:dragBoundsLeft}}
                 >
-                    <div id="drag-item" className=" min-w-full md:w-max h-auto mx-auto  justify-self-end flex justify-start items-start px-8 gap-8 md:gap-12 mb-6 pt-3 ">
+                    <div id="drag-item" className=" z-30  min-w-full md:w-max h-auto mx-auto  justify-self-end flex justify-start items-start px-8 gap-8 md:gap-12 mb-6 pt-3 ">
                         {/* mapping out projects, no need to fetch anything */}
                         {spotlight && startingArrNum ? spotlight
                         .filter((item=>item.id < startingArrNum))
@@ -269,10 +275,8 @@ const SkillsSection = () => {
                                         <Paragraph text={item.projectDexcription} classes={' md:text-md lg:text-lg text-center w-full mx-auto rounded-2xl'}/>
                                     </div>
                                     
-                                    <ButtonWhite buttonText={`View ${item.projectName}`} additionalClasses={"text-sm md:text-lg text-black !w-full mt-4 relative z-10"} buttonLink={item.codeLink} newWindow={true}/> 
+                                    <ButtonWhite buttonText={`View ${item.projectName}`} additionalClasses={"text-sm md:text-lg text-black !w-full mt-4 relative z-10"} buttonLink={item.codeLink ? item.codeLink : ''} newWindow={true} clickHandle={allowClickThrough}/> 
                                    
-                                    <FaCaretDown className="duration-200 transition-all absolute text-4xl rounded-full bg-zinc-800 text-white text-opacity-100 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 hidden"/>
-                                    
                                 </div>
 
                             </div>

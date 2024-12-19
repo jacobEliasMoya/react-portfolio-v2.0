@@ -2,12 +2,13 @@ type Props = {
     buttonText:string,
     additionalClasses:string,
     buttonLink:string | undefined,
-    newWindow: boolean 
+    newWindow: boolean,
+    clickHandle: any | undefined
 }
 
 const ButtonWhite = (props: Props) => {
   return (
-    <a href={props.buttonLink} target={props.newWindow ? '_blank':''} className={`${props.additionalClasses} p-6 text-zinc-800 bg-white w-max rounded-xl transition-all ease-linear flex items-center justify-center duration-100 cursor-pointer md:cursor-none`}>{props.buttonText}</a>
+    <a onClick={props.clickHandle} href={props.buttonLink} target={props.newWindow ? '_blank':''} className={`${props.additionalClasses} p-6 text-zinc-800 bg-white w-max rounded-xl transition-all ease-linear flex items-center justify-center duration-100 cursor-none cancel-me-now`}>{props.buttonText}</a>
   )
 }
 
