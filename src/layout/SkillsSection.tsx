@@ -251,19 +251,19 @@ const SkillsSection = () => {
                         .filter((item=>item.id < startingArrNum))
                         .map((item)=>(
 
-                            <div id={`${item.id}`} className={`${item.animation} text-center [scale:0] rounded-2xl w-[85vw] min-h-[600px] max-h-[70vh] max-w-[550px] relative drop-shadow-[-.25em_.25em_.05em_rgba(0,0,0,0.4)] flex flex-col item-center justify-end md:hover:-translate-y-3 group/main group/alt h-[600px] transition-all duration-200 overflow-hidden`}>
+                            <div id={`${item.id}`} className={`${item.animation} text-center [scale:0] rounded-2xl w-[85vw] min-h-[600px] max-h-[70vh] max-w-[550px] relative drop-shadow-[-.25em_.25em_.05em_rgba(0,0,0,0.4)] flex flex-col item-center justify-end md:hover:-translate-y-3 h-[600px] transition-all duration-200 overflow-hidden`}>
                                 
-                                <div className="z-0 duration-500 transition-all bg-cover bg-center  w-full h-full group-hover/main:opacity-100 opacity-85"
+                                <div className="duration-500 transition-all bg-cover bg-center w-full rounded-tl-2xl rounded-tr-2xl min-h-60"
                                     style={{
                                     backgroundImage:`url(${item.projectLink})`, 
                                     }}
                                 ></div>
 
-                                <div className=" duration-100 text-2xl md:text-3xl transition-all w-full h-20 bg-red-500 p-4  flex justify-center items-center text-opacity-30 text-white group-hover/main:text-opacity-100 z-10">
-                                    <H3element additionalClasses={'relative transition-all tracking-normal group-hover/main:tracking-wider'} headerText={item.projectName} spanClasses={''} spanText={''}/>
+                                <div className=" duration-100 text-2xl md:text-3xl transition-all w-full bg-red-500 p-4 flex justify-center items-center text-white z-10">
+                                    <H3element additionalClasses={'relative transition-all tracking-normal'} headerText={item.projectName} spanClasses={''} spanText={''}/>
                                 </div>
 
-                                <div className="rounded-bl-2xl font-ultra rounded-br-2xl bg-red-700 duration-200 transition-all w-full h-20 p-4 hover:h-2/3 text-opacity-20 text-white relative hover:text-opacity-100 group z-10" >
+                                <div className="rounded-bl-2xl rounded-br-2xl font-ultra  bg-red-700 duration-200 transition-all w-full p-4 flex flex-col items-center justify-between text-white relative z-10 h-3/6" >
 
                                     <div className="flex w-full items-center justify-center py-3">
                                         <Paragraph text={item.projectDexcription} classes={' text-lg text-center w-full mx-auto rounded-2xl'}/>
@@ -271,7 +271,7 @@ const SkillsSection = () => {
                                     
                                     <ButtonWhite buttonText={`View ${item.projectName}'s Website`} additionalClasses={"text-black !w-full mt-4 relative z-10"} buttonLink={item.codeLink} newWindow={true}/> 
                                    
-                                    <FaCaretDown className="duration-200 transition-all group-hover:opacity-0 absolute text-4xl rounded-full bg-zinc-800 text-white text-opacity-100 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"/>
+                                    <FaCaretDown className="duration-200 transition-all absolute text-4xl rounded-full bg-zinc-800 text-white text-opacity-100 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 hidden"/>
                                     
                                 </div>
 
