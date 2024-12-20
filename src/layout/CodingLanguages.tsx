@@ -67,9 +67,9 @@ const CodingLanguages = () => {
             </div>
         </div>
 
-        <div className="w-full flex px-8 py-10 md:py-20 font-ultra text-zinc-800  justify-between z-10 opacity-0 animate-fallFour relative -top-[200px]">
+        <div className="w-full flex px-8 py-10 md:py-14 lg:py-20 font-ultra text-zinc-800  justify-between z-10 opacity-0 animate-fallFour relative -top-[200px]">
             
-            <Paragraph text={"I utilize HTML5, CSS, SCSS, Tailwind, React, WordPress to create. Adobe Suite for the artsy stuff, and Figma for design."} classes={'!text-balance text-md lg:text-2xl text-center w-full mx-auto rounded-2xl'}/>
+            <Paragraph text={"I utilize HTML5, CSS, SCSS, Tailwind, React, WordPress to create. Adobe Suite for the artsy stuff, and Figma for design."} classes={'!text-balance text-md md:text-lg lg:text-xl xl:text-2xl text-center w-full mx-auto rounded-2xl'}/>
 
         </div>
                 

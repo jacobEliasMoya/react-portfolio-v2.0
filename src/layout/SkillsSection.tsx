@@ -239,8 +239,10 @@ const SkillsSection = () => {
                     </div>
                 </div>
 
-                <div className="w-full flex gap-8 px-8 py-10 md:py-20 font-ultra text-white  justify-center  relative z-10 opacity-0 animate-fallFour  -top-[200px]">
-                    <Paragraph text={"Drag or swipe right to view my selected work, enjoy, and if you like it so we can create some amazing work together. "} classes={' text-md lg:text-2xl text-center w-full mx-auto rounded-2xl text-white'}/>
+                <div className="w-full flex gap-8 px-8 py-10 md:py-14 lg:py-20 font-ultra text-white  justify-center  relative z-10 opacity-0 animate-fallFour  -top-[200px]">
+
+                    <Paragraph text={"Drag or swipe right to view my selected work, enjoy, and if you like it so we can create some amazing work together. "} classes={'!text-balance text-md md:text-lg lg:text-xl xl:text-2xl text-center w-full mx-auto rounded-2xl'}/>
+
                 </div>
 
                 <Draggable 
@@ -257,7 +259,7 @@ const SkillsSection = () => {
 
                             <div id={`${item.id}`} className={`${item.animation} text-center [scale:0] rounded-2xl w-[85vw]  max-w-[550px] relative drop-shadow-[-.25em_.25em_.05em_rgba(0,0,0,0.4)] flex flex-col item-center justify-end md:hover:-translate-y-3  transition-all duration-200 `}>
                                 
-                                <div className="duration-500 transition-all bg-cover bg-center w-full rounded-tl-2xl rounded-tr-2xl min-h-56 lg:min-h-96 "
+                                <div className="duration-500 transition-all bg-cover bg-center w-full rounded-tl-3xl rounded-tr-3xl md:rounded-tr-xl md:rounded-tl-xl min-h-96 "
                                     style={{
                                     backgroundImage:`url(${item.projectLink})`, 
                                     }}
@@ -267,7 +269,7 @@ const SkillsSection = () => {
                                     <H3element additionalClasses={'relative transition-all tracking-normal'} headerText={item.projectName} spanClasses={''} spanText={''}/>
                                 </div>
 
-                                <div className="rounded-bl-2xl rounded-br-2xl font-ultra  bg-red-700 duration-200 transition-all w-full p-4 flex flex-col items-center justify-between text-white relative z-10 h-3/6" >
+                                <div className="rounded-bl-3xl rounded-br-3xl md:rounded-bl-xl md:rounded-br-xl font-ultra  bg-red-700 duration-200 transition-all w-full p-4 flex flex-col items-center justify-between text-white relative z-10 h-3/6" >
 
                                     {/* <div className="flex w-full items-center justify-center py-3 min-h-36">
                                         <Paragraph text={item.projectDexcription} classes={' md:text-md lg:text-lg text-center w-full mx-auto rounded-2xl'}/>
