@@ -624,6 +624,10 @@ video {
   z-index: 30;
 }
 
+.z-40 {
+  z-index: 40;
+}
+
 .order-1 {
   order: 1;
 }
@@ -747,8 +751,8 @@ video {
   min-width: 100%;
 }
 
-.max-w-\[550px\] {
-  max-width: 550px;
+.max-w-\[450px\] {
+  max-width: 450px;
 }
 
 .-translate-x-1\/2 {
@@ -1469,10 +1473,6 @@ video {
 
 .grid-cols-2 {
   grid-template-columns: repeat(2, minmax(0, 1fr));
-}
-
-.grid-cols-3 {
-  grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
 .flex-row {
