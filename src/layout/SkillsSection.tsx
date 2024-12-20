@@ -274,7 +274,8 @@ const SkillsSection = () => {
                                     {/* <div className="flex w-full items-center justify-center py-3 min-h-36">
                                         <Paragraph text={item.projectDexcription} classes={' md:text-md lg:text-lg text-center w-full mx-auto rounded-2xl'}/>
                                     </div>
-                                     */}
+                                    */}
+
                                     <ButtonWhite buttonText={`View ${item.projectName}`} additionalClasses={"text-sm md:text-lg text-black !w-full relative z-10"} buttonLink={item.codeLink ? item.codeLink : ''} newWindow={true} clickHandle={allowClickThrough}/> 
                                    
                                 </div>
