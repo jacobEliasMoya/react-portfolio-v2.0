@@ -15,6 +15,7 @@ import p8Img from "../assets/projects/kidskingdom1.png";
 
 import ButtonWhite from "../components/buttons/ButtonWhite";
 import Paragraph from "../components/Paragraph";
+import Spacer from "../components/Spacer";
  
 interface Spotlight {
     id:number,
@@ -230,16 +231,16 @@ const SkillsSection = () => {
         <section id="outer-scroll" className="transition-all w-full md:min-h-screen bg-zinc-800 flex justify-start flex-wrap flex-col overflow-hidden py-10 rounded-tl-2xl">
                 <div className="w-full flex gap-8 px-8 relative z-10">
                     <div className="flex flex-col gap-2 md:gap-4 w-full justify-center ">
-                        <div className="rounded md:rounded-xl h-4 lg:h-6 bg-red-600 w-full opacity-0 animate-fallTwo relative -top-[200px]"></div>
-                        <div className="rounded md:rounded-xl h-10 lg:h-20 bg-white w-full opacity-0 animate-fallThree relative -top-[200px]"></div>
+                        <div className="rounded md:rounded-xl h-4 lg:h-6 bg-red-600 w-full "></div>
+                        <div className="rounded md:rounded-xl h-10 lg:h-20 bg-white w-full "></div>
                     </div>
                     
                     <div className="flex flex-col" >            
-                        <H2element additionalClasses={'text-white text-5xl md:text-6xl lg:text-8xl flex flex-col text-left opacity-0 animate-fall relative -top-[200px]'} headerText={"spot-"} spanClasses={'text-red-600 -mt-5 sm:-mt-6 md:-mt-8 lg:-mt-14 opacity-0 animate-fallOne relative -top-[200px]'} spanText={'light'}/>
+                        <H2element additionalClasses={'text-white text-5xl md:text-6xl lg:text-8xl flex flex-col text-left '} headerText={"spot-"} spanClasses={'text-red-600 -mt-5 sm:-mt-6 md:-mt-8 lg:-mt-14'} spanText={'light'}/>
                     </div>
                 </div>
 
-                <div className="w-full flex gap-8 px-8 py-10 md:py-14 lg:py-20 font-ultra text-white  justify-center  relative z-10 opacity-0 animate-fallFour  -top-[200px]">
+                <div className="w-full flex gap-8 px-8 py-10 md:py-14 lg:py-20 font-ultra text-white  justify-center  relative z-10 ">
 
                     <Paragraph text={"Drag or swipe right to view my selected work, enjoy, and if you like it so we can create some amazing work together. "} classes={'!text-balance text-md md:text-lg lg:text-xl xl:text-2xl text-center w-full mx-auto rounded-2xl'}/>
 
@@ -257,7 +258,8 @@ const SkillsSection = () => {
                         .filter((item=>item.id < startingArrNum))
                         .map((item)=>(
 
-                            <div id={`${item.id}`} className={`${item.animation} text-center [scale:0] rounded-2xl w-[85vw]  max-w-[450px] relative drop-shadow-[-.25em_.25em_.05em_rgba(0,0,0,0.4)] flex flex-col item-center justify-end md:hover:-translate-y-3  transition-all duration-200 `}>
+                            <div id={`${item.id}`} className={` text-center   rounded-2xl w-[85vw]  max-w-[450px] relative drop-shadow-[-.25em_.25em_.05em_rgba(0,0,0,0.4)] flex flex-col item-center justify-end md:hover:-translate-y-3  transition-all duration-200 bg-white`}>
+                            {/* <div id={`${item.id}`} className={`${item.animation} text-center [scale:0] rounded-2xl w-[85vw]  max-w-[450px] relative drop-shadow-[-.25em_.25em_.05em_rgba(0,0,0,0.4)] flex flex-col item-center justify-end md:hover:-translate-y-3  transition-all duration-200 bg-white`}> */}
                                 
                                 <div className="duration-500 transition-all bg-cover bg-center w-full rounded-tl-3xl rounded-tr-3xl md:rounded-tr-xl md:rounded-tl-xl min-h-96 "
                                     style={{
@@ -265,18 +267,18 @@ const SkillsSection = () => {
                                     }}
                                 ></div>
 
-                                <div className=" duration-100 text-2xl md:text-3xl transition-all w-full bg-red-500 p-4 flex justify-center items-center text-white z-10">
+                                <div className=" duration-100 text-2xl md:text-3xl transition-all w-full bg-white p-4 flex justify-center items-center text-red-600 z-10">
                                     <H3element additionalClasses={'relative transition-all tracking-normal'} headerText={item.projectName} spanClasses={''} spanText={''}/>
                                 </div>
 
-                                <div className="rounded-bl-3xl rounded-br-3xl md:rounded-bl-xl md:rounded-br-xl font-ultra  bg-red-700 duration-200 transition-all w-full p-4 flex flex-col items-center justify-between text-white relative z-10 h-3/6" >
+                                <div className="rounded-bl-3xl rounded-tr rounded-br-3xl md:rounded-bl-xl md:rounded-br-xl font-ultra  bg-red-700 duration-200 transition-all w-full p-0 flex flex-col items-center justify-between relative z-10 h-3/6" >
 
                                     {/* <div className="flex w-full items-center justify-center py-3 min-h-36">
                                         <Paragraph text={item.projectDexcription} classes={' md:text-md lg:text-lg text-center w-full mx-auto rounded-2xl'}/>
                                     </div>
                                     */}
 
-                                    <ButtonWhite buttonText={`View ${item.projectName}`} additionalClasses={"text-sm md:text-lg text-black !w-full relative z-10"} buttonLink={item.codeLink ? item.codeLink : ''} newWindow={true} clickHandle={allowClickThrough}/> 
+                                    <ButtonWhite buttonText={`View ${item.projectName}`} additionalClasses={"rounded-tr-none rounded-tl-none text-sm md:text-lg !w-full relative z-10 !bg-red-500 hover:!bg-red-600 !text-white"} buttonLink={item.codeLink ? item.codeLink : ''} newWindow={true} clickHandle={allowClickThrough}/> 
                                    
                                 </div>
 
