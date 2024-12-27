@@ -2166,4 +2166,16 @@ video {
     font-size: 1.5rem;
     line-height: 2rem;
   }
+
+  .xl\:text-sm {
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width: 1536px) {
+  .\32xl\:text-2xl {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
 }

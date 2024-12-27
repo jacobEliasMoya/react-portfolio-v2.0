@@ -1,7 +1,7 @@
 import H1element from "../components/headers/H1element"
 import H2element from "../components/headers/H2element"
 import jakeCartoon from "../assets/cartoon-jm.png"
-import { FaEnvelope, FaGithub, FaMobile, FaPhone, FaPhoneAlt, FaPhoneSquare } from "react-icons/fa"
+import { FaEnvelope, FaGithub, FaMobile } from "react-icons/fa"
 import { useEffect } from "react"
 import { FaLinkedin } from "react-icons/fa6"
 import Paragraph from "../components/Paragraph"

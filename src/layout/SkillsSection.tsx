@@ -15,7 +15,6 @@ import p8Img from "../assets/projects/kidskingdom1.png";
 
 import ButtonWhite from "../components/buttons/ButtonWhite";
 import Paragraph from "../components/Paragraph";
-import Spacer from "../components/Spacer";
  
 interface Spotlight {
     id:number,
@@ -286,6 +285,8 @@ const SkillsSection = () => {
                         )) : null}
                     </div>
                 </Draggable>
+
+                
         </section>
     )
 }
