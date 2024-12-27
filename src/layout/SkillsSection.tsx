@@ -230,8 +230,8 @@ const SkillsSection = () => {
         <section id="outer-scroll" className="transition-all w-full bg-zinc-800 flex justify-start flex-wrap flex-col overflow-hidden py-10 ">
                 <div className="w-full flex gap-8 px-8 relative z-10">
                     <div className="flex flex-col gap-2 md:gap-4 w-full justify-center ">
-                        <div className="rounded md:rounded-xl h-4 lg:h-6 bg-red-600 w-full "></div>
-                        <div className="rounded md:rounded-xl h-10 lg:h-20 bg-white w-full "></div>
+                        <div className="rounded-xl h-4 lg:h-6 bg-red-600 w-full "></div>
+                        <div className="rounded-xl h-10 lg:h-20 bg-white w-full "></div>
                     </div>
                     
                     <div className="flex flex-col" >            
@@ -241,7 +241,7 @@ const SkillsSection = () => {
 
                 <div className="w-full flex gap-8 px-8 py-10 md:py-14 lg:py-20 font-ultra text-white  justify-center  relative z-10 ">
 
-                    <Paragraph text={"Drag or swipe right to view my selected works. I have worked with small mom and pop business, to business with multiple locations across the US."} classes={' text-md md:text-lg lg:text-xl xl:text-2xl text-center w-full mx-auto rounded-2xl tracking-wider'}/>
+                    <Paragraph text={"Drag or swipe right to view my selected works. I have been helping small mom and pop business grow with a, to business with multiple locations across the US. "} classes={' text-md md:text-lg lg:text-xl xl:text-2xl text-center w-full mx-auto rounded-2xl tracking-wider'}/>
 
                 </div>
 
@@ -251,16 +251,15 @@ const SkillsSection = () => {
                     onDrag={handleScroll}
                     bounds={{right:0, left:dragBoundsLeft}}
                 >
-                    <div id="drag-item" className=" z-30  min-w-full md:w-max h-auto mx-auto  justify-self-end flex justify-start items-start px-8 gap-8 md:gap-12 mb-6 pt-3 ">
+                    <div id="drag-item" className="z-10  min-w-full md:w-max h-auto mx-auto  justify-self-end flex justify-start items-start px-8 gap-8 md:gap-12 mb-6 pt-3 ">
                         {/* mapping out projects, no need to fetch anything */}
                         {spotlight && startingArrNum ? spotlight
                         .filter((item=>item.id < startingArrNum))
                         .map((item)=>(
 
                             <div id={`${item.id}`} className={` text-center   rounded-2xl w-[85vw]  max-w-[450px] relative drop-shadow-[-.25em_.25em_.05em_rgba(0,0,0,0.4)] flex flex-col item-center justify-end md:hover:-translate-y-3  transition-all duration-200 bg-white`}>
-                            {/* <div id={`${item.id}`} className={`${item.animation} text-center [scale:0] rounded-2xl w-[85vw]  max-w-[450px] relative drop-shadow-[-.25em_.25em_.05em_rgba(0,0,0,0.4)] flex flex-col item-center justify-end md:hover:-translate-y-3  transition-all duration-200 bg-white`}> */}
                                 
-                                <div className="duration-500 transition-all bg-cover bg-center w-full rounded-tl-3xl rounded-tr-3xl md:rounded-tr-xl md:rounded-tl-xl min-h-96 "
+                                <div className="duration-500 transition-all bg-cover bg-center w-full rounded-t-2xl md:rounded-tr-xl md:rounded-tl-xl min-h-96 "
                                     style={{
                                     backgroundImage:`url(${item.projectLink})`, 
                                     }}
@@ -271,11 +270,6 @@ const SkillsSection = () => {
                                 </div>
 
                                 <div className="rounded-bl-3xl rounded-tr rounded-br-3xl md:rounded-bl-xl md:rounded-br-xl font-ultra  bg-red-700 duration-200 transition-all w-full p-0 flex flex-col items-center justify-between relative z-10 h-3/6" >
-
-                                    {/* <div className="flex w-full items-center justify-center py-3 min-h-36">
-                                        <Paragraph text={item.projectDexcription} classes={' md:text-md lg:text-lg text-center w-full mx-auto rounded-2xl'}/>
-                                    </div>
-                                    */}
 
                                     <ButtonWhite buttonText={`View ${item.projectName}`} additionalClasses={"rounded-tr-none rounded-tl-none text-sm md:text-lg !w-full relative z-10 !bg-red-500 hover:!bg-red-600 !text-white"} buttonLink={item.codeLink ? item.codeLink : ''} newWindow={true} clickHandle={allowClickThrough}/> 
                                    

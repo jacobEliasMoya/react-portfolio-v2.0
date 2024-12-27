@@ -1,12 +1,10 @@
 import H2element from "../components/headers/H2element"
 import Paragraph from "../components/Paragraph"
 
-type Props = {}
-
-const ProfessionalExperience = (props: Props) => {
+const ProfessionalExperience = () => {
   return (
-    <section id="outer-scroll" className="transition-all w-full bg-white flex justify-start flex-wrap flex-col overflow-hidden py-10 ">
-        <div className="w-full flex gap-8 px-8 relative z-10">
+    <section className="transition-all min-h-screen w-[calc(100vw_-_2em)] md:w-[calc(100vw_-_4em)] bg-white flex justify-start flex-wrap flex-col overflow-hidden py-10 mx-auto px-8 rounded-xl mb-16">
+        <div className="w-full flex gap-8 relative z-10">
             
             <div className="flex flex-col" >            
                 <H2element additionalClasses={'text-red-600 text-5xl md:text-6xl lg:text-8xl flex flex-col text-left '} headerText={"Career"} spanClasses={'text-zinc-800 -mt-5 sm:-mt-6 md:-mt-8 lg:-mt-14'} spanText={'history'}/>
@@ -18,9 +16,9 @@ const ProfessionalExperience = (props: Props) => {
             </div>
         </div>
 
-        <div className="w-full flex px-8 py-10 md:py-14 lg:py-20 font-ultra text-white  justify-between z-10">
+        <div className="w-full flex py-10 md:py-14 lg:py-20 font-ultra text-zinc-800  justify-between z-10">
             
-            <Paragraph text={"I"} classes={' text-md md:text-lg lg:text-xl xl:text-2xl text-center w-full mx-auto rounded-2xl'}/>
+            <Paragraph text={"I am just using some text for now, will fill in later and add a few different elements later."} classes={' text-md md:text-lg lg:text-xl xl:text-2xl text-center w-full mx-auto rounded-2xl'}/>
 
         </div>
                 

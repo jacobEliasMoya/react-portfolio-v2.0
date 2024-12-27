@@ -54,7 +54,7 @@ const CodingLanguages = () => {
 
     return (
  
-    <section className="transition-all w-full bg-white flex justify-center flex-wrap flex-col overflow-hidden py-10 ">
+    <section className="transition-all w-full bg-white flex justify-center flex-wrap flex-col overflow-hidden py-10 !text-left ">
         <div className="w-full flex gap-8 px-8 relative z-10">
 
             <div className="flex flex-col text-center" >            
