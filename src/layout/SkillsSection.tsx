@@ -227,7 +227,7 @@ const SkillsSection = () => {
     },[boundsLocked])
 
     return (
-        <section id="outer-scroll" className="transition-all w-full md:min-h-screen bg-zinc-800 flex justify-start flex-wrap flex-col overflow-hidden py-10 rounded-tl-2xl">
+        <section id="outer-scroll" className="transition-all w-full bg-zinc-800 flex justify-start flex-wrap flex-col overflow-hidden py-10 ">
                 <div className="w-full flex gap-8 px-8 relative z-10">
                     <div className="flex flex-col gap-2 md:gap-4 w-full justify-center ">
                         <div className="rounded md:rounded-xl h-4 lg:h-6 bg-red-600 w-full "></div>
@@ -235,13 +235,13 @@ const SkillsSection = () => {
                     </div>
                     
                     <div className="flex flex-col" >            
-                        <H2element additionalClasses={'text-white text-5xl md:text-6xl lg:text-8xl flex flex-col text-left '} headerText={"spot-"} spanClasses={'text-red-600 -mt-5 sm:-mt-6 md:-mt-8 lg:-mt-14'} spanText={'light'}/>
+                        <H2element additionalClasses={'text-red-600 text-5xl md:text-6xl lg:text-8xl flex flex-col text-left '} headerText={"spot-"} spanClasses={'text-white -mt-5 sm:-mt-6 md:-mt-8 lg:-mt-14'} spanText={'light'}/>
                     </div>
                 </div>
 
                 <div className="w-full flex gap-8 px-8 py-10 md:py-14 lg:py-20 font-ultra text-white  justify-center  relative z-10 ">
 
-                    <Paragraph text={"Drag or swipe right to view my selected work, enjoy, and if you like it so we can create some amazing work together. "} classes={'!text-balance text-md md:text-lg lg:text-xl xl:text-2xl text-center w-full mx-auto rounded-2xl'}/>
+                    <Paragraph text={"Drag or swipe right to view my selected works. I have worked with small mom and pop business, to business with multiple locations across the US."} classes={' text-md md:text-lg lg:text-xl xl:text-2xl text-center w-full mx-auto rounded-2xl tracking-wider'}/>
 
                 </div>
 

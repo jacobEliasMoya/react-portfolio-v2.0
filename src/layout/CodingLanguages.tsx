@@ -58,7 +58,7 @@ const CodingLanguages = () => {
         <div className="w-full flex gap-8 px-8 relative z-10">
 
             <div className="flex flex-col text-center" >            
-                <H2element additionalClasses={'text-zinc-800 text-5xl md:text-6xl lg:text-8xl flex flex-col text-left '} headerText={"Tech -"} spanClasses={'text-red-600 -mt-5 sm:-mt-6 md:-mt-8 lg:-mt-14 '} spanText={'Stack'}/>
+                <H2element additionalClasses={'text-red-600 text-5xl md:text-6xl lg:text-8xl flex flex-col text-left '} headerText={"Tech -"} spanClasses={'text-zinc-800 -mt-5 sm:-mt-6 md:-mt-8 lg:-mt-14 '} spanText={'Stack'}/>
             </div>
 
             <div className="flex flex-col gap-2 md:gap-4  w-full justify-center ">
@@ -69,7 +69,7 @@ const CodingLanguages = () => {
 
         <div className="w-full flex px-8 py-10 md:py-14 lg:py-20 font-ultra text-zinc-800  justify-between z-10">
             
-            <Paragraph text={"I utilize HTML5, CSS, SCSS, Tailwind, React, JavaScript, TypeScript, & WordPress to create. Adobe Suite for the artsy stuff, and Figma for design."} classes={'!text-balance text-md md:text-lg lg:text-xl xl:text-2xl text-center w-full mx-auto rounded-2xl'}/>
+            <Paragraph text={"I utilize HTML5, CSS, SCSS, Tailwind, React, JavaScript, TypeScript, & WordPress to create. Adobe Suite for the artsy stuff, and Figma for design. Fun Fact: If you need it, I learn it."} classes={' text-md md:text-lg lg:text-xl xl:text-2xl text-center w-full mx-auto rounded-2xl'}/>
 
         </div>
                 
@@ -79,9 +79,6 @@ const CodingLanguages = () => {
                 <div className={` flex items-center justify-center gap-4 bg-red-600 p-4 rounded-2xl md:hover:-translate-y-2 md:hover:drop-shadow-md transition-all`} >
                     {item.icon}
                 </div>
-                // <div className={`opacity-0 ${item.animation} relative -top-[200px] flex items-center justify-center gap-4 bg-red-600 p-4 rounded-2xl md:hover:-translate-y-2 md:hover:drop-shadow-md transition-all`} >
-                //     {item.icon}
-                // </div>
             )) : null}
 
         </div>
