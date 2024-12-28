@@ -228,7 +228,9 @@ const SkillsSection = () => {
 
     return (
         <section id="outer-scroll" className="transition-all w-full bg-zinc-800 flex justify-start flex-wrap flex-col overflow-hidden py-10 ">
+
                 <div className="w-full flex gap-8 px-8 relative z-10">
+
                     <div className="flex flex-col gap-2 md:gap-4 w-full justify-center ">
                         <div className="rounded-xl h-4 lg:h-6 bg-red-600 w-full "></div>
                         <div className="rounded-xl h-10 lg:h-20 bg-white w-full "></div>
@@ -237,9 +239,10 @@ const SkillsSection = () => {
                     <div className="flex flex-col" >            
                         <H2element additionalClasses={'text-red-600 text-5xl md:text-6xl lg:text-8xl flex flex-col text-left '} headerText={"spot-"} spanClasses={'text-white -mt-5 sm:-mt-6 md:-mt-8 lg:-mt-14'} spanText={'light'}/>
                     </div>
+                    
                 </div>
 
-                <div className="w-full flex gap-8 px-8 py-10 md:py-14 lg:py-20 font-ultra text-white  justify-center  relative z-10 ">
+                <div className="w-full flex gap-8 px-8 py-10 md:py-14 lg:py-18 font-ultra text-white  justify-center  relative z-10 ">
 
                     <Paragraph text={"Drag or swipe right to view my selected works. I have been helping small mom and pop business grow with a, to business with multiple locations across the US. "} classes={' text-md md:text-lg lg:text-xl xl:text-2xl text-center w-full mx-auto rounded-2xl tracking-wider'}/>
 
@@ -254,7 +257,7 @@ const SkillsSection = () => {
                     <div id="drag-item" className="z-10  min-w-full md:w-max h-auto mx-auto  justify-self-end flex justify-start items-start px-8 gap-8 md:gap-12 mb-6 pt-3 ">
                         {/* mapping out projects, no need to fetch anything */}
                         {spotlight && startingArrNum ? spotlight
-                        .filter((item=>item.id < startingArrNum))
+                        // .filter((item=>item.id < startingArrNum))
                         .map((item)=>(
 
                             <div id={`${item.id}`} className={` text-center   rounded-2xl w-[85vw]  max-w-[450px] relative drop-shadow-[-.25em_.25em_.05em_rgba(0,0,0,0.4)] flex flex-col item-center justify-end md:hover:-translate-y-3  transition-all duration-200 bg-white`}>

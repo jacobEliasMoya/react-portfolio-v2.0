@@ -54,7 +54,7 @@ const CodingLanguages = () => {
 
     return (
  
-    <section className="transition-all w-full bg-white flex justify-center flex-wrap flex-col overflow-hidden py-10 !text-left ">
+        <section className="transition-all w-[calc(100vw_-_3em)] md:w-[calc(100vw_-_5em)] bg-white flex justify-start flex-wrap flex-col overflow-hidden mx-auto pt-7 md:pt-10 pb-9 md:pb-14 mt-14 rounded-xl mb-4">
         <div className="w-full flex gap-8 px-8 relative z-10">
 
             <div className="flex flex-col text-center" >            
@@ -67,7 +67,7 @@ const CodingLanguages = () => {
             </div>
         </div>
 
-        <div className="w-full flex px-8 py-10 md:py-14 lg:py-20 font-ultra text-zinc-800  justify-between z-10">
+        <div className="w-full flex px-8 py-10 md:py-14 lg:py-18 font-ultra text-zinc-800  justify-between z-10">
             
             <Paragraph text={"I utilize HTML5, CSS, SCSS, Tailwind, React, JavaScript, TypeScript, & WordPress to create. Adobe Suite for the artsy stuff, and Figma for design. Fun Fact: If you need it, I learn it."} classes={' text-md md:text-lg lg:text-xl xl:text-2xl text-center w-full mx-auto rounded-2xl'}/>
 
