@@ -19,7 +19,7 @@ return (
     <div className="w-full flex gap-8 ">
         <div className="flex flex-col" >            
             <H1element additionalClasses={'text-5xl md:text-6xl lg:text-8xl flex flex-col text-left '} headerText={'Design'} spanClasses={'text-white -mt-5 sm:-mt-6 md:-mt-8 lg:-mt-14 '} spanText={'Develop'}/>
-        </div>
+        </div> 
         <div className="flex flex-col gap-2 md:gap-4  w-full justify-center ">
             <div className="rounded md:rounded-xl h-4 lg:h-6 bg-zinc-800 w-full "></div>
             <div className="rounded md:rounded-xl h-10 lg:h-20 bg-white w-full "></div>
@@ -30,7 +30,7 @@ return (
 
         <div className="transition-all z-10 rounded-full relative w-full flex justify-center items-center flex-col md:flex-row opacity-100 p-4 gap-6  md:gap-12">
 
-            <div className="w-full md:gap-4 flex items-center justify-center flex-row flex-wrap text-white tracking-widest text-md  font-ultra !text-balance order-2 md:order-1">
+            <div className="w-full md:gap-4 flex items-center justify-center flex-row flex-wrap text-white tracking-widest text-lg  font-ultra !text-balance order-2 md:order-1">
 
                 <Paragraph text={"Frontend."} classes={'w-full md:w-max'}/>
                 <Paragraph text={"ReactJS."} classes={'w-full md:w-max'}/>

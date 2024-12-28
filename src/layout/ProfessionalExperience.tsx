@@ -16,8 +16,12 @@ const ProfessionalExperience = () => {
                 </div>
             </div>
 
-            <div className="w-full flex py-10 md:py-14 lg:py-18 font-ultra text-zinc-800  justify-between z-10">
+            <div className="w-full flex-col gap-8 flex py-10 md:py-14 lg:py-18 font-ultra text-zinc-800  justify-between z-10">
                 
+                <Paragraph text={"I am just using some text for now, will fill in later and add a few different elements later."} classes={' text-md md:text-lg lg:text-xl xl:text-2xl text-center w-full mx-auto rounded-2xl'}/>
+
+                <Paragraph text={"I am just using some text for now, will fill in later and add a few different elements later."} classes={' text-md md:text-lg lg:text-xl xl:text-2xl text-center w-full mx-auto rounded-2xl'}/>
+
                 <Paragraph text={"I am just using some text for now, will fill in later and add a few different elements later."} classes={' text-md md:text-lg lg:text-xl xl:text-2xl text-center w-full mx-auto rounded-2xl'}/>
 
             </div>

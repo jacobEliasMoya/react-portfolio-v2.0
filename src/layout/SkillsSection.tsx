@@ -15,6 +15,7 @@ import p8Img from "../assets/projects/kidskingdom1.png";
 
 import ButtonWhite from "../components/buttons/ButtonWhite";
 import Paragraph from "../components/Paragraph";
+import { FaWordpress } from "react-icons/fa";
  
 interface Spotlight {
     id:number,
@@ -227,7 +228,7 @@ const SkillsSection = () => {
     },[boundsLocked])
 
     return (
-        <section id="outer-scroll" className="transition-all w-full bg-zinc-800 flex justify-start flex-wrap flex-col overflow-hidden py-10 ">
+        <section id="outer-scroll" className="transition-all w-full bg-zinc-800 flex justify-start flex-wrap flex-col !overflow-hidden py-10">
 
                 <div className="w-full flex gap-8 px-8 relative z-10">
 
@@ -260,7 +261,7 @@ const SkillsSection = () => {
                         // .filter((item=>item.id < startingArrNum))
                         .map((item)=>(
 
-                            <div id={`${item.id}`} className={` text-center   rounded-2xl w-[85vw]  max-w-[450px] relative md:drop-shadow-[-.25em_.25em_.05em_rgba(0,0,0,0.4)] flex flex-col item-center justify-end md:hover:-translate-y-3  transition-all duration-200 bg-white`}>
+                            <div id={`${item.id}`} className={` text-center   rounded-2xl w-[60vw] md:w-[85vw]  max-w-[450px] relative md:drop-shadow-[-.25em_.25em_.05em_rgba(0,0,0,0.4)] flex flex-col item-center justify-end md:hover:-translate-y-3  transition-all duration-200 `}>
                                 
                                 <div className="duration-500 transition-all bg-cover bg-center w-full rounded-none md:rounded-tr-xl md:rounded-tl-xl min-h-72 md:min-h-96 "
                                     style={{
@@ -268,13 +269,14 @@ const SkillsSection = () => {
                                     }}
                                 ></div>
 
-                                <div className=" duration-100 text-2xl md:text-3xl transition-all w-full bg-white p-4 flex justify-center items-center text-red-600 z-10">
+                                <div className="flex justify-center items-center duration-100 text-md md:text-2xl transition-all w-full bg-white p-4  text-zinc-800 z-10">
                                     <H3element additionalClasses={'relative transition-all tracking-normal'} headerText={item.projectName} spanClasses={''} spanText={''}/>
+                                    <FaWordpress/>
                                 </div>
 
                                 <div className=" !rounded-none font-ultra duration-200 transition-all w-full p-0 flex flex-col items-center justify-between relative z-10 h-3/6" >
 
-                                    <ButtonWhite buttonText={`View ${item.projectName}`} additionalClasses={"!rounded-none md:!rounded-br-xl md:!rounded-bl-xl rounded-tr-none rounded-tl-none text-sm md:text-lg !w-full relative z-10 !bg-red-500 hover:!bg-red-600 !text-white"} buttonLink={item.codeLink ? item.codeLink : ''} newWindow={true} clickHandle={allowClickThrough}/> 
+                                    <ButtonWhite buttonText={`View Website`} additionalClasses={"!rounded-none md:!rounded-br-xl md:!rounded-bl-xl rounded-tr-none rounded-tl-none text-sm md:text-lg !w-full relative z-10 !bg-red-500 hover:!bg-red-600 !text-white"} buttonLink={item.codeLink ? item.codeLink : ''} newWindow={true} clickHandle={allowClickThrough}/> 
                                    
                                 </div>
 
