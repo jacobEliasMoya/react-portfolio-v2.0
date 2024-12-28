@@ -254,15 +254,15 @@ const SkillsSection = () => {
                     onDrag={handleScroll}
                     bounds={{right:0, left:dragBoundsLeft}}
                 >
-                    <div id="drag-item" className="z-10  min-w-full md:w-max h-auto mx-auto  justify-self-end flex justify-start items-start px-8 gap-8 md:gap-12 mb-6 pt-3 ">
+                    <div id="drag-item" className="z-10 min-w-full md:w-max h-auto mx-auto justify-self-end flex justify-start items-start px-1 md:px-8 gap-1 md:gap-8 mb-6 pt-3 ">
                         {/* mapping out projects, no need to fetch anything */}
                         {spotlight && startingArrNum ? spotlight
                         // .filter((item=>item.id < startingArrNum))
                         .map((item)=>(
 
-                            <div id={`${item.id}`} className={` text-center   rounded-2xl w-[85vw]  max-w-[450px] relative drop-shadow-[-.25em_.25em_.05em_rgba(0,0,0,0.4)] flex flex-col item-center justify-end md:hover:-translate-y-3  transition-all duration-200 bg-white`}>
+                            <div id={`${item.id}`} className={` text-center   rounded-2xl w-[85vw]  max-w-[450px] relative md:drop-shadow-[-.25em_.25em_.05em_rgba(0,0,0,0.4)] flex flex-col item-center justify-end md:hover:-translate-y-3  transition-all duration-200 bg-white`}>
                                 
-                                <div className="duration-500 transition-all bg-cover bg-center w-full rounded-t-2xl md:rounded-tr-xl md:rounded-tl-xl min-h-96 "
+                                <div className="duration-500 transition-all bg-cover bg-center w-full rounded-none md:rounded-tr-xl md:rounded-tl-xl min-h-72 md:min-h-96 "
                                     style={{
                                     backgroundImage:`url(${item.projectLink})`, 
                                     }}
@@ -272,9 +272,9 @@ const SkillsSection = () => {
                                     <H3element additionalClasses={'relative transition-all tracking-normal'} headerText={item.projectName} spanClasses={''} spanText={''}/>
                                 </div>
 
-                                <div className="rounded-bl-3xl rounded-tr rounded-br-3xl md:rounded-bl-xl md:rounded-br-xl font-ultra  bg-red-700 duration-200 transition-all w-full p-0 flex flex-col items-center justify-between relative z-10 h-3/6" >
+                                <div className=" !rounded-none font-ultra duration-200 transition-all w-full p-0 flex flex-col items-center justify-between relative z-10 h-3/6" >
 
-                                    <ButtonWhite buttonText={`View ${item.projectName}`} additionalClasses={"rounded-tr-none rounded-tl-none text-sm md:text-lg !w-full relative z-10 !bg-red-500 hover:!bg-red-600 !text-white"} buttonLink={item.codeLink ? item.codeLink : ''} newWindow={true} clickHandle={allowClickThrough}/> 
+                                    <ButtonWhite buttonText={`View ${item.projectName}`} additionalClasses={"!rounded-none md:!rounded-br-xl md:!rounded-bl-xl rounded-tr-none rounded-tl-none text-sm md:text-lg !w-full relative z-10 !bg-red-500 hover:!bg-red-600 !text-white"} buttonLink={item.codeLink ? item.codeLink : ''} newWindow={true} clickHandle={allowClickThrough}/> 
                                    
                                 </div>
 

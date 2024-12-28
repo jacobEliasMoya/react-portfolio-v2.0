@@ -3,7 +3,7 @@ import Paragraph from "../components/Paragraph"
 
 const ProfessionalExperience = () => {
     return (
-        <section className="transition-all w-[calc(100vw_-_3em)] md:w-[calc(100vw_-_5em)] bg-white flex justify-start flex-wrap flex-col overflow-hidden mx-auto pt-7 md:pt-10 pb-9 md:pb-14 px-6 md:mt-14 rounded-xl mb-4">
+        <section className="transition-all w-[calc(100vw_-_3em)] md:w-[calc(100vw_-_5em)] bg-white flex justify-start flex-wrap flex-col overflow-hidden mx-auto pt-7 md:pt-10 pb-9 md:pb-14 px-6 md:mt-6 rounded-xl mb-4">
             <div className="w-full flex gap-8 relative z-10">
                 
                 <div className="flex flex-col" >            

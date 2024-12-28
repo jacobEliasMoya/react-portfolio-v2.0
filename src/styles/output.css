@@ -653,10 +653,6 @@ video {
   margin-bottom: 1.5rem;
 }
 
-.mt-6 {
-  margin-top: 1.5rem;
-}
-
 .mt-14 {
   margin-top: 3.5rem;
 }
@@ -724,6 +720,14 @@ video {
 
 .min-h-screen {
   min-height: 100vh;
+}
+
+.min-h-7 {
+  min-height: 1.75rem;
+}
+
+.min-h-72 {
+  min-height: 18rem;
 }
 
 .\!w-full {
@@ -1359,6 +1363,10 @@ video {
   justify-content: space-between;
 }
 
+.gap-1 {
+  gap: 0.25rem;
+}
+
 .gap-2 {
   gap: 0.5rem;
 }
@@ -1415,33 +1423,32 @@ video {
   border-radius: 0.5rem;
 }
 
+.rounded-none {
+  border-radius: 0px;
+}
+
 .rounded-xl {
   border-radius: 0.75rem;
 }
 
-.rounded-t-2xl {
-  border-top-left-radius: 1rem;
-  border-top-right-radius: 1rem;
-}
-
-.rounded-bl-3xl {
-  border-bottom-left-radius: 1.5rem;
-}
-
-.rounded-br-3xl {
-  border-bottom-right-radius: 1.5rem;
+.\!rounded-none {
+  border-radius: 0px !important;
 }
 
 .rounded-tl-none {
   border-top-left-radius: 0px;
 }
 
-.rounded-tr {
-  border-top-right-radius: 0.25rem;
-}
-
 .rounded-tr-none {
   border-top-right-radius: 0px;
+}
+
+.rounded-bl-xl {
+  border-bottom-left-radius: 0.75rem;
+}
+
+.rounded-br-xl {
+  border-bottom-right-radius: 0.75rem;
 }
 
 .\!bg-red-500 {
@@ -1522,54 +1529,21 @@ video {
   padding-bottom: 2.5rem;
 }
 
-.px-10 {
-  padding-left: 2.5rem;
-  padding-right: 2.5rem;
+.px-1 {
+  padding-left: 0.25rem;
+  padding-right: 0.25rem;
 }
 
-.px-7 {
-  padding-left: 1.75rem;
-  padding-right: 1.75rem;
-}
-
-.pb-14 {
-  padding-bottom: 3.5rem;
-}
-
-.pt-10 {
-  padding-top: 2.5rem;
+.pb-9 {
+  padding-bottom: 2.25rem;
 }
 
 .pt-3 {
   padding-top: 0.75rem;
 }
 
-.pt-4 {
-  padding-top: 1rem;
-}
-
-.pt-8 {
-  padding-top: 2rem;
-}
-
-.pt-6 {
-  padding-top: 1.5rem;
-}
-
 .pt-7 {
   padding-top: 1.75rem;
-}
-
-.pb-11 {
-  padding-bottom: 2.75rem;
-}
-
-.pb-8 {
-  padding-bottom: 2rem;
-}
-
-.pb-9 {
-  padding-bottom: 2.25rem;
 }
 
 .text-left {
@@ -1657,11 +1631,6 @@ video {
   --tw-shadow: 0em 0.25em rgba(0,0,0,0.15);
   --tw-shadow-colored: 0em 0.25em var(--tw-shadow-color);
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
-}
-
-.drop-shadow-\[-\.25em_\.25em_\.05em_rgba\(0\2c 0\2c 0\2c 0\.4\)\] {
-  --tw-drop-shadow: drop-shadow(-.25em .25em .05em rgba(0,0,0,0.4));
-  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
 }
 
 .drop-shadow-lg {
@@ -1807,6 +1776,10 @@ video {
   content: var(--tw-content);
 }
 
+.first\:opacity-0:first-child {
+  opacity: 0;
+}
+
 .hover\:scale-110:hover {
   --tw-scale-x: 1.1;
   --tw-scale-y: 1.1;
@@ -1871,6 +1844,14 @@ video {
     margin-top: 3.5rem;
   }
 
+  .md\:mt-7 {
+    margin-top: 1.75rem;
+  }
+
+  .md\:mt-6 {
+    margin-top: 1.5rem;
+  }
+
   .md\:block {
     display: block;
   }
@@ -1881,6 +1862,10 @@ video {
 
   .md\:min-h-80 {
     min-height: 20rem;
+  }
+
+  .md\:min-h-96 {
+    min-height: 24rem;
   }
 
   .md\:w-64 {
@@ -2060,6 +2045,10 @@ video {
     gap: 1rem;
   }
 
+  .md\:gap-8 {
+    gap: 2rem;
+  }
+
   .md\:rounded-xl {
     border-radius: 0.75rem;
   }
@@ -2080,6 +2069,14 @@ video {
     border-top-right-radius: 0.75rem;
   }
 
+  .md\:\!rounded-bl-xl {
+    border-bottom-left-radius: 0.75rem !important;
+  }
+
+  .md\:\!rounded-br-xl {
+    border-bottom-right-radius: 0.75rem !important;
+  }
+
   .md\:p-6 {
     padding: 1.5rem;
   }
@@ -2089,17 +2086,26 @@ video {
     padding-bottom: 3.5rem;
   }
 
-  .md\:px-6 {
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
+  .md\:px-8 {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+
+  .md\:px-1 {
+    padding-left: 0.25rem;
+    padding-right: 0.25rem;
+  }
+
+  .md\:pb-14 {
+    padding-bottom: 3.5rem;
   }
 
   .md\:pt-10 {
     padding-top: 2.5rem;
   }
 
-  .md\:pb-14 {
-    padding-bottom: 3.5rem;
+  .md\:pr-8 {
+    padding-right: 2rem;
   }
 
   .md\:text-2xl {
@@ -2125,6 +2131,11 @@ video {
   .md\:text-lg {
     font-size: 1.125rem;
     line-height: 1.75rem;
+  }
+
+  .md\:drop-shadow-\[-\.25em_\.25em_\.05em_rgba\(0\2c 0\2c 0\2c 0\.4\)\] {
+    --tw-drop-shadow: drop-shadow(-.25em .25em .05em rgba(0,0,0,0.4));
+    filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
   }
 
   .md\:hover\:-translate-y-2:hover {
