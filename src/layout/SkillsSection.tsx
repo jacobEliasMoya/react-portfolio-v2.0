@@ -228,16 +228,16 @@ const SkillsSection = () => {
     },[boundsLocked])
 
     return (
-        <section id="outer-scroll" className="transition-all w-full bg-zinc-900 flex justify-start flex-wrap flex-col !overflow-hidden py-6 md:py-10 ">
+        <section id="outer-scroll" className="transition-all w-full bg-red-600 flex justify-start flex-wrap flex-col !overflow-hidden py-6 md:py-10 ">
 
                 <div className="w-full flex gap-8 px-6 md:px-8 relative z-10">
 
                     <div className="flex flex-col" >            
-                        <H2element additionalClasses={'text-red-600 text-5xl md:text-6xl lg:text-8xl flex flex-col text-left '} headerText={"spot-"} spanClasses={'text-white -mt-5 sm:-mt-6 md:-mt-8 lg:-mt-14'} spanText={'light'}/>
+                        <H2element additionalClasses={'text-zinc-800 text-5xl md:text-6xl lg:text-8xl flex flex-col text-left '} headerText={"spot-"} spanClasses={'text-white -mt-5 sm:-mt-6 md:-mt-8 lg:-mt-14'} spanText={'light'}/>
                     </div>
 
                     <div className="flex flex-col gap-2 md:gap-4 w-full justify-center ">
-                        <div className="rounded md:rounded-xl h-4 lg:h-6 bg-red-600 w-full "></div>
+                        <div className="rounded md:rounded-xl h-4 lg:h-6 bg-zinc-800 w-full "></div>
                         <div className="rounded md:rounded-xl h-10 lg:h-20 bg-white w-full "></div>
                     </div>
                     
@@ -275,7 +275,7 @@ const SkillsSection = () => {
 
                                 <div className=" !rounded-none font-ultra duration-200 transition-all w-full p-0 flex flex-col items-center justify-between relative z-10 h-3/6" >
 
-                                    <ButtonWhite buttonText={`View Website`} additionalClasses={"!rounded-none md:!rounded-br-xl md:!rounded-bl-xl rounded-tr-none rounded-tl-none text-sm md:text-lg !w-full relative z-10 !bg-red-600 hover:!bg-red-700 !text-white"} buttonLink={item.codeLink ? item.codeLink : ''} newWindow={true} clickHandle={allowClickThrough}/> 
+                                    <ButtonWhite buttonText={`View Website`} additionalClasses={"!rounded-none md:!rounded-br-xl md:!rounded-bl-xl rounded-tr-none rounded-tl-none text-sm md:text-lg !w-full relative z-10 !bg-zinc-800 hover:!bg-zinc-700 !text-white"} buttonLink={item.codeLink ? item.codeLink : ''} newWindow={true} clickHandle={allowClickThrough}/> 
                                    
                                 </div>
 

@@ -147,7 +147,7 @@ const CodingLanguages = () => {
 
                 <ul className=' columns-2 text-sm md:text-md xl:text-lg gap-4 md:gap-8'>
                     {usedTech ? usedTech.filter((item=>item.category == 'programming')).map((item)=>(
-                        <li className='bg-red-600 text-white p-2 rounded tracking-wider mb-1'> {item.name} </li>
+                        <li className='bg-red-600 text-white p-2 rounded tracking-wider mb-2'> {item.name} </li>
                     )) : null}
                 </ul>
                 
@@ -160,7 +160,7 @@ const CodingLanguages = () => {
 
             <ul className='text-sm md:text-md xl:text-lg '>
                 {usedTech ? usedTech.filter((item=>item.category == 'design')).map((item)=>(
-                        <li className='bg-red-600 text-white p-2 rounded tracking-wider mb-1'> {item.name} </li>
+                        <li className='bg-red-600 text-white p-2 rounded tracking-wider mb-2'> {item.name} </li>
                     )) : null}
             </ul>
             
@@ -174,7 +174,7 @@ const CodingLanguages = () => {
 
             <ul className=' text-sm md:text-md xl:text-lg '>
                 {usedTech ? usedTech.filter((item=>item.category == 'builder')).map((item)=>(
-                        <li className='bg-red-600 text-white p-2 rounded tracking-wider mb-1'> {item.name} </li>
+                        <li className='bg-red-600 text-white p-2 rounded tracking-wider mb-2'> {item.name} </li>
                     )) : null}
             </ul>
 
@@ -186,7 +186,7 @@ const CodingLanguages = () => {
         <div className="w-full gap-2 md:gap-4 lg:gap-6 xl:gap-8 grid grid-cols-4 md:grid-cols-8 flex-wrap text-white  relative z-10 text-3xl md:text-3xl  lg:text-7xl mt-4">
 
             {usedTech ? usedTech.map((item)=>(
-                <div className={` flex items-center justify-center gap-4 bg-zinc-900 p-4 rounded md:rounded-2xl md:hover:-translate-y-2 md:hover:drop-shadow-md transition-all`} >
+                <div className={` flex items-center justify-center gap-4 bg-zinc-800 p-4 rounded md:rounded-2xl md:hover:-translate-y-2 md:hover:drop-shadow-md transition-all`} >
                     {item.icon}
                 </div>
             )) : null}
