@@ -130,7 +130,7 @@ const CodingLanguages = () => {
         <div className=" w-full gap-8  relative z-10 flex">
 
             <div className="flex flex-col text-center" >            
-                <H2element additionalClasses={'text-red-600 text-5xl md:text-6xl lg:text-8xl flex flex-col text-left '} headerText={"Tech -"} spanClasses={'text-zinc-800 -mt-5 sm:-mt-6 md:-mt-8 lg:-mt-14 '} spanText={'Stack'}/>
+                <H2element additionalClasses={'text-red-600 text-5xl md:text-6xl lg:text-8xl flex flex-col text-left '} headerText={"Dev"} spanClasses={'text-zinc-800 -mt-5 sm:-mt-6 md:-mt-8 lg:-mt-14 '} spanText={'kit.'}/>
             </div>
 
             <div className="flex flex-col gap-2 md:gap-4  w-full justify-center ">
