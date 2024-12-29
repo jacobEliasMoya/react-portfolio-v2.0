@@ -653,6 +653,10 @@ video {
   margin-bottom: 0.25rem;
 }
 
+.mt-4 {
+  margin-top: 1rem;
+}
+
 .mt-8 {
   margin-top: 2rem;
 }
@@ -1320,8 +1324,8 @@ video {
   grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
-.grid-cols-3 {
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+.grid-cols-4 {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
 }
 
 .flex-row {
@@ -1544,6 +1548,10 @@ video {
   padding-bottom: 1.5rem;
 }
 
+.\!pl-0 {
+  padding-left: 0px !important;
+}
+
 .pb-0 {
   padding-bottom: 0px;
 }
@@ -1556,28 +1564,12 @@ video {
   padding-bottom: 1.75rem;
 }
 
-.pl-0 {
-  padding-left: 0px;
-}
-
-.pr-0 {
-  padding-right: 0px;
-}
-
 .pt-3 {
   padding-top: 0.75rem;
 }
 
 .pt-6 {
   padding-top: 1.5rem;
-}
-
-.\!pl-0 {
-  padding-left: 0px !important;
-}
-
-.\!pr-0 {
-  padding-right: 0px !important;
 }
 
 .text-left {
@@ -1862,10 +1854,6 @@ video {
     order: 3;
   }
 
-  .md\:col-span-1 {
-    grid-column: span 1 / span 1;
-  }
-
   .md\:-mt-8 {
     margin-top: -2rem;
   }
@@ -2047,13 +2035,8 @@ video {
     animation: fall .4s 2.25s ease-out forwards;
   }
 
-  .md\:columns-2 {
-    -moz-columns: 2;
-         columns: 2;
-  }
-
-  .md\:grid-cols-6 {
-    grid-template-columns: repeat(6, minmax(0, 1fr));
+  .md\:grid-cols-8 {
+    grid-template-columns: repeat(8, minmax(0, 1fr));
   }
 
   .md\:flex-row {
@@ -2064,12 +2047,20 @@ video {
     gap: 3rem;
   }
 
+  .md\:gap-2 {
+    gap: 0.5rem;
+  }
+
   .md\:gap-4 {
     gap: 1rem;
   }
 
   .md\:gap-6 {
     gap: 1.5rem;
+  }
+
+  .md\:gap-8 {
+    gap: 2rem;
   }
 
   .md\:text-pretty {
@@ -2133,14 +2124,6 @@ video {
 
   .md\:pb-8 {
     padding-bottom: 2rem;
-  }
-
-  .md\:pl-8 {
-    padding-left: 2rem;
-  }
-
-  .md\:pr-8 {
-    padding-right: 2rem;
   }
 
   .md\:pt-10 {
@@ -2231,8 +2214,16 @@ video {
     min-width: 24rem;
   }
 
-  .lg\:grid-cols-3 {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+  .lg\:grid-cols-4 {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
+  .lg\:gap-12 {
+    gap: 3rem;
+  }
+
+  .lg\:gap-4 {
+    gap: 1rem;
   }
 
   .lg\:gap-6 {
@@ -2242,6 +2233,11 @@ video {
   .lg\:text-3xl {
     font-size: 1.875rem;
     line-height: 2.25rem;
+  }
+
+  .lg\:text-7xl {
+    font-size: 4.5rem;
+    line-height: 1;
   }
 
   .lg\:text-8xl {

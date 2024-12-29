@@ -1,10 +1,9 @@
-import { FaArtstation, FaBootstrap, FaCss3Alt, FaDrupal, FaFigma, FaHtml5, FaJs, FaPhp, FaReact, FaSass, FaShopify, FaSquare, FaSquarespace, FaWix, FaWordpress } from 'react-icons/fa'
+import {  FaBootstrap, FaCss3Alt,  FaFigma, FaHtml5,  FaPhp, FaReact, FaSass, FaShopify,  FaSquarespace, FaWix, FaWordpress } from 'react-icons/fa'
 import H2element from '../components/headers/H2element'
 import Paragraph from '../components/Paragraph'
 import { ReactElement, useEffect, useState } from 'react'
-import { DiPhotoshop } from 'react-icons/di'
-import { SiAdobephotoshop } from 'react-icons/si'
-import { BiLogoJavascript, BiLogoTypescript } from 'react-icons/bi'
+import { SiAdobeillustrator, SiAdobephotoshop, SiKrita } from 'react-icons/si'
+import {  BiLogoTypescript } from 'react-icons/bi'
 import { RiJavascriptFill } from 'react-icons/ri'
 
 interface Skills {
@@ -70,12 +69,24 @@ const CodingLanguages = () => {
         {
             icon: <FaShopify />,
             animation: 'animate-fallTwelve md:animate-fallNine',
-            name: 'Shopify',
+            name: 'Squarespace',
             category: 'builder'
         },
         {
             name: 'Wordpress',
             icon: <FaWordpress />,
+            animation: 'animate-fallEleven md:animate-fallTen1',
+            category: 'builder'
+        },
+        {
+            icon: <FaSquarespace />,
+            animation: 'animate-fallTwelve md:animate-fallNine',
+            name: 'Shopify',
+            category: 'builder'
+        },
+        {
+            name: 'WIX',
+            icon: <FaWix />,
             animation: 'animate-fallEleven md:animate-fallTen1',
             category: 'builder'
         },
@@ -86,13 +97,24 @@ const CodingLanguages = () => {
             category: 'design'
         },
         {
+            icon: <SiAdobeillustrator />,
+            animation: 'animate-fallEleven md:animate-fallTen1',
+            name: 'Illustrator',
+            category: 'design'
+        },
+        {
             icon: <FaFigma />,
             animation: 'animate-fallTwelve md:animate-fallNine',
             name: 'Figma',
             category: 'design'
         },
         
-        
+        {
+            icon: <SiKrita />,
+            animation: 'animate-fallTwelve md:animate-fallNine',
+            name: 'Krita',
+            category: 'design'
+        },
     ]
 
     const [usedTech,setUsedTech] = useState<Array<Skills>>();
@@ -116,14 +138,14 @@ const CodingLanguages = () => {
             </div>
         </div>
 
-        <div className=" mt-8 w-full grid grid-cols-2 lg:grid-cols-3 pb-4 md:pb-10 font-ultra text-zinc-800 justify-between z-10 text-left ">
+        <div className="gap-4 md:gap-8 mt-8 w-full grid grid-cols-2 lg:grid-cols-4 pb-4 md:pb-10 font-ultra text-zinc-800  z-10 text-left justify-start ">
            
-        <div className="w-full p-0 pb-0 md:pb-8 px-0 md:px-8 md:p-8 !pl-0 rounded-2xl  col-span-2 md:col-span-1">
+            <div className="w-full p-0 pb-0 md:pb-8 px-0 !pl-0 rounded-2xl col-span-2">
 
                 <H2element additionalClasses={'text-red-600 text-md md:text-2xl flex flex-col pb-4  '} headerText={"Web Dev"} spanClasses={undefined} spanText={undefined}/>
                 <Paragraph text={""} classes={' text-sm md:text-lg lg:text-xl xl:text-2xl text-center w-full mx-auto   text-pretty '}/>
 
-                <ul className=' columns-2 text-sm md:text-md xl:text-lg '>
+                <ul className=' columns-2 text-sm md:text-md xl:text-lg gap-4 md:gap-8'>
                     {usedTech ? usedTech.filter((item=>item.category == 'programming')).map((item)=>(
                         <li className='bg-red-600 text-white p-2 rounded tracking-wider mb-1'> {item.name} </li>
                     )) : null}
@@ -131,12 +153,12 @@ const CodingLanguages = () => {
                 
             </div>
 
-            <div className="w-full p-6 pl-0 md:pl-8 md:p-8 rounded-2xl ">
+            <div className="w-full ">
 
             <H2element additionalClasses={'text-red-600 text-md md:text-2xl pb-4 flex flex-col  '} headerText={"Web Design"} spanClasses={undefined} spanText={undefined}/>
             <Paragraph text={""} classes={' text-sm md:text-lg lg:text-xl xl:text-2xl text-center md:text-left w-full mx-auto  text-pretty'}/>
 
-            <ul className='md:columns-2 text-sm md:text-md xl:text-lg '>
+            <ul className='text-sm md:text-md xl:text-lg '>
                 {usedTech ? usedTech.filter((item=>item.category == 'design')).map((item)=>(
                         <li className='bg-red-600 text-white p-2 rounded tracking-wider mb-1'> {item.name} </li>
                     )) : null}
@@ -145,12 +167,12 @@ const CodingLanguages = () => {
            </div>
      
 
-           <div className="w-full p-6 !pr-0  md:p-8 rounded-2xl ">
+           <div className="w-full  ">
 
             <H2element additionalClasses={'text-red-600 text-md md:text-2xl pb-4 flex flex-col  '} headerText={"Web Builders"} spanClasses={undefined} spanText={undefined}/>
             <Paragraph text={""} classes={' text-sm md:text-lg lg:text-xl xl:text-2xl text-center w-full mx-auto text-pretty '}/>
 
-            <ul className='md:columns-2 text-sm md:text-md xl:text-lg '>
+            <ul className=' text-sm md:text-md xl:text-lg '>
                 {usedTech ? usedTech.filter((item=>item.category == 'builder')).map((item)=>(
                         <li className='bg-red-600 text-white p-2 rounded tracking-wider mb-1'> {item.name} </li>
                     )) : null}
@@ -161,7 +183,7 @@ const CodingLanguages = () => {
 
         </div>
                 
-        <div className="w-full gap-2 md:gap-4 lg:gap-6 xl:gap-8 grid grid-cols-3 md:grid-cols-6 flex-wrap text-white  relative z-10 text-5xl md:text-3xl  lg:text-8xl ">
+        <div className="w-full gap-2 md:gap-4 lg:gap-6 xl:gap-8 grid grid-cols-4 md:grid-cols-8 flex-wrap text-white  relative z-10 text-3xl md:text-3xl  lg:text-7xl mt-4">
 
             {usedTech ? usedTech.map((item)=>(
                 <div className={` flex items-center justify-center gap-4 bg-zinc-900 p-4 rounded md:rounded-2xl md:hover:-translate-y-2 md:hover:drop-shadow-md transition-all`} >

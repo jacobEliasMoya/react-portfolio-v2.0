@@ -30,10 +30,10 @@ return (
 
         <div className="transition-all z-10 rounded-full relative w-full flex justify-center items-center flex-col md:flex-row opacity-100 p-4 gap-6  md:gap-12">
 
-            <div className="w-full md:gap-4 flex items-center justify-center flex-row flex-wrap text-white tracking-widest text-lg  font-ultra !text-balance order-2 md:order-1">
+            <div className="w-full md:gap-2 lg:gap-4 flex items-center justify-center flex-row flex-wrap text-white tracking-widest text-lg  font-ultra !text-balance order-2 md:order-1">
 
                 <Paragraph text={"Frontend."} classes={'w-full md:w-max'}/>
-                <Paragraph text={"ReactJS."} classes={'w-full md:w-max'}/>
+                <Paragraph text={"ReactJS."} classes={'w-full md:w-max'}/> 
                 <Paragraph text={"California."} classes={'w-full md:w-max'}/>                
 
             </div>
@@ -51,7 +51,7 @@ return (
                 </div>
             </div>
 
-            <div className="w-full gap-5 md:gap-12  flex items-center justify-center flex-row flex-wrap order-2 md:order-3 text-white text-3xl md:text-4xl ">
+            <div className="w-full gap-4 lg:gap-12 flex items-center justify-center flex-row flex-wrap order-2 md:order-3 text-white text-3xl md:text-4xl ">
                 
                 <a href="tel:+19096446073" title=" Call Jacob Now" className="cursor-none" aria-label="Call Jacob Now">
                     <FaMobile className="  transition-all  active:scale-125  md:hover:-translate-y-2 md:hover:drop-shadow-md"/> 
