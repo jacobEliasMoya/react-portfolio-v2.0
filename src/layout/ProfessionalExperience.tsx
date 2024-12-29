@@ -3,7 +3,7 @@ import Paragraph from "../components/Paragraph"
 
 const ProfessionalExperience = () => {
     return (
-        <section className="transition-all w-[calc(100vw_-_3em)] md:w-[calc(100vw_-_5em)] bg-white flex justify-start flex-wrap flex-col overflow-hidden mx-auto pt-7 md:pt-10 pb-9 md:pb-14 px-6 md:mt-6 rounded-xl mb-4">
+        <section className="transition-all w-full bg-white flex justify-start flex-wrap flex-col overflow-hidden   p-6 md:p-8 py-6 md:py-10">
             <div className="w-full flex gap-8 relative z-10">
                 
                 <div className="flex flex-col" >            
@@ -16,13 +16,13 @@ const ProfessionalExperience = () => {
                 </div>
             </div>
 
-            <div className="w-full flex-col gap-8 flex py-10 md:py-14 lg:py-18 font-ultra text-zinc-800  justify-between z-10">
+            <div className="w-full flex-col gap-8 flex py-10 md:py-14 lg:py-18 font-ultra text-zinc-800 text-center md:text-left justify-between z-10">
                 
-                <Paragraph text={"I am just using some text for now, will fill in later and add a few different elements later."} classes={' text-md md:text-lg lg:text-xl xl:text-2xl text-center w-full mx-auto rounded-2xl'}/>
+                <Paragraph text={"I am just using some text for now, will fill in later and add a few different elements later."} classes={' text-md md:text-lg lg:text-xl xl:text-2xl  w-full mx-auto rounded-2xl'}/>
 
-                <Paragraph text={"I am just using some text for now, will fill in later and add a few different elements later."} classes={' text-md md:text-lg lg:text-xl xl:text-2xl text-center w-full mx-auto rounded-2xl'}/>
+                <Paragraph text={"I am just using some text for now, will fill in later and add a few different elements later."} classes={' text-md md:text-lg lg:text-xl xl:text-2xl  w-full mx-auto rounded-2xl'}/>
 
-                <Paragraph text={"I am just using some text for now, will fill in later and add a few different elements later."} classes={' text-md md:text-lg lg:text-xl xl:text-2xl text-center w-full mx-auto rounded-2xl'}/>
+                <Paragraph text={"I am just using some text for now, will fill in later and add a few different elements later."} classes={' text-md md:text-lg lg:text-xl xl:text-2xl  w-full mx-auto rounded-2xl'}/>
 
             </div>
                 
