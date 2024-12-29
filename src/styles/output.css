@@ -1384,6 +1384,10 @@ video {
   gap: 2rem;
 }
 
+.gap-3 {
+  gap: 0.75rem;
+}
+
 .justify-self-start {
   justify-self: start;
 }

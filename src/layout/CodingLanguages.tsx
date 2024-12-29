@@ -116,7 +116,7 @@ const CodingLanguages = () => {
             </div>
         </div>
 
-        <div className=" mt-8 w-full grid grid-cols-2 lg:grid-cols-3 gap-6 xl:gap-8 pb-6 md:pb-10 font-ultra text-zinc-800 justify-between z-10 text-left ">
+        <div className=" mt-8 w-full grid grid-cols-2 lg:grid-cols-3 gap-2 xl:gap-8 pb-6 md:pb-10 font-ultra text-zinc-800 justify-between z-10 text-left ">
            
         <div className="w-full p-6 md:p-8 rounded-2xl bg-stone-200 col-span-2 md:col-span-1">
 
