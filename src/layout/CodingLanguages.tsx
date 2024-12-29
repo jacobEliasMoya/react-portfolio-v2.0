@@ -118,7 +118,7 @@ const CodingLanguages = () => {
 
         <div className=" mt-8 w-full grid grid-cols-2 lg:grid-cols-3 pb-4 md:pb-10 font-ultra text-zinc-800 justify-between z-10 text-left ">
            
-        <div className="w-full p-0 pb-0 md:pb-8 px-0 md:px-8 md:p-8 rounded-2xl  col-span-2 md:col-span-1">
+        <div className="w-full p-0 pb-0 md:pb-8 px-0 md:px-8 md:p-8 !pl-0 rounded-2xl  col-span-2 md:col-span-1">
 
                 <H2element additionalClasses={'text-red-600 text-md md:text-2xl flex flex-col pb-4  '} headerText={"Web Dev"} spanClasses={undefined} spanText={undefined}/>
                 <Paragraph text={""} classes={' text-sm md:text-lg lg:text-xl xl:text-2xl text-center w-full mx-auto   text-pretty '}/>
@@ -145,7 +145,7 @@ const CodingLanguages = () => {
            </div>
      
 
-           <div className="w-full p-6 pr-0 md:pr-8 md:p-8 rounded-2xl ">
+           <div className="w-full p-6 !pr-0  md:p-8 rounded-2xl ">
 
             <H2element additionalClasses={'text-red-600 text-md md:text-2xl pb-4 flex flex-col  '} headerText={"Web Builders"} spanClasses={undefined} spanText={undefined}/>
             <Paragraph text={""} classes={' text-sm md:text-lg lg:text-xl xl:text-2xl text-center w-full mx-auto text-pretty '}/>
