@@ -34,13 +34,13 @@ const CodingLanguages = () => {
             icon: <FaCss3Alt />,
             animation: 'animate-fallSeven',
             name: 'CSS3',
-            category: 'design'
+            category: 'programming'
         },
         {
             icon: <FaSass />,
             animation: 'animate-fallEight',
             name: 'SCSS',
-            category: 'design'
+            category: 'programming'
         },
         {
             icon: <RiJavascriptFill />,
@@ -116,45 +116,43 @@ const CodingLanguages = () => {
             </div>
         </div>
 
-        <div className=" mt-8 w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2 md:gap-4 lg:gap-6 xl:gap-8 pb-10 font-ultra text-zinc-800 text-left justify-between z-10 ">
+        <div className=" mt-8 w-full grid grid-cols-2 lg:grid-cols-3 gap-6 xl:gap-8 pb-6 md:pb-10 font-ultra text-zinc-800 justify-between z-10 text-left ">
            
-            {/* <Paragraph text={"I utilize HTML5, CSS, SCSS, Tailwind, React, JavaScript, TypeScript, & WordPress to create. Adobe Suite for the artsy stuff, and Figma for design."} classes={' text-sm md:text-lg lg:text-xl xl:text-2xl text-center md:text-left w-full mx-auto w-1/2 text-pretty'}/> */}
+        <div className="w-full p-6 md:p-8 rounded-2xl bg-stone-200 col-span-2 md:col-span-1">
 
-            <div className="w-full p-6 md:p-8 rounded-2xl  bg-stone-200 ">
-
-                <H2element additionalClasses={'text-red-600 text-2xl flex flex-col pb-4  font-retro'} headerText={"Programming"} spanClasses={undefined} spanText={undefined}/>
+                <H2element additionalClasses={'text-red-600 text-sl md:text-2xl flex flex-col pb-4  '} headerText={"Web Dev"} spanClasses={undefined} spanText={undefined}/>
                 <Paragraph text={""} classes={' text-sm md:text-lg lg:text-xl xl:text-2xl text-center w-full mx-auto   text-pretty '}/>
 
-                <ul className=' columns-2 text-sm md:text-md xl:text-lg tracking-widest'>
+                <ul className=' columns-2 text-sm md:text-md xl:text-lg '>
                     {usedTech ? usedTech.filter((item=>item.category == 'programming')).map((item)=>(
-                        <li className=' flex flex-row items-center gap-4'> {item.name} </li>
+                        <li className=' '> {item.name} </li>
                     )) : null}
                 </ul>
                 
             </div>
 
-           <div className="w-full bg-stone-200 p-8 rounded-2xl">
+            <div className="w-full p-6 md:p-8 rounded-2xl bg-stone-200">
 
-            <H2element additionalClasses={'text-red-600 text-2xl pb-4 flex flex-col  font-retro'} headerText={"Web Design"} spanClasses={undefined} spanText={undefined}/>
+            <H2element additionalClasses={'text-red-600 text-sl md:text-2xl pb-4 flex flex-col  '} headerText={"Web Design"} spanClasses={undefined} spanText={undefined}/>
             <Paragraph text={""} classes={' text-sm md:text-lg lg:text-xl xl:text-2xl text-center md:text-left w-full mx-auto  text-pretty'}/>
 
-            <ul className='columns-2 text-sm md:text-md xl:text-lg tracking-widest'>
+            <ul className='md:columns-2 text-sm md:text-md xl:text-lg '>
                 {usedTech ? usedTech.filter((item=>item.category == 'design')).map((item)=>(
-                    <li className=' flex flex-row items-center gap-4'> {item.name} </li>
+                        <li className=' '> {item.name} </li>
                 )) : null}
             </ul>
             
            </div>
      
 
-           <div className="w-full bg-stone-200 p-8 rounded-2xl">
+           <div className="w-full p-6 md:p-8 rounded-2xl bg-stone-200">
 
-            <H2element additionalClasses={'text-red-600 text-2xl pb-4 flex flex-col  font-retro'} headerText={"website builders"} spanClasses={undefined} spanText={undefined}/>
+            <H2element additionalClasses={'text-red-600 text-sl md:text-2xl pb-4 flex flex-col  '} headerText={"Web Builders"} spanClasses={undefined} spanText={undefined}/>
             <Paragraph text={""} classes={' text-sm md:text-lg lg:text-xl xl:text-2xl text-center w-full mx-auto text-pretty '}/>
 
-            <ul className='columns-2  text-sm md:text-md xl:text-lg tracking-widest'>
+            <ul className='md:columns-2 text-sm md:text-md xl:text-lg '>
                 {usedTech ? usedTech.filter((item=>item.category == 'builder')).map((item)=>(
-                    <li className=' flex flex-row items-center gap-4'> {item.name} </li>
+                        <li className=' '> {item.name} </li>
                 )) : null}
             </ul>
 
