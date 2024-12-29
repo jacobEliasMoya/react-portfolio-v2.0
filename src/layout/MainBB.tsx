@@ -15,8 +15,8 @@ const MainBB = () => {
     },[])
 
 return (
-<section className='gap-5 transition-all w-full min-h-screen  bg-red-600 flex items-center justify-between p-6 md:p-8 py-6 md:py-10 flex-wrap flex-col overflow-hidden'>
-    <div className="w-full flex gap-8 ">
+<section className='gap-5 transition-all w-full min-h-screen  bg-red-600 flex items-center justify-between p-6 md:p-8 py-6 md:py-10 flex-wrap flex-col '>
+    <div className="w-full flex gap-8 relative z-30 bg-inherit">
         <div className="flex flex-col" >            
             <H1element additionalClasses={'text-5xl md:text-6xl lg:text-8xl flex flex-col text-left '} headerText={'Design'} spanClasses={'text-white -mt-5 sm:-mt-6 md:-mt-8 lg:-mt-14 '} spanText={'Develop'}/>
         </div> 
@@ -73,7 +73,7 @@ return (
         </div>
     </div>
 
-    <div className="w-full flex gap-8 ">
+    <div className="w-full flex gap-8 pt-4">
     
         <div className="flex flex-col gap-2 md:gap-4 w-full justify-center"> 
             <div className="rounded md:rounded-xl h-4 lg:h-6 bg-zinc-800 w-full"></div>
