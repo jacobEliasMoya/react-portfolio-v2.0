@@ -122,7 +122,7 @@ const CodingLanguages = () => {
 
             <div className="w-full p-6 md:p-8 rounded-2xl  bg-stone-200 ">
 
-                <H2element additionalClasses={'text-red-600 text-2xl flex flex-col  font-retro'} headerText={"Programming"} spanClasses={undefined} spanText={undefined}/>
+                <H2element additionalClasses={'text-red-600 text-2xl flex flex-col pb-4  font-retro'} headerText={"Programming"} spanClasses={undefined} spanText={undefined}/>
                 <Paragraph text={""} classes={' text-sm md:text-lg lg:text-xl xl:text-2xl text-center w-full mx-auto   text-pretty '}/>
 
                 <ul className=' columns-2 text-sm md:text-md xl:text-lg tracking-widest'>
