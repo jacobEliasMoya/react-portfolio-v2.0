@@ -116,44 +116,44 @@ const CodingLanguages = () => {
             </div>
         </div>
 
-        <div className=" mt-8 w-full grid grid-cols-2 lg:grid-cols-3 gap-2 xl:gap-8 pb-6 md:pb-10 font-ultra text-zinc-800 justify-between z-10 text-left ">
+        <div className=" mt-8 w-full grid grid-cols-2 lg:grid-cols-3 pb-6 md:pb-10 font-ultra text-zinc-800 justify-between z-10 text-left ">
            
-        <div className="w-full p-6 md:p-8 rounded-2xl bg-stone-200 col-span-2 md:col-span-1">
+        <div className="w-full p-6 md:p-8 rounded-2xl  col-span-2 md:col-span-1">
 
-                <H2element additionalClasses={'text-red-600 text-sl md:text-2xl flex flex-col pb-4  '} headerText={"Web Dev"} spanClasses={undefined} spanText={undefined}/>
+                <H2element additionalClasses={'text-red-600 text-lg md:text-2xl flex flex-col pb-4  '} headerText={"Web Dev"} spanClasses={undefined} spanText={undefined}/>
                 <Paragraph text={""} classes={' text-sm md:text-lg lg:text-xl xl:text-2xl text-center w-full mx-auto   text-pretty '}/>
 
                 <ul className=' columns-2 text-sm md:text-md xl:text-lg '>
                     {usedTech ? usedTech.filter((item=>item.category == 'programming')).map((item)=>(
-                        <li className=' '> {item.name} </li>
+                        <li className='bg-red-600 text-white p-2 rounded tracking-wider mb-1'> {item.name} </li>
                     )) : null}
                 </ul>
                 
             </div>
 
-            <div className="w-full p-6 md:p-8 rounded-2xl bg-stone-200">
+            <div className="w-full p-6 md:p-8 rounded-2xl ">
 
-            <H2element additionalClasses={'text-red-600 text-sl md:text-2xl pb-4 flex flex-col  '} headerText={"Web Design"} spanClasses={undefined} spanText={undefined}/>
+            <H2element additionalClasses={'text-red-600 text-lg md:text-2xl pb-4 flex flex-col  '} headerText={"Web Design"} spanClasses={undefined} spanText={undefined}/>
             <Paragraph text={""} classes={' text-sm md:text-lg lg:text-xl xl:text-2xl text-center md:text-left w-full mx-auto  text-pretty'}/>
 
             <ul className='md:columns-2 text-sm md:text-md xl:text-lg '>
                 {usedTech ? usedTech.filter((item=>item.category == 'design')).map((item)=>(
-                        <li className=' '> {item.name} </li>
-                )) : null}
+                        <li className='bg-red-600 text-white p-2 rounded tracking-wider mb-1'> {item.name} </li>
+                    )) : null}
             </ul>
             
            </div>
      
 
-           <div className="w-full p-6 md:p-8 rounded-2xl bg-stone-200">
+           <div className="w-full p-6 md:p-8 rounded-2xl ">
 
-            <H2element additionalClasses={'text-red-600 text-sl md:text-2xl pb-4 flex flex-col  '} headerText={"Web Builders"} spanClasses={undefined} spanText={undefined}/>
+            <H2element additionalClasses={'text-red-600 text-lg md:text-2xl pb-4 flex flex-col  '} headerText={"Web Builders"} spanClasses={undefined} spanText={undefined}/>
             <Paragraph text={""} classes={' text-sm md:text-lg lg:text-xl xl:text-2xl text-center w-full mx-auto text-pretty '}/>
 
             <ul className='md:columns-2 text-sm md:text-md xl:text-lg '>
                 {usedTech ? usedTech.filter((item=>item.category == 'builder')).map((item)=>(
-                        <li className=' '> {item.name} </li>
-                )) : null}
+                        <li className='bg-red-600 text-white p-2 rounded tracking-wider mb-1'> {item.name} </li>
+                    )) : null}
             </ul>
 
 
@@ -164,7 +164,7 @@ const CodingLanguages = () => {
         <div className="w-full gap-2 md:gap-4 lg:gap-6 xl:gap-8 grid grid-cols-3 md:grid-cols-6 flex-wrap text-white  relative z-10 text-5xl md:text-3xl  lg:text-8xl ">
 
             {usedTech ? usedTech.map((item)=>(
-                <div className={` flex items-center justify-center gap-4 bg-red-600 p-4 rounded-2xl md:hover:-translate-y-2 md:hover:drop-shadow-md transition-all`} >
+                <div className={` flex items-center justify-center gap-4 bg-zinc-900 p-4 rounded-2xl md:hover:-translate-y-2 md:hover:drop-shadow-md transition-all`} >
                     {item.icon}
                 </div>
             )) : null}

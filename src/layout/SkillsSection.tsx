@@ -276,7 +276,7 @@ const SkillsSection = () => {
 
                                 <div className=" !rounded-none font-ultra duration-200 transition-all w-full p-0 flex flex-col items-center justify-between relative z-10 h-3/6" >
 
-                                    <ButtonWhite buttonText={`View Website`} additionalClasses={"!rounded-none md:!rounded-br-xl md:!rounded-bl-xl rounded-tr-none rounded-tl-none text-sm md:text-lg !w-full relative z-10 !bg-red-500 hover:!bg-red-600 !text-white"} buttonLink={item.codeLink ? item.codeLink : ''} newWindow={true} clickHandle={allowClickThrough}/> 
+                                    <ButtonWhite buttonText={`View Website`} additionalClasses={"!rounded-none md:!rounded-br-xl md:!rounded-bl-xl rounded-tr-none rounded-tl-none text-sm md:text-lg !w-full relative z-10 !bg-red-600 hover:!bg-red-700 !text-white"} buttonLink={item.codeLink ? item.codeLink : ''} newWindow={true} clickHandle={allowClickThrough}/> 
                                    
                                 </div>
 
