@@ -139,7 +139,10 @@ const CodingLanguages = () => {
             </div>
         </div>
 
-        <div className="gap-4 md:gap-8 mt-8 w-full grid grid-cols-2 lg:grid-cols-4 font-ultra text-zinc-800  z-10 text-left justify-start ">
+        {/* <Paragraph text={"test test test test test test test test test test test test test test test test test test test test test test "} classes={'font-ultra text-sm md:text-lg lg:text-xl xl:text-2xl text-center md:text-left w-full mx-auto  text-pretty'}/> */}
+
+
+        <div className="gap-4 md:gap-8 mt-8 w-full grid grid-cols-2 lg:grid-cols-4 font-ultra text-zinc-800  z-10 text-center md:text-left justify-start ">
            
             <div className="w-full p-0  px-0 !pl-0 rounded-2xl col-span-2">
 
@@ -147,8 +150,8 @@ const CodingLanguages = () => {
 
                 <ul className=' columns-2 text-sm md:text-md xl:text-lg gap-4 md:gap-8'>
                     {usedTech ? usedTech.filter((item=>item.category == 'programming')).map((item)=>(
-                         <li className='flex flex-row items-center justify-start gap-2 bg-red-600 text-white p-2 px-3 rounded tracking-wider mb-2'> 
-                         <span className='text-2xl md:text-4xl'>{item.icon}</span>
+                         <li className='flex flex-col md:flex-row items-center justify-start gap-2 bg-red-600 text-white p-2 px-3 rounded tracking-wider mb-2'> 
+                         <span className='text-xl md:text-4xl'>{item.icon}</span>
                          {item.name} 
                        </li>
                     )) : null}
@@ -162,8 +165,8 @@ const CodingLanguages = () => {
 
             <ul className='text-sm md:text-md xl:text-lg '>
                 {usedTech ? usedTech.filter((item=>item.category == 'design')).map((item)=>(
-                        <li className='flex flex-row items-center justify-start gap-2 bg-red-600 text-white p-2 px-3 rounded tracking-wider mb-2'> 
-                         <span className='text-2xl md:text-4xl'>{item.icon}</span>
+                        <li className='flex flex-col md:flex-row items-center justify-start gap-2 bg-red-600 text-white p-2 px-3 rounded tracking-wider mb-2'> 
+                         <span className='text-xl md:text-4xl'>{item.icon}</span>
                          {item.name} 
                         </li>
                     )) : null}
@@ -178,8 +181,8 @@ const CodingLanguages = () => {
 
             <ul className=' text-sm md:text-md xl:text-lg '>
                 {usedTech ? usedTech.filter((item=>item.category == 'builder')).map((item)=>(
-                         <li className='flex flex-row items-center justify-start gap-2 bg-red-600 text-white p-2 px-3 rounded tracking-wider mb-2'> 
-                         <span className='text-2xl md:text-4xl'>{item.icon}</span>
+                         <li className='flex flex-col md:flex-row items-center justify-start gap-2 bg-red-600 text-white p-2 px-3 rounded tracking-wider mb-2'> 
+                         <span className='text-xl md:text-4xl'>{item.icon}</span>
                          {item.name} 
                        </li>
                     )) : null}
