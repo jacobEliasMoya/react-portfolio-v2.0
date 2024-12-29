@@ -228,7 +228,7 @@ const SkillsSection = () => {
     },[boundsLocked])
 
     return (
-        <section id="outer-scroll" className="transition-all w-full bg-zinc-900 flex justify-start flex-wrap flex-col !overflow-hidden py-6 md:py-10 pb-1">
+        <section id="outer-scroll" className="transition-all w-full bg-zinc-900 flex justify-start flex-wrap flex-col !overflow-hidden py-6 md:py-10 ">
 
                 <div className="w-full flex gap-8 px-6 md:px-8 relative z-10">
 
@@ -271,7 +271,6 @@ const SkillsSection = () => {
 
                                 <div className="flex justify-center items-center duration-100 text-md md:text-2xl transition-all w-full bg-white p-4  text-zinc-800 z-10">
                                     <H3element additionalClasses={'relative transition-all tracking-normal'} headerText={item.projectName} spanClasses={''} spanText={''}/>
-                                    <FaWordpress/>
                                 </div>
 
                                 <div className=" !rounded-none font-ultra duration-200 transition-all w-full p-0 flex flex-col items-center justify-between relative z-10 h-3/6" >
