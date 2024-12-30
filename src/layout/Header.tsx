@@ -70,7 +70,7 @@ const Header = () => {
 
       <ul className={` flex justify-center items-center gap-6 md:gap-12 lg:gap-14 w-full max-w-0 `}>
         { navigationElms?.map((item)=>(
-          <li className=" text-xl md:text-sm tracking-widest lg:text-2xl">
+          <li className=" text-2xl md:text-sm tracking-widest lg:text-2xl">
             <a href={item.url} title={item.title} className='flex flex-row items-center justify-center gap-2 md:gap-4'>{item.icon} <span className='hidden md:inline'>{item.name}</span> </a>
           </li>
         )) }

@@ -743,10 +743,6 @@ video {
   width: 100% !important;
 }
 
-.w-0 {
-  width: 0px;
-}
-
 .w-1\/2 {
   width: 50%;
 }
@@ -782,14 +778,6 @@ video {
 .w-max {
   width: -moz-max-content;
   width: max-content;
-}
-
-.w-\[full\] {
-  width: full;
-}
-
-.w-\[0\%\] {
-  width: 0%;
 }
 
 .min-w-12 {
@@ -1646,6 +1634,11 @@ video {
   font-family: Ultra, serif;
 }
 
+.text-2xl {
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+
 .text-3xl {
   font-size: 1.875rem;
   line-height: 2.25rem;
@@ -1733,10 +1726,6 @@ video {
   transition-property: all;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 150ms;
-}
-
-.delay-500 {
-  transition-delay: 500ms;
 }
 
 .duration-100 {
