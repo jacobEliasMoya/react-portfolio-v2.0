@@ -142,7 +142,7 @@ const CodingLanguages = () => {
                 <H2element additionalClasses={'text-zinc-800 text-md md:text-2xl flex flex-col pb-4  '} headerText={"Frontend Development"} spanClasses={undefined} spanText={undefined}/>
                 <ul className=' columns-2 text-sm md:text-md xl:text-lg gap-4 md:gap-8'>
                     {usedTech ? usedTech.filter((item=>item.category == 'programming')).map((item)=>(
-                         <li className='flex flex-col md:flex-row items-center justify-start gap-2 bg-red-600 text-white p-2 px-3 rounded tracking-wider mb-2'> 
+                         <li className='flex flex-col md:flex-row items-center justify-start md:gap-2 bg-red-600 text-white p-2 px-3 rounded tracking-wider mb-2'> 
                          <span className='text-xl md:text-4xl'>{item.icon}</span>
                          {item.name} 
                        </li>
@@ -156,7 +156,7 @@ const CodingLanguages = () => {
             <H2element additionalClasses={'text-zinc-800 text-md md:text-2xl pb-4 flex flex-col  '} headerText={"Web Design"} spanClasses={undefined} spanText={undefined}/>
             <ul className='text-sm md:text-md xl:text-lg '>
                 {usedTech ? usedTech.filter((item=>item.category == 'design')).map((item)=>(
-                        <li className='flex flex-col md:flex-row items-center justify-start gap-2 bg-red-600 text-white p-2 px-3 rounded tracking-wider mb-2'> 
+                        <li className='flex flex-col md:flex-row items-center justify-start md:gap-2 bg-red-600 text-white p-2 px-3 rounded tracking-wider mb-2'> 
                          <span className='text-xl md:text-4xl'>{item.icon}</span>
                          {item.name} 
                         </li>
@@ -171,7 +171,7 @@ const CodingLanguages = () => {
             <H2element additionalClasses={'text-zinc-800 text-md md:text-2xl pb-4 flex flex-col  '} headerText={"Web Builders"} spanClasses={undefined} spanText={undefined}/>
             <ul className=' text-sm md:text-md xl:text-lg '>
                 {usedTech ? usedTech.filter((item=>item.category == 'builder')).map((item)=>(
-                         <li className='flex flex-col md:flex-row items-center justify-start gap-2 bg-red-600 text-white p-2 px-3 rounded tracking-wider mb-2'> 
+                         <li className='flex flex-col md:flex-row items-center justify-start md:gap-2 bg-red-600 text-white p-2 px-3 rounded tracking-wider mb-2'> 
                          <span className='text-xl md:text-4xl'>{item.icon}</span>
                          {item.name} 
                        </li>
