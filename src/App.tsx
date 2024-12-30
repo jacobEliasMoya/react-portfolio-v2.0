@@ -22,7 +22,7 @@ function App() {
 
   return (  
 
-    <div className="bg-red-800 font-retro text-zinc-800 w-full h-max relative cursor-none overflow-hidden">
+    <div className="scroll-smooth bg-red-800 font-retro text-zinc-800 w-full h-max relative cursor-none overflow-hidden">
       <Header/>
       <MainBB />
       <CodingLanguages/>

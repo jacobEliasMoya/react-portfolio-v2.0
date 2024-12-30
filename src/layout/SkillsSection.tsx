@@ -15,7 +15,6 @@ import p8Img from "../assets/projects/kidskingdom1.png";
 
 import ButtonWhite from "../components/buttons/ButtonWhite";
 import Paragraph from "../components/Paragraph";
-import { FaWordpress } from "react-icons/fa";
  
 interface Spotlight {
     id:number,
