@@ -227,22 +227,23 @@ const SkillsSection = () => {
     },[boundsLocked])
 
     return (
-        <section id="outer-scroll" className="transition-all w-full bg-zinc-800 flex justify-start flex-wrap flex-col !overflow-hidden py-6 md:py-10 ">
+        <section id="outer-scroll" className="transition-all w-11/12 rounded-lg my-8 md:my-20 bg-white flex justify-start flex-wrap flex-col overflow-hidden mx-auto pb-7 md:pb-12 pt-6 md:pt-10 ">
+
 
                 <div className="w-full flex gap-8 px-6 md:px-8 relative z-10">
 
-                    <div className="flex flex-col" >            
-                        <H2element additionalClasses={'text-red-600 text-5xl md:text-6xl lg:text-8xl flex flex-col text-left '} headerText={"spot-"} spanClasses={'text-white -mt-5 sm:-mt-6 md:-mt-8 lg:-mt-14'} spanText={'light'}/>
-                    </div>
+                <div className="flex flex-col text-center" >            
+                    <H2element additionalClasses={'text-red-600 text-5xl md:text-6xl lg:text-8xl flex flex-col text-left '} headerText={"Spot"} spanClasses={'text-zinc-800 -mt-5 sm:-mt-6 md:-mt-8 lg:-mt-14 '} spanText={'Light'}/>
+                </div>
 
-                    <div className="flex flex-col gap-2 md:gap-4 w-full justify-center ">
-                        <div className="rounded md:rounded-xl h-4 lg:h-6 bg-red-600 w-full "></div>
-                        <div className="rounded md:rounded-xl h-10 lg:h-20 bg-white w-full "></div>
-                    </div>
+                <div className="flex flex-col gap-2 md:gap-4  w-full justify-center ">
+                    <div className="rounded md:rounded-xl h-4 lg:h-6 bg-red-600 w-full"></div>
+                    <div className="rounded md:rounded-xl h-10 lg:h-20 bg-zinc-800 w-full"></div>
+                </div>
                     
                 </div>
 
-                <div className="w-full flex gap-8 px-6 md:px-8  py-12 md:py-14 lg:py-18 font-ultra text-white  justify-center  relative z-10 ">
+                <div className="w-full flex gap-8 px-6 md:px-8  py-12 md:py-14 lg:py-18 font-ultra   justify-center  relative z-10 ">
 
                     <Paragraph text={"Drag or swipe right to view my selected works. I have been helping small mom and pop business grow with a, to business with multiple locations across the US. "} classes={' text-md md:text-lg lg:text-xl xl:text-2xl text-center md:text-left w-full mx-auto rounded-2xl tracking-wider'}/>
 
@@ -254,13 +255,13 @@ const SkillsSection = () => {
                     onDrag={handleScroll}
                     bounds={{right:0, left:dragBoundsLeft}}
                 >
-                    <div id="drag-item" className="z-10 min-w-full md:w-max h-auto mx-auto justify-self-end flex justify-start items-start gap-1  pt-3 ">
+                    <div id="drag-item" className="z-10 min-w-full md:w-max h-auto mx-auto justify-self-end flex justify-start items-start pt-3">
                         {/* mapping out projects, no need to fetch anything */}
                         {spotlight && startingArrNum ? spotlight
                         // .filter((item=>item.id < startingArrNum))
                         .map((item)=>(
 
-                            <div id={`${item.id}`} className={` text-center md:rounded-lg w-[60vw] md:w-[85vw]  max-w-[450px] relative md:drop-shadow-[-.25em_.25em_.05em_rgba(0,0,0,0.4)] flex flex-col item-center justify-end md:hover:-translate-y-3  transition-all duration-200 overflow-hidden`}>
+                            <div id={`${item.id}`} className={` border-l-2 border-zinc-800  text-center w-[60vw] md:w-[85vw]  max-w-[450px] relative  flex flex-col item-center justify-end transition-all duration-200 overflow-hidden font-ultra`}>
                                 
                                 <div className="duration-500 transition-all bg-cover bg-center w-full  min-h-72 md:min-h-96 "
                                     style={{
@@ -268,11 +269,11 @@ const SkillsSection = () => {
                                     }}
                                 ></div>
 
-                                <div className="flex justify-center items-center duration-100 text-md md:text-2xl transition-all w-full bg-white p-4  text-zinc-800 z-10">
-                                    <H3element additionalClasses={'relative transition-all tracking-normal'} headerText={item.projectName} spanClasses={''} spanText={''}/>
+                                <div className="flex justify-center items-center duration-100 text-md md:text-2xl transition-all w-full text-white p-4  bg-zinc-800 z-10">
+                                    <H3element additionalClasses={'relative transition-all tracking-widest'} headerText={item.projectName} spanClasses={''} spanText={''}/>
                                 </div>
 
-                                <div className=" font-ultra duration-200 transition-all w-full p-0 flex flex-col items-center justify-between relative z-10 h-3/6" >
+                                <div className="  duration-200 transition-all w-full p-0 flex flex-col items-center justify-between relative z-10 h-3/6" >
 
                                     <ButtonWhite buttonText={`View Website`} additionalClasses={"!rounded-none rounded-tr-none rounded-tl-none text-sm md:text-lg !w-full relative z-10 !bg-red-600 hover:!bg-red-700 !text-white"} buttonLink={item.codeLink ? item.codeLink : ''} newWindow={true} clickHandle={allowClickThrough}/> 
                                    
