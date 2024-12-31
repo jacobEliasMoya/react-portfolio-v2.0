@@ -255,7 +255,7 @@ const SkillsSection = () => {
                     onDrag={handleScroll}
                     bounds={{right:0, left:dragBoundsLeft}}
                 >
-                    <div id="drag-item" className="mt-24 gap-4 z-10 min-w-full md:w-max h-auto mx-auto justify-self-end flex justify-start items-start pt-3 px-4">
+                    <div id="drag-item" className="mt-12 md:mt-16 gap-4 z-10 min-w-full md:w-max h-auto mx-auto justify-self-end flex justify-start items-start pt-3 px-4">
                         {/* mapping out projects, no need to fetch anything */}
                         {spotlight && startingArrNum ? spotlight
                         // .filter((item=>item.id < startingArrNum))
@@ -263,7 +263,7 @@ const SkillsSection = () => {
 
                             <div id={`${item.id}`} className={`rounded-xl text-center w-[450px] max-w-[75vw] relative transition-all duration-200  font-ultra p-4 grid grid-cols-4 gap-2 `}>
                                 
-                                <H3element additionalClasses={' font-retro drop-shadow-xl shadow-red-900 absolute -top-32 -right-5 -z-10 text-[10em] transition-all tracking-widest text-red-700'} headerText={`${item.id}`} spanClasses={''} spanText={''}/>
+                                <H3element additionalClasses={' font-retro drop-shadow-xl shadow-red-900 absolute -top-28 -right-5 -z-10 text-[10em] transition-all tracking-widest text-red-700'} headerText={`${item.id}`} spanClasses={''} spanText={''}/>
 
 
                                 <div className="rounded-md col-span-3 duration-500 transition-all bg-cover bg-center w-full min-h-72 translate"
@@ -278,8 +278,11 @@ const SkillsSection = () => {
 
                                 <div className="col-span-4  duration-200 transition-all w-full p-0 flex flex-col items-center justify-between relative z-10 h-3/6" >
 
+                                    
                                     <ButtonWhite buttonText={`View Website`} additionalClasses={"rounded-md text-sm md:text-md !w-full relative z-10 !bg-red-600 hover:!bg-red-700 !text-white !py-3"} buttonLink={item.codeLink ? item.codeLink : ''} newWindow={true} clickHandle={allowClickThrough}/> 
                                    
+                                    <Paragraph text={item.projectDexcription} classes={'mt-2 !text-balance'}/>
+
                                 </div>
 
                             </div>
