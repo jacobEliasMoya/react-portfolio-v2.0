@@ -227,7 +227,7 @@ const SkillsSection = () => {
     },[boundsLocked])
 
     return (
-        <section id="outer-scroll" className="transition-all w-11/12 rounded-lg my-8 md:my-20 bg-white flex justify-start flex-wrap flex-col overflow-hidden mx-auto pb-7 md:pb-12 pt-6 md:pt-10 ">
+        <section id="outer-scroll" className="transition-all w-11/12 rounded-lg my-8 md:my-20 bg-white flex justify-start flex-wrap flex-col overflow-hidden mx-auto py-6 md:py-10 ">
 
 
                 <div className="w-full flex gap-8 px-6 md:px-8 relative z-10">
@@ -243,11 +243,11 @@ const SkillsSection = () => {
                     
                 </div>
 
-                <div className="w-full flex gap-8 px-6 md:px-8  py-12 md:py-14 lg:py-18 font-ultra   justify-center  relative z-10 ">
+                {/* <div className="w-full flex gap-8 px-6 md:px-8  py-12 md:py-14 lg:py-18 font-ultra   justify-center  relative z-10 ">
 
                     <Paragraph text={"Drag or swipe right to view my selected works. I have been helping small mom and pop business grow with a, to business with multiple locations across the US. "} classes={' text-md md:text-lg lg:text-xl xl:text-2xl text-center md:text-left w-full mx-auto rounded-2xl tracking-wider'}/>
 
-                </div>
+                </div> */}
 
                 <Draggable 
                     axis="x"
@@ -255,27 +255,30 @@ const SkillsSection = () => {
                     onDrag={handleScroll}
                     bounds={{right:0, left:dragBoundsLeft}}
                 >
-                    <div id="drag-item" className="z-10 min-w-full md:w-max h-auto mx-auto justify-self-end flex justify-start items-start pt-3">
+                    <div id="drag-item" className="mt-24 gap-4 z-10 min-w-full md:w-max h-auto mx-auto justify-self-end flex justify-start items-start pt-3 px-4">
                         {/* mapping out projects, no need to fetch anything */}
                         {spotlight && startingArrNum ? spotlight
                         // .filter((item=>item.id < startingArrNum))
                         .map((item)=>(
 
-                            <div id={`${item.id}`} className={` border-l-2 border-zinc-800  text-center w-[60vw] md:w-[85vw]  max-w-[450px] relative  flex flex-col item-center justify-end transition-all duration-200 overflow-hidden font-ultra`}>
+                            <div id={`${item.id}`} className={`rounded-xl text-center w-[450px] max-w-[75vw] relative transition-all duration-200  font-ultra p-4 grid grid-cols-4 gap-2 `}>
                                 
-                                <div className="duration-500 transition-all bg-cover bg-center w-full  min-h-72 md:min-h-96 "
+                                <H3element additionalClasses={' font-retro drop-shadow-xl shadow-red-900 absolute -top-32 -right-5 -z-10 text-[10em] transition-all tracking-widest text-red-700'} headerText={`${item.id}`} spanClasses={''} spanText={''}/>
+
+
+                                <div className="rounded-md col-span-3 duration-500 transition-all bg-cover bg-center w-full min-h-72 translate"
                                     style={{
                                     backgroundImage:`url(${item.projectLink})`, 
                                     }}
                                 ></div>
 
-                                <div className="flex justify-center items-center duration-100 text-md md:text-2xl transition-all w-full text-white p-4  bg-zinc-800 z-10">
-                                    <H3element additionalClasses={'relative transition-all tracking-widest'} headerText={item.projectName} spanClasses={''} spanText={''}/>
+                                <div className="rounded-md  flex justify-center items-center duration-100 text-md transition-all w-full text-white p-4  bg-zinc-800 z-10">
+                                    <H3element additionalClasses={'relative transition-all tracking-widest !text-nowrap rotate-90'} headerText={item.projectName} spanClasses={''} spanText={''}/>
                                 </div>
 
-                                <div className="  duration-200 transition-all w-full p-0 flex flex-col items-center justify-between relative z-10 h-3/6" >
+                                <div className="col-span-4  duration-200 transition-all w-full p-0 flex flex-col items-center justify-between relative z-10 h-3/6" >
 
-                                    <ButtonWhite buttonText={`View Website`} additionalClasses={"!rounded-none rounded-tr-none rounded-tl-none text-sm md:text-lg !w-full relative z-10 !bg-red-600 hover:!bg-red-700 !text-white"} buttonLink={item.codeLink ? item.codeLink : ''} newWindow={true} clickHandle={allowClickThrough}/> 
+                                    <ButtonWhite buttonText={`View Website`} additionalClasses={"rounded-md text-sm md:text-md !w-full relative z-10 !bg-red-600 hover:!bg-red-700 !text-white !py-3"} buttonLink={item.codeLink ? item.codeLink : ''} newWindow={true} clickHandle={allowClickThrough}/> 
                                    
                                 </div>
 

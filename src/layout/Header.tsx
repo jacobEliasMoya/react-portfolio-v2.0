@@ -60,7 +60,7 @@ const Header = () => {
 
   useEffect(()=>{
       window.innerWidth < 768 ? setHeaderActive(true) : setHeaderActive(false)
-    },[headerActive])
+    },[])
 
   return (
     <header className={`${headerActive ? 'min-w-[calc(100%-2em)] pr-2' : 'min-w-12'} min-h-12 flex items-center justify-center bg-zinc-800 bg-opacity-85 backdrop-blur-lg text-white mx-auto fixed bottom-[1em] left-[1em]  z-40 rounded-full flex-row transition-all ease duration-500 [box-shadow:0_0_.3em_rgba(0,0,0,.45)] font-ultra overflow-hidden `}>

@@ -22,7 +22,7 @@ function App() {
 
   return (  
 
-    <div className="scroll-smooth bg-gradient-to-b from-red-700 to-red-950 font-retro text-zinc-800 w-full h-max relative cursor-none overflow-hidden">
+    <div className="scroll-smooth bg-gradient-to-b from-red-700 to-red-700 font-retro text-zinc-800 w-full h-max relative cursor-none overflow-hidden">
       <Header/>
       <MainBB />
       <CodingLanguages/>
