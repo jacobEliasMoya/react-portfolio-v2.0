@@ -63,9 +63,9 @@ const Header = () => {
     },[])
 
   return (
-    <header className={`${headerActive ? 'min-w-[calc(100%-2em)] pr-2' : 'min-w-12'} min-h-12 flex items-center justify-center bg-zinc-800 bg-opacity-85 backdrop-blur-lg text-white mx-auto fixed bottom-[1em] left-[1em]  z-40 rounded-full flex-row transition-all ease duration-500 [box-shadow:0_0_.3em_rgba(0,0,0,.45)] font-ultra overflow-hidden `}>
+    <header className={`${headerActive ? 'min-w-[calc(100%-2em)] pr-2' : 'min-w-16'} min-h-16 flex items-center justify-center bg-zinc-800 bg-opacity-85 backdrop-blur-lg text-white mx-auto fixed bottom-[1em] left-[1em]  z-40 rounded-full flex-row transition-all ease duration-500  font-ultra overflow-hidden `}>
       <button onClick={handleClick} className='absolute left-0'>
-          <img src={jakeCartoon} alt="" className={`${headerActive ? 'scale-75' : 'scale-100'} h-12 w-12 active:scale-110 transition-all` }/>
+          <img src={jakeCartoon} alt="" className={`${headerActive ? 'scale-75' : 'scale-100'} h-16 w-16 active:scale-110 transition-all` }/>
       </button>
 
       <ul className={` flex justify-center items-center gap-6 md:gap-12 lg:gap-14 w-full max-w-0 `}>

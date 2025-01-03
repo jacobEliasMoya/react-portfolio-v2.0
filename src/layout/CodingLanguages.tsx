@@ -4,6 +4,7 @@ import { ReactElement, useEffect, useState } from 'react'
 import { SiAdobeillustrator, SiAdobephotoshop, SiKrita, SiRedux, SiTailwindcss } from 'react-icons/si'
 import {  BiLogoTypescript } from 'react-icons/bi'
 import { RiJavascriptFill } from 'react-icons/ri'
+import Paragraph from '../components/Paragraph'
 
 interface Skills {
     name: string,
@@ -138,6 +139,9 @@ const CodingLanguages = () => {
         <div className="gap-4 md:gap-8 mt-8 w-full grid grid-cols-2 lg:grid-cols-4 font-ultra text-zinc-800  z-10 text-center md:text-left justify-start ">
            
             <div className="w-full p-0  px-0 !pl-0 rounded-2xl col-span-2">
+
+                {/* <Paragraph text={"I am a Frontend Developer who prides himself on the work I bring to the interwebs. I had to learn a lot of new technologies, loose countless hours of sleep ... Yet, I'm still doing the same - but its what I love, check out the tech I love ."} classes={'px-6 pt-6 md:pt-20 w-11/12 mx-auto font-ultra text-white text-lg  w-full md:w-max'} /> */}
+
 
                 <H2element additionalClasses={'text-zinc-800 text-md md:text-2xl flex flex-col pb-4  '} headerText={"Frontend Development"} spanClasses={undefined} spanText={undefined}/>
                 <ul className=' columns-2 text-sm md:text-md xl:text-lg gap-4 md:gap-8'>

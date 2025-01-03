@@ -4,6 +4,7 @@ import SkillsSection from "./layout/SkillsSection"
 import CodingLanguages from "./layout/CodingLanguages"
 import Header from "./layout/Header"
 import ProfessionalExperience from "./layout/ProfessionalExperience"
+import Paragraph from "./components/Paragraph"
 
 interface MouseXY{
   x:number | undefined,
@@ -24,7 +25,7 @@ function App() {
 
     <div className="scroll-smooth bg-gradient-to-b from-red-700 to-red-700 font-retro text-zinc-800 w-full h-max relative cursor-none overflow-hidden">
       <Header/>
-      <MainBB />
+      <MainBB /> 
       <CodingLanguages/>
       <SkillsSection />
       <ProfessionalExperience/>
