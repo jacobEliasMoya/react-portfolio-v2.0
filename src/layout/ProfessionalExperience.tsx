@@ -118,30 +118,30 @@ const ProfessionalExperience = () => {
                 </div>
             </div>
 
-            <div className="w-full md:w-8/12 gap-8 py-10 md:py-14 lg:py-18 font-ultra text-white text-center  z-10 grid grid-cols-1     ">
+            <div className="w-11/12 gap-8 py-10 md:py-14 lg:py-18 font-ultra text-white text-center z-10 grid grid-cols-4  mx-auto">
 
                 {initialResume?.map((item)=>(
-                    <div className="w-full bg-red-600 rounded-lg  py-6 md:py-10  overflow-hidden !pt-0">
-                        <H3element additionalClasses={'font-ultra text-3xl md:text-4xl flex flex-col  col-span-2 bg-red-700  p-4'} headerText={item.experience.companyName} spanClasses={undefined} spanText={undefined}/>
+
+                    <div className="odd:bg-red-600 even:bg-red-700 rounded-lg py-6 md:py-10  overflow-hidden !pt-0 col-span-3 odd:col-start-2 even:col-start-1 grid">
+                        
+                        <H3element additionalClasses={'font-ultra text-3xl md:text-4xl flex flex-col  col-span-2 bg-white text-red-700  p-4'} headerText={item.experience.companyName} spanClasses={undefined} spanText={undefined}/>
                        
-                        <H4element additionalClasses={' mt-4 font-ultra text-2xl md:text-4xl flex flex-col  col-span-2 bg-red-600   px-4 py-2 md:py-4 rounded-t-lg'} headerText={item.experience.companyRole} spanClasses={undefined} spanText={undefined}/>
+                        <H4element additionalClasses={' mt-4 font-ultra text-2xl md:text-4xl flex flex-col  col-span-2 bg-inherit   px-4 py-2 md:py-4 rounded-t-lg'} headerText={item.experience.companyRole} spanClasses={undefined} spanText={undefined}/>
 
+                        <div className="w-full  items-start grid grid-cols-1 md:grid-cols-2  pt-4  px-8 md:pt-2 pb-0">
 
-                       <div className="w-full  items-start grid grid-cols-1 md:grid-cols-2  pt-4  px-8 md:pt-2 pb-0">
+                                <p className="mb-4 col-span-2">{item.experience.smallExcerpt}</p>
 
-                            <p className="mb-4 col-span-2">{item.experience.smallExcerpt}</p>
+                                <p className="flex items-center justify-center h-full gap-8 col-span-2 md:col-span-1">{item.experience.companyStartDate} - {item.experience.companyEndDate ? item.experience.companyEndDate : 'Still Kickin Butt'}</p>
 
-                            <p className="flex items-center justify-center h-full gap-8 col-span-2 md:col-span-1">{item.experience.companyStartDate} - {item.experience.companyEndDate ? item.experience.companyEndDate : 'Still Kickin Butt'}</p>
-
-                            <ul className="columns-3 text-center py-5">
-                                {item.experience.companySkills.map((item)=>(
-                                    <li className="p-2 bg-white text-zinc-800 rounded">{item}</li>
-                                ))}
-                            </ul>
-                       </div>
-
-                      
+                                <ul className="columns-3 text-center py-5">
+                                    {item.experience.companySkills.map((item)=>(
+                                        <li className="p-2 bg-white text-zinc-800 rounded">{item}</li>
+                                    ))}
+                                </ul>
+                        </div>                     
                     </div>
+
                 ))}
 
             </div>
