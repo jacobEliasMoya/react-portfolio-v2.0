@@ -266,20 +266,20 @@ const SkillsSection = () => {
                                 <H3element additionalClasses={' font-retro drop-shadow-xl shadow-red-900 absolute -top-28 -right-5 -z-10 text-[10em] transition-all tracking-widest text-red-700'} headerText={`${item.id}`} spanClasses={''} spanText={''}/>
 
 
-                                <div className="rounded-md col-span-3 duration-500 transition-all bg-cover bg-center w-full min-h-72 translate"
+                                <div className="rounded col-span-3 duration-500 transition-all bg-cover bg-center w-full min-h-72 translate"
                                     style={{
                                     backgroundImage:`url(${item.projectLink})`, 
                                     }}
                                 ></div>
 
-                                <div className="rounded-md  flex justify-center items-center duration-100 text-md transition-all w-full text-white p-4  bg-zinc-800 z-10">
+                                <div className="rounded  flex justify-center items-center duration-100 text-md transition-all w-full text-white p-4  bg-zinc-800 z-10">
                                     <H3element additionalClasses={'relative transition-all tracking-widest !text-nowrap rotate-90'} headerText={item.projectName} spanClasses={''} spanText={''}/>
                                 </div>
 
                                 <div className="col-span-4  duration-200 transition-all w-full p-0 flex flex-col items-center justify-between relative z-10 h-3/6" >
 
                                     
-                                    <ButtonWhite buttonText={`View Website`} additionalClasses={"rounded-md text-sm md:text-md !w-full relative z-10 !bg-red-600 hover:!bg-red-700 !text-white !py-3"} buttonLink={item.codeLink ? item.codeLink : ''} newWindow={true} clickHandle={allowClickThrough}/> 
+                                    <ButtonWhite buttonText={`View Website`} additionalClasses={"!rounded text-sm md:text-md !w-full relative z-10 !bg-red-600 hover:!bg-red-700 !text-white !py-3"} buttonLink={item.codeLink ? item.codeLink : ''} newWindow={true} clickHandle={allowClickThrough}/> 
                                    
                                     <Paragraph text={item.projectDexcription} classes={'mt-2 !text-balance'}/>
 
