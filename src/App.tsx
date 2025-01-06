@@ -4,7 +4,6 @@ import SkillsSection from "./layout/SkillsSection"
 import CodingLanguages from "./layout/CodingLanguages"
 import Header from "./layout/Header"
 import ProfessionalExperience from "./layout/ProfessionalExperience"
-import Paragraph from "./components/Paragraph"
 
 interface MouseXY{
   x:number | undefined,

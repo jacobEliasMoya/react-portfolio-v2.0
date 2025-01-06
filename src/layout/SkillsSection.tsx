@@ -272,7 +272,7 @@ const SkillsSection = () => {
                                     }}
                                 ></div>
 
-                                <div className="rounded  flex justify-center items-center duration-100 text-md transition-all w-full  p-4  bg-zinc-200 z-10">
+                                <div className="rounded  flex justify-center items-center duration-100 text-md transition-all w-full  p-4 text-white bg-zinc-800 z-10">
                                     <H3element additionalClasses={'relative transition-all tracking-widest !text-nowrap rotate-90'} headerText={item.projectName} spanClasses={''} spanText={''}/>
                                 </div>
 

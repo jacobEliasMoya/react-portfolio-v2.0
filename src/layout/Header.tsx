@@ -62,6 +62,9 @@ const Header = () => {
       window.innerWidth < 768 ? setHeaderActive(true) : setHeaderActive(false)
     },[])
 
+
+    // https://gaspavar.dev/#contact
+
   return (
     <header className={`${headerActive ? 'min-w-[calc(100%-2em)] pr-2' : 'min-w-16'} min-h-16 flex items-center justify-center bg-zinc-800 bg-opacity-85 backdrop-blur-lg text-white mx-auto fixed bottom-[1em] left-[1em]  z-40 rounded-full flex-row transition-all ease duration-500  font-ultra overflow-hidden `}>
       <button onClick={handleClick} className='absolute left-0'>
