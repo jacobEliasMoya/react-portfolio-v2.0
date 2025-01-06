@@ -29,7 +29,7 @@ return (
 
         <div className="transition-all z-10 rounded-full relative w-full flex justify-center items-center flex-col md:flex-row opacity-100 p-4 gap-6  md:gap-12">
 
-            <div className="w-full md:gap-2 lg:gap-4 flex items-center justify-center flex-row flex-wrap text-white tracking-widest text-lg  font-ultra !text-balance order-2 md:order-1">
+            <div className="w-full md:gap-2 lg:gap-4 flex items-center justify-center flex-row flex-wrap text-white tracking-widest text-sm lg:text-lg  font-ultra !text-balance order-2 md:order-1">
 
                 <Paragraph text={"Frontend."} classes={'w-full md:w-max'}/>
                 <Paragraph text={"ReactJS."} classes={'w-full md:w-max'}/> 
