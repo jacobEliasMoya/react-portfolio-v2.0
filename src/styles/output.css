@@ -1856,6 +1856,10 @@ video {
   transition-timing-function: linear;
 }
 
+.\[box-shadow\:_1em_1em\] {
+  box-shadow: 1em 1em;
+}
+
 .before\:absolute::before {
   content: var(--tw-content);
   position: absolute;
@@ -2070,10 +2074,6 @@ video {
 
   .md\:block {
     display: block;
-  }
-
-  .md\:inline {
-    display: inline;
   }
 
   .md\:hidden {
@@ -2386,6 +2386,42 @@ video {
   .md\:text-xl {
     font-size: 1.25rem;
     line-height: 1.75rem;
+  }
+
+  .md\:\[box-shadow\:_1em_1em\2c \] {
+    box-shadow: 1em 1em,;
+  }
+
+  .md\:\[box-shadow\:_1em_1em\2c _-1em_-1em_red\] {
+    box-shadow: 1em 1em, -1em -1em red;
+  }
+
+  .md\:\[box-shadow\:_1em_1em\2c _-1em_1em_red\] {
+    box-shadow: 1em 1em, -1em 1em red;
+  }
+
+  .md\:\[box-shadow\:_1em_1em\2c _1em_1em\] {
+    box-shadow: 1em 1em, 1em 1em;
+  }
+
+  .md\:\[box-shadow\:_1em_1em\2c _1em_1em_red\] {
+    box-shadow: 1em 1em, 1em 1em red;
+  }
+
+  .md\:\[box-shadow\:_1em_1em\] {
+    box-shadow: 1em 1em;
+  }
+
+  .md\:\[box-shadow\:_1em_1em_\#960707\] {
+    box-shadow: 1em 1em #960707;
+  }
+
+  .md\:\[box-shadow\:_1em_1em_1em\2c _-1em_-1em_1em_red\] {
+    box-shadow: 1em 1em 1em, -1em -1em 1em red;
+  }
+
+  .md\:\[box-shadow\:_1em_1em_1em\2c _-1em_-1em_red\] {
+    box-shadow: 1em 1em 1em, -1em -1em red;
   }
 
   .md\:hover\:-translate-y-2:hover {

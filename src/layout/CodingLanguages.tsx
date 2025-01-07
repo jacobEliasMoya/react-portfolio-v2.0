@@ -123,7 +123,7 @@ const CodingLanguages = () => {
 
     return (
  
-        <section id="coding" className="transition-all w-11/12 rounded-lg my-8 md:my-20 bg-white flex justify-start flex-wrap flex-col overflow-hidden mx-auto pb-7 md:pb-12 pt-6 md:pt-10 px-6 md:px-8">
+        <section id="coding" className="transition-all w-11/12 rounded-lg my-8 md:my-20 bg-white flex justify-start flex-wrap flex-col overflow-hidden mx-auto pb-7 md:pb-12 pt-6 md:pt-10 px-6 md:px-8 md:[box-shadow:_1em_1em_#960707]">
         <div className=" w-full gap-8  relative z-10 flex">
 
             <div className="flex flex-col text-center" >            

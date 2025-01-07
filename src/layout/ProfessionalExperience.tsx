@@ -106,7 +106,7 @@ const ProfessionalExperience = () => {
     },[])
 
     return (
-        <section id="about" className="transition-all w-11/12 rounded-lg my-8 md:my-20 bg-white flex justify-start flex-wrap flex-col overflow-hidden mx-auto py-6 md:py-10 ">
+        <section id="about" className="transition-all w-11/12 rounded-lg my-8 md:my-20 bg-white flex justify-start flex-wrap flex-col overflow-hidden mx-auto py-6 md:py-10  md:[box-shadow:_1em_1em_#960707]">
             <div className="w-full flex gap-8 px-6 md:px-8 relative z-10">
             
                 <div className="flex flex-col" >            

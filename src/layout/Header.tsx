@@ -42,7 +42,7 @@ const Header = () => {
     },
     {
       name: 'Contact',
-      url: '#',
+      url: '/#contact',
       title: 'Contact Me Today',
       icon: <MdContactMail />
     },
