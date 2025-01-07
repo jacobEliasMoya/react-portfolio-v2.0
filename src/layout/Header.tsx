@@ -76,7 +76,7 @@ const Header = () => {
       <ul className={` flex justify-center items-center gap-6 w-full max-w-0 `}>
         { navigationElms?.map((item)=>(
           <li className="cursor-none text-2xl tracking-widest lg:text-3xl group ">
-            <a href={item.url} className='flex flex-row items-center justify-center gap-2 md:gap-4 md:p-4 relative cursor-none'>{item.icon} <span className='hidden transition-all ease duration-200 -top-2 group-hover:-top-20 opacity-0 group-hover:opacity-100 group-hover:text-2xl  lg:absolute md:inline text-sm bg-zinc-800  p-4 rounded-md '>{item.name}</span> </a>
+            <a href={item.url} className='flex flex-row items-center justify-center gap-2 md:gap-4 md:p-4 relative cursor-none'>{item.icon} <span className='hidden transition-all ease duration-200 -top-2 group-hover:-top-20 opacity-0 group-hover:opacity-100 group-hover:text-2xl  lg:absolute lg:inline text-sm bg-zinc-800  p-4 rounded-md '>{item.name}</span> </a>
           </li>
         )) }
       </ul>

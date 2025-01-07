@@ -799,12 +799,12 @@ video {
   width: 4rem;
 }
 
-.w-44 {
-  width: 11rem;
+.w-3\/12 {
+  width: 25%;
 }
 
-.w-5\/12 {
-  width: 41.666667%;
+.w-44 {
+  width: 11rem;
 }
 
 .w-8 {
@@ -815,6 +815,10 @@ video {
   width: 450px;
 }
 
+.w-auto {
+  width: auto;
+}
+
 .w-full {
   width: 100%;
 }
@@ -822,18 +826,6 @@ video {
 .w-max {
   width: -moz-max-content;
   width: max-content;
-}
-
-.w-auto {
-  width: auto;
-}
-
-.w-4\/12 {
-  width: 33.333333%;
-}
-
-.w-3\/12 {
-  width: 25%;
 }
 
 .min-w-16 {
@@ -1596,26 +1588,6 @@ video {
   background-color: rgb(24 24 27 / var(--tw-bg-opacity, 1));
 }
 
-.bg-zinc-200 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(228 228 231 / var(--tw-bg-opacity, 1));
-}
-
-.bg-red-800 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(153 27 27 / var(--tw-bg-opacity, 1));
-}
-
-.bg-zinc-400 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(161 161 170 / var(--tw-bg-opacity, 1));
-}
-
-.bg-zinc-600 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(82 82 91 / var(--tw-bg-opacity, 1));
-}
-
 .bg-opacity-85 {
   --tw-bg-opacity: 0.85;
 }
@@ -2033,24 +2005,12 @@ video {
 }
 
 @media (min-width: 640px) {
-  .sm\:col-span-4 {
-    grid-column: span 4 / span 4;
-  }
-
-  .sm\:col-span-3 {
-    grid-column: span 3 / span 3;
-  }
-
   .sm\:-mt-6 {
     margin-top: -1.5rem;
   }
 }
 
 @media (min-width: 768px) {
-  .md\:absolute {
-    position: absolute;
-  }
-
   .md\:bottom-0 {
     bottom: 0px;
   }
@@ -2147,10 +2107,6 @@ video {
 
   .md\:min-w-\[65vw\] {
     min-width: 65vw;
-  }
-
-  .md\:min-w-28 {
-    min-width: 7rem;
   }
 
   .md\:-translate-x-1\/2 {
@@ -2457,6 +2413,10 @@ video {
     margin-top: -3.5rem;
   }
 
+  .lg\:inline {
+    display: inline;
+  }
+
   .lg\:h-20 {
     height: 5rem;
   }
@@ -2485,12 +2445,12 @@ video {
     min-width: 40vw;
   }
 
-  .lg\:grid-cols-4 {
-    grid-template-columns: repeat(4, minmax(0, 1fr));
-  }
-
   .lg\:grid-cols-2 {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .lg\:grid-cols-4 {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
   }
 
   .lg\:gap-12 {
