@@ -2449,6 +2449,10 @@ video {
 }
 
 @media (min-width: 1024px) {
+  .lg\:absolute {
+    position: absolute;
+  }
+
   .lg\:-mt-14 {
     margin-top: -3.5rem;
   }
