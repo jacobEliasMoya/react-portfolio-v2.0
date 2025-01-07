@@ -2,7 +2,7 @@ import { useEffect, useState } from "react"
 import H2element from "../components/headers/H2element"
 import H3element from "../components/headers/H3element"
 import H4element from "../components/headers/H4element"
-import varepLogo from "../assets/VAREP logo.webp"
+import varepLogo from "../assets/varepMainWhite-300x109.webp"
 import biziqLogo from "../assets/biziq-logo.webp"
 
 interface Experience{
@@ -40,7 +40,7 @@ const ProfessionalExperience = () => {
             companyStartDate:'October 2022',
             companyEndDate: undefined,
             smallExcerpt: 'Loving it wordpress, the works woohoo Loving it wordpress, the works woohoo ',
-            companySkills: ['skill 1','skill 2','skill 3','skill 1','skill 2','skill 3','skill 1','skill 2','skill 3','skill 1','skill 2','skill 3'],
+            companySkills: ['skill 1','skill 2','skill 3','skill 1','skill 2','skill 3','skill 1','skill 2'],
         },
 
         education: {
@@ -62,7 +62,7 @@ const ProfessionalExperience = () => {
             companyStartDate:'October 2021',
             companyEndDate: 'October 2022',
             smallExcerpt: 'Loving it wordpress, the works woohoo Loving it wordpress, the works woohoo ',
-            companySkills: ['skill 1','skill 2','skill 3','skill 1','skill 2','skill 3','skill 1','skill 2','skill 3','skill 1','skill 2','skill 3'],
+            companySkills: ['skill 1','skill 2','skill 3','skill 1','skill 2','skill 3','skill 1','skill 2'],
         },
 
         education: {
@@ -84,7 +84,7 @@ const ProfessionalExperience = () => {
             companyStartDate:'October 2019',
             companyEndDate: 'October 2021',
             smallExcerpt: 'Loving it wordpress, the works woohoo Loving it wordpress, the works woohoo ',
-            companySkills: ['skill 1','skill 2','skill 3','skill 1','skill 2','skill 3','skill 1','skill 2','skill 3','skill 1','skill 2','skill 3'],
+            companySkills: ['skill 1','skill 2','skill 3','skill 1','skill 2','skill 3','skill 1','skill 2'],
         },
 
         education: {
@@ -107,8 +107,8 @@ const ProfessionalExperience = () => {
 
     return (
         <section id="about" className="transition-all w-11/12 rounded-lg my-8 md:my-20 bg-white flex justify-start flex-wrap flex-col overflow-hidden mx-auto py-6 md:py-10 ">
-                <div className="w-full flex gap-8 px-6 md:px-8 relative z-10">
-                
+            <div className="w-full flex gap-8 px-6 md:px-8 relative z-10">
+            
                 <div className="flex flex-col" >            
                     <H2element additionalClasses={'text-red-600 text-5xl md:text-6xl lg:text-8xl flex flex-col text-left '} headerText={"Career"} spanClasses={'text-zinc-800 -mt-5 sm:-mt-6 md:-mt-8 lg:-mt-14'} spanText={'history'}/>
                 </div>
@@ -119,28 +119,27 @@ const ProfessionalExperience = () => {
                 </div>
             </div>
 
-            <div className="w-full gap-10 md:gap-20 py-10 md:py-14 lg:py-18 font-ultra text-center md:text-left  grid grid-cols-4 mx-auto px-6 md:px-8 relative z-10">
+            <div className="w-full gap-10 md:gap-20 py-10 md:py-14 lg:py-18 font-ultra text-center md:text-left  grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 mx-auto px-6 md:px-8 relative z-10">
 
                 {initialResume?.map((item)=>(
-                    <div className="col-span-full grid grid-cols-1 gap-8 ">
+                    <div className="">
                         <div className="items-start grid grid-cols-1 md:grid-cols-2 gap-4 col-span-full md:col-span-3 ">
+                            <div className=" col-span-full gap-2 md:gap-5 rounded grid grid-cols-5">
 
-                            <div className=" col-span-full gap-4 md:gap-8 rounded grid grid-cols-8">
-
-                                <div className="rounded col-span-full md:col-span-1 gap-4 flex items-center justify-center bg-zinc-200 ">
-                                    <img src={item.experience.companyIcon} alt='' className="p-4 md:scale-110  md:-rotate-90  min-w-28 w-5/12 md:w-full "/>
+                                <div className="rounded col-span-full md:col-span-1 gap-4 flex items-center justify-center bg-zinc-800 p-4 w-auto">
+                                    <img src={item.experience.companyIcon} alt='' className="md:-rotate-90  min-w-28 w-3/12 md:w-full invert brightness-0"/>
                                 </div>
 
-                                <div className="grid grid-cols-1 col-span-full md:col-span-7 gap-4 items-start justify-end flex-col">
+                                <div className="grid grid-cols-1 col-span-full md:col-span-4 gap-2 items-start justify-end flex-col mt-2 md:mt-0">
 
-                                    <H4element additionalClasses={' font-ultra text-2xl md:text-32xl flex flex-col text-red-600  bg-inherit '} headerText={item.experience.companyRole} spanClasses={undefined} spanText={undefined}/>
+                                    <H4element additionalClasses={' font-ultra text-xl md:text-2xl  flex flex-col text-red-600  bg-inherit '} headerText={item.experience.companyRole} spanClasses={undefined} spanText={undefined}/>
 
 
-                                    <p className=" grid text-zinc-5600  items-center md:items-start justify-center md:justify-start gap-8  md:text-xl">{item.experience.companyStartDate} - {item.experience.companyEndDate ? item.experience.companyEndDate : 'Still Kickin Butt'}</p>
+                                    <p className=" grid text-zinc-700  items-center md:items-start justify-center md:justify-start gap-8  md:text-xl">{item.experience.companyStartDate} - {item.experience.companyEndDate ? item.experience.companyEndDate : 'Present'}</p>
 
                                     <p className="">{item.experience.smallExcerpt}</p>
 
-                                    <ul className="grid gap-2 grid-cols-2 md:grid-cols-4 col-span-full  text-sm md:text-md xl:text-lg capitalize mt-2">
+                                    <ul className="grid gap-2 grid-cols-2 col-span-full  text-sm md:text-md xl:text-lg capitalize mt-2">
                                         {item.experience.companySkills.map((item)=>(
                                             <li className="flex flex-col md:flex-row items-center justify-start md:gap-2 bg-red-600 text-white p-2 px-3 rounded tracking-wider">{item}</li>
                                         ))}

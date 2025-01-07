@@ -136,14 +136,14 @@ const CodingLanguages = () => {
             </div>
         </div>
 
-        <div className="gap-2 md:gap-8 mt-8 w-full grid grid-cols-2 lg:grid-cols-4 font-ultra text-zinc-800  z-10 text-center md:text-left justify-start ">
+        <div className="gap-2 md:gap-8 mt-8 w-full grid grid-cols-2 lg:grid-cols-4 font-ultra text-zinc-700  z-10 text-center md:text-left justify-start ">
            
             <div className="w-full p-0 mb-2 md:mb-0 px-0 !pl-0 rounded-2xl col-span-2">
 
                 {/* <Paragraph text={"I am a Frontend Developer who prides himself on the work I bring to the interwebs. I had to learn a lot of new technologies, loose countless hours of sleep ... Yet, I'm still doing the same - but its what I love, check out the tech I love ."} classes={'px-6 pt-6 md:pt-20 w-11/12 mx-auto font-ultra text-white text-lg  w-full md:w-max'} /> */}
 
 
-                <H2element additionalClasses={'text-zinc-800 text-md md:text-2xl flex flex-col pb-4  '} headerText={"Frontend Development"} spanClasses={undefined} spanText={undefined}/>
+                <H2element additionalClasses={'  text-md md:text-2xl flex flex-col pb-4  '} headerText={"Frontend Development"} spanClasses={undefined} spanText={undefined}/>
                 <ul className='grid grid-cols-2 gap-2 text-sm md:text-md xl:text-lg'>
                     {usedTech ? usedTech.filter((item=>item.category == 'programming')).map((item)=>(
                          <li className='flex flex-col md:flex-row items-center justify-start md:gap-2 bg-red-600 text-white p-2 px-3 rounded tracking-wider'> 
@@ -157,7 +157,7 @@ const CodingLanguages = () => {
 
             <div className="w-full ">
 
-            <H2element additionalClasses={'text-zinc-800 text-md md:text-2xl pb-4 flex flex-col  '} headerText={"Web Design"} spanClasses={undefined} spanText={undefined}/>
+            <H2element additionalClasses={'text-md md:text-2xl pb-4 flex flex-col  '} headerText={"Web Design"} spanClasses={undefined} spanText={undefined}/>
             <ul className='text-sm md:text-md xl:text-lg '>
                 {usedTech ? usedTech.filter((item=>item.category == 'design')).map((item)=>(
                         <li className='flex flex-col md:flex-row items-center justify-start md:gap-2 bg-red-600 text-white p-2 px-3 rounded tracking-wider mb-2'> 
@@ -172,7 +172,7 @@ const CodingLanguages = () => {
 
            <div className="w-full  ">
 
-            <H2element additionalClasses={'text-zinc-800 text-md md:text-2xl pb-4 flex flex-col  '} headerText={"Web Builders"} spanClasses={undefined} spanText={undefined}/>
+            <H2element additionalClasses={'text-md md:text-2xl pb-4 flex flex-col  '} headerText={"Web Builders"} spanClasses={undefined} spanText={undefined}/>
             <ul className=' text-sm md:text-md xl:text-lg '>
                 {usedTech ? usedTech.filter((item=>item.category == 'builder')).map((item)=>(
                          <li className='flex flex-col md:flex-row items-center justify-start md:gap-2 bg-red-600 text-white p-2 px-3 rounded tracking-wider mb-2'> 

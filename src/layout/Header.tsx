@@ -71,6 +71,7 @@ const Header = () => {
       <button onClick={handleClick} className='absolute left-0 md:hidden z-10'>
           <img src={jakeCartoon} alt="" className={`${headerActive ? 'scale-75' : 'scale-100'} h-16 w-16 active:scale-110 transition-all` }/>
       </button>
+                                    
 
       <ul className={` flex justify-center items-center gap-6 w-full max-w-0 `}>
         { navigationElms?.map((item)=>(
