@@ -161,7 +161,6 @@ const SkillsSection = () => {
             categories:['test','test1','test2'],
             isActive: false
         },
-
     ]  
 
     const [spotlight,setSpotlight] = useState<Array<Spotlight>>() 
@@ -278,9 +277,7 @@ const SkillsSection = () => {
 
                                 <div className="col-span-4  duration-200 transition-all w-full p-0 flex flex-col items-center justify-between relative z-10 h-3/6" >
 
-                                    
-                                    <ButtonWhite buttonText={`View Website`} additionalClasses={"!rounded text-sm md:text-md !w-full relative z-10 !bg-red-600 hover:!bg-red-700 !text-white !py-3"} buttonLink={item.codeLink ? item.codeLink : ''} newWindow={true} clickHandle={allowClickThrough}/> 
-                                   
+                                    <ButtonWhite buttonText={`View Website`} additionalClasses={"!rounded text-sm md:text-md lg:text-lg tracking-widest !w-full relative z-10 !bg-red-600 hover:!bg-red-700 !text-white !py-3"} buttonLink={item.codeLink ? item.codeLink : ''} newWindow={true} clickHandle={allowClickThrough}/> 
                                     <Paragraph text={item.projectDexcription} classes={'mt-2 !text-balance'}/>
 
                                 </div>
