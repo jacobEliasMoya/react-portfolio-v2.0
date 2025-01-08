@@ -19,6 +19,10 @@ const MainForm = (props: Props) => {
         <label htmlFor="" className='col-span-full'>
           <TextArea additionalClasses={'min-h-44'} value={''} onChange={undefined} placeholder={"Have something you want to say that cant fit in one line, let me know here please! "} />
         </label>
+
+        <label htmlFor="" className="col-span-full md:col-span-1">
+          <Input type={'submit'} value={'Send it!'} onChange={undefined} placeholder={undefined} additionalClasses={'rounded col-span-full md:col-span-1 gap-4 flex items-center justify-center bg-zinc-800 p-4 w-auto'} />
+        </label>
     </form>
   )
 }
