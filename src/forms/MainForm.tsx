@@ -1,11 +1,13 @@
 import Input from './form components/Input'
 import TextArea from './form components/TextArea'
 
-type Props = {}
+type Props = {
+  moreClasses:string|undefined
+}
 
 const MainForm = (props: Props) => {
   return (
-    <form className='font-ultra gap-4 grid grid-cols-2 bg-red-500 p-8 rounded md:rounded-xl md:[box-shadow:_1em_1em_#960707] '>
+    <form className={`font-ultra gap-4 grid grid-cols-2 rounded md:rounded-xl ${props.moreClasses}`}>
         <label htmlFor="" className="col-span-full md:col-span-1">
           <Input type={'text'} value={''} onChange={undefined} placeholder={"Im Jake, whats your Name .."} additionalClasses={undefined} />
         </label>

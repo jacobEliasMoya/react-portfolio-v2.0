@@ -1,10 +1,9 @@
 import H1element from "../components/headers/H1element"
 import H2element from "../components/headers/H2element"
 import jakeCartoon from "../assets/cartoon-jm.png"
-import { FaEnvelope, FaGithub, FaMobile } from "react-icons/fa"
 import { useEffect } from "react"
-import { FaLinkedin } from "react-icons/fa6"
 import Paragraph from "../components/Paragraph"
+import Socials from "../components/Socials"
 
 // type Props = {}
 
@@ -52,21 +51,8 @@ return (
 
             <div className="w-full gap-4 lg:gap-12 flex items-center justify-center flex-row flex-wrap order-2 md:order-3 text-white text-3xl md:text-4xl ">
                 
-                <a href="tel:+19096446073" title=" Call Jacob Now" className="cursor-none" aria-label="Call Jacob Now">
-                    <FaMobile className="  transition-all  active:scale-125  md:hover:-translate-y-2 md:hover:drop-shadow-md"/> 
-                </a>
-                
-                <a href="https://www.linkedin.com/in/jacob-moya-317998174/" target="_blank" rel="noopener noreferrer" title="" className="cursor-none" aria-label="JacobMoya Linked-In">
-                    <FaLinkedin className="  transition-all  active:scale-125  md:hover:-translate-y-2 md:hover:drop-shadow-md"/>
-                </a>
-                
-                <a href="mailto:jemoya1994@gmail.com" target="_blank" rel="noopener noreferrer" aria-label="Email Jacob Now" title="JacobMoya Email" className="cursor-none">
-                    <FaEnvelope className="  transition-all  active:scale-125  md:hover:-translate-y-2 md:hover:drop-shadow-md"/>
-                </a>
-
-                <a href="https://github.com/jacobEliasMoya/" target="_blank" rel="noopener noreferrer" title="JacobMoya Github" className="cursor-none" aria-label="JacobMoya Github">
-                    <FaGithub className="  transition-all  active:scale-125  md:hover:-translate-y-2 md:hover:drop-shadow-md"/>
-                </a>
+                <Socials additionalClasses={undefined}/>
+               
             </div>
 
         </div>

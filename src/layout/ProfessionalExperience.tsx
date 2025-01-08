@@ -124,6 +124,8 @@ const ProfessionalExperience = () => {
                 {initialResume?.map((item)=>(
                     <div className="">
                         <div className="items-start grid grid-cols-1 md:grid-cols-2 gap-4 col-span-full md:col-span-3 ">
+                        <H4element additionalClasses={'col-span-full font-ultra text-xl md:text-2xl lg:text-4xl flex flex-col text-red-600  bg-inherit '} headerText={item.experience.companyRole} spanClasses={undefined} spanText={undefined}/>
+
                             <div className=" col-span-full gap-2 md:gap-5 rounded grid grid-cols-5">
 
                                 <div className="rounded col-span-full md:col-span-1 gap-4 flex items-center justify-center bg-zinc-800 p-4 w-auto">
@@ -131,9 +133,6 @@ const ProfessionalExperience = () => {
                                 </div>
 
                                 <div className="grid grid-cols-1 col-span-full md:col-span-4 gap-2 items-start justify-end flex-col mt-2 md:mt-0">
-
-                                    <H4element additionalClasses={' font-ultra text-xl md:text-2xl  flex flex-col text-red-600  bg-inherit '} headerText={item.experience.companyRole} spanClasses={undefined} spanText={undefined}/>
-
 
                                     <p className=" grid text-zinc-700  items-center md:items-start justify-center md:justify-start gap-8  md:text-xl">{item.experience.companyStartDate} - {item.experience.companyEndDate ? item.experience.companyEndDate : 'Present'}</p>
 
