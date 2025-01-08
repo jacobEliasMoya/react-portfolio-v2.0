@@ -19,6 +19,7 @@ function App() {
     window.addEventListener('mousemove',(e)=>{
       window.innerWidth > 768 ? setMouseCoordinates({ x:e.pageX, y:e.pageY}) : null
     })
+
   },[])
 
   return (  
