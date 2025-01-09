@@ -1,10 +1,10 @@
-import React from 'react'
-
 type Props = {
     value: string | number,
     onChange: any,
     placeholder:string|undefined,
     additionalClasses:string | undefined,
+    name:string |undefined
+
 }
 
 const TextArea = (props: Props) => {
@@ -13,7 +13,8 @@ const TextArea = (props: Props) => {
         value={props.value}
         onChange={props.onChange}
         placeholder={props.placeholder}
-        className={`${props.additionalClasses} p-4 rounded border-none w-full placeholder-zinc-700  text-sm lg:text-lg tracking-widest`}></textarea>
+        name={props.name}
+        className={`${props.additionalClasses} cursor-none p-4 rounded border-none w-full placeholder-zinc-600  text-sm lg:text-lg tracking-widest`}></textarea>
   )
 }
 

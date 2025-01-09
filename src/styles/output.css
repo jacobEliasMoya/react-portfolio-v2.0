@@ -1616,6 +1616,10 @@ video {
   --tw-bg-opacity: 0.85;
 }
 
+.bg-opacity-0 {
+  --tw-bg-opacity: 0;
+}
+
 .bg-cover {
   background-size: cover;
 }
@@ -1688,8 +1692,8 @@ video {
   padding-left: 0px !important;
 }
 
-.pb-20 {
-  padding-bottom: 5rem;
+.pb-24 {
+  padding-bottom: 6rem;
 }
 
 .pb-4 {
@@ -1718,10 +1722,6 @@ video {
 
 .pt-6 {
   padding-top: 1.5rem;
-}
-
-.pb-24 {
-  padding-bottom: 6rem;
 }
 
 .text-left {
@@ -1790,6 +1790,10 @@ video {
   letter-spacing: 0.1em;
 }
 
+.\!tracking-widest {
+  letter-spacing: 0.1em !important;
+}
+
 .\!text-white {
   --tw-text-opacity: 1 !important;
   color: rgb(255 255 255 / var(--tw-text-opacity, 1)) !important;
@@ -1828,6 +1832,16 @@ video {
 .placeholder-zinc-700::placeholder {
   --tw-placeholder-opacity: 1;
   color: rgb(63 63 70 / var(--tw-placeholder-opacity, 1));
+}
+
+.placeholder-zinc-600::-moz-placeholder {
+  --tw-placeholder-opacity: 1;
+  color: rgb(82 82 91 / var(--tw-placeholder-opacity, 1));
+}
+
+.placeholder-zinc-600::placeholder {
+  --tw-placeholder-opacity: 1;
+  color: rgb(82 82 91 / var(--tw-placeholder-opacity, 1));
 }
 
 .opacity-0 {
@@ -1900,6 +1914,10 @@ video {
 
 .ease-linear {
   transition-timing-function: linear;
+}
+
+.\[filter\:_drop-shadow\(rgba\(0\2c _0\2c _0\2c _0\.5\)_2px_4px_6px\)\;\] {
+  filter: drop-shadow(rgba(0, 0, 0, 0.5) 2px 4px 6px);;
 }
 
 .before\:absolute::before {
@@ -2011,6 +2029,11 @@ video {
 .hover\:\!bg-red-700:hover {
   --tw-bg-opacity: 1 !important;
   background-color: rgb(185 28 28 / var(--tw-bg-opacity, 1)) !important;
+}
+
+.hover\:bg-zinc-900:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(24 24 27 / var(--tw-bg-opacity, 1));
 }
 
 .hover\:shadow-\[0em_1em_rgba\(0\2c 0\2c 0\2c 0\.15\)\]:hover {
@@ -2126,6 +2149,10 @@ video {
 
   .md\:block {
     display: block;
+  }
+
+  .md\:flex {
+    display: flex;
   }
 
   .md\:hidden {
@@ -2564,6 +2591,13 @@ video {
 }
 
 @media (min-width: 1280px) {
+  @media (min-width: 1024px) {
+    .xl\:lg\:text-4xl {
+      font-size: 2.25rem;
+      line-height: 2.5rem;
+    }
+  }
+
   .xl\:grid-cols-3 {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
@@ -2576,5 +2610,10 @@ video {
   .xl\:text-lg {
     font-size: 1.125rem;
     line-height: 1.75rem;
+  }
+
+  .xl\:text-4xl {
+    font-size: 2.25rem;
+    line-height: 2.5rem;
   }
 }

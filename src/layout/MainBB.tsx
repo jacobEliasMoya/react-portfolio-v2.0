@@ -50,9 +50,7 @@ return (
             </div>
 
             <div className="w-full gap-4 lg:gap-12 flex items-center justify-center flex-row flex-wrap order-2 md:order-3 text-white text-3xl md:text-4xl ">
-                
                 <Socials additionalClasses={undefined}/>
-               
             </div>
 
         </div>
