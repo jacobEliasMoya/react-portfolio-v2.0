@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react"
 import H2element from "../components/headers/H2element"
-import H3element from "../components/headers/H3element"
 import H4element from "../components/headers/H4element"
 import varepLogo from "../assets/varepMainWhite-300x109.webp"
 import biziqLogo from "../assets/biziq-logo.webp"

@@ -32,11 +32,7 @@ return (
         <div className="transition-all z-10 rounded-full relative w-full flex justify-center items-center flex-col md:flex-row opacity-100 p-4 gap-6  md:gap-12">
 
             <div className="w-full md:gap-2 lg:gap-4 flex items-center justify-center flex-row flex-wrap text-white tracking-widest text-sm lg:text-lg  font-ultra !text-balance order-2">
-
-                <Paragraph text={jakeMessage} classes={'w-1/2 font-ultra tracking-widest'}/>
-
-                         
-
+                <Paragraph text={jakeMessage ? jakeMessage : ''} classes={'w-full md:w-2/3 font-ultra tracking-widest !text-balance'}/>
             </div>
 
             <div className="shadow-[0em_0.25em_rgba(0,0,0,0.15)] hover:shadow-[0em_1em_rgba(0,0,0,0.15)] transition-all ease  bg-red-500  rounded-full min-w-52 min-h-52 md:min-w-80 md:min-h-80 lg:min-w-96 lg:min-h-96 relative md:hover:-translate-y-[15px] flex justify-center items-center z-10 group order-1 md:order-2">
