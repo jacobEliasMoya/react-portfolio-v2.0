@@ -216,7 +216,7 @@ const SkillsSection = () => {
                     // .filter((item=>item.id < startingArrNum))
                     .map((item)=>(
 
-                        <div id={`${item.id}`} className={`rounded-xl text-center w-[450px] max-w-[75vw] relative transition-all duration-200  font-ultra p-4 grid grid-cols-4 gap-2 `}>
+                        <div id={`${item.id}`} className={`rounded-xl text-center w-[450px] max-w-[75vw] relative transition-all duration-200  font-ultra p-4 grid grid-cols-4 gap-4 `}>
                             
                             <H3element additionalClasses={' font-retro drop-shadow-xl shadow-red-900 absolute -top-28 -right-5 -z-10 text-[10em] transition-all tracking-widest text-red-700'} headerText={`${item.id}`} spanClasses={''} spanText={''}/>
 
@@ -234,7 +234,7 @@ const SkillsSection = () => {
                             <div className="col-span-4  duration-200 transition-all w-full p-0 flex flex-col items-center justify-between relative z-10 h-3/6" >
 
                                 <ButtonWhite buttonText={item.isApp ? `View App` : `View Website`} additionalClasses={"!rounded text-sm md:text-md lg:text-lg tracking-widest !w-full relative z-10 !bg-red-600 hover:!bg-red-700 !text-white !py-3"} buttonLink={item.codeLink ? item.codeLink : ''} newWindow={true} clickHandle={allowClickThrough}/> 
-                                <Paragraph text={item.projectDexcription} classes={'mt-4 md:text-left'}/>
+                                <Paragraph text={item.projectDexcription} classes={'mt-4 md:text-left text-md'}/>
 
                             </div>
 

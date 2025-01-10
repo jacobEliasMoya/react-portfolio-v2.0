@@ -144,7 +144,7 @@ const CodingLanguages = () => {
 
 
                 <H2element additionalClasses={'  text-md md:text-2xl flex flex-col pb-4  '} headerText={"Frontend Development"} spanClasses={undefined} spanText={undefined}/>
-                <ul className='grid grid-cols-2 gap-2 text-sm md:text-md xl:text-lg'>
+                <ul className='grid grid-cols-2 gap-2 md:gap-x-6 md:!gap-y-4 text-sm md:text-md xl:text-lg'>
                     {usedTech ? usedTech.filter((item=>item.category == 'programming')).map((item)=>(
                          <li className='flex flex-col md:flex-row items-center justify-start md:gap-2 bg-red-600 text-white p-2 px-3 rounded tracking-wider'> 
                          <span className='text-xl md:text-4xl'>{item.icon}</span>
@@ -158,7 +158,7 @@ const CodingLanguages = () => {
             <div className="w-full ">
 
             <H2element additionalClasses={'text-md md:text-2xl pb-4 flex flex-col  '} headerText={"Web Design"} spanClasses={undefined} spanText={undefined}/>
-            <ul className='text-sm md:text-md xl:text-lg '>
+            <ul className='text-sm md:text-md xl:text-lg grid grid-cols-1 gap-2  '>
                 {usedTech ? usedTech.filter((item=>item.category == 'design')).map((item)=>(
                         <li className='flex flex-col md:flex-row items-center justify-start md:gap-2 bg-red-600 text-white p-2 px-3 rounded tracking-wider mb-2'> 
                          <span className='text-xl md:text-4xl'>{item.icon}</span>
@@ -173,7 +173,7 @@ const CodingLanguages = () => {
            <div className="w-full  ">
 
             <H2element additionalClasses={'text-md md:text-2xl pb-4 flex flex-col  '} headerText={"Web Builders"} spanClasses={undefined} spanText={undefined}/>
-            <ul className=' text-sm md:text-md xl:text-lg '>
+            <ul className='text-sm md:text-md xl:text-lg grid grid-cols-1 gap-2 '>
                 {usedTech ? usedTech.filter((item=>item.category == 'builder')).map((item)=>(
                          <li className='flex flex-col md:flex-row items-center justify-start md:gap-2 bg-red-600 text-white p-2 px-3 rounded tracking-wider mb-2'> 
                          <span className='text-xl md:text-4xl'>{item.icon}</span>

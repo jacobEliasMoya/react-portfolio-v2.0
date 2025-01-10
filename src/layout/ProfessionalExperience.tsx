@@ -38,8 +38,8 @@ const ProfessionalExperience = () => {
             companyRole:'Web Developer II',
             companyStartDate:'10/2022',
             companyEndDate: undefined,
-            smallExcerpt: 'Loving it wordpress, the works woohoo Loving it wordpress, the works woohoo ',
-            companySkills: ['skill 1','skill 2','skill 3','skill 1','skill 2','skill 3','skill 1','skill 2'],
+            smallExcerpt: 'After advancing to Web Developer II, I have built an additional 150+ top ranking, SEO driven and accessible websites. I have also built onto our theme ',
+            companySkills: ['UI/UX','RWD','SEO','RackSpace','Accessibility','Plugins','Themes','Hosting'],
         },
 
         education: {
@@ -60,8 +60,8 @@ const ProfessionalExperience = () => {
             companyRole:'Web Developer I',
             companyStartDate:'10/2021',
             companyEndDate: '10/2022',
-            smallExcerpt: 'Loving it wordpress, the works woohoo Loving it wordpress, the works woohoo ',
-            companySkills: ['skill 1','skill 2','skill 3','skill 1','skill 2','skill 3','skill 1','skill 2'],
+            smallExcerpt: 'While working remotely, I designed and developed over 100 websites, earning three web design awards. I ensured precise task execution and maintained seamless communication.',
+            companySkills: ['UI/UX','RWD','SEO','RackSpace','Accessibility','Plugins','Themes','Hosting'],
         },
 
         education: {
@@ -82,8 +82,8 @@ const ProfessionalExperience = () => {
             companyRole:'JR Web Developer',
             companyStartDate:'10/2019',
             companyEndDate: '10/2021',
-            smallExcerpt: 'Loving it wordpress, the works woohoo Loving it wordpress, the works woohoo ',
-            companySkills: ['skill 1','skill 2','skill 3','skill 1','skill 2','skill 3','skill 1','skill 2'],
+            smallExcerpt: 'Led the transition from Joomla to WordPress, collaborating with the design team to create a visually striking and highly functional website, delivering exceptional precision and seamless implementation.',
+            companySkills: ['UI/UX','RWD','Wireframing','RackSpace','Migrations','Deadlines','FTP','Hosting'],
         },
 
         education: {
@@ -116,7 +116,7 @@ const ProfessionalExperience = () => {
                 </div>
             </div>
 
-            <div className="w-full gap-10 md:gap-20 py-10 md:py-14 lg:py-18 font-ultra text-center md:text-left  grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 mx-auto px-6 md:px-8 relative z-10">
+            <div className="w-full gap-10 md:gap-16 py-10 md:py-14 lg:py-18 font-ultra text-center md:text-left  grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 mx-auto px-6 md:px-8 relative z-10">
 
                 {initialResume?.map((item)=>(
                     <div className="">
@@ -135,9 +135,9 @@ const ProfessionalExperience = () => {
 
                                     <p className=" grid text-zinc-700  items-center md:items-start justify-center md:justify-start gap-8  md:text-xl">{item.experience.companyStartDate} - {item.experience.companyEndDate ? item.experience.companyEndDate : 'Present'}</p>
 
-                                    <p className="">{item.experience.smallExcerpt}</p>
+                                    <p className="text-md ">{item.experience.smallExcerpt}</p>
 
-                                    <ul className="grid gap-2 grid-cols-2 col-span-full  text-sm md:text-md xl:text-lg capitalize mt-2">
+                                    <ul className="grid gap-2 grid-cols-2 col-span-full  text-sm md:text-md capitalize mt-2">
                                         {item.experience.companySkills.map((item)=>(
                                             <li className="flex flex-col md:flex-row items-center justify-start md:gap-2 bg-red-600 text-white p-2 px-3 rounded tracking-wider">{item}</li>
                                         ))}
