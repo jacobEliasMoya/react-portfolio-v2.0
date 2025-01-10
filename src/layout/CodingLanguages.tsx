@@ -4,7 +4,6 @@ import { ReactElement, useEffect, useState } from 'react'
 import { SiAdobeillustrator, SiAdobephotoshop, SiKrita, SiRedux, SiTailwindcss } from 'react-icons/si'
 import {  BiLogoTypescript } from 'react-icons/bi'
 import { RiJavascriptFill } from 'react-icons/ri'
-import Paragraph from '../components/Paragraph'
 
 interface Skills {
     name: string,
@@ -158,7 +157,7 @@ const CodingLanguages = () => {
             <div className="w-full ">
 
             <H2element additionalClasses={'text-md md:text-2xl pb-4 flex flex-col  '} headerText={"Web Design"} spanClasses={undefined} spanText={undefined}/>
-            <ul className='text-sm md:text-md xl:text-lg grid grid-cols-1 gap-2  '>
+            <ul className='text-sm md:text-md xl:text-lg grid grid-cols-1 gap-0 md:gap-2  '>
                 {usedTech ? usedTech.filter((item=>item.category == 'design')).map((item)=>(
                         <li className='flex flex-col md:flex-row items-center justify-start md:gap-2 bg-red-600 text-white p-2 px-3 rounded tracking-wider mb-2'> 
                          <span className='text-xl md:text-4xl'>{item.icon}</span>
@@ -173,7 +172,7 @@ const CodingLanguages = () => {
            <div className="w-full  ">
 
             <H2element additionalClasses={'text-md md:text-2xl pb-4 flex flex-col  '} headerText={"Web Builders"} spanClasses={undefined} spanText={undefined}/>
-            <ul className='text-sm md:text-md xl:text-lg grid grid-cols-1 gap-2 '>
+            <ul className='text-sm md:text-md xl:text-lg grid grid-cols-1 gap-0 md:gap-2 '>
                 {usedTech ? usedTech.filter((item=>item.category == 'builder')).map((item)=>(
                          <li className='flex flex-col md:flex-row items-center justify-start md:gap-2 bg-red-600 text-white p-2 px-3 rounded tracking-wider mb-2'> 
                          <span className='text-xl md:text-4xl'>{item.icon}</span>
