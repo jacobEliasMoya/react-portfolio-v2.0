@@ -24,7 +24,7 @@ const Contact = () => {
           <div className="grid justify-evenly flex-col gap-6 h-full order-1 lg:order-2">
 
             <H3element additionalClasses={' text-xl md:text-2xl  xl:text-4xl bg-inherit capitalize'} headerText={'Send me a Message Today!'} spanClasses={undefined} spanText={undefined}/>
-            <Paragraph text={'I would love to get to know more about you, your businesses needs, and what exactly your looking for. '} classes={'gap-8 md:text-xl tracking-widest '}/>
+            <Paragraph text={'I would love to get to know more about you, your businesses needs, and what exactly your looking for. '} classes={'gap-8 text-sm md:text-lg lg:text-xl tracking-widest '}/>
             <div className='grid grid-cols-4 gap-12 mx-auto md:mx-0 md:w-max pt-1'><Socials additionalClasses={'text-3xl md:text-4xl'}/></div>
 
           </div>

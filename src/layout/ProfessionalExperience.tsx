@@ -36,7 +36,7 @@ const ProfessionalExperience = () => {
             companyIcon: biziqLogo,
             companyName:'BIZIQ',
             companyRole:'Web Developer II',
-            companyStartDate:'October 2022',
+            companyStartDate:'10/2022',
             companyEndDate: undefined,
             smallExcerpt: 'Loving it wordpress, the works woohoo Loving it wordpress, the works woohoo ',
             companySkills: ['skill 1','skill 2','skill 3','skill 1','skill 2','skill 3','skill 1','skill 2'],
@@ -58,8 +58,8 @@ const ProfessionalExperience = () => {
             companyIcon:biziqLogo,
             companyName:'BIZIQ',
             companyRole:'Web Developer I',
-            companyStartDate:'October 2021',
-            companyEndDate: 'October 2022',
+            companyStartDate:'10/2021',
+            companyEndDate: '10/2022',
             smallExcerpt: 'Loving it wordpress, the works woohoo Loving it wordpress, the works woohoo ',
             companySkills: ['skill 1','skill 2','skill 3','skill 1','skill 2','skill 3','skill 1','skill 2'],
         },
@@ -80,8 +80,8 @@ const ProfessionalExperience = () => {
             companyIcon:varepLogo,
             companyName:'VAREP',
             companyRole:'JR Web Developer',
-            companyStartDate:'October 2019',
-            companyEndDate: 'October 2021',
+            companyStartDate:'10/2019',
+            companyEndDate: '10/2021',
             smallExcerpt: 'Loving it wordpress, the works woohoo Loving it wordpress, the works woohoo ',
             companySkills: ['skill 1','skill 2','skill 3','skill 1','skill 2','skill 3','skill 1','skill 2'],
         },
@@ -103,7 +103,7 @@ const ProfessionalExperience = () => {
     },[])
 
     return (
-        <section id="about" className="transition-all w-11/12 rounded-lg my-8 md:my-20 bg-white flex justify-start flex-wrap flex-col overflow-hidden mx-auto py-6 md:py-10  md:[box-shadow:_1em_1em_#960707]">
+        <section id="about" className="transition-all w-11/12 rounded-lg my-8 md:my-20 bg-white flex justify-start flex-wrap flex-col overflow-hidden mx-auto py-6 md:py-10 [box-shadow:_.5em_.5em_#960707] md:[box-shadow:_1em_1em_#960707]">
             <div className="w-full flex gap-8 px-6 md:px-8 relative z-10">
             
                 <div className="flex flex-col" >            
@@ -121,7 +121,7 @@ const ProfessionalExperience = () => {
                 {initialResume?.map((item)=>(
                     <div className="">
                         <div className="items-start grid grid-cols-1 md:grid-cols-2 gap-4 col-span-full md:col-span-3 ">
-                            <H4element additionalClasses={'col-span-full font-ultra text-xl md:text-2xl lg:text-4xl hidden md:flex flex-col text-red-600  bg-inherit '} headerText={item.experience.companyRole} spanClasses={undefined} spanText={undefined}/>
+                            <H4element additionalClasses={'col-span-full font-ultra text-2xl md:text-[1.8em] hidden md:flex flex-col text-red-600  bg-inherit '} headerText={item.experience.companyRole} spanClasses={undefined} spanText={undefined}/>
 
                             <div className=" col-span-full gap-2 md:gap-5 rounded grid grid-cols-5">
 

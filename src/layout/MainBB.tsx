@@ -32,16 +32,12 @@ return (
         <div className="transition-all z-10 rounded-full relative w-full flex justify-center items-center flex-col md:flex-row opacity-100 p-4 gap-6  md:gap-12">
 
             <div className="w-full md:gap-2 lg:gap-4 flex items-center justify-center flex-row flex-wrap text-white tracking-widest text-sm lg:text-lg  font-ultra !text-balance order-2">
-                <Paragraph text={jakeMessage ? jakeMessage : ''} classes={'w-full md:w-2/3 font-ultra tracking-widest !text-balance'}/>
+                <Paragraph text={jakeMessage ? jakeMessage : ''} classes={'w-full md:w-11/12 font-ultra tracking-widest !text-balance'}/>
             </div>
 
             <div className="shadow-[0em_0.25em_rgba(0,0,0,0.15)] hover:shadow-[0em_1em_rgba(0,0,0,0.15)] transition-all ease  bg-red-500  rounded-full min-w-52 min-h-52 md:min-w-80 md:min-h-80 lg:min-w-96 lg:min-h-96 relative md:hover:-translate-y-[15px] flex justify-center items-center z-10 group order-1 md:order-2">
                 
                 <div className=" bg-white rounded-full w-44 h-44 md:w-64 md:h-64 lg:w-80 lg:h-80 flex items-center justify-center animate-wiggle relative ">
-                    
-                    <div className="hidden md:absolute z-20 bg-white p-8 text-xl md:-top-28 lg:-top-24 md:left-56 w-full rounded-lg before:content-[''] before:absolute before:w-0 before:h-0 before:top-[97%] before:border-[20px] before:border-transparent before:border-t-white transition-all font-ultra text-balance">
-                       {jakeMessage}
-                    </div>
                     
                     <img src={jakeCartoon} alt="jake" className="w-1/2 pointer-events-none select-none"/>
 

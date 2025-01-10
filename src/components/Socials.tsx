@@ -1,7 +1,6 @@
 import { FaLinkedin } from "react-icons/fa6"
 import { FaEnvelope, FaGithub, FaMobile } from "react-icons/fa"
 
-
 type Props = {
     additionalClasses:string|undefined
 }
@@ -24,6 +23,7 @@ const Socials = (props: Props) => {
         <a href="https://github.com/jacobEliasMoya/" target="_blank" rel="noopener noreferrer" title="JacobMoya Github" className="cursor-none w-max" aria-label="JacobMoya Github">
             <FaGithub className={`transition-all  active:scale-125  md:hover:-translate-y-2 md:hover:drop-shadow-md ${props.additionalClasses}`}/>
         </a>
+
     </>
   )
 }

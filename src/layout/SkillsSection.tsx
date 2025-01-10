@@ -188,7 +188,7 @@ const SkillsSection = () => {
     },[boundsLocked])
 
     return (
-        <section id="outer-scroll" className=" md:[box-shadow:_1em_1em_#960707] transition-all w-11/12 rounded-lg my-8 md:my-20 bg-white flex justify-start flex-wrap flex-col overflow-hidden mx-auto py-6 md:py-10 ">
+        <section id="outer-scroll" className="[box-shadow:_.5em_.5em_#960707] md:[box-shadow:_1em_1em_#960707] transition-all w-11/12 rounded-lg my-8 md:my-20 bg-white flex justify-start flex-wrap flex-col overflow-hidden mx-auto py-6 md:py-10 ">
 
 
             <div className="w-full flex gap-8 px-6 md:px-8 relative z-10">
