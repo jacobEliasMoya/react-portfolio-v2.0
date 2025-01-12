@@ -5,15 +5,18 @@ import { useEffect, useState } from "react"
 import Paragraph from "../components/Paragraph"
 import Socials from "../components/Socials"
 
-// type Props = {}
-
 const MainBB = () => {
 
-    const [jakeMessage,setJakeMessage]  = useState<string>();
+    const [jakeMessage, setJakeMessage]  = useState<string>();
+    const [foldBackInt, setFoldBackInt] = useState<number>();
+    const [myContainer, setMyContainer] = useState<HTMLElement>();
 
-useEffect(()=>{
-    setJakeMessage('Hi, I am Jake, a Frontend ReactJS Dev and Designer! ')
-},[jakeMessage])
+    useEffect(()=>{
+        setJakeMessage('Hi, I am Jake, a Frontend ReactJS Dev and Designer! ')
+    },[jakeMessage])
+
+    useEffect(()=>{
+    },[])
 
 return (
 <section id="home" className='gap-5 transition-all w-full min-h-screen  bg-red-600 flex items-center justify-between p-6 md:p-8 py-6 md:py-10 flex-wrap flex-col  '>

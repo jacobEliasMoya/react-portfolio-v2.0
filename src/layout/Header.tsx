@@ -12,7 +12,8 @@ interface Nav {
   url:string,
   title: string,
   icon: ReactElement,
-  target:string|undefined
+  target:string|undefined,
+  additionalClasses:string 
 }
 
 const Header = () => {
@@ -22,33 +23,33 @@ const Header = () => {
       name: 'Home',
       url: '/#home',
       title: 'test',
-      icon: <FaHome/>,
-      target: undefined
-
+      icon: <FaHome />,
+      target: undefined,
+      additionalClasses: ''
     },
     {
       name: 'Tech',
       url: '/#coding',
       title: 'Technology I use',
-      icon: <FaCode/>,
-      target: undefined
-
+      icon: <FaCode />,
+      target: undefined,
+      additionalClasses: ''
     },
     {
       name: 'Spotlight',
       url: '/#outer-scroll',
       title: 'Spotlight Work',
-      icon: <GiRoundStar  />,
+      icon: <GiRoundStar />,
       target: undefined,
-
+      additionalClasses: ''
     },
     {
       name: 'About',
       url: '/#about',
       title: 'About My Work',
-      icon: <HiQuestionMarkCircle/>,
+      icon: <HiQuestionMarkCircle />,
       target: undefined,
-
+      additionalClasses: ''
     },
     {
       name: 'Contact',
@@ -56,13 +57,15 @@ const Header = () => {
       title: 'Contact Me Today',
       icon: <MdEmail />,
       target: undefined,
+      additionalClasses: ''
     },
     {
       name: 'Resume',
       url: resume,
       title: 'View My Resume',
-      icon: <HiClipboardDocumentCheck  />,
-      target: '_blank'
+      icon: <HiClipboardDocumentCheck />,
+      target: '_blank',
+      additionalClasses: 'hidden md:block'
     },
 
 
@@ -88,7 +91,7 @@ const Header = () => {
     },[])
 
   return (
-    <header className={`${headerActive ? 'min-w-[calc(100%-1em)]  pl-10 md:pl-0' : 'min-w-16 md:min-w-[65vw] lg:min-w-[55vw]'} min-h-16 flex items-center justify-center bg-zinc-800 bg-opacity-85 backdrop-blur-lg text-white mx-auto fixed bottom-[.5em] md:bottom-0 left-[.5em] md:left-1/2 md:-translate-x-1/2 md:rounded-b-none  z-40 rounded-full flex-row transition-all ease duration-500  font-ultra overflow-hidden md:overflow-visible `}>
+    <header className={`${headerActive ? 'min-w-[calc(100%-1em)]  pl-6 md:pl-0' : 'min-w-16 md:min-w-[65vw] lg:min-w-[55vw]'} min-h-16 flex items-center justify-center bg-zinc-800 bg-opacity-85 backdrop-blur-lg text-white mx-auto fixed bottom-[.5em] md:bottom-0 left-[.5em] md:left-1/2 md:-translate-x-1/2 md:rounded-b-none  z-40 rounded-full flex-row transition-all ease duration-500  font-ultra overflow-hidden md:overflow-visible `}>
 
       <button onClick={handleClick} className='absolute left-0 md:hidden z-10'>
           <img src={jakeCartoon} alt="" className={`${headerActive ? 'scale-75' : 'scale-100'} h-16 w-16 active:scale-110 transition-all` }/>
@@ -98,7 +101,7 @@ const Header = () => {
       <ul className={` flex justify-center items-center gap-6 w-full max-w-0 `}>
         { navigationElms?.map((item)=>(
           <li className="cursor-none text-2xl tracking-widest lg:text-3xl group ">
-            <a href={item.url} target={item.target ? item.target : '' } className='flex flex-row items-center justify-center gap-2 md:gap-4 md:p-4 relative cursor-none'>{item.icon} <span className='hidden transition-all ease duration-200 -top-2 group-hover:-top-20 opacity-0 group-hover:opacity-100 group-hover:text-2xl  lg:absolute lg:inline text-sm bg-zinc-800  p-4 rounded-md '>{item.name}</span> </a>
+            <a href={item.url} target={item.target ? item.target : '' } className={`flex flex-row items-center justify-center gap-2 md:gap-4 md:p-4 relative cursor-none ${item.additionalClasses}`}>{item.icon} <span className='hidden transition-all ease duration-200 -top-2 group-hover:-top-20 opacity-0 group-hover:opacity-100 group-hover:text-2xl  lg:absolute lg:inline text-sm bg-zinc-800  p-4 rounded-md '>{item.name}</span> </a>
           </li>
         )) }
       </ul>
