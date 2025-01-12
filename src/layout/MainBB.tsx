@@ -1,6 +1,6 @@
 import H1element from "../components/headers/H1element"
 import H2element from "../components/headers/H2element"
-import jakeCartoon from "../assets/cartoon-jm.png"
+import jakeCartoon from "../assets/cartoon-jm.webp"
 import { useEffect, useState } from "react"
 import Paragraph from "../components/Paragraph"
 import Socials from "../components/Socials"
@@ -49,7 +49,7 @@ return (
 
             <div className="w-full gap-4 lg:gap-12 flex items-center justify-center flex-row flex-wrap order-2 md:order-3 text-white text-3xl md:text-4xl ">
 
-                <Socials additionalClasses={undefined}/>
+                <Socials additionalClasses={''}/>
             </div>
 
         </div>
