@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react"
 import H2element from "../components/headers/H2element"
-import H4element from "../components/headers/H4element"
+import H3element from "../components/headers/H3element"
 import varepLogo from "../assets/varepMainWhite-300x109.webp"
 import biziqLogo from "../assets/biziq-logo.webp"
 
@@ -122,7 +122,7 @@ const ProfessionalExperience = () => {
                 {initialResume?.map((item)=>(
                     <div className="">
                         <div className="items-start grid grid-cols-1 md:grid-cols-2 gap-4 col-span-full md:col-span-3 ">
-                            <H4element additionalClasses={'col-span-full font-ultra text-2xl md:text-[1.8em] hidden md:flex flex-col text-red-600  bg-inherit '} headerText={item.experience.companyRole} spanClasses={undefined} spanText={undefined}/>
+                            <H3element additionalClasses={'col-span-full font-ultra text-2xl md:text-[1.8em] hidden md:flex flex-col text-red-600  bg-inherit '} headerText={item.experience.companyRole} spanClasses={undefined} spanText={undefined}/>
 
                             <div className=" col-span-full gap-2 md:gap-5 rounded grid grid-cols-5">
 
@@ -130,7 +130,7 @@ const ProfessionalExperience = () => {
                                     <img src={item.experience.companyIcon} alt='' className="md:-rotate-90  min-w-28 w-3/12 md:w-full invert brightness-0"/>
                                 </div>
 
-                                <H4element additionalClasses={'col-span-full font-ultra text-xl flex md:hidden flex-col text-red-600 bg-inherit mt-2 '} headerText={item.experience.companyRole} spanClasses={undefined} spanText={undefined}/>
+                                <H3element additionalClasses={'col-span-full font-ultra text-xl flex md:hidden flex-col text-red-600 bg-inherit mt-2 '} headerText={item.experience.companyRole} spanClasses={undefined} spanText={undefined}/>
 
                                 <div className="grid grid-cols-1 col-span-full md:col-span-4 gap-2 items-start justify-end flex-col mt-0">
 

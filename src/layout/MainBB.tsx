@@ -42,7 +42,7 @@ return (
                 
                 <div className=" bg-white rounded-full w-44 h-44 md:w-64 md:h-64 lg:w-80 lg:h-80 flex items-center justify-center animate-wiggle relative ">
                     
-                    <img src={jakeCartoon} alt="jake" className="w-1/2 pointer-events-none select-none"/>
+                    <img src={jakeCartoon} alt="jake" width="150" height="220" className="w-1/2 pointer-events-none select-none"/>
 
                 </div>
             </div>
