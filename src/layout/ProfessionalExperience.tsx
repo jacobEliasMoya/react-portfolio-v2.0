@@ -38,7 +38,7 @@ const ProfessionalExperience = () => {
             companyRole:'Web Developer II',
             companyStartDate:'10/2022',
             companyEndDate: undefined,
-            smallExcerpt: 'As Web Developer II, I’ve excelled in creating SEO-driven & accessible websites. All while enhancing UI/UX for high conversions, and growing my skills & fostering team success.'
+            smallExcerpt: 'As Web Developer II, I’ve excelled in creating SEO-driven & accessible websites. All while enhancing UI/UX for high conversions, and growing my skills for team success.'
             ,
             companySkills: ['UI/UX','RWD','SEO','RackSpace','Accessibility','Plugins','Themes','Migrations'],
         },
@@ -140,7 +140,7 @@ const ProfessionalExperience = () => {
 
                                     <ul className="grid gap-2 md:gap-3 grid-cols-2 col-span-full text-sm md:text-md capitalize mt-2">
                                         {item.experience.companySkills.map((item)=>(
-                                            <li className="flex flex-col md:flex-row items-center justify-start md:gap-2 bg-red-600 text-white p-2 px-3 rounded tracking-wider">{item}</li>
+                                            <li className="flex flex-col md:flex-row items-center justify-start md:gap-2 bg-red-600 text-white p-3 rounded tracking-wider">{item}</li>
                                         ))}
                                     </ul>
 
