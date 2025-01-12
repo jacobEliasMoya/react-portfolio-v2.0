@@ -718,10 +718,6 @@ video {
   display: grid;
 }
 
-.\!hidden {
-  display: none !important;
-}
-
 .hidden {
   display: none;
 }
@@ -2307,6 +2303,10 @@ video {
     gap: 0.5rem;
   }
 
+  .md\:gap-3 {
+    gap: 0.75rem;
+  }
+
   .md\:gap-4 {
     gap: 1rem;
   }
@@ -2413,6 +2413,11 @@ video {
 
   .md\:text-\[1\.8em\] {
     font-size: 1.8em;
+  }
+
+  .md\:text-lg {
+    font-size: 1.125rem;
+    line-height: 1.75rem;
   }
 
   .md\:text-xl {

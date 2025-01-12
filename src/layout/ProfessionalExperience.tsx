@@ -61,7 +61,7 @@ const ProfessionalExperience = () => {
             companyRole:'Web Developer I',
             companyStartDate:'10/2021',
             companyEndDate: '10/2022',
-            smallExcerpt: 'While working remotely, I designed and developed 100+ websites, earning accolades. I ensured precise execution, seamless communication, and prioritized client requests, delivering quality results',
+            smallExcerpt: 'While working remotely, I developed 100+ websites, earning accolades for quality, clear communication, and client-focused execution.',
             companySkills: ['UI/UX','RWD','SEO','RackSpace','Accessibility','Plugins','Themes','Migrations'],
         },
 
@@ -83,7 +83,7 @@ const ProfessionalExperience = () => {
             companyRole:'JR Web Developer',
             companyStartDate:'10/2019',
             companyEndDate: '10/2021',
-            smallExcerpt: 'Led the transition from Joomla to WordPress, working with the design team to create a visually striking, highly functional website. Delivered precise execution and seamless implementation.',
+            smallExcerpt: 'Led the transition from Joomla to WordPress, collaborating with designers to deliver a visually striking, functional website with seamless execution.',
             companySkills: ['UI/UX','RWD','Wireframing','RackSpace','Migrations','Deadlines','FTP','Hosting'],
         },
 
@@ -136,9 +136,9 @@ const ProfessionalExperience = () => {
 
                                     <p className=" grid text-zinc-700  items-center md:items-start justify-center md:justify-start gap-8  md:text-xl">{item.experience.companyStartDate} - {item.experience.companyEndDate ? item.experience.companyEndDate : 'Present'}</p>
 
-                                    <p className="text-sm md:text-md ">{item.experience.smallExcerpt}</p>
+                                    <p className="text-sm md:text-md md:text-lg ">{item.experience.smallExcerpt}</p>
 
-                                    <ul className="grid gap-2 grid-cols-2 col-span-full text-sm md:text-md capitalize mt-2">
+                                    <ul className="grid gap-2 md:gap-3 grid-cols-2 col-span-full text-sm md:text-md capitalize mt-2">
                                         {item.experience.companySkills.map((item)=>(
                                             <li className="flex flex-col md:flex-row items-center justify-start md:gap-2 bg-red-600 text-white p-2 px-3 rounded tracking-wider">{item}</li>
                                         ))}

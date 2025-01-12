@@ -15,6 +15,7 @@ import p8Img from "../assets/projects/kidskingdom1.png";
 
 import ButtonWhite from "../components/buttons/ButtonWhite";
 import Paragraph from "../components/Paragraph";
+import { FaGithub } from "react-icons/fa";
  
 interface Spotlight {
     id:number,
@@ -37,10 +38,11 @@ const SkillsSection = () => {
             projectName: "Qr Code Generator",
             projectLink: p1Img,
             codeLink: "https://qrclone.netlify.app/",
-            projectDexcription: "My passion project is using React/ Typescript / Tailwind/ Redux with a couple libraries as well. The libraries are just a color dropper/ selection tool and a canvas to image lib for downloads!",
+            projectDexcription: "My passion project uses React, TypeScript, Tailwind, Redux, and libraries for color selection and canvas-to-image downloads.",
             categories:['test','test1','test2'],
             isActive: false,
             isApp: true,
+            git:''
         },
         {
             id:2,
@@ -48,10 +50,12 @@ const SkillsSection = () => {
             projectName: "Pokedex v2",
             projectLink: p2Img,
             codeLink: "https://main--pokedex-vmax.netlify.app/",
-            projectDexcription: "My childrens love for pokemon inspired me to make a 2nd version of a pokedex I created a few years back with CSS/ SCSS/, This one is more robust and I used bootstrap for this one. ",
+            projectDexcription: "My kids' love for Pokémon inspired me to create a more robust second version of my Pokédex, now built with Bootstrap. ",
             categories:['test','test1','test2'],
             isActive: false,
             isApp: true,
+            git:''
+
         },
         {
             id:3,
@@ -59,10 +63,12 @@ const SkillsSection = () => {
             projectName: "Smith Insurance",
             projectLink: p3Img,
             codeLink: "https://insurancesic.com/",
-            projectDexcription: "Welcome to Smith Insurance, your reliable partner for comprehensive insurance solutions in Pagosa Springs, CO, and beyond. Whether you’re looking for auto, home, life, or business coverage, our experienced team is here. ",
+            projectDexcription: "Welcome to Smith Insurance, your reliable partner for comprehensive insurance solutions in Pagosa Springs, CO, and beyond.",
             categories:['test','test1','test2'],
             isActive: false,
             isApp: false,
+            git:''
+
         },
         {
             id:4,
@@ -70,10 +76,12 @@ const SkillsSection = () => {
             projectName: "MedEstheticsRX",
             projectLink: p4Img,
             codeLink: "https://medestheticsrx.com/",
-            projectDexcription: "At MedEstheticsRX, we believe that beautiful, healthy skin is more than just an aesthetic goal—it’s a science. And as a premier skincare spa in San Francisco, CA, and beyond ",
+            projectDexcription: "At MedEstheticsRX, we believe that beautiful, healthy skin is more than just an aesthetic goal—it’s a science. ",
             categories:['test','test1','test2'],
             isActive: false,
             isApp: false,
+            git:''
+
 
         },
         {
@@ -86,6 +94,8 @@ const SkillsSection = () => {
             categories:['test','test1','test2'],
             isActive: false,
             isApp: false,
+            git:''
+
         },
         {
             id:6,
@@ -93,10 +103,12 @@ const SkillsSection = () => {
             projectName: "Kids Kingdom",
             projectLink: p8Img,
             codeLink: "https://kidskingdom1.com/",
-            projectDexcription: "Kids Kingdom Early Learning Center is the premier Biblically-based early child care center in Greenwood, IN. We’re proud to teach the youngest minds skills that last a lifetime.",
+            projectDexcription: "Kids Kingdom Early Learning Center is the premier Biblically-based early child care center in Greenwood, IN. ",
             categories:['test','test1','test2'],
             isActive: false,
             isApp: false,
+            git:''
+
 
         },
         {
@@ -105,10 +117,12 @@ const SkillsSection = () => {
             projectName: "Franklin’s",
             projectLink: p5Img,
             codeLink: "https://franklinsinproctor.com/",
-            projectDexcription: "Welcome to Franklin’s, where the motto “Food, Friends, and Fun” truly comes to life! Located in the heart of Proctor, VT, our family-style restaurant is your go-to destination.",
+            projectDexcription: "Welcome to Franklin’s, where the motto “Food, Friends, and Fun” truly comes to life! Located in the heart of Proctor, VT.",
             categories:['test','test1','test2'],
             isActive: false,
             isApp: false,
+            git:''
+
         },
         {
             id:8,
@@ -116,10 +130,11 @@ const SkillsSection = () => {
             projectName: "Venlos Apparal",
             projectLink: p7Img,
             codeLink: "https://venolosapparel.com/",
-            projectDexcription: "At Venolos Apparel, we believe that apparel, art, and music go hand in hand. Drawing inspiration from the rich and diverse culture of hip hop",
+            projectDexcription: "At Venolos Apparel, we believe that apparel, art, and music go hand in hand. Drawing inspiration from hip hop.",
             categories:['test','test1','test2'],
             isActive: false,
             isApp: false,
+            git:''
 
         },
 
@@ -149,10 +164,6 @@ const SkillsSection = () => {
         if(containerWidth && startingArrNum && scrollItemRight && scrollItemRight < containerWidth * 1.35){
             setStartingArrNum( startingArrNum + 4);
         }
-    }
-
-    const allowClickThrough = () =>{
-        console.log('mouse is down')
     }
 
     // all useeffects below here --------------------------------------------------------
@@ -218,8 +229,8 @@ const SkillsSection = () => {
 
                         <div id={`${item.id}`} className={`rounded-xl text-center w-[450px] max-w-[75vw] relative transition-all duration-200  font-ultra p-4 grid grid-cols-4 gap-4 `}>
                             
-                            <H3element additionalClasses={' font-retro drop-shadow-xl shadow-red-900 absolute -top-28 -right-5 -z-10 text-[10em] transition-all tracking-widest text-red-700'} headerText={`${item.id}`} spanClasses={''} spanText={''}/>
 
+                            <H3element additionalClasses={' font-retro drop-shadow-xl shadow-red-900 absolute -top-28 -right-5 -z-10 text-[10em] transition-all tracking-widest text-red-700'} headerText={`${item.id}`} spanClasses={''} spanText={''}/>
 
                             <div className="rounded col-span-3 duration-500 transition-all bg-cover bg-left w-full min-h-72 translate brightness-90"
                                 style={{
@@ -233,8 +244,12 @@ const SkillsSection = () => {
 
                             <div className="col-span-4  duration-200 transition-all w-full p-0 flex flex-col items-center justify-between relative z-10 h-3/6" >
 
-                                <ButtonWhite buttonText={item.isApp ? `View App` : `View Website`} additionalClasses={"!rounded text-sm md:text-md lg:text-lg tracking-widest !w-full relative z-10 !bg-red-600 hover:!bg-red-700 !text-white !py-3"} buttonLink={item.codeLink ? item.codeLink : ''} newWindow={true} clickHandle={allowClickThrough}/> 
-                                <Paragraph text={item.projectDexcription} classes={'mt-4 md:text-left text-sm md:text-md '}/>
+                                <ButtonWhite buttonText={item.isApp ? `View App` : `View Website`} additionalClasses={"!rounded text-sm md:text-md lg:text-lg tracking-widest !w-full relative z-10 !bg-red-600 hover:!bg-red-700 !text-white !py-3"} buttonLink={item.codeLink ? item.codeLink : ''} newWindow={true} clickHandle={undefined}/> 
+
+
+
+
+                                <Paragraph text={item.projectDexcription} classes={'mt-4 md:text-left text-sm md:text-md md:text-lg '}/>
 
                             </div>
 
