@@ -40,7 +40,7 @@ const ProfessionalExperience = () => {
             companyEndDate: undefined,
             smallExcerpt: 'As Web Developer II, I’ve excelled in creating SEO-driven & accessible websites. All while enhancing UI/UX for high conversions, and growing my skills for team success.'
             ,
-            companySkills: ['UI/UX','RWD','SEO','RackSpace','Accessibility','Plugins','Themes','Migrations'],
+            companySkills: ['UI/UX','Mobile','SEO','RackSpace','Accessibility','Plugins','Themes','Migrations'],
         },
 
         education: {
@@ -62,7 +62,7 @@ const ProfessionalExperience = () => {
             companyStartDate:'10/2021',
             companyEndDate: '10/2022',
             smallExcerpt: 'While working remotely, I developed 100+ websites, earning accolades for quality, clear communication, and client-focused execution.',
-            companySkills: ['UI/UX','RWD','SEO','RackSpace','Accessibility','Plugins','Themes','Migrations'],
+            companySkills: ['UI/UX','Mobile','SEO','RackSpace','Accessibility','Plugins','Themes','Migrations'],
         },
 
         education: {
@@ -84,7 +84,7 @@ const ProfessionalExperience = () => {
             companyStartDate:'10/2019',
             companyEndDate: '10/2021',
             smallExcerpt: 'Led the transition from Joomla to WordPress, collaborating with designers to deliver a visually striking, functional website with seamless execution.',
-            companySkills: ['UI/UX','RWD','Wireframing','RackSpace','Migrations','Deadlines','FTP','Hosting'],
+            companySkills: ['UI/UX','Mobile','Wireframing','RackSpace','Migrations','Deadlines','FTP','Hosting'],
         },
 
         education: {
