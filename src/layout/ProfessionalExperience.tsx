@@ -38,7 +38,7 @@ const ProfessionalExperience = () => {
             companyRole:'Web Developer II',
             companyStartDate:'10/2022',
             companyEndDate: undefined,
-            smallExcerpt: 'As Web Developer II, I’ve excelled in creating SEO-driven, accessible websites, enhancing UI/UX for high conversions, and growing my skills while fostering team success.'
+            smallExcerpt: 'As Web Developer II, I’ve excelled in creating SEO-driven & accessible websites. All while enhancing UI/UX for high conversions, and growing my skills while fostering team success.'
             ,
             companySkills: ['UI/UX','RWD','SEO','RackSpace','Accessibility','Plugins','Themes','Migrations'],
         },
