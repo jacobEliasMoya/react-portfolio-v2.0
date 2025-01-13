@@ -1814,12 +1814,12 @@ video {
   color: rgb(39 39 42 / var(--tw-text-opacity, 1));
 }
 
-.text-opacity-0 {
-  --tw-text-opacity: 0;
-}
-
 .text-opacity-100 {
   --tw-text-opacity: 1;
+}
+
+.text-opacity-0 {
+  --tw-text-opacity: 0;
 }
 
 .placeholder-zinc-600::-moz-placeholder {
@@ -1843,18 +1843,6 @@ video {
 .shadow-\[0em_0\.25em_rgba\(0\2c 0\2c 0\2c 0\.15\)\] {
   --tw-shadow: 0em 0.25em rgba(0,0,0,0.15);
   --tw-shadow-colored: 0em 0.25em var(--tw-shadow-color);
-  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
-}
-
-.shadow-\[0em_0\.5em_rgba\(0\2c 0\2c 0\2c 0\.15\)\] {
-  --tw-shadow: 0em 0.5em rgba(0,0,0,0.15);
-  --tw-shadow-colored: 0em 0.5em var(--tw-shadow-color);
-  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
-}
-
-.shadow-\[0em_0\.35em_rgba\(0\2c 0\2c 0\2c 0\.15\)\] {
-  --tw-shadow: 0em 0.35em rgba(0,0,0,0.15);
-  --tw-shadow-colored: 0em 0.35em var(--tw-shadow-color);
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
@@ -2456,6 +2444,10 @@ video {
   .md\:text-xl {
     font-size: 1.25rem;
     line-height: 1.75rem;
+  }
+
+  .md\:text-opacity-100 {
+    --tw-text-opacity: 1;
   }
 
   .md\:\[box-shadow\:_1em_1em_\#960707\] {

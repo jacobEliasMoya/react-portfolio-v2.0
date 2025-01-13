@@ -1,4 +1,4 @@
-import {  FaBootstrap, FaFigma, FaHtml5,  FaPhp, FaReact, FaSass, FaShopify,  FaSquarespace, FaWix, FaWordpress } from 'react-icons/fa'
+import {  FaBootstrap, FaFigma, FaHtml5,  FaReact, FaSass, FaShopify,  FaSquarespace, FaWix, FaWordpress } from 'react-icons/fa'
 import H2element from '../components/headers/H2element'
 import { ReactElement, useEffect, useState } from 'react'
 import { SiAdobeillustrator, SiAdobephotoshop, SiKrita, SiRedux, SiTailwindcss } from 'react-icons/si'

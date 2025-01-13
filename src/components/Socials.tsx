@@ -2,7 +2,7 @@ import { FaLinkedin } from "react-icons/fa6"
 import { FaEnvelope, FaGithub,  FaMobile } from "react-icons/fa"
 import { HiClipboardDocumentCheck } from "react-icons/hi2"
 import resume from "../assets/JacobResume.pdf"
-import { ReactElement, useState } from "react"
+import { ReactElement, useEffect, useState } from "react"
 
 interface Socials {
     name:string,
@@ -62,15 +62,19 @@ const Socials = (props: Props) => {
  
     ]
 
-    const [socialElms,setSocialElms] = useState(initialSocials);
+    const [socialElms,setSocialElms] = useState<Socials[]>();
     
+    useEffect(()=>{
+        initialSocials ? setSocialElms(initialSocials) : null;
+    },[])
+
 return (
 <>
-    {socialElms.map((item)=>(
+    {socialElms ? socialElms.map((item)=>(
         <a href={item.url} title={item.title} target={item.target} className={`cursor-none w-max ${item.desktopHidden ? 'md:hidden' : ''}`} aria-label={item.title} >
             {item.icon}
-         </a>
-    ))}
+        </a>
+    )):''}
 </>
 )
 }

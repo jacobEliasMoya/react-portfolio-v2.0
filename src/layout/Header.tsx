@@ -1,14 +1,10 @@
 import { useEffect, useState,ReactElement } from 'react'
-import jakeCartoon from '../assets/favi.png'
-import { FaBars, FaCode, FaHamburger, FaHome } from 'react-icons/fa'
+import { FaCode, FaHome } from 'react-icons/fa'
 import {  MdEmail } from 'react-icons/md'
-import { HiBars3, HiClipboardDocumentCheck, HiQuestionMarkCircle } from 'react-icons/hi2'
-import resume from "../assets/JacobResume.pdf"
-import { GiHamburgerMenu, GiRoundStar } from 'react-icons/gi'
-import { RxHamburgerMenu } from 'react-icons/rx'
-import { BsArrowsExpand, BsArrowUpShort, BsMenuButton } from 'react-icons/bs'
-import { TbMenu2 } from 'react-icons/tb'
+import {  HiClipboardDocumentCheck, HiQuestionMarkCircle } from 'react-icons/hi2'
+import { GiRoundStar } from 'react-icons/gi'
 import { TiThMenu } from 'react-icons/ti'
+import resume from "../assets/JacobResume.pdf"
 
 
 interface Nav {
@@ -78,7 +74,7 @@ const Header = () => {
     
   ]
 
-  const [navigationElms,setNavigationElms] = useState(initialNav);
+  const [navigationElms,setNavigationElms] = useState<Nav[]>();
   const [headerActive,setHeaderActive] = useState<boolean>();
 
   const handleClick = () => {
@@ -92,10 +88,12 @@ const Header = () => {
         window.innerWidth < 768 ? setHeaderActive(true) : setHeaderActive(false)
       })
 
+      initialNav ? setNavigationElms(initialNav) : '';
+
     },[])
 
   return (
-    <header className={`${headerActive ? 'min-w-[calc(100%-1em)]  pl-6 md:pl-0 bg-opacity-85 text-opacity-100 ' : 'min-w-14 md:min-w-[65vw] lg:min-w-[55vw] '} min-h-14 text-white text-opacity-0 flex items-center justify-center bg-zinc-800 bg-opacity-85 backdrop-blur-lg  mx-auto fixed bottom-[.5em] md:bottom-0 left-[.5em] md:left-1/2 md:-translate-x-1/2 md:rounded-b-none  z-40 rounded-full flex-row transition-all ease duration-500 font-ultra overflow-hidden md:overflow-visible shadow-[0em_0.25em_rgba(0,0,0,0.15)]`}>
+    <header className={`${headerActive ? 'min-w-[calc(100%-1em)]  pl-6 md:pl-0 bg-opacity-85  ' : 'min-w-14 md:min-w-[65vw] lg:min-w-[55vw] '} min-h-14 text-white  flex items-center justify-center bg-zinc-800 bg-opacity-85 backdrop-blur-lg  mx-auto fixed bottom-[.5em] md:bottom-0 left-[.5em] md:left-1/2 md:-translate-x-1/2 md:rounded-b-none  z-40 rounded-full flex-row transition-all ease duration-500 font-ultra overflow-hidden md:overflow-visible shadow-[0em_0.25em_rgba(0,0,0,0.15)]`}>
 
       <button aria-label="mobile-navigation-toggle" onClick={handleClick} className='absolute left-0 md:hidden z-10 ' >
           <TiThMenu className={`${headerActive ? 'scale-75' : 'scale-100'} rounded-full text-white p-2 border-8 border-white bg-red-600 h-14 w-14 active:scale-110 transition-all` }/>
