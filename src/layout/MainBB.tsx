@@ -8,8 +8,6 @@ import Socials from "../components/Socials"
 const MainBB = () => {
 
     const [jakeMessage, setJakeMessage]  = useState<string>();
-    const [foldBackInt, setFoldBackInt] = useState<number>();
-    const [myContainer, setMyContainer] = useState<HTMLElement>();
 
     useEffect(()=>{
         setJakeMessage('Hi, I am Jake, a Frontend ReactJS Dev and Designer! ')
@@ -39,16 +37,12 @@ return (
             </div>
 
             <div className="shadow-[0em_0.25em_rgba(0,0,0,0.15)] hover:shadow-[0em_1em_rgba(0,0,0,0.15)] transition-all ease  bg-red-500  rounded-full min-w-52 min-h-52 md:min-w-80 md:min-h-80 lg:min-w-96 lg:min-h-96 relative md:hover:-translate-y-[15px] flex justify-center items-center z-10 group order-1 md:order-2">
-                
                 <div className=" bg-white rounded-full w-44 h-44 md:w-64 md:h-64 lg:w-80 lg:h-80 flex items-center justify-center animate-wiggle relative ">
-                    
                     <img src={jakeCartoon} alt="jake" width="150" height="220" className="w-1/2 pointer-events-none select-none"/>
-
                 </div>
             </div>
 
             <div className="w-full gap-4 lg:gap-12 flex items-center justify-center flex-row flex-wrap order-2 md:order-3 text-white text-3xl md:text-4xl ">
-
                 <Socials additionalClasses={''}/>
             </div>
 
