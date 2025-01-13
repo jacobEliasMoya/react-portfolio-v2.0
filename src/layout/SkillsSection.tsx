@@ -140,31 +140,23 @@ const SkillsSection = () => {
 
     ]  
 
-    const [spotlight,setSpotlight] = useState<Array<Spotlight>>() 
+
+    // commented out code not needed for now, just to set the bounds limit 
 
     // initial count of items in array to base measurements on
-    const [startingArrNum,setStartingArrNum] = useState<number>();
-    const [scrollItemLeft, setScrollItemLeft] = useState<number>();
-    const [scrollItemRight, setScrollItemRight] = useState<number>();
-    const [containerWidth, setContainerWidth] = useState<number>();
-
+    // const [scrollItemLeft, setScrollItemLeft] = useState<number>();
+    // const [scrollItemRight, setScrollItemRight] = useState<number>();
     // handling the drag limites based on projects
-    const [dragBoundsLeft,setDragBoundsLeft] = useState<number>();
-    const [boundsLocked,setBoundsLocked] = useState<boolean>(false);
-
     // event handlers here
-    const handleScroll = () => {
-        setScrollItemLeft(document.querySelector("#drag-item")?.getBoundingClientRect().left)
-        setScrollItemRight(document.getElementById("drag-item")?.getBoundingClientRect().right)
-    }
+    // const handleScroll = () => {
+    //     setScrollItemLeft(document.querySelector("#drag-item")?.getBoundingClientRect().left)
+    //     setScrollItemRight(document.getElementById("drag-item")?.getBoundingClientRect().right)
+    // }
 
-    // handles additional items/ will stop at end of project list
-    const handleAdditionalItems = () =>{
-        // need to get inner width of container, if left is less the screens inner width add more
-        if(containerWidth && startingArrNum && scrollItemRight && scrollItemRight < containerWidth * 1.35){
-            setStartingArrNum( startingArrNum + 4);
-        }
-    }
+    const [spotlight,setSpotlight] = useState<Array<Spotlight>>() 
+    const [containerWidth, setContainerWidth] = useState<number>();
+    const [dragBoundsLeft,setDragBoundsLeft] = useState<number>();
+    
 
     // all useeffects below here --------------------------------------------------------
 
@@ -174,29 +166,16 @@ const SkillsSection = () => {
     },[])
 
     useEffect(()=>{
-        // when spotlight is set, set number of items to show
-        spotlight ? setStartingArrNum(5) : null;
         // set the width of the container
         setContainerWidth(document.getElementById("outer-scroll")?.offsetWidth)
     },[spotlight])
 
     useEffect(()=>{
-        // on either scroll left or right, runs a check to increase the starting Arr num to show more projects
-        handleAdditionalItems();
-
-        // setting slightly before to ensure bounds are set seamlessly
-        if(!boundsLocked && scrollItemRight && scrollItemRight - window.innerWidth <= 30){
-            setBoundsLocked(true)
-        } 
-
-    },[scrollItemLeft,scrollItemRight])
-
-    useEffect(()=>{
-        if(boundsLocked){
+        if(containerWidth){
             let x:any = document.getElementById("drag-item")?.offsetWidth;
             x && containerWidth ? setDragBoundsLeft(containerWidth - x) : '';
         }
-    },[boundsLocked])
+    },[containerWidth])
 
     return (
         <section id="outer-scroll" className="[box-shadow:_.5em_.5em_#960707] md:[box-shadow:_1em_1em_#960707] transition-all w-11/12 rounded-lg my-8 md:my-20 bg-white flex justify-start flex-wrap flex-col overflow-hidden mx-auto py-6 md:py-10 ">
@@ -218,12 +197,12 @@ const SkillsSection = () => {
             <Draggable 
                 axis="x"
                 cancel=".cancel-me-now"
-                onDrag={handleScroll}
+                // onDrag={handleScroll}
                 bounds={{right:0, left:dragBoundsLeft}}
             >
                 <div id="drag-item" className="mt-12 md:mt-16 gap-4 z-10 min-w-full md:w-max h-auto mx-auto justify-self-end flex justify-start items-start pt-3 px-4 ">
                     {/* mapping out projects, no need to fetch anything */}
-                    {spotlight && startingArrNum ? spotlight
+                    {spotlight ? spotlight
                     // .filter((item=>item.id < startingArrNum))
                     .map((item)=>(
 
@@ -245,9 +224,6 @@ const SkillsSection = () => {
                             <div className="col-span-4  duration-200 transition-all w-full p-0 flex flex-col items-center justify-between relative z-10 h-3/6" >
 
                                 <ButtonWhite buttonText={item.isApp ? `View App` : `View Website`} additionalClasses={"!rounded text-sm md:text-md lg:text-lg tracking-widest !w-full relative z-10 !bg-red-600 hover:!bg-red-700 !text-white !py-3"} buttonLink={item.codeLink ? item.codeLink : ''} newWindow={true} clickHandle={undefined}/> 
-
-
-
 
                                 <Paragraph text={item.projectDexcription} classes={'mt-4 md:text-left text-sm md:text-md md:text-lg '}/>
 
