@@ -554,6 +554,14 @@ video {
   display: none;
 }
 
+:root {
+  --tw-rotate-x: 0;
+  --tw-rotate-y: 0;
+  --tw-translate-z: 0;
+  --tw-scale-z: 1;
+  --tw-rotate-3d: 0,0,0,0deg;
+}
+
 .container {
   width: 100%;
 }
@@ -864,6 +872,10 @@ video {
   max-width: 75vw;
 }
 
+.origin-bottom {
+  transform-origin: bottom;
+}
+
 .-translate-x-1\/2 {
   --tw-translate-x: -50%;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
@@ -888,6 +900,10 @@ video {
 .scale-75 {
   --tw-scale-x: .75;
   --tw-scale-y: .75;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.transform {
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
@@ -1487,10 +1503,6 @@ video {
   gap: 1rem;
 }
 
-.gap-5 {
-  gap: 1.25rem;
-}
-
 .gap-6 {
   gap: 1.5rem;
 }
@@ -1814,14 +1826,6 @@ video {
   color: rgb(39 39 42 / var(--tw-text-opacity, 1));
 }
 
-.text-opacity-100 {
-  --tw-text-opacity: 1;
-}
-
-.text-opacity-0 {
-  --tw-text-opacity: 0;
-}
-
 .placeholder-zinc-600::-moz-placeholder {
   --tw-placeholder-opacity: 1;
   color: rgb(82 82 91 / var(--tw-placeholder-opacity, 1));
@@ -1915,6 +1919,18 @@ video {
 
 .ease-linear {
   transition-timing-function: linear;
+}
+
+.perspective-origin-bottom {
+  perspective-origin: bottom;
+}
+
+.perspective-1000 {
+  perspective: 1000px;
+}
+
+.transform {
+  transform: translate3d(var(--tw-translate-x), var(--tw-translate-y), var(--tw-translate-z)) rotateX(var(--tw-rotate-x)) rotateY(var(--tw-rotate-y)) rotateZ(var(--tw-rotate)) rotate3d(var(--tw-rotate-3d)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scale3d(var(--tw-scale-x),var(--tw-scale-y),var(--tw-scale-z)) !important;
 }
 
 .\[box-shadow\:_\.5em_\.5em_\#960707\] {
@@ -2444,10 +2460,6 @@ video {
   .md\:text-xl {
     font-size: 1.25rem;
     line-height: 1.75rem;
-  }
-
-  .md\:text-opacity-100 {
-    --tw-text-opacity: 1;
   }
 
   .md\:\[box-shadow\:_1em_1em_\#960707\] {
