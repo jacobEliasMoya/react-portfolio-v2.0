@@ -116,32 +116,52 @@ const CodingLanguages = () => {
     ]
 
     const [usedTech,setUsedTech] = useState<Array<Skills>>();
-
-    useEffect(()=>{
-        setUsedTech(skillsArr)
-    },[])
-
-    const [scrollBottom,setScrollBottom] = useState<number>();
-  
-    useEffect(()=>{
-
-    },[])
-  
-    const inView = () =>{
-        window.addEventListener('scroll',()=>{
-            document.querySelector('#home')?.getBoundingClientRect().top ? 
-            setScrollBottom(document.querySelector('#home')?.getBoundingClientRect().top) : null
-          })
+    const [isVisible,setIsVisible] = useState(false);
+    const [scrollBottom,setScrollBottom] = useState<number>(0);
+    const [scrollDirection,setScrollDirection] = useState<boolean>();
+    const [scrollDirectionInt,setScrollDirectionInt] = useState<number>();
+    
+    const inView = (e:boolean) =>{
+        setIsVisible(e)
     }
-    // useEffect(()=>{
-    // },[scrollBottom])
+
+    useEffect(()=>{
+        setUsedTech(skillsArr);
+
+
+        window.addEventListener("scroll",()=>{
+            let x:number|undefined = window.scrollY;
+            setScrollDirectionInt(x);
+        })
+
+    },[])
+
+
+    useEffect(()=>{
+        
+        window.addEventListener("scroll",()=>{
+            let x:number|undefined = window.scrollY;
+            scrollDirectionInt && x ? x < scrollDirectionInt ? setScrollDirection(true): setScrollDirection(false) : null
+        })
+
+    },[scrollDirectionInt])
+
+    useEffect(()=>{
+        console.log(scrollDirection)
+        scrollDirection ? setScrollBottom(prev=>prev+1) : setScrollBottom(prev=>prev-1)
+     },[scrollDirection])
 
     return (
         <ReactVisibilitySensor 
+            partialVisibility={true}
             onChange={inView}
+            minTopValue={window.innerHeight/2}
+
         > 
-            <section id="coding" className=" w-11/12 rounded-lg my-8 md:my-20 bg-white flex justify-start flex-wrap flex-col overflow-hidden mx-auto pb-7 md:pb-12 pt-6 md:pt-10 px-6 md:px-8 [box-shadow:_.5em_.5em_#960707] md:[box-shadow:_1em_1em_#960707]"             style={{
-                transform:` rotateX(${scrollBottom ? ( scrollBottom/-99 ):'0'}deg)`
+            <section id="coding" className=" w-11/12 rounded-lg my-8 md:my-20 bg-white flex justify-start flex-wrap flex-col overflow-hidden mx-auto pb-7 md:pb-12 pt-6 md:pt-10 px-6 md:px-8 [box-shadow:_.5em_.5em_#960707] md:[box-shadow:_1em_1em_#960707]"             
+            
+            style={{
+                transform:` rotateX(${isVisible ? scrollBottom : null}deg)`
             }}>
 
             <div className=" w-full gap-8  relative z-10 flex">

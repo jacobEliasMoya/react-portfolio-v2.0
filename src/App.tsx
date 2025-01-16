@@ -26,7 +26,7 @@ function App() {
 
     <div className=" scroll-smooth bg-red-700 font-retro text-zinc-800 w-full h-max relative cursor-none overflow-hidden">
       <Header/>
-      <div className="perspective-1000">
+      <div className="perspective-600">
         <MainBB /> 
         <CodingLanguages/>
         <SkillsSection />

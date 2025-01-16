@@ -16,10 +16,6 @@ const MainBB = () => {
 
     const [scrollBottom,setScrollBottom] = useState<number>();
   
-    useEffect(()=>{
-
-    },[])
-  
     const inView = () =>{
         window.addEventListener('scroll',()=>{
             document.querySelector('#home')?.getBoundingClientRect().top ? 

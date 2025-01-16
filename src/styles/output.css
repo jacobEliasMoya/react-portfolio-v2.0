@@ -600,6 +600,10 @@ video {
   pointer-events: none;
 }
 
+.visible {
+  visibility: visible;
+}
+
 .fixed {
   position: fixed;
 }
@@ -1925,8 +1929,8 @@ video {
   perspective-origin: bottom;
 }
 
-.perspective-1000 {
-  perspective: 1000px;
+.perspective-600 {
+  perspective: 600px;
 }
 
 .transform {
