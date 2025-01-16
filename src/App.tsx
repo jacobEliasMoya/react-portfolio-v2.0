@@ -5,6 +5,9 @@ import CodingLanguages from "./layout/CodingLanguages"
 import Header from "./layout/Header"
 import ProfessionalExperience from "./layout/ProfessionalExperience"
 import Contact from "./layout/Contact"
+import useDetectScroll, {
+} from '@smakss/react-scroll-direction';
+
 
 interface MouseXY{
   x:number | undefined,
@@ -14,21 +17,30 @@ interface MouseXY{
 function App() {
 
   const  [ mouseCoordinates, setMouseCoordinates] = useState<MouseXY>()
+  const [directionMain,setDirectionMain] = useState<string>();
 
+  const scrollDirection = useDetectScroll().scrollDir
+  
   useEffect(()=>{
     window.addEventListener('mousemove',(e)=>{
       window.innerWidth > 768 ? setMouseCoordinates({ x:e.pageX, y:e.pageY}) : null
     })
-
   },[])
+
+  useEffect(()=>{
+    setDirectionMain(scrollDirection)
+  },[scrollDirection])
+
+  useEffect(()=>{
+  },[directionMain])
 
   return (  
 
     <div className=" scroll-smooth bg-red-700 font-retro text-zinc-800 w-full h-max relative cursor-none overflow-hidden">
       <Header/>
-      <div className="perspective-600">
+      <div className="perspective-800">
         <MainBB /> 
-        <CodingLanguages/>
+        <CodingLanguages direction={directionMain ? directionMain : ''}/>
         <SkillsSection />
         <ProfessionalExperience/>
         <Contact/>

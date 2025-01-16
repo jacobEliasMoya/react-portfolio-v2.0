@@ -1,6 +1,6 @@
 import {  FaBootstrap, FaFigma, FaHtml5,  FaReact, FaSass, FaShopify,  FaSquarespace, FaWix, FaWordpress } from 'react-icons/fa'
 import H2element from '../components/headers/H2element'
-import { ReactElement, useEffect, useState } from 'react'
+import { ReactElement,   useEffect, useState } from 'react'
 import { SiAdobeillustrator, SiAdobephotoshop, SiKrita, SiRedux, SiTailwindcss } from 'react-icons/si'
 import {  BiLogoTypescript } from 'react-icons/bi'
 import { RiJavascriptFill } from 'react-icons/ri'
@@ -13,7 +13,11 @@ interface Skills {
     category: string,
 }
 
-const CodingLanguages = () => {
+type Props = {
+direction:string
+}
+
+const CodingLanguages = (props:Props) => {
 
     const skillsArr:Array<Skills> = [
        
@@ -118,41 +122,24 @@ const CodingLanguages = () => {
     const [usedTech,setUsedTech] = useState<Array<Skills>>();
     const [isVisible,setIsVisible] = useState(false);
     const [scrollBottom,setScrollBottom] = useState<number>(0);
-    const [scrollDirection,setScrollDirection] = useState<boolean>();
-    const [scrollDirectionInt,setScrollDirectionInt] = useState<number>();
-    
+
     const inView = (e:boolean) =>{
         setIsVisible(e)
     }
 
+
     useEffect(()=>{
         setUsedTech(skillsArr);
-
-
-        window.addEventListener("scroll",()=>{
-            let x:number|undefined = window.scrollY;
-            setScrollDirectionInt(x);
-        })
-
-    },[])
-
-
-    useEffect(()=>{
         
-        window.addEventListener("scroll",()=>{
-            let x:number|undefined = window.scrollY;
-            scrollDirectionInt && x ? x < scrollDirectionInt ? setScrollDirection(true): setScrollDirection(false) : null
-        })
-
-    },[scrollDirectionInt])
-
+    },[])
+ 
     useEffect(()=>{
-        console.log(scrollDirection)
-        scrollDirection ? setScrollBottom(prev=>prev+1) : setScrollBottom(prev=>prev-1)
-     },[scrollDirection])
+        console.log(props.direction)
+    },[props.direction])
 
+ 
     return (
-        <ReactVisibilitySensor 
+        <ReactVisibilitySensor  
             partialVisibility={true}
             onChange={inView}
             minTopValue={window.innerHeight/2}
@@ -164,6 +151,7 @@ const CodingLanguages = () => {
                 transform:` rotateX(${isVisible ? scrollBottom : null}deg)`
             }}>
 
+                
             <div className=" w-full gap-8  relative z-10 flex">
             
 
