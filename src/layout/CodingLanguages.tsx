@@ -13,11 +13,9 @@ interface Skills {
     category: string,
 }
 
-type Props = {
-direction:string
-}
 
-const CodingLanguages = (props:Props) => {
+
+const CodingLanguages = () => {
 
     const skillsArr:Array<Skills> = [
        
@@ -122,36 +120,58 @@ const CodingLanguages = (props:Props) => {
     const [usedTech,setUsedTech] = useState<Array<Skills>>();
     const [isVisible,setIsVisible] = useState(false);
     const [scrollBottom,setScrollBottom] = useState<number>(0);
+    const [animationStart, setAnimationStart] = useState<number>(0)
 
     const inView = (e:boolean) =>{
-        setIsVisible(e)
+        e ? setIsVisible(true) : setIsVisible(false);
     }
-
 
     useEffect(()=>{
         setUsedTech(skillsArr);
-        
     },[])
  
-    useEffect(()=>{
-        console.log(props.direction)
-    },[props.direction])
+    const detectScrollDirection = () => {
+        const currentScrollTop = window.scrollY; // Get current scroll position
+        const direction = currentScrollTop > scrollBottom ? 'down' : 'up'; // Compare with the last position
+        setScrollBottom(currentScrollTop); // Update the last position
+        return direction;
+    };
 
- 
+    const  setIt = (direction:string) =>{
+        if(direction == 'up'){
+            setAnimationStart( prev => prev > 0 ? prev - .75 : prev )
+        } else if(direction == 'down'){
+            setAnimationStart( prev => prev + .25 )
+        }
+    }
+    
+    useEffect(()=>{
+        const scrollHandler = () => {
+            const direction = detectScrollDirection(); // Get the current scroll direction
+            setIt(direction)
+        } 
+
+        isVisible ? window.addEventListener("scroll", scrollHandler) : null;
+
+        return () => {
+            isVisible ? window.removeEventListener("scroll", scrollHandler) : null;  // Clean up listener
+        };
+
+    },[scrollBottom,isVisible])
+
     return (
         <ReactVisibilitySensor  
             partialVisibility={true}
             onChange={inView}
-            minTopValue={window.innerHeight/2}
-
+            minTopValue={window.innerHeight/1.35}
         > 
-            <section id="coding" className=" w-11/12 rounded-lg my-8 md:my-20 bg-white flex justify-start flex-wrap flex-col overflow-hidden mx-auto pb-7 md:pb-12 pt-6 md:pt-10 px-6 md:px-8 [box-shadow:_.5em_.5em_#960707] md:[box-shadow:_1em_1em_#960707]"             
+            <section id="coding" className="origin-bottom w-11/12 rounded-lg my-8 md:my-20 bg-white flex justify-start flex-wrap flex-col overflow-hidden mx-auto pb-7 md:pb-12 pt-6 md:pt-10 px-6 md:px-8 [box-shadow:_.5em_.5em_#960707] md:[box-shadow:_1em_1em_#960707] transition-all ease-linear duration-75"             
             
             style={{
-                transform:` rotateX(${isVisible ? scrollBottom : null}deg)`
+                transform:` rotateX(${animationStart > 0 ? animationStart : 0}deg) translateZ(-${animationStart > 0 ? animationStart*8 : 0}px)`
             }}>
 
-                
+
             <div className=" w-full gap-8  relative z-10 flex">
             
 

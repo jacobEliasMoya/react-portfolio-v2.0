@@ -15,6 +15,7 @@ import p8Img from "../assets/projects/kidskingdom1.png";
 
 import ButtonWhite from "../components/buttons/ButtonWhite";
 import Paragraph from "../components/Paragraph";
+import ReactVisibilitySensor from "react-visibility-sensor";
  
 interface Spotlight {
     id:number,
@@ -157,84 +158,137 @@ const SkillsSection = () => {
     const [dragBoundsLeft,setDragBoundsLeft] = useState<number>();
     
 
-    // all useeffects below here --------------------------------------------------------
+        // all useeffects below here --------------------------------------------------------
 
-    useEffect(()=>{
-        // setting spotlight
-        setSpotlight(initialProjects)
-    },[])
+        useEffect(()=>{
+            // setting spotlight
+            setSpotlight(initialProjects)
+        },[])
 
-    useEffect(()=>{
-        // set the width of the container
-        setContainerWidth(document.getElementById("outer-scroll")?.offsetWidth)
-    },[spotlight])
+        useEffect(()=>{
+            // set the width of the container
+            setContainerWidth(document.getElementById("outer-scroll")?.offsetWidth)
+        },[spotlight])
 
-    useEffect(()=>{
-        if(containerWidth){
-            let x:any = document.getElementById("drag-item")?.offsetWidth;
-            x && containerWidth ? setDragBoundsLeft(containerWidth - x) : '';
+        useEffect(()=>{
+            if(containerWidth){
+                let x:any = document.getElementById("drag-item")?.offsetWidth;
+                x && containerWidth ? setDragBoundsLeft(containerWidth - x) : '';
+            }
+        },[containerWidth])
+
+
+        const [isVisible,setIsVisible] = useState(false);
+        const [scrollBottom,setScrollBottom] = useState<number>(0);
+        const [animationStart, setAnimationStart] = useState<number>(0)
+    
+        const inView = (e:boolean) =>{
+            e ? setIsVisible(true) : setIsVisible(false);
         }
-    },[containerWidth])
+ 
+     
+        const detectScrollDirection = () => {
+            const currentScrollTop = window.scrollY; // Get current scroll position
+            const direction = currentScrollTop > scrollBottom ? 'down' : 'up'; // Compare with the last position
+            setScrollBottom(currentScrollTop); // Update the last position
+            return direction;
+        };
+    
+        const  setIt = (direction:string) =>{
+            console.log(direction)
+            if(direction == 'up'){
+                setAnimationStart( prev => prev > 0 ? prev - .75 : prev )
+            } else if(direction == 'down'){
+                setAnimationStart( prev => prev + .25 )
+            }
+        }
+        
+        useEffect(()=>{
+            const scrollHandler = () => {
+                const direction = detectScrollDirection(); // Get the current scroll direction
+                setIt(direction)
+            } 
+    
+            isVisible ? window.addEventListener("scroll", scrollHandler) : null;
+    
+            console.log('activated')
 
+            
+            return () => {
+                isVisible ? window.removeEventListener("scroll", scrollHandler) : null;  // Clean up listener
+            };
+    
+
+        },[scrollBottom,isVisible])
+        
     return (
-        <section id="outer-scroll" className="[box-shadow:_.5em_.5em_#960707] md:[box-shadow:_1em_1em_#960707] transition-all w-11/12 rounded-lg my-8 md:my-20 bg-white flex justify-start flex-wrap flex-col overflow-hidden mx-auto py-6 md:py-10 ">
+        <ReactVisibilitySensor
+            partialVisibility={true}
+            onChange={inView}
+            minTopValue={window.innerHeight/1.35}
+        > 
+            <section id="outer-scroll" className="origin-bottom [box-shadow:_.5em_.5em_#960707] md:[box-shadow:_1em_1em_#960707] w-11/12 rounded-lg my-8 md:my-20 bg-white flex justify-start flex-wrap flex-col overflow-hidden mx-auto py-6 md:py-10 transition-all ease-linear duration-75"        
+            style={{
+                transform:` rotateX(${animationStart > 0 ? animationStart : 0}deg) translateZ(-${animationStart > 0 ? animationStart*8: animationStart}px)`
+            }}>
 
 
-            <div className="w-full flex gap-8 px-6 md:px-8 relative z-10">
+                <div className="w-full flex gap-8 px-6 md:px-8 relative z-10">
 
-                <div className="flex flex-col text-center" >            
-                    <H2element additionalClasses={'text-red-600 text-5xl md:text-6xl lg:text-8xl flex flex-col text-left '} headerText={"Spot"} spanClasses={'text-zinc-800 -mt-5 sm:-mt-6 md:-mt-8 lg:-mt-14 '} spanText={'Light'}/>
+                    <div className="flex flex-col text-center" >            
+                        <H2element additionalClasses={'text-red-600 text-5xl md:text-6xl lg:text-8xl flex flex-col text-left '} headerText={"Spot"} spanClasses={'text-zinc-800 -mt-5 sm:-mt-6 md:-mt-8 lg:-mt-14 '} spanText={'Light'}/>
+                    </div>
+
+                    <div className="flex flex-col gap-2 md:gap-4  w-full justify-center ">
+                        <div className="rounded md:rounded-xl h-4 lg:h-6 bg-red-600 w-full"></div>
+                        <div className="rounded md:rounded-xl h-10 lg:h-20 bg-zinc-800 w-full"></div>
+                    </div>
+                    
                 </div>
 
-                <div className="flex flex-col gap-2 md:gap-4  w-full justify-center ">
-                    <div className="rounded md:rounded-xl h-4 lg:h-6 bg-red-600 w-full"></div>
-                    <div className="rounded md:rounded-xl h-10 lg:h-20 bg-zinc-800 w-full"></div>
-                </div>
-                
-            </div>
+                <Draggable 
+                    axis="x"
+                    cancel=".cancel-me-now"
+                    // onDrag={handleScroll}
+                    bounds={{right:0, left:dragBoundsLeft}}
+                >
+                    <div id="drag-item" className="mt-12 md:mt-16 gap-4 z-10 min-w-full md:w-max h-auto mx-auto justify-self-end flex justify-start items-start pt-3 px-4 ">
+                        {/* mapping out projects, no need to fetch anything */}
+                        {spotlight ? spotlight
+                        // .filter((item=>item.id < startingArrNum))
+                        .map((item)=>(
 
-            <Draggable 
-                axis="x"
-                cancel=".cancel-me-now"
-                // onDrag={handleScroll}
-                bounds={{right:0, left:dragBoundsLeft}}
-            >
-                <div id="drag-item" className="mt-12 md:mt-16 gap-4 z-10 min-w-full md:w-max h-auto mx-auto justify-self-end flex justify-start items-start pt-3 px-4 ">
-                    {/* mapping out projects, no need to fetch anything */}
-                    {spotlight ? spotlight
-                    // .filter((item=>item.id < startingArrNum))
-                    .map((item)=>(
+                            <div id={`${item.id}`} className={`rounded-xl text-center w-[450px] max-w-[75vw] relative transition-all duration-200  font-ultra p-4 grid grid-cols-4 gap-4 `}>
+                                
 
-                        <div id={`${item.id}`} className={`rounded-xl text-center w-[450px] max-w-[75vw] relative transition-all duration-200  font-ultra p-4 grid grid-cols-4 gap-4 `}>
-                            
+                                <H3element additionalClasses={' font-retro drop-shadow-xl shadow-red-900 absolute -top-28 -right-5 -z-10 text-[10em] transition-all tracking-widest text-red-700'} headerText={`${item.id}`} spanClasses={''} spanText={''}/>
 
-                            <H3element additionalClasses={' font-retro drop-shadow-xl shadow-red-900 absolute -top-28 -right-5 -z-10 text-[10em] transition-all tracking-widest text-red-700'} headerText={`${item.id}`} spanClasses={''} spanText={''}/>
+                                <div className="rounded col-span-3 duration-500 transition-all bg-cover bg-left w-full min-h-72 translate brightness-90"
+                                    style={{
+                                    backgroundImage:`url(${item.projectLink})`, 
+                                    }}
+                                ></div>
 
-                            <div className="rounded col-span-3 duration-500 transition-all bg-cover bg-left w-full min-h-72 translate brightness-90"
-                                style={{
-                                backgroundImage:`url(${item.projectLink})`, 
-                                }}
-                            ></div>
+                                <div className="rounded  flex justify-center items-center duration-100 text-md transition-all w-full  p-4 text-white bg-zinc-800 z-10">
+                                    <H3element additionalClasses={'relative transition-all tracking-widest !text-nowrap rotate-90'} headerText={item.projectName} spanClasses={''} spanText={''}/>
+                                </div>
 
-                            <div className="rounded  flex justify-center items-center duration-100 text-md transition-all w-full  p-4 text-white bg-zinc-800 z-10">
-                                <H3element additionalClasses={'relative transition-all tracking-widest !text-nowrap rotate-90'} headerText={item.projectName} spanClasses={''} spanText={''}/>
+                                <div className="col-span-4  duration-200 transition-all w-full p-0 flex flex-col items-center justify-between relative z-10 h-3/6" >
+
+                                    <ButtonWhite buttonText={item.isApp ? `View App` : `View Website`} additionalClasses={"!rounded text-sm md:text-md lg:text-lg tracking-widest !w-full relative z-10 !bg-red-600 hover:!bg-red-700 !text-white !py-3"} buttonLink={item.codeLink ? item.codeLink : ''} newWindow={true} clickHandle={undefined}/> 
+
+                                    <Paragraph text={item.projectDexcription} classes={'mt-4 md:text-left text-sm md:text-md md:text-lg '}/>
+
+                                </div>
+
                             </div>
+                        )) : null}
+                    </div>
+                </Draggable>
 
-                            <div className="col-span-4  duration-200 transition-all w-full p-0 flex flex-col items-center justify-between relative z-10 h-3/6" >
-
-                                <ButtonWhite buttonText={item.isApp ? `View App` : `View Website`} additionalClasses={"!rounded text-sm md:text-md lg:text-lg tracking-widest !w-full relative z-10 !bg-red-600 hover:!bg-red-700 !text-white !py-3"} buttonLink={item.codeLink ? item.codeLink : ''} newWindow={true} clickHandle={undefined}/> 
-
-                                <Paragraph text={item.projectDexcription} classes={'mt-4 md:text-left text-sm md:text-md md:text-lg '}/>
-
-                            </div>
-
-                        </div>
-                    )) : null}
-                </div>
-            </Draggable>
-
-                
-        </section>
+                    
+            </section>
+        </ReactVisibilitySensor>
     )
 }
 

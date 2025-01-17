@@ -20,17 +20,16 @@ const MainBB = () => {
         window.addEventListener('scroll',()=>{
             document.querySelector('#home')?.getBoundingClientRect().top ? 
             setScrollBottom(document.querySelector('#home')?.getBoundingClientRect().top) : null
-          })
+        })
     }
-    // useEffect(()=>{
-    // },[scrollBottom])
+    
 
     return (
         <ReactVisibilitySensor onChange={inView}> 
-            <section id="home" className='origin-bottom perspective-origin-bottom  w-full min-h-screen  bg-red-600 flex items-center justify-between p-6 md:p-8 py-6 md:py-10 flex-wrap flex-col  '
+            <section id="home" className='origin-bottom  w-full min-h-screen  bg-red-600 flex items-center justify-between p-6 md:p-8 py-6 md:py-10 flex-wrap flex-col  '
             
             style={{
-                transform:` rotateX(${scrollBottom ? ( scrollBottom/-99 ):'0'}deg)`
+                transform:` rotateX(${scrollBottom ? ( scrollBottom/-59 ):'0'}deg)`
             }}>
                 <div className="w-full flex gap-8 relative ">
                     <div className="flex flex-col" >            
