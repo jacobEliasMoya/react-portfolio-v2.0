@@ -1929,24 +1929,24 @@ video {
   transition-duration: 75ms;
 }
 
-.ease-linear {
-  transition-timing-function: linear;
+.duration-\[\.1s\] {
+  transition-duration: .1s;
 }
 
-.perspective-origin-bottom {
-  perspective-origin: bottom;
+.duration-0 {
+  transition-duration: 0s;
+}
+
+.ease-linear {
+  transition-timing-function: linear;
 }
 
 .perspective-origin-center {
   perspective-origin: center;
 }
 
-.perspective-origin-top {
-  perspective-origin: top;
-}
-
-.perspective-1000 {
-  perspective: 1000px;
+.perspective-\[2500px\] {
+  perspective: 2500px;
 }
 
 .transform {

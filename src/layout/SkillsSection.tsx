@@ -180,13 +180,12 @@ const SkillsSection = () => {
 
         const [isVisible,setIsVisible] = useState(false);
         const [scrollBottom,setScrollBottom] = useState<number>(0);
-        const [animationStart, setAnimationStart] = useState<number>(0)
+        const [animationStart, setAnimationStart] = useState<number>(-500)
     
         const inView = (e:boolean) =>{
             e ? setIsVisible(true) : setIsVisible(false);
         }
- 
-     
+    
         const detectScrollDirection = () => {
             const currentScrollTop = window.scrollY; // Get current scroll position
             const direction = currentScrollTop > scrollBottom ? 'down' : 'up'; // Compare with the last position
@@ -195,11 +194,10 @@ const SkillsSection = () => {
         };
     
         const  setIt = (direction:string) =>{
-            console.log(direction)
             if(direction == 'up'){
-                setAnimationStart( prev => prev > 0 ? prev - .75 : prev )
+                setAnimationStart( prev => prev - 6 )
             } else if(direction == 'down'){
-                setAnimationStart( prev => prev + .25 )
+                setAnimationStart( prev => prev < 6 ? prev + 6 : prev )
             }
         }
         
@@ -211,26 +209,24 @@ const SkillsSection = () => {
     
             isVisible ? window.addEventListener("scroll", scrollHandler) : null;
     
-            console.log('activated')
-
-            
             return () => {
                 isVisible ? window.removeEventListener("scroll", scrollHandler) : null;  // Clean up listener
             };
     
-
         },[scrollBottom,isVisible])
         
     return (
         <ReactVisibilitySensor
             partialVisibility={true}
             onChange={inView}
-            minTopValue={window.innerHeight/1.35}
+            minTopValue={0}
         > 
-            <section id="outer-scroll" className="origin-bottom [box-shadow:_.5em_.5em_#960707] md:[box-shadow:_1em_1em_#960707] w-11/12 rounded-lg my-8 md:my-20 bg-white flex justify-start flex-wrap flex-col overflow-hidden mx-auto py-6 md:py-10 transition-all ease-linear duration-75"        
-            style={{
-                transform:` rotateX(${animationStart > 0 ? animationStart : 0}deg) translateZ(-${animationStart > 0 ? animationStart*8: animationStart}px)`
-            }}>
+            <section id="outer-scroll" className="relative [box-shadow:_.5em_.5em_#960707] md:[box-shadow:_1em_1em_#960707] w-11/12 rounded-lg my-8 md:my-20 bg-white flex justify-start flex-wrap flex-col overflow-hidden mx-auto py-6 md:py-10 transition-all ease-linear duration-75"        
+
+                style={{
+                    left:`${animationStart && animationStart < 0 ? animationStart * 1.5 : '0'}px`
+                    // transform:` rotateX(-${animationStart > 0 ? animationStart : ''}deg) `
+                }}>
 
 
                 <div className="w-full flex gap-8 px-6 md:px-8 relative z-10">
