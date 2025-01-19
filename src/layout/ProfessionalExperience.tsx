@@ -122,9 +122,9 @@ const ProfessionalExperience = () => {
 
     const  setIt = (direction:string) =>{
         if(direction == 'up'){
-            setAnimationStart( prev => prev < 50 ? prev + 1 : prev )
+            setAnimationStart( prev => prev < 50 ? prev + .5 : prev )
         } else if(direction == 'down'){
-            setAnimationStart( prev => prev > 1 ? prev - 1 : prev )
+            setAnimationStart( prev => prev > 0 ? prev - 1 : prev )
         }
     }
     
@@ -147,7 +147,7 @@ const ProfessionalExperience = () => {
         <ReactVisibilitySensor
         partialVisibility={true}
         onChange={inView}
-        minTopValue={window.screenY}
+        minTopValue={0}
     > 
         
         <section id="about" className="relative w-11/12 rounded-lg my-8 md:my-20 bg-white flex justify-start flex-wrap flex-col overflow-hidden mx-auto py-6 md:py-10 [box-shadow:_.5em_.5em_#960707] md:[box-shadow:_1em_1em_#960707] transition-all ease-linear duration-75"        

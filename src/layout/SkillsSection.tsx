@@ -195,9 +195,9 @@ const SkillsSection = () => {
     
         const  setIt = (direction:string) =>{
             if(direction == 'up'){
-                setAnimationStart( prev => prev < 50 ? prev - 1 :prev )
+                setAnimationStart( prev => prev > -50 ? prev - .5 :prev )
             } else if(direction == 'down'){
-                setAnimationStart( prev => prev < 1 ? prev + 1 : prev )
+                setAnimationStart( prev => prev < 0 ? prev + 1 : prev )
             }
         }
         
