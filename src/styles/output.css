@@ -876,12 +876,12 @@ video {
   transform-origin: bottom;
 }
 
-.origin-center {
-  transform-origin: center;
+.origin-right {
+  transform-origin: right;
 }
 
-.origin-top {
-  transform-origin: top;
+.origin-left {
+  transform-origin: left;
 }
 
 .-translate-x-1\/2 {
@@ -1913,6 +1913,10 @@ video {
   transition-duration: 150ms;
 }
 
+.duration-0 {
+  transition-duration: 0s;
+}
+
 .duration-100 {
   transition-duration: 100ms;
 }
@@ -1923,18 +1927,6 @@ video {
 
 .duration-500 {
   transition-duration: 500ms;
-}
-
-.duration-75 {
-  transition-duration: 75ms;
-}
-
-.duration-\[\.1s\] {
-  transition-duration: .1s;
-}
-
-.duration-0 {
-  transition-duration: 0s;
 }
 
 .ease-linear {
