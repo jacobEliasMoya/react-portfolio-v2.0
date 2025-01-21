@@ -107,7 +107,7 @@ const ProfessionalExperience = () => {
 
     const [isVisible,setIsVisible] = useState(false);
     const [scrollBottom,setScrollBottom] = useState<number>(0);
-    const [animationStart, setAnimationStart] = useState<number>(100)
+    const [animationStart, setAnimationStart] = useState<number>(40)
 
     const inView = (e:boolean) =>{
         e ? setIsVisible(true) : setIsVisible(false);
@@ -122,9 +122,9 @@ const ProfessionalExperience = () => {
 
     const  setIt = (direction:string) =>{
         if(direction == 'up'){
-            setAnimationStart( prev => prev < 50 ? prev + .5 : prev )
+            setAnimationStart( prev => prev < 50 ? prev + 1 : prev )
         } else if(direction == 'down'){
-            setAnimationStart( prev => prev > 0 ? prev - 2 : prev )
+            setAnimationStart( prev => prev > 0 ? prev - 1 : prev )
         }
     }
     
@@ -191,7 +191,7 @@ const ProfessionalExperience = () => {
 
                                     <ul className="grid gap-2 md:gap-3 grid-cols-2 col-span-full text-sm md:text-md capitalize mt-2">
                                         {item.experience.companySkills.map((item)=>(
-                                            <li className="flex flex-col md:flex-row items-center justify-start md:gap-2 bg-red-600 text-white p-3 rounded tracking-wider">{item}</li>
+                                            <li className="flex flex-col md:flex-row items-center justify-start md:gap-2 bg-red-600 text-white p-3 rounded tracking-wider  border-b-8 border-red-700 ">{item}</li>
                                         ))}
                                     </ul>
 

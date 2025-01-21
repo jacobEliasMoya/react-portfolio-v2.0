@@ -180,7 +180,7 @@ const SkillsSection = () => {
 
         const [isVisible,setIsVisible] = useState(false);
         const [scrollBottom,setScrollBottom] = useState<number>(0);
-        const [animationStart, setAnimationStart] = useState<number>(-100)
+        const [animationStart, setAnimationStart] = useState<number>(-40)
     
         const inView = (e:boolean) =>{
             e ? setIsVisible(true) : setIsVisible(false);
@@ -195,9 +195,9 @@ const SkillsSection = () => {
     
         const  setIt = (direction:string) =>{
             if(direction == 'up'){
-                setAnimationStart( prev => prev > -50 ? prev - .5 :prev )
+                setAnimationStart( prev => prev > -50 ? prev - 1:prev )
             } else if(direction == 'down'){
-                setAnimationStart( prev => prev < 0 ? prev + 2 : prev )
+                setAnimationStart( prev => prev < 0 ? prev + 1: prev )
             }
         }
         
@@ -271,7 +271,7 @@ const SkillsSection = () => {
 
                                 <div className="col-span-4  duration-200 transition-all w-full p-0 flex flex-col items-center justify-between relative z-10 h-3/6" >
 
-                                    <ButtonWhite buttonText={item.isApp ? `View App` : `View Website`} additionalClasses={"!rounded text-sm md:text-md lg:text-lg tracking-widest !w-full relative z-10 !bg-red-600 hover:!bg-red-700 !text-white !py-3"} buttonLink={item.codeLink ? item.codeLink : ''} newWindow={true} clickHandle={undefined}/> 
+                                    <ButtonWhite buttonText={item.isApp ? `View App` : `View Website`} additionalClasses={"!rounded text-sm md:text-md lg:text-lg tracking-widest !w-full relative z-10 !bg-red-600 hover:!bg-red-700 !text-white !py-3  border-b-8 border-red-700 "} buttonLink={item.codeLink ? item.codeLink : ''} newWindow={true} clickHandle={undefined}/> 
 
                                     <Paragraph text={item.projectDexcription} classes={'mt-4 md:text-left text-sm md:text-md md:text-lg '}/>
 
