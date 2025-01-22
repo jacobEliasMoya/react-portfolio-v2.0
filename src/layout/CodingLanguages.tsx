@@ -128,6 +128,7 @@ const CodingLanguages = () => {
     const [isVisible,setIsVisible] = useState(false);
     const [scrollBottom,setScrollBottom] = useState<number>(0);
     const [animationStart, setAnimationStart] = useState<number>(30)
+    const [opacityStart, setOpacityStart] = useState<number>(0)
 
     const inView = (e:boolean) =>{
         e ? setIsVisible(true) : setIsVisible(false);
@@ -143,8 +144,10 @@ const CodingLanguages = () => {
     const  setIt = (direction:string) =>{
         if(direction == 'up'){
             setAnimationStart( prev => prev < 30 ? prev + 1 : prev )
+            setOpacityStart(  prev => prev > .1 ? prev - .1 : prev)
         } else if(direction == 'down'){
             setAnimationStart( prev => prev > 0 ? prev - 1 : prev )
+            setOpacityStart( prev =>  prev <= .9  ? prev + .1 : prev )
         }
     }
     
@@ -166,13 +169,14 @@ const CodingLanguages = () => {
         <ReactVisibilitySensor  
             partialVisibility={true}
             onChange={inView}
-            minTopValue={isVisible}
+            minTopValue={window.innerHeight*.25}
         > 
             <section id="coding" className="relative origin-right w-11/12 rounded-lg my-8 md:my-20 bg-white flex justify-start flex-wrap flex-col overflow-hidden mx-auto pb-7 md:pb-12 pt-6 md:pt-10 px-6 md:px-8 [box-shadow:_.5em_.5em_#960707] md:[box-shadow:_1em_1em_#960707] transition-all ease-linear duration-0"             
             
             style={{
             left:`${animationStart && animationStart >= 0 ? animationStart : '0'}px`,
                 transform:` rotateY(-${animationStart >= 0 ? animationStart : ''}deg) `,
+                opacity:opacityStart
             }}>
 
 
@@ -226,9 +230,9 @@ const CodingLanguages = () => {
             <div className="w-full  ">
 
                 <H2element additionalClasses={'text-md md:text-2xl pb-4 flex flex-col  '} headerText={"Web Builders"} spanClasses={undefined} spanText={undefined}/>
-                <ul className='text-sm md:text-md xl:text-lg grid grid-cols-1 gap-0 md:gap-2 '>
+                <ul className='text-sm md:text-md xl:text-lg grid grid-cols-1 gap-0 md:gap-6 '>
                     {usedTech ? usedTech.filter((item=>item.category == 'builder')).map((item)=>(
-                            <li className='flex flex-col md:flex-row items-center justify-start md:gap-2 bg-red-600 text-white p-2 px-3 rounded tracking-wider mb-2  border-b-8 border-red-700'> 
+                            <li className='transition-all ease-linear  flex flex-col md:flex-row items-center justify-start md:gap-2 bg-red-600 text-white p-2 px-3 rounded tracking-wider '> 
                             <span className='text-xl md:text-4xl'>{item.icon}</span>
                             {item.name} 
                         </li>
