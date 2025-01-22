@@ -107,7 +107,7 @@ const ProfessionalExperience = () => {
 
     const [isVisible,setIsVisible] = useState(false);
     const [scrollBottom,setScrollBottom] = useState<number>(0);
-    const [animationStart, setAnimationStart] = useState<number>(40)
+    const [animationStart, setAnimationStart] = useState<number>(30)
 
     const inView = (e:boolean) =>{
         e ? setIsVisible(true) : setIsVisible(false);
@@ -122,7 +122,7 @@ const ProfessionalExperience = () => {
 
     const  setIt = (direction:string) =>{
         if(direction == 'up'){
-            setAnimationStart( prev => prev < 50 ? prev + 1 : prev )
+            setAnimationStart( prev => prev < 30 ? prev + 1 : prev )
         } else if(direction == 'down'){
             setAnimationStart( prev => prev > 0 ? prev - 1 : prev )
         }
@@ -152,8 +152,8 @@ const ProfessionalExperience = () => {
         
         <section id="about" className="relative origin-right w-11/12 rounded-lg my-8 md:my-20 bg-white flex justify-start flex-wrap flex-col overflow-hidden mx-auto py-6 md:py-10 [box-shadow:_.5em_.5em_#960707] md:[box-shadow:_1em_1em_#960707] transition-all ease-linear duration-0"        
             style={{
-                left:`${animationStart && animationStart > 0 ? animationStart : '0'}px`,
-                transform:` rotateY(-${animationStart > 0 ? animationStart * .2 : ''}deg) `
+                left:`${animationStart && animationStart >= 0 ? animationStart : '0'}px`,
+                transform:` rotateY(-${animationStart >= 0 ? animationStart : ''}deg) `
             }}>
 
             <div className="w-full flex gap-8 px-6 md:px-8 relative z-10">
