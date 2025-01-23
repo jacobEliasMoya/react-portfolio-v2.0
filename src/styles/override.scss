@@ -5,19 +5,17 @@
 
 /* width */
 ::-webkit-scrollbar {
-    cursor: none;
     width: 17px;
   }
   
   /* Track */
   ::-webkit-scrollbar-track {
-    cursor: none;
     background: #fff;
   }
   
   /* Handle */
   ::-webkit-scrollbar-thumb {
-    cursor: none;
+    
     background: #b91c1c;
     border:3px solid white;
     border-radius: 6px;
@@ -25,6 +23,5 @@
   
   /* Handle on hover */
   ::-webkit-scrollbar-thumb:hover {
-    cursor: none;
     background: #b91c1ce7;
   }

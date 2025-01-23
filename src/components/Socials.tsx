@@ -71,7 +71,7 @@ const Socials = (props: Props) => {
 return (
 <>
     {socialElms ? socialElms.map((item)=>(
-        <a href={item.url} title={item.title} target={item.target} className={`cursor-none w-max ${item.desktopHidden ? 'md:hidden' : ''}`} aria-label={item.title} >
+        <a href={item.url} title={item.title} target={item.target} className={`md:cursor-none w-max ${item.desktopHidden ? 'md:hidden' : ''}`} aria-label={item.title} >
             {item.icon}
         </a>
     )):''}

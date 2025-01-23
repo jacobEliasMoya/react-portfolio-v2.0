@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { ReactElement, useEffect, useState } from "react";
 
 import H2element from "../components/headers/H2element"
 import H3element from "../components/headers/H3element"
@@ -16,15 +16,21 @@ import p8Img from "../assets/projects/kidskingdom1.png";
 import ButtonWhite from "../components/buttons/ButtonWhite";
 import Paragraph from "../components/Paragraph";
 import ReactVisibilitySensor from "react-visibility-sensor";
+import { FaGithub } from "react-icons/fa6";
  
+interface CodeLink{
+    icon:ReactElement,
+    link:string
+}
+
 interface Spotlight {
     id:number,
     animation:string,
     projectName: string,
     projectLink: string,
-    codeLink: string,
+    liveLink: string,
     projectDexcription: string,
-    categories: string[],
+    codelinks: CodeLink[] | undefined,
     isActive: boolean,
     isApp: boolean,
 }
@@ -37,24 +43,29 @@ const SkillsSection = () => {
             animation:'animate-growProjectOne',
             projectName: "Qr Code Generator",
             projectLink: p1Img,
-            codeLink: "https://qrclone.netlify.app/",
+            liveLink: "https://qrclone.netlify.app/",
             projectDexcription: "My passion project uses React, TypeScript, Tailwind, Redux, and libraries for color selection and canvas-to-image downloads.",
-            categories:['test','test1','test2'],
+            codelinks:[{
+                icon:<FaGithub/>,
+                link:'https://github.com/jacobEliasMoya/react-portfolio-v2.0'
+            }],
             isActive: false,
             isApp: true,
-            git:''
         },
         {
             id:2,
             animation:'animate-growProjectTwo',
             projectName: "Pokedex v2",
             projectLink: p2Img,
-            codeLink: "https://main--pokedex-vmax.netlify.app/",
+            liveLink: "https://main--pokedex-vmax.netlify.app/",
             projectDexcription: "My kids' love for Pokémon inspired me to create a more robust second version of my Pokédex, now built with Bootstrap. ",
-            categories:['test','test1','test2'],
+            codelinks:[{
+                icon:<FaGithub/>,
+                link:'https://github.com/jacobEliasMoya/Pokedex-TypeScript'
+            }],
             isActive: false,
             isApp: true,
-            git:''
+            
 
         },
         {
@@ -62,12 +73,12 @@ const SkillsSection = () => {
             animation:'animate-growProjectThree',
             projectName: "Smith Insurance",
             projectLink: p3Img,
-            codeLink: "https://insurancesic.com/",
+            liveLink: "https://insurancesic.com/",
             projectDexcription: "Welcome to Smith Insurance, your reliable partner for comprehensive insurance solutions in Pagosa Springs, CO, and beyond.",
-            categories:['test','test1','test2'],
+            codelinks:undefined,
             isActive: false,
             isApp: false,
-            git:''
+            
 
         },
         {
@@ -75,12 +86,12 @@ const SkillsSection = () => {
             animation:'animate-growProjectFour',
             projectName: "MedEstheticsRX",
             projectLink: p4Img,
-            codeLink: "https://medestheticsrx.com/",
+            liveLink: "https://medestheticsrx.com/",
             projectDexcription: "At MedEstheticsRX, we believe that beautiful, healthy skin is more than just an aesthetic goal—it’s a science. ",
-            categories:['test','test1','test2'],
+            codelinks:undefined,
             isActive: false,
             isApp: false,
-            git:''
+            
 
 
         },
@@ -89,12 +100,13 @@ const SkillsSection = () => {
             animation:'animate-growProjectTwoNoDelay',
             projectName: "Ocean Drive Designs",
             projectLink: p6Img,
-            codeLink: "https://oceandrivedesigns.com/",
+            liveLink: "https://oceandrivedesigns.com/",
             projectDexcription: "Ocean Drive Designs has been a premiere provider of high-end turnkey residential and hospitality interiors across the globe.",
-            categories:['test','test1','test2'],
+            codelinks:undefined,
+
             isActive: false,
             isApp: false,
-            git:''
+            
 
         },
         {
@@ -102,12 +114,12 @@ const SkillsSection = () => {
             animation:'animate-growProjectFourNoDelay',
             projectName: "Kids Kingdom",
             projectLink: p8Img,
-            codeLink: "https://kidskingdom1.com/",
+            liveLink: "https://kidskingdom1.com/",
             projectDexcription: "Kids Kingdom Early Learning Center is the premier Biblically-based early child care center in Greenwood, IN. ",
-            categories:['test','test1','test2'],
+            codelinks:undefined,
             isActive: false,
             isApp: false,
-            git:''
+            
 
 
         },
@@ -116,12 +128,12 @@ const SkillsSection = () => {
             animation:'animate-growProjectOneNoDelay',
             projectName: "Franklin’s",
             projectLink: p5Img,
-            codeLink: "https://franklinsinproctor.com/",
+            liveLink: "https://franklinsinproctor.com/",
             projectDexcription: "Welcome to Franklin’s, where the motto “Food, Friends, and Fun” truly comes to life! Located in the heart of Proctor, VT.",
-            categories:['test','test1','test2'],
+            codelinks:undefined,
             isActive: false,
             isApp: false,
-            git:''
+            
 
         },
         {
@@ -129,12 +141,12 @@ const SkillsSection = () => {
             animation:'animate-growProjectThreeNoDelay',
             projectName: "Venlos Apparal",
             projectLink: p7Img,
-            codeLink: "https://venolosapparel.com/",
+            liveLink: "https://venolosapparel.com/",
             projectDexcription: "At Venolos Apparel, we believe that apparel, art, and music go hand in hand. Drawing inspiration from hip hop.",
-            categories:['test','test1','test2'],
+            codelinks:undefined,
             isActive: false,
             isApp: false,
-            git:''
+            
 
         },
 
@@ -180,7 +192,7 @@ const SkillsSection = () => {
 
         const [isVisible,setIsVisible] = useState(false);
         const [scrollBottom,setScrollBottom] = useState<number>(0);
-        const [animationStart, setAnimationStart] = useState<number>(-30)
+        const [animationStart, setAnimationStart] = useState<number>(120)
         const [opacityStart, setOpacityStart] = useState<number>(0)
 
 
@@ -196,17 +208,13 @@ const SkillsSection = () => {
         };
     
         const  setIt = (direction:string) =>{
-
-            if(direction == 'up'){
-                setAnimationStart( prev => prev > -30 ? prev - 1:prev )
+            if(direction == 'up' && isVisible){
+                setAnimationStart( prev => prev < 116 ? prev + 4 : prev )
                 setOpacityStart(  prev => prev > .1 ? prev - .1 : prev)
-
             } else if(direction == 'down'){
-                setAnimationStart( prev => prev < 0 ? prev + 1: prev )
+                setAnimationStart( prev => prev > 0 ? prev - 5 : prev )
                 setOpacityStart( prev =>  prev <= .9  ? prev + .1 : prev )
-
             }
-
         }
         
         useEffect(()=>{
@@ -231,14 +239,11 @@ const SkillsSection = () => {
         > 
             <section id="outer-scroll" className="relative origin-left [box-shadow:_.5em_.5em_#960707] md:[box-shadow:_1em_1em_#960707] w-11/12 rounded-lg my-8 md:my-20 bg-white flex justify-start flex-wrap flex-col overflow-hidden mx-auto py-6 md:py-10 transition-all ease-linear duration-0"        
 
-                style={{
-                    left:`${animationStart && animationStart <= 0 ? animationStart : '0'}px`,
-                    // transform:` rotateY(${animationStart <= 0 ? -animationStart : ''}deg)`,
+            style={{
+                bottom:`-${animationStart && animationStart >= 0 ? animationStart : '0'}px`,
                     opacity:opacityStart
-
                 }}
-                
-                >
+            >
 
 
                 <div className="w-full flex gap-8 px-6 md:px-8 relative z-10">
@@ -271,6 +276,12 @@ const SkillsSection = () => {
 
                                 <H3element additionalClasses={' font-retro drop-shadow-xl shadow-red-900 absolute -top-28 -right-5 -z-10 text-[10em] transition-all tracking-widest text-red-700'} headerText={`${item.id}`} spanClasses={''} spanText={''}/>
 
+                                <div className="col-span-full relative">
+                                    {item.codelinks?.map((item=>(
+                                        <a className="flex items-center justify-start gap-2 absolute left-0 -top-8   md:cursor-none transition-all  active:scale-125  md:hover:-translate-y-2 md:hover:drop-shadow-md cancel-me-now" href={item.link} target="_blank" rel="noopener noreferrer"><span className=" text-3xl md:text-4xl " >{item.icon}</span> View Git</a>
+                                    )))}
+                                </div>
+
                                 <div className="rounded col-span-3 duration-500 transition-all bg-cover bg-left w-full min-h-72 translate brightness-90"
                                     style={{
                                     backgroundImage:`url(${item.projectLink})`, 
@@ -283,9 +294,9 @@ const SkillsSection = () => {
 
                                 <div className="col-span-4  duration-200 transition-all w-full p-0 flex flex-col items-center justify-between relative z-10 h-3/6" >
 
-                                    <ButtonWhite buttonText={item.isApp ? `View App` : `View Website`} additionalClasses={"!rounded text-sm md:text-md lg:text-lg   !w-full   z-10 !bg-red-600  !text-white !py-3 top-0  hover:-top-4 transition-all ease flex flex-col md:flex-row items-center justify-start md:gap-2  p-2 px-3  tracking-wider relative !rounded-b-none  after:w-full  after:bg-red-700 after:absolute after:-bottom-2 after:left-0 after:rounded-b-md hover:after:-bottom-6 after:h-[calc(.5rem+1px)] hover:after:h-[calc(1.5rem+1px)] after:transition-all after:ease transform after:transform"} buttonLink={item.codeLink ? item.codeLink : ''} newWindow={true} clickHandle={undefined}/> 
+                                    <ButtonWhite buttonText={item.isApp ? `View App` : `View Website`} additionalClasses={"!rounded text-sm md:text-md lg:text-lg   !w-full   z-10 !bg-red-600  !text-white !py-3 top-0  hover:-top-4 transition-all ease flex flex-col md:flex-row items-center justify-start md:gap-2  p-2 px-3  tracking-wider relative !rounded-b-none  after:w-full  after:bg-red-700 after:absolute after:-bottom-2 after:left-0 after:rounded-b-md hover:after:-bottom-6 after:h-[calc(.5rem+1px)] hover:after:h-[calc(1.5rem+1px)] after:transition-all after:ease transform after:transform"} buttonLink={item.liveLink ? item.liveLink : ''} newWindow={true} clickHandle={undefined}/> 
 
-                                    <Paragraph text={item.projectDexcription} classes={'mt-4 md:text-left text-sm md:text-md md:text-lg '}/>
+                                    <Paragraph text={item.projectDexcription} classes={'mt-6 md:text-left text-sm md:text-md md:text-lg '}/>
 
                                 </div>
 
