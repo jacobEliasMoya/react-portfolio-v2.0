@@ -25,7 +25,6 @@ const Contact = () => {
       };
   
       const  setIt = (direction:string) =>{
-          console.log(direction)
           if(direction == 'up'){
               setAnimationStart( prev => prev > 0 ? prev - .75 : prev )
           } else if(direction == 'down'){
@@ -41,8 +40,6 @@ const Contact = () => {
   
           isVisible ? window.addEventListener("scroll", scrollHandler) : null;
   
-          console.log('activated')
-  
           
           return () => {
               isVisible ? window.removeEventListener("scroll", scrollHandler) : null;  // Clean up listener
@@ -57,7 +54,7 @@ const Contact = () => {
     onChange={inView}
     minTopValue={0}
 > 
-    <section id="contact" className="origin-bottom transition-all rounded-lg mt-8 mt:my-20 bg-red-600 min-h-96 md: gap-8 md:gap-16 flex justify-between flex-wrap flex-col overflow-hidden pt-6 md:pt-10 px-6 md:px-8 pb-24 md:pb-28 " >
+    <section id="contact" className="origin-bottom transition-all rounded-lg  bg-red-600 min-h-96 md: gap-8 md:gap-16 flex justify-between flex-wrap flex-col overflow-hidden pt-6 md:pt-10 px-6 md:px-8 pb-24 md:pb-28 " >
         <div className="w-full flex gap-8 relative z-30 bg-inherit">
             <div className="flex flex-col" >            
                 <H2element additionalClasses={'text-5xl md:text-6xl lg:text-8xl flex flex-col text-left '} headerText={'Lets'} spanClasses={'text-white -mt-5 sm:-mt-6 md:-mt-8 lg:-mt-14 '} spanText={'Talk'}/>

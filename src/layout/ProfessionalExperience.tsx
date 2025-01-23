@@ -156,10 +156,11 @@ const ProfessionalExperience = () => {
         <section id="about" className="relative origin-right w-11/12 rounded-lg my-8 md:my-20 bg-white flex justify-start flex-wrap flex-col overflow-hidden mx-auto py-6 md:py-10 [box-shadow:_.5em_.5em_#960707] md:[box-shadow:_1em_1em_#960707] transition-all ease-linear duration-0"        
             style={{
                 left:`${animationStart && animationStart >= 0 ? animationStart : '0'}px`,
-                transform:` rotateY(-${animationStart >= 0 ? animationStart : ''}deg) `,
+                // transform:` rotateY(-${animationStart >= 0 ? animationStart : ''}deg) `,
                 opacity:opacityStart
 
-            }}>
+            }}
+            >
 
             <div className="w-full flex gap-8 px-6 md:px-8 relative z-10">
             
@@ -194,9 +195,9 @@ const ProfessionalExperience = () => {
 
                                     <p className="text-sm md:text-md md:text-lg ">{item.experience.smallExcerpt}</p>
 
-                                    <ul className="grid gap-2 md:gap-3 grid-cols-2 col-span-full text-sm md:text-md capitalize mt-2">
+                                    <ul className="grid gap-x-2 md:gap-3 grid-cols-2 col-span-full text-sm lg:text-md capitalize mt-2">
                                         {item.experience.companySkills.map((item)=>(
-                                            <li className="flex flex-col md:flex-row items-center justify-start md:gap-2 bg-red-600 text-white p-3 rounded tracking-wider  border-b-8 border-red-700 ">{item}</li>
+                                            <li className=' top-0  hover:-top-4 transition-all ease flex flex-col md:flex-row items-center justify-start md:gap-2 bg-red-600 text-white p-2 px-3 rounded tracking-wider relative rounded-b-none  after:w-full  after:bg-red-700 after:absolute after:-bottom-2 after:left-0 after:rounded-b-md hover:after:-bottom-6 after:h-[calc(.5rem+1px)] hover:after:h-[calc(1.5rem+1px)] after:transition-all after:ease transform after:transform '>  {item}</li>
                                         ))}
                                     </ul>
 

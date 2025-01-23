@@ -233,10 +233,12 @@ const SkillsSection = () => {
 
                 style={{
                     left:`${animationStart && animationStart <= 0 ? animationStart : '0'}px`,
-                    transform:` rotateY(${animationStart <= 0 ? -animationStart : ''}deg)`,
+                    // transform:` rotateY(${animationStart <= 0 ? -animationStart : ''}deg)`,
                     opacity:opacityStart
 
-                }}>
+                }}
+                
+                >
 
 
                 <div className="w-full flex gap-8 px-6 md:px-8 relative z-10">
@@ -281,7 +283,7 @@ const SkillsSection = () => {
 
                                 <div className="col-span-4  duration-200 transition-all w-full p-0 flex flex-col items-center justify-between relative z-10 h-3/6" >
 
-                                    <ButtonWhite buttonText={item.isApp ? `View App` : `View Website`} additionalClasses={"!rounded text-sm md:text-md lg:text-lg tracking-widest !w-full relative z-10 !bg-red-600 hover:!bg-red-700 !text-white !py-3  border-b-8 border-red-700 "} buttonLink={item.codeLink ? item.codeLink : ''} newWindow={true} clickHandle={undefined}/> 
+                                    <ButtonWhite buttonText={item.isApp ? `View App` : `View Website`} additionalClasses={"!rounded text-sm md:text-md lg:text-lg   !w-full   z-10 !bg-red-600  !text-white !py-3 top-0  hover:-top-4 transition-all ease flex flex-col md:flex-row items-center justify-start md:gap-2  p-2 px-3  tracking-wider relative !rounded-b-none  after:w-full  after:bg-red-700 after:absolute after:-bottom-2 after:left-0 after:rounded-b-md hover:after:-bottom-6 after:h-[calc(.5rem+1px)] hover:after:h-[calc(1.5rem+1px)] after:transition-all after:ease transform after:transform"} buttonLink={item.codeLink ? item.codeLink : ''} newWindow={true} clickHandle={undefined}/> 
 
                                     <Paragraph text={item.projectDexcription} classes={'mt-4 md:text-left text-sm md:text-md md:text-lg '}/>
 
@@ -291,9 +293,7 @@ const SkillsSection = () => {
                         )) : null}
                     </div>
                 </Draggable>
-
-                    
-            </section>
+             </section>
         </ReactVisibilitySensor>
     )
 }

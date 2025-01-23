@@ -13,8 +13,6 @@ interface Skills {
     category: string,
 }
 
-
-
 const CodingLanguages = () => {
 
     const skillsArr:Array<Skills> = [
@@ -116,22 +114,20 @@ const CodingLanguages = () => {
             category: 'design'
         },
     ]
-
     
     useEffect(()=>{
         setUsedTech(skillsArr);
     },[])
- 
 
     const [usedTech,setUsedTech] = useState<Array<Skills>>();
     
     const [isVisible,setIsVisible] = useState(false);
     const [scrollBottom,setScrollBottom] = useState<number>(0);
-    const [animationStart, setAnimationStart] = useState<number>(30)
+    const [animationStart, setAnimationStart] = useState<number>(60)
     const [opacityStart, setOpacityStart] = useState<number>(0)
 
     const inView = (e:boolean) =>{
-        e ? setIsVisible(true) : setIsVisible(false);
+        e ? setIsVisible(true) :  setIsVisible(false) ;
     }
 
     const detectScrollDirection = () => {
@@ -165,19 +161,21 @@ const CodingLanguages = () => {
 
     },[scrollBottom,isVisible])
 
+
     return (
         <ReactVisibilitySensor  
             partialVisibility={true}
             onChange={inView}
-            minTopValue={window.innerHeight*.25}
+            minTopValue={0}
         > 
             <section id="coding" className="relative origin-right w-11/12 rounded-lg my-8 md:my-20 bg-white flex justify-start flex-wrap flex-col overflow-hidden mx-auto pb-7 md:pb-12 pt-6 md:pt-10 px-6 md:px-8 [box-shadow:_.5em_.5em_#960707] md:[box-shadow:_1em_1em_#960707] transition-all ease-linear duration-0"             
             
-            style={{
-            left:`${animationStart && animationStart >= 0 ? animationStart : '0'}px`,
-                transform:` rotateY(-${animationStart >= 0 ? animationStart : ''}deg) `,
-                opacity:opacityStart
-            }}>
+                style={{
+                left:`${animationStart && animationStart >= 0 ? animationStart : '0'}px`,
+                    // transform:` rotateY(-${animationStart >= 0 ? animationStart : ''}deg) `,
+                    opacity:opacityStart
+                }}
+            >
 
 
             <div className=" w-full gap-8  relative z-10 flex">
@@ -201,9 +199,9 @@ const CodingLanguages = () => {
 
 
                     <H2element additionalClasses={'  text-md md:text-2xl flex flex-col pb-4  '} headerText={"Frontend Development"} spanClasses={undefined} spanText={undefined}/>
-                    <ul className='grid grid-cols-2 gap-2 md:gap-x-6 md:!gap-y-4 text-sm md:text-md xl:text-lg'>
+                    <ul className='grid grid-cols-2 gap-x-4 md:gap-x-6 md:!gap-y-4 text-sm md:text-md xl:text-lg'>
                         {usedTech ? usedTech.filter((item=>item.category == 'programming')).map((item)=>(
-                            <li className='flex flex-col md:flex-row items-center justify-start md:gap-2 bg-red-600 text-white p-2 px-3 rounded tracking-wider border-b-8 border-red-700'> 
+                          <li className=' top-0  hover:-top-4 transition-all ease flex flex-col md:flex-row items-center justify-start md:gap-2 bg-red-600 text-white p-2 px-3 rounded tracking-wider relative rounded-b-none  after:w-full  after:bg-red-700 after:absolute after:-bottom-2 after:left-0 after:rounded-b-md hover:after:-bottom-6 after:h-[calc(.5rem+1px)] hover:after:h-[calc(1.5rem+1px)] after:transition-all after:ease transform after:transform '>  
                             <span className='text-xl md:text-4xl'>{item.icon}</span>
                             {item.name} 
                         </li>
@@ -215,9 +213,9 @@ const CodingLanguages = () => {
                 <div className="w-full ">
 
                 <H2element additionalClasses={'text-md md:text-2xl pb-4 flex flex-col  '} headerText={"Web Design"} spanClasses={undefined} spanText={undefined}/>
-                <ul className='text-sm md:text-md xl:text-lg grid grid-cols-1 gap-0 md:gap-2  '>
+                <ul className='text-sm md:text-md xl:text-lg grid grid-cols-1 gap-0 md:gap-4  '>
                     {usedTech ? usedTech.filter((item=>item.category == 'design')).map((item)=>(
-                            <li className='flex flex-col md:flex-row items-center justify-start md:gap-2 bg-red-600 text-white p-2 px-3 rounded tracking-wider mb-2  border-b-8 border-red-700'> 
+                            <li className=' top-0  hover:-top-4 transition-all ease flex flex-col md:flex-row items-center justify-start md:gap-2 bg-red-600 text-white p-2 px-3 rounded tracking-wider relative rounded-b-none  after:w-full  after:bg-red-700 after:absolute after:-bottom-2 after:left-0 after:rounded-b-md hover:after:-bottom-6 after:h-[calc(.5rem+1px)] hover:after:h-[calc(1.5rem+1px)] after:transition-all after:ease transform after:transform '>  
                             <span className='text-xl md:text-4xl'>{item.icon}</span>
                             {item.name} 
                             </li>
@@ -227,12 +225,12 @@ const CodingLanguages = () => {
             </div>
         
 
-            <div className="w-full  ">
+            <div className="w-full  perspective-1000    ">
 
                 <H2element additionalClasses={'text-md md:text-2xl pb-4 flex flex-col  '} headerText={"Web Builders"} spanClasses={undefined} spanText={undefined}/>
-                <ul className='text-sm md:text-md xl:text-lg grid grid-cols-1 gap-0 md:gap-6 '>
+                <ul className='text-sm md:text-md xl:text-lg grid grid-cols-1 gap-0 md:gap-4 perspective-200 '>
                     {usedTech ? usedTech.filter((item=>item.category == 'builder')).map((item)=>(
-                            <li className='transition-all ease-linear  flex flex-col md:flex-row items-center justify-start md:gap-2 bg-red-600 text-white p-2 px-3 rounded tracking-wider '> 
+                            <li className=' top-0  hover:-top-4 transition-all ease flex flex-col md:flex-row items-center justify-start md:gap-2 bg-red-600 text-white p-2 px-3 rounded tracking-wider relative rounded-b-none  after:w-full  after:bg-red-700 after:absolute after:-bottom-2 after:left-0 after:rounded-b-md hover:after:-bottom-6 after:h-[calc(.5rem+1px)] hover:after:h-[calc(1.5rem+1px)] after:transition-all after:ease transform after:transform '>  
                             <span className='text-xl md:text-4xl'>{item.icon}</span>
                             {item.name} 
                         </li>
