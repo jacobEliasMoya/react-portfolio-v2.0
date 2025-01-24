@@ -111,7 +111,7 @@ const ProfessionalExperience = () => {
     const [opacityStart, setOpacityStart] = useState<number>(0)
 
     const inView = (e:boolean) =>{
-        e ? setIsVisible(true) : null;
+        e ? setIsVisible(true) : setIsVisible(false);
     }
 
     const detectScrollDirection = () => {
@@ -121,15 +121,20 @@ const ProfessionalExperience = () => {
         return direction;
     };
 
-        const  setIt = (direction:string) =>{
-            if(direction == 'up' && isVisible){
-                setAnimationStart( prev => prev < 116 ? prev + 4 : prev )
+    const  setIt = (direction:string) =>{
+        if(direction == 'up'  && isVisible){
+            let x = document.querySelector('#about');
+            if( x && window.innerHeight*.65 < x.getBoundingClientRect().top){
+                setAnimationStart( prev => prev < 110 ? prev + 5 : prev )
                 setOpacityStart(  prev => prev > .1 ? prev - .1 : prev)
-            } else if(direction == 'down'){
-                setAnimationStart( prev => prev > 0 ? prev - 5 : prev )
-                setOpacityStart( prev =>  prev <= .9  ? prev + .1 : prev )
-            } 
-        }
+            }
+
+        } else if(direction == 'down' && isVisible){
+            setAnimationStart( prev => prev > 0 ? prev - 5 : prev )
+            setOpacityStart( prev =>  prev <= .95  ? prev + .1 : prev )
+        } 
+    }
+
     
     useEffect(()=>{
         const scrollHandler = () => {
@@ -160,10 +165,10 @@ const ProfessionalExperience = () => {
         
         <section id="about" className="relative origin-right w-11/12 rounded-lg my-8 md:my-20 bg-white flex justify-start flex-wrap flex-col overflow-hidden mx-auto py-6 md:py-10 [box-shadow:_.5em_.5em_#960707] md:[box-shadow:_1em_1em_#960707] transition-all ease-linear duration-0"        
             style={{
-                bottom:`-${animationStart && animationStart >= 0 ? animationStart : '0'}px`,
-                    opacity:opacityStart
-                }}
-            >
+                bottom:`-${animationStart && animationStart >= 0 ? animationStart : animationStart}px`,
+                opacity:opacityStart
+            }}
+        >
 
             <div className="w-full flex gap-8 px-6 md:px-8 relative z-10">
             
@@ -198,7 +203,7 @@ const ProfessionalExperience = () => {
 
                                     <p className="text-sm md:text-md md:text-lg ">{item.experience.smallExcerpt}</p>
 
-                                    <ul className="grid gap-2 gap-y-4 md:gap-y-6 md:gap-4 grid-cols-2 col-span-full text-sm lg:text-md capitalize mt-2 mb-2">
+                                    <ul className="grid gap-2 gap-y-4  md:gap-4 grid-cols-2 col-span-full text-sm lg:text-md capitalize mt-2 mb-2">
                                         {item.experience.companySkills.map((item)=>(
                                             <li className=' top-0  hover:-top-4 transition-all ease flex flex-col md:flex-row items-center justify-start md:gap-2 bg-red-600 text-white rounded tracking-wider relative rounded-b-none  after:w-full  after:bg-red-700 after:absolute after:-bottom-2 after:left-0 after:rounded-b-md hover:after:-bottom-6 after:h-[calc(.5rem+1px)] hover:after:h-[calc(1.5rem+1px)] after:transition-all after:ease transform after:transform p-3'>  {item}</li>
                                         ))}

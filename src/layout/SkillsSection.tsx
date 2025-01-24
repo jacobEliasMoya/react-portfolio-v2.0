@@ -197,7 +197,7 @@ const SkillsSection = () => {
 
 
         const inView = (e:boolean) =>{
-            e ? setIsVisible(true) : setIsVisible(false);
+            e ? setIsVisible(true) :  setIsVisible(false) ;
         }
     
         const detectScrollDirection = () => {
@@ -208,15 +208,19 @@ const SkillsSection = () => {
         };
     
         const  setIt = (direction:string) =>{
-            if(direction == 'up' && isVisible){
-                setAnimationStart( prev => prev < 116 ? prev + 4 : prev )
-                setOpacityStart(  prev => prev > .1 ? prev - .1 : prev)
-            } else if(direction == 'down'){
+            if(direction == 'up'  && isVisible){
+                let x = document.querySelector('#outer-scroll');
+                if( x && window.innerHeight*.65 < x.getBoundingClientRect().top){
+                    setAnimationStart( prev => prev < 110 ? prev + 5 : prev )
+                    setOpacityStart(  prev => prev > .1 ? prev - .1 : prev)
+                }
+    
+            } else if(direction == 'down' && isVisible){
                 setAnimationStart( prev => prev > 0 ? prev - 5 : prev )
-                setOpacityStart( prev =>  prev <= .9  ? prev + .1 : prev )
-            }
+                setOpacityStart( prev =>  prev <= .95  ? prev + .1 : prev )
+            } 
         }
-        
+    
         useEffect(()=>{
             const scrollHandler = () => {
                 const direction = detectScrollDirection(); // Get the current scroll direction
