@@ -42,6 +42,9 @@ const Contact = () => {
 
     
     useEffect(()=>{
+    },[animationStart,opacityStart])
+
+    useEffect(()=>{
         const scrollHandler = () => {
             const direction = detectScrollDirection(); // Get the current scroll direction
             setIt(direction)
