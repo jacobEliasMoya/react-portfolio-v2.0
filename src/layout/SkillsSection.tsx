@@ -47,7 +47,7 @@ const SkillsSection = () => {
             projectDexcription: "My passion project uses React, TypeScript, Tailwind, Redux, and libraries for color selection and canvas-to-image downloads.",
             codelinks:[{
                 icon:<FaGithub/>,
-                link:'https://github.com/jacobEliasMoya/react-portfolio-v2.0'
+                link:'https://github.com/jacobEliasMoya/QR-Clone'
             }],
             isActive: false,
             isApp: true,
