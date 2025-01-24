@@ -46,8 +46,8 @@ const SkillsSection = () => {
             liveLink: "https://qrclone.netlify.app/",
             projectDexcription: "My passion project uses React, TypeScript, Tailwind, Redux, and libraries for color selection and canvas-to-image downloads.",
             codelinks:[{
-                icon:<FaGithub/>,
-                link:'https://github.com/jacobEliasMoya/QR-Clone'
+                icon: <FaGithub/>,
+                link: 'https://github.com/jacobEliasMoya/QR-Clone'
             }],
             isActive: false,
             isApp: true,
