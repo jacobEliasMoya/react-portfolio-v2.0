@@ -129,7 +129,9 @@ const ProfessionalExperience = () => {
                 setOpacityStart(  prev => prev > .1 ? prev - .1 : prev)
             }
 
-        } else if(direction == 'down' && isVisible){
+        } else if(direction == 'up' && !isVisible){
+            console.log('beeper')
+        }  else if(direction == 'down' && isVisible){
             setAnimationStart( prev => prev > 0 ? prev - 5 : prev )
             setOpacityStart( prev =>  prev <= .95  ? prev + .1 : prev )
         } 
@@ -149,12 +151,7 @@ const ProfessionalExperience = () => {
         };
 
     },[scrollBottom,isVisible])
-
-    useEffect(()=>{
-
-        console.log(isVisible)
-        
-    },[isVisible])
+ 
     
     return (
         <ReactVisibilitySensor
@@ -165,7 +162,7 @@ const ProfessionalExperience = () => {
         
         <section id="about" className="relative origin-right w-11/12 rounded-lg my-8 md:my-20 bg-white flex justify-start flex-wrap flex-col overflow-hidden mx-auto py-6 md:py-10 [box-shadow:_.5em_.5em_#960707] md:[box-shadow:_1em_1em_#960707] transition-all ease-linear duration-0"        
             style={{
-                bottom:`-${animationStart && animationStart >= 0 ? animationStart : animationStart}px`,
+                bottom:`-${animationStart && animationStart >= 0 ? animationStart : 0}px`,
                 opacity:opacityStart
             }}
         >

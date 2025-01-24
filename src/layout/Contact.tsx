@@ -8,45 +8,52 @@ import { useState, useEffect } from 'react'
 
 const Contact = () => {
 
-  const [isVisible,setIsVisible] = useState(false);
-      const [scrollBottom,setScrollBottom] = useState<number>(0);
-      const [animationStart, setAnimationStart] = useState<number>(0)
-  
-      const inView = (e:boolean) =>{
-          e ? setIsVisible(true) : setIsVisible(false);
-      }
-  
-   
-      const detectScrollDirection = () => {
-          const currentScrollTop = window.scrollY; // Get current scroll position
-          const direction = currentScrollTop > scrollBottom ? 'down' : 'up'; // Compare with the last position
-          setScrollBottom(currentScrollTop); // Update the last position
-          return direction;
-      };
-  
-      const  setIt = (direction:string) =>{
-          if(direction == 'up'){
-              setAnimationStart( prev => prev > 0 ? prev - .75 : prev )
-          } else if(direction == 'down'){
-              setAnimationStart( prev => prev + .25 )
-          }
-      }
-      
-      useEffect(()=>{
-          const scrollHandler = () => {
-              const direction = detectScrollDirection(); // Get the current scroll direction
-              setIt(direction)
-          } 
-  
-          isVisible ? window.addEventListener("scroll", scrollHandler) : null;
-  
-          
-          return () => {
-              isVisible ? window.removeEventListener("scroll", scrollHandler) : null;  // Clean up listener
-          };
-  
-  
-      },[scrollBottom,isVisible])
+    const [isVisible,setIsVisible] = useState(false);
+    const [scrollBottom,setScrollBottom] = useState<number>(0);
+    const [animationStart, setAnimationStart] = useState<number>(120)
+    const [opacityStart, setOpacityStart] = useState<number>(0)
+
+    const inView = (e:boolean) =>{
+        e ? setIsVisible(true) : setIsVisible(false);
+    }
+
+    const detectScrollDirection = () => {
+        const currentScrollTop = window.scrollY; // Get current scroll position
+        const direction = currentScrollTop > scrollBottom ? 'down' : 'up'; // Compare with the last position
+        setScrollBottom(currentScrollTop); // Update the last position
+        return direction;
+    };
+
+    const  setIt = (direction:string) =>{
+        if(direction == 'up'  && isVisible){
+            let x = document.querySelector('#about');
+            if( x && window.innerHeight*.65 < x.getBoundingClientRect().top){
+                setAnimationStart( prev => prev < 110 ? prev + 5 : prev )
+                setOpacityStart(  prev => prev > .1 ? prev - .1 : prev)
+            }
+
+        } else if(direction == 'up' && !isVisible){
+            console.log('beeper')
+        }  else if(direction == 'down' && isVisible){
+            setAnimationStart( prev => prev > 0 ? prev - 5 : prev )
+            setOpacityStart( prev =>  prev <= .95  ? prev + .1 : prev )
+        } 
+    }
+
+    
+    useEffect(()=>{
+        const scrollHandler = () => {
+            const direction = detectScrollDirection(); // Get the current scroll direction
+            setIt(direction)
+        } 
+
+        isVisible ? window.addEventListener("scroll", scrollHandler) : null;
+
+        return () => {
+            isVisible ? window.removeEventListener("scroll", scrollHandler) : null;  // Clean up listener
+        };
+
+    },[scrollBottom,isVisible])
       
   return (
     <ReactVisibilitySensor
@@ -54,7 +61,7 @@ const Contact = () => {
     onChange={inView}
     minTopValue={0}
 > 
-    <section id="contact" className="origin-bottom transition-all rounded-lg  bg-red-600 min-h-96 md: gap-8 md:gap-16 flex justify-between flex-wrap flex-col overflow-hidden pt-6 md:pt-10 px-6 md:px-8 pb-24 md:pb-28 " >
+    <section id="contact" className="origin-bottom transition-all rounded-lg rounded-t-3xl bg-red-600 min-h-96 md: gap-8 md:gap-16 flex justify-between flex-wrap flex-col overflow-hidden pt-6 md:pt-10 px-6 md:px-8 pb-24 md:pb-28 " >
         <div className="w-full flex gap-8 relative z-30 bg-inherit">
             <div className="flex flex-col" >            
                 <H2element additionalClasses={'text-5xl md:text-6xl lg:text-8xl flex flex-col text-left '} headerText={'Lets'} spanClasses={'text-white -mt-5 sm:-mt-6 md:-mt-8 lg:-mt-14 '} spanText={'Talk'}/>
