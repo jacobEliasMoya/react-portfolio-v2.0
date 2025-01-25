@@ -33,14 +33,11 @@ const Contact = () => {
                 setOpacityStart(  prev => prev > .2 ? prev - .2 : prev)
             }
 
-        } else if(direction === 'up' && !isVisible){
-            console.log('beeper')
-        }  else if(direction === 'down' && isVisible){
-            setAnimationStart( prev => prev > 0 ? prev - 5 : prev )
+        } else if(direction === 'down' && isVisible){
+            setAnimationStart( prev => prev > 0 ? window.innerWidth < 1000 ? prev - 2 : prev - 5 : prev )
             setOpacityStart( prev =>  prev <= .8  ? prev + .2 : prev )
         } 
     }
-
     
     useEffect(()=>{
         const scrollHandler = () => {
@@ -76,7 +73,7 @@ const Contact = () => {
     onChange={inView}
     minTopValue={0}
 > 
-    <section id="contact" className="relative origin-bottom transition-all rounded-lg rounded-t-3xl bg-red-600 min-h-96 md: gap-8 md:gap-16 flex justify-between flex-wrap flex-col overflow-hidden pt-6 md:pt-10 px-6 md:px-8 pb-24 md:pb-28 " 
+    <section id="contact" className="relative origin-bottom transition-all ease-linear rounded-lg duration-0 rounded-t-3xl bg-red-600 min-h-96 md: gap-8 md:gap-16 flex justify-between flex-wrap flex-col overflow-hidden pt-6 md:pt-10 px-6 md:px-8 pb-24 md:pb-28 " 
         style={{
             bottom:`-${animationStart && animationStart >= 0 ? animationStart : 0}px`,
             opacity:opacityStart

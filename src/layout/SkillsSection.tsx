@@ -215,9 +215,7 @@ const SkillsSection = () => {
                     setOpacityStart(  prev => prev > .2 ? prev - .2 : prev)
                 }
     
-            } else if(direction === 'up' && !isVisible){
-                console.log('beeper')
-            }  else if(direction === 'down' && isVisible){
+            } else if(direction === 'down' && isVisible){
                 setAnimationStart( prev => prev > 0 ? prev - 5 : prev )
                 setOpacityStart( prev =>  prev <= .8  ? prev + .2 : prev )
             } 

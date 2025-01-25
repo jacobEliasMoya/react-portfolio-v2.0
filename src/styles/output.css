@@ -1966,10 +1966,6 @@ video {
   transition-duration: 500ms;
 }
 
-.duration-\[\.1s\] {
-  transition-duration: .1s;
-}
-
 .ease-linear {
   transition-timing-function: linear;
 }

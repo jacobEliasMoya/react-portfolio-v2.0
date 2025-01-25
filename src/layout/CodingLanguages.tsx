@@ -145,9 +145,7 @@ const CodingLanguages = () => {
                 setOpacityStart(  prev => prev > .2 ? prev - .2 : prev)
             }
 
-        } else if(direction === 'up' && !isVisible){
-            console.log('beeper')
-        }  else if(direction === 'down' && isVisible){
+        } else if(direction === 'down' && isVisible){
             setAnimationStart( prev => prev > 0 ? prev - 5 : prev )
             setOpacityStart( prev =>  prev <= .8  ? prev + .2 : prev )
         } 
@@ -174,7 +172,7 @@ const CodingLanguages = () => {
             onChange={inView}
             minTopValue={window.innerHeight/80}
         > 
-            <section id="coding" className="relative origin-right w-11/12 rounded-lg my-8 md:my-20 bg-white flex justify-start flex-wrap flex-col overflow-hidden mx-auto pb-7 md:pb-12 pt-6 md:pt-10 px-6 md:px-8 [box-shadow:_.5em_.5em_#960707] md:[box-shadow:_1em_1em_#960707] transition-all ease-linear duration-[.1s]"             
+            <section id="coding" className="relative origin-right w-11/12 rounded-lg my-8 md:my-20 bg-white flex justify-start flex-wrap flex-col overflow-hidden mx-auto pb-7 md:pb-12 pt-6 md:pt-10 px-6 md:px-8 [box-shadow:_.5em_.5em_#960707] md:[box-shadow:_1em_1em_#960707] transition-all ease-linear duration-0"             
             
                 style={{
                 bottom:`${animationStart && animationStart >= 0 ? -animationStart : '0'}px`,
