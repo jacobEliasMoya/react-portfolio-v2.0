@@ -122,6 +122,8 @@ const ProfessionalExperience = () => {
     };
 
     const  setIt = (direction:string) =>{
+        if (!isVisible) return; // awesome way to prevent the function from running if isVisible is false, love it!
+
         if(direction === 'up'  && isVisible){
             let x = document.querySelector('#about');
             if( x && window.innerHeight*.65 < x.getBoundingClientRect().top){
