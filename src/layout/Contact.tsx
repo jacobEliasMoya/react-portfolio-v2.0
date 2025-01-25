@@ -34,7 +34,7 @@ const Contact = () => {
             }
 
         } else if(direction === 'down' && isVisible){
-            setAnimationStart( prev => prev > 0 ? window.innerWidth < 1000 ? prev - 2 : prev - 5 : prev )
+            setAnimationStart( prev => prev > 0 ? prev - 5 : prev )
             setOpacityStart( prev =>  prev <= .8  ? prev + .2 : prev )
         } 
     }
