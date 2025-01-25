@@ -11,7 +11,7 @@ const Contact = () => {
 
     const [isVisible,setIsVisible] = useState(false);
     const [scrollBottom,setScrollBottom] = useState<number>(0);
-    const [animationStart, setAnimationStart] = useState<number>(120)
+    const [animationStart, setAnimationStart] = useState<number>(75)
     const [opacityStart, setOpacityStart] = useState<number>(0)
 
     const inView = (e:boolean) =>{
@@ -30,14 +30,14 @@ const Contact = () => {
             let x = document.querySelector('#contact');
             if( x && window.innerHeight*.65 < x.getBoundingClientRect().top){
                 setAnimationStart( prev => prev < 110 ? prev + 5 : prev )
-                setOpacityStart(  prev => prev > .1 ? prev - .1 : prev)
+                setOpacityStart(  prev => prev > .2 ? prev - .2 : prev)
             }
 
         } else if(direction === 'up' && !isVisible){
             console.log('beeper')
         }  else if(direction === 'down' && isVisible){
             setAnimationStart( prev => prev > 0 ? prev - 5 : prev )
-            setOpacityStart( prev =>  prev <= .95  ? prev + .1 : prev )
+            setOpacityStart( prev =>  prev <= .8  ? prev + .2 : prev )
         } 
     }
 

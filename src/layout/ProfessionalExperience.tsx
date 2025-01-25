@@ -122,18 +122,18 @@ const ProfessionalExperience = () => {
     };
 
     const  setIt = (direction:string) =>{
-        if(direction == 'up'  && isVisible){
+        if(direction === 'up'  && isVisible){
             let x = document.querySelector('#about');
             if( x && window.innerHeight*.65 < x.getBoundingClientRect().top){
                 setAnimationStart( prev => prev < 110 ? prev + 5 : prev )
-                setOpacityStart(  prev => prev > .1 ? prev - .1 : prev)
+                setOpacityStart(  prev => prev > .2 ? prev - .2 : prev)
             }
 
-        } else if(direction == 'up' && !isVisible){
+        } else if(direction === 'up' && !isVisible){
             console.log('beeper')
-        }  else if(direction == 'down' && isVisible){
+        }  else if(direction === 'down' && isVisible){
             setAnimationStart( prev => prev > 0 ? prev - 5 : prev )
-            setOpacityStart( prev =>  prev <= .95  ? prev + .1 : prev )
+            setOpacityStart( prev =>  prev <= .8  ? prev + .2 : prev )
         } 
     }
 
