@@ -21,6 +21,8 @@ function App() {
 
   const  [ mouseCoordinates, setMouseCoordinates] = useState<MouseXY>()
   const [appSections, setAppSections] = useState<Array<Section>>()
+  const [isLoaded,setIsLoaded] = useState<boolean>(false) 
+
 
   useEffect(()=>{
     setAppSections([
@@ -84,15 +86,18 @@ const checkIfInView = (section:Section) => {
   useEffect(()=>{
     
       // Use this to check the visibility of elements once the page is loaded
-    appSections?.forEach((section) => {
-      const isPast = checkIfInView(section);
-      // If the section is already past the viewport, mark it as visible
-      if (isPast) {
-        setAppSections(prev => prev?.map((item) =>
-          item.section === section.section ? { ...item, isVisible: true } : item
-        ));
-      }
-    });
+    if(!isLoaded){
+      appSections?.forEach((section) => {
+        const isPast = checkIfInView(section);
+        // If the section is already past the viewport, mark it as visible
+        if (isPast) {
+          setIsLoaded(true);
+          setAppSections(prev => prev?.map((item) =>
+            item.section === section.section ? { ...item, isVisible: true } : item
+          ));
+        }
+      });
+    }
 
   },[appSections])
 
