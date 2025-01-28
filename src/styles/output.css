@@ -600,6 +600,10 @@ video {
   pointer-events: none;
 }
 
+.visible {
+  visibility: visible;
+}
+
 .fixed {
   position: fixed;
 }
@@ -1948,10 +1952,6 @@ video {
   transition-property: all;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 150ms;
-}
-
-.duration-0 {
-  transition-duration: 0s;
 }
 
 .duration-100 {

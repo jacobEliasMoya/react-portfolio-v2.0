@@ -17,6 +17,7 @@ interface Section{
   isVisible:boolean,
 }
 
+
 function App() {
 
   const  [ mouseCoordinates, setMouseCoordinates] = useState<MouseXY>()
