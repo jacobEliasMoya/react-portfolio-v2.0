@@ -14,7 +14,7 @@ const Contact = (props:Props) => {
 
   return (
  
-    <section id={props.id} className="relative origin-bottom transition-all ease rounded-lg  duration-200 rounded-t-3xl bg-red-600 min-h-96 md: gap-8 md:gap-16 flex justify-between flex-wrap flex-col overflow-hidden pt-6 md:pt-10 px-6 md:px-8 pb-24 md:pb-28 " 
+    <section id={props.id} className="relative origin-bottom transition-all ease-out rounded-lg  duration-200 rounded-t-3xl bg-red-600 min-h-96 md: gap-8 md:gap-16 flex justify-between flex-wrap flex-col overflow-hidden pt-6 md:pt-10 px-6 md:px-8 pb-24 md:pb-28 " 
         style={{
             bottom:`${props.animationStart && props.animationStart >= 0 ? -props.animationStart : '0'}px`,
                 opacity:props.opacityStart
