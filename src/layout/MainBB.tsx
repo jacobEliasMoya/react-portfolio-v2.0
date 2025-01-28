@@ -6,7 +6,11 @@ import Paragraph from "../components/Paragraph"
 import Socials from "../components/Socials"
 import ReactVisibilitySensor from "react-visibility-sensor"
 
-const MainBB = () => {
+type Props = {
+    id:string
+}
+
+const MainBB = (props:Props) => {
 
     const [jakeMessage, setJakeMessage]  = useState<string>();
 
@@ -26,7 +30,7 @@ const MainBB = () => {
 
     return (
         <ReactVisibilitySensor onChange={inView}> 
-            <section id="home" className='origin-bottom  w-full min-h-screen  bg-red-600 flex items-center justify-between p-6 md:p-8 py-6 md:py-10 flex-wrap flex-col rounded-b-3xl '>
+            <section id={props.id} className='origin-bottom  w-full min-h-screen  bg-red-600 flex items-center justify-between p-6 md:p-8 py-6 md:py-10 flex-wrap flex-col rounded-b-3xl '>
                 <div className="w-full flex gap-8 relative ">
                     <div className="flex flex-col" >            
                         <H1element additionalClasses={'text-5xl md:text-6xl lg:text-8xl flex flex-col text-left '} headerText={'Design'} spanClasses={'text-white -mt-5 sm:-mt-6 md:-mt-8 lg:-mt-14 '} spanText={'Develop'}/>

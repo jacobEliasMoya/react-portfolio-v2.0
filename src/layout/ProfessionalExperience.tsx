@@ -3,7 +3,6 @@ import H2element from "../components/headers/H2element"
 import H3element from "../components/headers/H3element"
 import varepLogo from "../assets/varepMainWhite-300x109.webp"
 import biziqLogo from "../assets/biziq-logo.webp"
-import ReactVisibilitySensor from "react-visibility-sensor"
 
 interface Experience{
     companyIcon: string,
@@ -27,9 +26,13 @@ interface Data {
     education : Education,
     certifications: string[]
 }
+type Props = {
+    animationStart: number,
+    opacityStart: number,
+    id:string
+}
 
-
-const ProfessionalExperience = () => {
+const ProfessionalExperience = (props:Props) => {
     
     const resumeData = [{
 
@@ -104,67 +107,14 @@ const ProfessionalExperience = () => {
         setInitialResume(resumeData)
     },[])
 
-
-    const [isVisible,setIsVisible] = useState(false);
-    const [scrollBottom,setScrollBottom] = useState<number>(0);
-    const [animationStart, setAnimationStart] = useState<number>(120)
-    const [opacityStart, setOpacityStart] = useState<number>(0)
-
-    const inView = (e:boolean) =>{
-        e ? setIsVisible(true) : setIsVisible(false);
-    }
-
-    const detectScrollDirection = () => {
-        const currentScrollTop = window.scrollY; // Get current scroll position
-        const direction = currentScrollTop > scrollBottom ? 'down' : 'up'; // Compare with the last position
-        setScrollBottom(currentScrollTop); // Update the last position
-        return direction;
-    };
-
-    const  setIt = (direction:string) =>{
-        if (!isVisible) return; // awesome way to prevent the function from running if isVisible is false, love it!
-
-        if(direction === 'up'  && isVisible){
-            let x = document.querySelector('#about');
-            if( x && window.innerHeight*.65 < x.getBoundingClientRect().top){
-                setAnimationStart( prev => prev < 110 ? prev + 5 : prev )
-                setOpacityStart(  prev => prev > .2 ? prev - .2 : prev)
-            }
-
-        } else if(direction === 'down' && isVisible){
-            setAnimationStart( prev => prev > 0 ? prev - 5 : prev )
-            setOpacityStart( prev =>  prev <= .8  ? prev + .2 : prev )
-        } 
-    }
-
-    
-    useEffect(()=>{
-        const scrollHandler = () => {
-            const direction = detectScrollDirection(); // Get the current scroll direction
-            setIt(direction)
-        } 
-
-        isVisible ? window.addEventListener("scroll", scrollHandler) : null;
-
-        return () => {
-            isVisible ? window.removeEventListener("scroll", scrollHandler) : null;  // Clean up listener
-        };
-
-    },[scrollBottom,isVisible])
  
-    
     return (
-        <ReactVisibilitySensor
-        partialVisibility={true}
-        onChange={inView}
-        minTopValue={0}
-    > 
-        
-        <section id="about" className="relative origin-right w-11/12 rounded-lg my-8 md:my-20 bg-white flex justify-start flex-wrap flex-col overflow-hidden mx-auto py-6 md:py-10 [box-shadow:_.5em_.5em_#960707] md:[box-shadow:_1em_1em_#960707] transition-all ease-linear duration-0"        
+         
+        <section id={props.id} className="relative origin-right w-11/12 rounded-lg my-8 md:my-20 bg-white flex justify-start flex-wrap flex-col overflow-hidden mx-auto py-6 md:py-10 [box-shadow:_.5em_.5em_#960707] md:[box-shadow:_1em_1em_#960707] transition-all ease-linear duration-75"        
             style={{
-                bottom:`-${animationStart && animationStart >= 0 ? animationStart : 0}px`,
-                opacity:opacityStart
-            }}
+                bottom:`${props.animationStart && props.animationStart >= 0 ? -props.animationStart : '0'}px`,
+                    opacity:props.opacityStart
+                }}
         >
 
             <div className="w-full flex gap-8 px-6 md:px-8 relative z-10">
@@ -214,9 +164,7 @@ const ProfessionalExperience = () => {
                 ))}
             </div>
         </section>
-
-        </ReactVisibilitySensor>
-
+ 
     )
 }
 
