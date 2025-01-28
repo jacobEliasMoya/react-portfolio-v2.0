@@ -128,7 +128,7 @@ const CodingLanguages = (props:Props) => {
 
     return (
 
-            <section id={props.id} className="relative origin-right w-11/12 rounded-lg my-8 md:my-20 bg-white flex justify-start flex-wrap flex-col overflow-hidden mx-auto pb-7 md:pb-12 pt-6 md:pt-10 px-6 md:px-8 [box-shadow:_.5em_.5em_#960707] md:[box-shadow:_1em_1em_#960707] transition-all ease-linear duration-200"             
+            <section id={props.id} className="relative origin-right w-11/12 rounded-lg my-8 md:my-20 bg-white flex justify-start flex-wrap flex-col overflow-hidden mx-auto pb-7 md:pb-12 pt-6 md:pt-10 px-6 md:px-8 [box-shadow:_.5em_.5em_#960707] md:[box-shadow:_1em_1em_#960707] transition-all ease duration-200"             
                 style={{
                 bottom:`${props.animationStart && props.animationStart >= 0 ? -props.animationStart : '0'}px`,
                     opacity:props.opacityStart
