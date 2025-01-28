@@ -19,7 +19,7 @@ Ensure that you have **Node.js** and **npm** installed.
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/your-username/portfolio-site.git
+   git clone https://github.com/your-username/react-portfolio-v2.0.git
    ```
 2. Install the dependencies:
    ```bash
