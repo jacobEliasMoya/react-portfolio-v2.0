@@ -55,7 +55,7 @@ export default {
           '50%': { transform: 'rotate(3deg)' },
         },
         fall: {
-          '0%,': { top: '-200px', opacity:'0' },
+          '0%,': { top: '-300px', opacity:'0' },
           '60%': { top: '0px', opacity:'1' },
           '70%': { top: '20px', opacity:'1' },
           '80%': { top: '0px', opacity:'1' },

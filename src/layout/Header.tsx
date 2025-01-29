@@ -76,10 +76,13 @@ const Header = () => {
 
   const [navigationElms,setNavigationElms] = useState<Nav[]>();
   const [headerActive,setHeaderActive] = useState<boolean>();
+  const [isActive,setIsActive ] = useState<boolean>(false);
 
   const handleClick = () => {
     setHeaderActive(prev=>!prev)
   }
+
+
 
   useEffect(()=>{
       window.innerWidth < 768 ? setHeaderActive(true) : setHeaderActive(false)
@@ -90,10 +93,21 @@ const Header = () => {
 
       initialNav ? setNavigationElms(initialNav) : '';
 
+      !isActive ? setTimeout(()=>setIsActive(true),550) : null;
+      
     },[])
 
+
+
+
+
   return (
-    <header className={`${headerActive ? 'min-w-[calc(100%-1em)]  pl-6 md:pl-0 bg-opacity-85  ' : 'min-w-14 md:min-w-[65vw] lg:min-w-[55vw] '} min-h-14 text-white  flex items-center justify-center bg-zinc-800 bg-opacity-85 backdrop-blur-lg  mx-auto fixed bottom-[.5em] md:bottom-0 left-[.5em] md:left-1/2 md:-translate-x-1/2 md:rounded-b-none  z-40 rounded-full flex-row transition-all ease duration-500 font-ultra overflow-hidden md:overflow-visible shadow-[0em_0.25em_rgba(0,0,0,0.15)]`}>
+    <header className={`${headerActive ? 'min-w-[calc(100%-1em)]  pl-6 md:pl-0 bg-opacity-85  ' : 'min-w-14 md:min-w-[65vw] lg:min-w-[55vw] '} min-h-14 text-white  flex items-center justify-center bg-zinc-800 bg-opacity-85 backdrop-blur-lg  mx-auto fixed bottom-[.5em] md:bottom-0 left-[.5em] md:left-1/2 md:-translate-x-1/2 md:rounded-b-none  z-40 rounded-full flex-row transition-all ease duration-300 font-ultra overflow-hidden md:overflow-visible shadow-[0em_0.25em_rgba(0,0,0,0.15)] mb-2 md:mb-0`}
+      style={{
+            bottom:`${isActive ? 0 : -200}px`,
+            opacity: isActive ? 1 : 0
+        }}
+    >
 
       <button aria-label="mobile-navigation-toggle" onClick={handleClick} className='absolute left-0 md:hidden z-10 ' >
           <TiThMenu className={`${headerActive ? 'scale-75' : 'scale-100'} rounded-full text-white p-2 border-8 border-white bg-red-600 h-14 w-14 active:scale-110 transition-all` }/>

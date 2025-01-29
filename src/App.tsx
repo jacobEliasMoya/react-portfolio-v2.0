@@ -17,18 +17,15 @@ interface Section{
   isVisible:boolean,
 }
 
-
 function App() {
 
-  const  [ mouseCoordinates, setMouseCoordinates] = useState<MouseXY>()
+  const [mouseCoordinates, setMouseCoordinates] = useState<MouseXY>()
   const [appSections, setAppSections] = useState<Array<Section>>()
-  const [isLoaded,setIsLoaded] = useState<boolean>(false) 
-
 
   useEffect(()=>{
     setAppSections([
       {
-        section: <MainBB id={"home"} />,
+        section: <MainBB id={"home"} animationStart={0} opacityStart={0} />,
         isVisible: false  
       },
       {
@@ -56,22 +53,22 @@ function App() {
 
   },[])
 
-const checkIfInView = (section:Section) => {  
+  const checkIfInView = (section:Section) => {  
 
-  const item = document.querySelector(`#${section.section.props.id}`) as HTMLElement;
+    const item = document.querySelector(`#${section.section.props.id}`) as HTMLElement;
 
-  if(!item){
-    return;
+    console.log(item)
+
+    if(!item){
+      return;
+    }
+
+    const itemBottom:number = item.getBoundingClientRect().bottom;
+
+    const isPast = itemBottom < 20 && !section.isVisible ? true : false;
+
+    return isPast;
   }
-
-  const itemBottom:number = item.getBoundingClientRect().bottom;
-  const pageOffset:number = window.innerHeight;
-
-  const isPast = itemBottom < pageOffset ? true : false;
-
-  return isPast;
-}
-
 
   const inView = (e:boolean,section:Section) =>{
 
@@ -83,24 +80,6 @@ const checkIfInView = (section:Section) => {
       )
     }
   }
-
-  useEffect(()=>{
-    
-      // Use this to check the visibility of elements once the page is loaded
-    if(!isLoaded){
-      appSections?.forEach((section) => {
-        const isPast = checkIfInView(section);
-        // If the section is already past the viewport, mark it as visible
-        if (isPast) {
-          setIsLoaded(true);
-          setAppSections(prev => prev?.map((item) =>
-            item.section === section.section ? { ...item, isVisible: true } : item
-          ));
-        }
-      });
-    }
-
-  },[appSections])
 
   // const [scrollBottom,setScrollBottom] = useState<number>(0);
   // const [animationStart, setAnimationStart] = useState<number>(120)
@@ -149,13 +128,12 @@ const checkIfInView = (section:Section) => {
 
     <div className=" scroll-smooth bg-red-800 font-retro text-zinc-800 w-full h-max relative md:cursor-none overflow-hidden">
       <Header/>
-      <div className="perspective-[2500px]  perspective-origin-center">
-        {appSections ? appSections.map((item)=>(
-          <ReactVisibilitySensor partialVisibility={true} onChange={(e:boolean)=>{inView(e,item)}} minTopValue={window.innerHeight/ 2.5/3} > 
-            {React.cloneElement(item.section,{animationStart:item.isVisible ? 0 : 130, opacityStart:item.isVisible ? 1 : 0})}
-          </ReactVisibilitySensor>
-        )): null}
-      </div>
+      
+      {appSections ? appSections.map((item)=>(
+        <ReactVisibilitySensor partialVisibility={true} onChange={(e:boolean)=>{inView(e,item)}} minTopValue={window.innerHeight/ 2.5/3} > 
+          {React.cloneElement(item.section,{animationStart:item.isVisible ? 0 : 130, opacityStart:item.isVisible ? 1 : 0})}
+        </ReactVisibilitySensor>
+      )): null}
       
       <div className="[filter:_drop-shadow(rgba(0,_0,_0,_0.5)_2px_4px_6px);] backdrop-invert  hidden md:block after:content-[''] after:w-[150%] after:h-[150%] after:absolute after:rounded-[100%] after:-translate-y-1/2 after:-translate-x-1/2 after:left-1/2 after:scale-125 after:top-1/2 after:border-4 after:border-white w-8 h-8 bg-zinc-900 bg-opacity-0 rounded-full absolute z-40 -translate-y-1/2 -translate-x-1/2 pointer-events-none" 
         style={{
