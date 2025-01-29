@@ -85,11 +85,8 @@ const Header = () => {
 
 
   useEffect(()=>{
-      window.innerWidth < 768 ? setHeaderActive(true) : setHeaderActive(false)
 
-      window.addEventListener('resize',()=>{
-        window.innerWidth < 768 ? setHeaderActive(true) : setHeaderActive(false)
-      })
+      window.innerWidth < 768 ? setHeaderActive(true) : setHeaderActive(false)
 
       initialNav ? setNavigationElms(initialNav) : '';
 
@@ -112,7 +109,6 @@ const Header = () => {
       <button aria-label="mobile-navigation-toggle" onClick={handleClick} className='absolute left-0 md:hidden z-10 ' >
           <TiThMenu className={`${headerActive ? 'scale-75' : 'scale-100'} rounded-full text-white p-2 border-8 border-white bg-red-600 h-14 w-14 active:scale-110 transition-all` }/>
       </button>
-                                    
 
       <ul className={` flex justify-center items-center gap-6 w-full max-w-0 `}>
         { navigationElms?.map((item)=>(

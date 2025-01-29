@@ -65,7 +65,7 @@ function App() {
 
     const itemBottom:number = item.getBoundingClientRect().bottom;
 
-    const isPast = itemBottom < 20 && !section.isVisible ? true : false;
+    const isPast = itemBottom < 0 && !section.isVisible ? true : false;
 
     return isPast;
   }
