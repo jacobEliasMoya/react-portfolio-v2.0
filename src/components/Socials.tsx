@@ -5,6 +5,7 @@ import resume from "../assets/JacobResume.pdf"
 import { ReactElement, useEffect, useState } from "react"
 
 interface Socials {
+    id:number
     name:string,
     url:string,
     title: string,
@@ -20,6 +21,7 @@ type Props = {
 const Socials = (props: Props) => {
     const initialSocials:Array<Socials> = [
         {
+            id:0,
             name: 'Call Now',
             url: 'tel:+19096446073',
             title: 'Call Now',
@@ -28,6 +30,7 @@ const Socials = (props: Props) => {
             desktopHidden: false
         },
         {
+            id:1,
             name: 'LinkedIn',
             url: 'https://www.linkedin.com/in/jacob-moya-317998174/',
             title: 'View LinkedIn',
@@ -41,7 +44,8 @@ const Socials = (props: Props) => {
             title: 'Email Me',
             icon: <FaEnvelope className={`transition-all  active:scale-125  md:hover:-translate-y-2 md:hover:drop-shadow-md ${props.additionalClasses}`} />,
             target: undefined,
-            desktopHidden: false
+            desktopHidden: false,
+            id: 2
         },
         {
             name: 'Github',
@@ -49,7 +53,8 @@ const Socials = (props: Props) => {
             title: 'My Github',
             icon: <FaGithub className={`transition-all  active:scale-125  md:hover:-translate-y-2 md:hover:drop-shadow-md ${props.additionalClasses}`} />,
             target: '_blank',
-            desktopHidden: false
+            desktopHidden: false,
+            id: 3
         },
         {
             name: 'Resume',
@@ -57,7 +62,8 @@ const Socials = (props: Props) => {
             title: 'View Resume',
             icon: <HiClipboardDocumentCheck className={`transition-all  active:scale-125  md:hover:-translate-y-2 md:hover:drop-shadow-md ${props.additionalClasses}`} />,
             target: '_blank',
-            desktopHidden: true
+            desktopHidden: true,
+            id: 4
         },
  
     ]
@@ -71,7 +77,7 @@ const Socials = (props: Props) => {
 return (
 <>
     {socialElms ? socialElms.map((item)=>(
-        <a href={item.url} title={item.title} target={item.target} className={`md:cursor-none w-max ${item.desktopHidden ? 'md:hidden' : ''}`} aria-label={item.title} >
+        <a key={item.id} href={item.url} title={item.title} target={item.target} className={`md:cursor-none w-max ${item.desktopHidden ? 'md:hidden' : ''}`} aria-label={item.title} >
             {item.icon}
         </a>
     )):''}

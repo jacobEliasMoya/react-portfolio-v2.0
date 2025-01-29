@@ -18,6 +18,7 @@ import Paragraph from "../components/Paragraph";
 import { FaGithub } from "react-icons/fa6";
  
 interface CodeLink{
+    id:number,
     icon:ReactElement,
     link:string
 }
@@ -50,6 +51,7 @@ const SkillsSection = (props:Props) => {
             liveLink: "https://qrclone.netlify.app/",
             projectDexcription: "My passion project uses React, TypeScript, Tailwind, Redux, and libraries for color selection and canvas-to-image downloads.",
             codelinks:[{
+                id:0,
                 icon: <FaGithub/>,
                 link: 'https://github.com/jacobEliasMoya/QR-Clone'
             }],
@@ -64,6 +66,7 @@ const SkillsSection = (props:Props) => {
             liveLink: "https://main--pokedex-vmax.netlify.app/",
             projectDexcription: "My kids' love for Pokémon inspired me to create a more robust second version of my Pokédex, now built with Bootstrap. ",
             codelinks:[{
+                id:1,
                 icon:<FaGithub/>,
                 link:'https://github.com/jacobEliasMoya/Pokedex-TypeScript'
             }],
@@ -230,14 +233,14 @@ const SkillsSection = (props:Props) => {
                     // .filter((item=>item.id < startingArrNum))
                     .map((item)=>(
 
-                        <div id={`${item.id}`} className={`rounded-xl text-center w-[450px] max-w-[75vw] relative transition-all duration-200  font-ultra p-4 grid grid-cols-4 gap-4 `}>
+                        <div key={`drag-${item.id}`} id={`${item.id}`} className={`rounded-xl text-center w-[450px] max-w-[75vw] relative transition-all duration-200  font-ultra p-4 grid grid-cols-4 gap-4 `}>
                             
 
                             <H3element additionalClasses={' font-retro drop-shadow-xl shadow-red-900 absolute -top-28 -right-5 -z-10 text-[10em] transition-all tracking-widest text-red-700'} headerText={`${item.id}`} spanClasses={''} spanText={''}/>
 
                             <div className="col-span-full relative">
                                 {item.codelinks?.map((item=>(
-                                    <a className="flex items-center justify-start gap-2 absolute left-0 -top-8   md:cursor-none transition-all  active:scale-125  md:hover:-translate-y-2 md:hover:drop-shadow-md cancel-me-now" href={item.link} target="_blank" rel="noopener noreferrer"><span className=" text-3xl md:text-4xl " >{item.icon}</span> View Git</a>
+                                    <a key={`codelinks-${item.id}`} className="flex items-center justify-start gap-2 absolute left-0 -top-8   md:cursor-none transition-all  active:scale-125  md:hover:-translate-y-2 md:hover:drop-shadow-md cancel-me-now" href={item.link} target="_blank" rel="noopener noreferrer"><span className=" text-3xl md:text-4xl " >{item.icon}</span> View Git</a>
                                 )))}
                             </div>
 

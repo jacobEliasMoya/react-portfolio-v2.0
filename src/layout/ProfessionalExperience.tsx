@@ -5,6 +5,7 @@ import varepLogo from "../assets/varepMainWhite-300x109.webp"
 import biziqLogo from "../assets/biziq-logo.webp"
 
 interface Experience{
+    id:number
     companyIcon: string,
     companyName:string,
     companyRole:string,
@@ -37,6 +38,7 @@ const ProfessionalExperience = (props:Props) => {
     const resumeData = [{
 
         experience: {
+            id:0,
             companyIcon: biziqLogo,
             companyName:'BIZIQ',
             companyRole:'Web Developer II',
@@ -60,6 +62,7 @@ const ProfessionalExperience = (props:Props) => {
     {
 
         experience: {
+            id:1,
             companyIcon:biziqLogo,
             companyName:'BIZIQ',
             companyRole:'Web Developer I',
@@ -82,6 +85,7 @@ const ProfessionalExperience = (props:Props) => {
     {
 
         experience: {
+            id:2,
             companyIcon:varepLogo,
             companyName:'VAREP',
             companyRole:'JR Web Developer',
@@ -132,7 +136,7 @@ const ProfessionalExperience = (props:Props) => {
             <div className="w-full gap-10 md:gap-16 py-10 md:py-14 lg:py-18 font-ultra text-center md:text-left  grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 mx-auto px-6 md:px-8 relative z-10">
 
                 {initialResume?.map((item)=>(
-                    <div className="">
+                    <div className=""  key={`exp-${item.experience.id}`}>
                         <div className="items-start grid grid-cols-1 md:grid-cols-2 gap-4 col-span-full md:col-span-3 ">
                             <H3element additionalClasses={'col-span-full font-ultra text-2xl md:text-[1.8em] hidden md:flex flex-col text-red-600  bg-inherit '} headerText={item.experience.companyRole} spanClasses={undefined} spanText={undefined}/>
 
@@ -152,7 +156,7 @@ const ProfessionalExperience = (props:Props) => {
 
                                     <ul className="grid gap-2 gap-y-4  md:gap-4 grid-cols-2 col-span-full text-sm lg:text-md capitalize mt-2 mb-2">
                                         {item.experience.companySkills.map((item)=>(
-                                            <li className=' top-0  hover:-top-4 transition-all ease flex flex-col md:flex-row items-center justify-start md:gap-2 bg-red-600 text-white rounded tracking-wider relative rounded-b-none  after:w-full  after:bg-red-700 after:absolute after:-bottom-2 after:left-0 after:rounded-b-md hover:after:-bottom-6 after:h-[calc(.5rem+1px)] hover:after:h-[calc(1.5rem+1px)] after:transition-all after:ease transform after:transform p-3'>  {item}</li>
+                                            <li key={`exp-${item}`} className=' top-0  hover:-top-4 transition-all ease flex flex-col md:flex-row items-center justify-start md:gap-2 bg-red-600 text-white rounded tracking-wider relative rounded-b-none  after:w-full  after:bg-red-700 after:absolute after:-bottom-2 after:left-0 after:rounded-b-md hover:after:-bottom-6 after:h-[calc(.5rem+1px)] hover:after:h-[calc(1.5rem+1px)] after:transition-all after:ease transform after:transform p-3'>  {item}</li>
                                         ))}
                                     </ul>
 

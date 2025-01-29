@@ -6,6 +6,7 @@ import {  BiLogoTypescript } from 'react-icons/bi'
 import { RiJavascriptFill } from 'react-icons/ri'
 
 interface Skills {
+    id:number,
     name: string,
     icon: ReactElement,
     animation: string,
@@ -26,97 +27,114 @@ const CodingLanguages = (props:Props) => {
             icon: <FaHtml5 />,
             animation: 'animate-fallFive',
             name: 'HTML5',
-            category: 'programming'
+            category: 'programming',
+            id:0,
         },
         {
             icon: <FaBootstrap />,
             animation: 'animate-fallSix',
             name: 'Bootstrap',
-            category: 'programming'
+            category: 'programming',
+            id: 1
         },
         {
             icon: <FaSass />,
             animation: 'animate-fallEight',
             name: 'SCSS/ CSS',
-            category: 'programming'
+            category: 'programming',
+            id: 2
         },
         {
             icon: <SiTailwindcss />,
             animation: 'animate-fallSeven',
             name: 'Tailwind',
-            category: 'programming'
+            category: 'programming',
+            id: 3
         },
         {
             icon: <RiJavascriptFill />,
             animation: 'animate-fallNine md:animate-fallTwelve',
             name: 'JavaScript',
-            category: 'programming'
+            category: 'programming',
+            id: 4
         },
         {
             icon: <BiLogoTypescript />,
             animation: 'animate-fallNine md:animate-fallTwelve',
             name: 'Typescript',
-            category: 'programming'
+            category: 'programming',
+            id: 5
         },
         {
             icon: <FaReact />,
             animation: 'animate-fallTen1 md:animate-fallEleven',
             name: 'ReactJS',
-            category: 'programming'
-        },       {
+            category: 'programming',
+            id: 6
+        },       
+        {
             icon: <SiRedux />,
             animation: 'animate-fallTen1 md:animate-fallEleven',
             name: 'Redux',
-            category: 'programming'
+            category: 'programming',
+            id: 7
         },
         {
             icon: <FaShopify />,
             animation: 'animate-fallTwelve md:animate-fallNine',
             name: 'Squarespace',
-            category: 'builder'
+            category: 'builder',
+            id: 8
         },
         {
             name: 'Wordpress',
             icon: <FaWordpress />,
             animation: 'animate-fallEleven md:animate-fallTen1',
-            category: 'builder'
+            category: 'builder',
+            id: 9
         },
         {
             icon: <FaSquarespace />,
             animation: 'animate-fallTwelve md:animate-fallNine',
             name: 'Shopify',
-            category: 'builder'
+            category: 'builder',
+            id: 10
         },
         {
             name: 'WIX',
             icon: <FaWix />,
             animation: 'animate-fallEleven md:animate-fallTen1',
-            category: 'builder'
+            category: 'builder',
+            id: 11
         },
         {
             icon: <SiAdobephotoshop />,
             animation: 'animate-fallEleven md:animate-fallTen1',
             name: 'Photoshop',
-            category: 'design'
+            category: 'design',
+            id: 12
         },
         {
             icon: <SiAdobeillustrator />,
             animation: 'animate-fallEleven md:animate-fallTen1',
             name: 'Illustrator',
-            category: 'design'
+            category: 'design',
+            id: 13
         },
         {
             icon: <FaFigma />,
             animation: 'animate-fallTwelve md:animate-fallNine',
             name: 'Figma',
-            category: 'design'
+            category: 'design',
+            id: 14
         },
         
         {
             icon: <SiKrita />,
             animation: 'animate-fallTwelve md:animate-fallNine',
             name: 'Krita',
-            category: 'design'
+            category: 'design',
+            id: 15
         },
     ]
     
@@ -159,7 +177,7 @@ const CodingLanguages = (props:Props) => {
                     <H2element additionalClasses={'  text-xl md:text-2xl flex flex-col pb-4  '} headerText={"Frontend Development"} spanClasses={undefined} spanText={undefined}/>
                     <ul className='grid grid-cols-2 gap-4 gap-x-2 md:gap-x-8 md:!gap-y-4 text-sm md:text-md xl:text-lg'>
                         {usedTech ? usedTech.filter((item=>item.category == 'programming')).map((item)=>(
-                          <li className=' top-0  hover:-top-4 transition-all ease flex flex-col md:flex-row items-center justify-start md:gap-2 bg-red-600 text-white p-2 px-3 rounded tracking-wider relative rounded-b-none  after:w-full  after:bg-red-700 after:absolute after:-bottom-2 after:left-0 after:rounded-b-md hover:after:-bottom-6 after:h-[calc(.5rem+1px)] hover:after:h-[calc(1.5rem+1px)] after:transition-all after:ease transform after:transform '>  
+                          <li key={`prg-${item.id}`} className=' top-0  hover:-top-4 transition-all ease flex flex-col md:flex-row items-center justify-start md:gap-2 bg-red-600 text-white p-2 px-3 rounded tracking-wider relative rounded-b-none  after:w-full  after:bg-red-700 after:absolute after:-bottom-2 after:left-0 after:rounded-b-md hover:after:-bottom-6 after:h-[calc(.5rem+1px)] hover:after:h-[calc(1.5rem+1px)] after:transition-all after:ease transform after:transform '>  
                             <span className='text-xl md:text-4xl'>{item.icon}</span>
                             {item.name} 
                         </li>
@@ -173,7 +191,7 @@ const CodingLanguages = (props:Props) => {
                 <H2element additionalClasses={'text-md md:text-2xl pb-4 flex flex-col  '} headerText={"Web Design"} spanClasses={undefined} spanText={undefined}/>
                 <ul className='text-sm md:text-md xl:text-lg grid grid-cols-1 gap-4  '>
                     {usedTech ? usedTech.filter((item=>item.category == 'design')).map((item)=>(
-                            <li className=' top-0  hover:-top-4 transition-all ease flex flex-col md:flex-row items-center justify-start md:gap-2 bg-red-600 text-white p-2 px-3 rounded tracking-wider relative rounded-b-none  after:w-full  after:bg-red-700 after:absolute after:-bottom-2 after:left-0 after:rounded-b-md hover:after:-bottom-6 after:h-[calc(.5rem+1px)] hover:after:h-[calc(1.5rem+1px)] after:transition-all after:ease transform after:transform '>  
+                            <li key={`design-${item.id}`} className=' top-0  hover:-top-4 transition-all ease flex flex-col md:flex-row items-center justify-start md:gap-2 bg-red-600 text-white p-2 px-3 rounded tracking-wider relative rounded-b-none  after:w-full  after:bg-red-700 after:absolute after:-bottom-2 after:left-0 after:rounded-b-md hover:after:-bottom-6 after:h-[calc(.5rem+1px)] hover:after:h-[calc(1.5rem+1px)] after:transition-all after:ease transform after:transform '>  
                             <span className='text-xl md:text-4xl'>{item.icon}</span>
                             {item.name} 
                             </li>
@@ -188,7 +206,7 @@ const CodingLanguages = (props:Props) => {
                 <H2element additionalClasses={'text-md md:text-2xl pb-4 flex flex-col  '} headerText={"Web Builders"} spanClasses={undefined} spanText={undefined}/>
                 <ul className='text-sm md:text-md xl:text-lg grid grid-cols-1 gap-4  '>
                     {usedTech ? usedTech.filter((item=>item.category == 'builder')).map((item)=>(
-                            <li className=' top-0  hover:-top-4 transition-all ease flex flex-col md:flex-row items-center justify-start md:gap-2 bg-red-600 text-white p-2 px-3 rounded tracking-wider relative rounded-b-none  after:w-full  after:bg-red-700 after:absolute after:-bottom-2 after:left-0 after:rounded-b-md hover:after:-bottom-6 after:h-[calc(.5rem+1px)] hover:after:h-[calc(1.5rem+1px)] after:transition-all after:ease transform after:transform '>  
+                            <li key={`builder-${item.id}`} className=' top-0  hover:-top-4 transition-all ease flex flex-col md:flex-row items-center justify-start md:gap-2 bg-red-600 text-white p-2 px-3 rounded tracking-wider relative rounded-b-none  after:w-full  after:bg-red-700 after:absolute after:-bottom-2 after:left-0 after:rounded-b-md hover:after:-bottom-6 after:h-[calc(.5rem+1px)] hover:after:h-[calc(1.5rem+1px)] after:transition-all after:ease transform after:transform '>  
                             <span className='text-xl md:text-4xl'>{item.icon}</span>
                             {item.name} 
                         </li>

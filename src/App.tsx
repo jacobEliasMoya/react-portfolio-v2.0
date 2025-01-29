@@ -13,6 +13,7 @@ interface MouseXY{
 }
 
 interface Section{
+  id:number,
   section:ReactElement,
   isVisible:boolean,
 }
@@ -25,24 +26,29 @@ function App() {
   useEffect(()=>{
     setAppSections([
       {
+        id:0,
         section: <MainBB id={"home"} animationStart={0} opacityStart={0} />,
         isVisible: false  
       },
       {
         section: <CodingLanguages animationStart={0} opacityStart={1} id={"coding"} />,
-        isVisible: false  
+        isVisible: false,
+        id: 1
       },
       {
         section: <SkillsSection animationStart={0} opacityStart={1} id={"outer-scroll"} />,
-        isVisible: false  
+        isVisible: false,
+        id: 2
       },
       {
         section: <ProfessionalExperience animationStart={0} opacityStart={1} id={"about"} />,
-        isVisible: false  
+        isVisible: false,
+        id: 3
       },
       {
         section: <Contact animationStart={0} opacityStart={1} id={"contact"} />,
-        isVisible: false  
+        isVisible: false,
+        id: 4
       }      
     ]);
     
@@ -56,8 +62,6 @@ function App() {
   const checkIfInView = (section:Section) => {  
 
     const item = document.querySelector(`#${section.section.props.id}`) as HTMLElement;
-
-    console.log(item)
 
     if(!item){
       return;
@@ -130,7 +134,7 @@ function App() {
       <Header/>
       
       {appSections ? appSections.map((item)=>(
-        <ReactVisibilitySensor partialVisibility={true} onChange={(e:boolean)=>{inView(e,item)}} minTopValue={window.innerHeight/ 2.5/3} > 
+        <ReactVisibilitySensor partialVisibility={true} onChange={(e:boolean)=>{inView(e,item)}} minTopValue={window.innerHeight/ 2.5/3} key={item.id}> 
           {React.cloneElement(item.section,{animationStart:item.isVisible ? 0 : 130, opacityStart:item.isVisible ? 1 : 0})}
         </ReactVisibilitySensor>
       )): null}
