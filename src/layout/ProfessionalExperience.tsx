@@ -137,8 +137,8 @@ const ProfessionalExperience = (props:Props) => {
 
                 {initialResume?.map((item)=>(
                     <div className=""  key={`exp-${item.experience.id}`}>
-                        <div className="items-start grid grid-cols-1 md:grid-cols-2 gap-4 col-span-full md:col-span-3 ">
-                            <H3element additionalClasses={'col-span-full font-ultra text-2xl md:text-[1.8em] hidden md:flex flex-col text-red-600  bg-inherit '} headerText={item.experience.companyRole} spanClasses={undefined} spanText={undefined}/>
+                        <div className="items-start grid grid-cols-1 md:grid-cols-2 gap-4 col-span-full md:col-span-3 group ">
+                            <H3element additionalClasses={'col-span-full font-ultra text-2xl md:text-[1.8em] hidden md:flex flex-colbg-inherit group-hover:text-red-600 text-red-900  '} headerText={item.experience.companyRole} spanClasses={undefined} spanText={undefined}/>
 
                             <div className=" col-span-full gap-2 md:gap-5 rounded grid grid-cols-5">
 
@@ -146,7 +146,7 @@ const ProfessionalExperience = (props:Props) => {
                                     <img src={item.experience.companyIcon} alt='' className="md:-rotate-90  min-w-28 w-3/12 md:w-full invert brightness-0"/>
                                 </div>
 
-                                <H3element additionalClasses={'col-span-full font-ultra text-xl flex md:hidden flex-col text-red-600 bg-inherit mt-2 '} headerText={item.experience.companyRole} spanClasses={undefined} spanText={undefined}/>
+                                <H3element additionalClasses={'col-span-full font-ultra text-xl flex md:hidden   flex-col group-hover:text-red-600 text-red-900 bg-inherit mt-2 '} headerText={item.experience.companyRole} spanClasses={undefined} spanText={undefined}/>
 
                                 <div className="grid grid-cols-1 col-span-full md:col-span-4 gap-2 items-start justify-end flex-col mt-0">
 
@@ -156,7 +156,7 @@ const ProfessionalExperience = (props:Props) => {
 
                                     <ul className="grid gap-2 gap-y-4  md:gap-4 grid-cols-2 col-span-full text-sm lg:text-md capitalize mt-2 mb-2">
                                         {item.experience.companySkills.map((item)=>(
-                                            <li key={`exp-${item}`} className=' top-0  hover:-top-4 transition-all ease flex flex-col md:flex-row items-center justify-start md:gap-2 bg-red-600 text-white rounded tracking-wider relative rounded-b-none  after:w-full  after:bg-red-700 after:absolute after:-bottom-2 after:left-0 after:rounded-b-md hover:after:-bottom-6 after:h-[calc(.5rem+1px)] hover:after:h-[calc(1.5rem+1px)] after:transition-all after:ease transform after:transform p-3'>  {item}</li>
+                                            <li key={`exp-${item}`} className='  top-0  hover:-top-4 active:-top-2 transition-all ease flex flex-col md:flex-row items-center justify-start md:gap-2 bg-red-600 text-white p-3 rounded tracking-wider relative rounded-b-none  after:w-full  after:bg-red-700 after:absolute after:-bottom-2 after:left-0 after:rounded-b-md hover:after:-bottom-6 after:h-[calc(.5rem+1px)] hover:after:h-[calc(1.5rem+1px)]  active:after:h-[calc(1rem+1px)] active:after:-bottom-4 after:transition-all after:ease transform after:transform'>  {item}</li>
                                         ))}
                                     </ul>
 

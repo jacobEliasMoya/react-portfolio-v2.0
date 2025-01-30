@@ -29,11 +29,10 @@ const MainForm = (props: Props) => {
   }
 
   const handleSubmission = (e:React.FormEvent<HTMLFormElement>) =>{
-      
+
     e.preventDefault();
 
-    form.current ? emailjs
-    .sendForm('service_df732ps', 'template_txv4cip', form.current, {
+    formName && formEmail && formMessage ? form.current ? emailjs.sendForm('service_df732ps', 'template_txv4cip', form.current, {
       publicKey: '9ReKBbRNDraeGtQBI',
     })
     .then(
@@ -44,8 +43,10 @@ const MainForm = (props: Props) => {
       (error) => {
         console.log('FAILED...', error.text);
       },
-    ) : alert('no!')
+    ) : alert('no!') : alert('Please see to it that all fields are filled')
   }
+
+
 
   useEffect(()=>{
 
@@ -60,24 +61,23 @@ const MainForm = (props: Props) => {
   },[formName,formEmail,formMessage])
 
   return (
-    
+
     <form ref={form} onSubmit={handleSubmission} className={`font-ultra gap-4 grid grid-cols-2 rounded md:rounded-xl text-zinc-800 ${props.moreClasses}`}>
-        <label htmlFor="" className="col-span-full md:col-span-1">
-          <Input type={'text'} value={formName ? formName : ''} onChange={handleNameChange} placeholder={"Name please  "} additionalClasses={undefined} name={'name'} />
-        </label>
+      <label htmlFor="" className="col-span-full md:col-span-1">
+        <Input type={'text'} value={formName ? formName : ''} onChange={handleNameChange} placeholder={"Name please  "} additionalClasses={''} name={'name'} />
+      </label>
 
-        <label htmlFor="" className="col-span-full md:col-span-1">
-          <Input type={'email'} value={formEmail ? formEmail : ''} onChange={handleEmailChange} placeholder={"Enter email here "} additionalClasses={undefined} name={'email'} />
-        </label>
+      <label htmlFor="" className="col-span-full md:col-span-1">
+        <Input type={'email'} value={formEmail ? formEmail : ''} onChange={handleEmailChange} placeholder={"Enter email here "} additionalClasses={undefined} name={'email'} />
+      </label>
 
-        <label htmlFor="" className='col-span-full'>
-          <TextArea additionalClasses={'min-h-44'} value={formMessage ? formMessage : ''} onChange={handleFormChange} placeholder={"Have something you want to say that cant fit in one line, let me know here please! "} name={'message'} />
-        </label>
+      <label htmlFor="" className='col-span-full'>
+        <TextArea additionalClasses={'min-h-44'} value={formMessage ? formMessage : ''} onChange={handleFormChange} placeholder={"Have something you want to say that cant fit in one line, let me know here please! "} name={'message'} />
+      </label>
 
-        <label htmlFor="" className="col-span-full  text-white">
-          <Input type={'submit'} value={'Send it!'} onChange={undefined} placeholder={undefined} additionalClasses={'rounded col-span-full md:col-span-1 gap-4 flex items-center justify-center bg-zinc-800 hover:bg-zinc-900 p-4 w-auto tracking-widest'} name={undefined} />
-        </label>
-
+      <label htmlFor="" className="col-span-full p-0 top-0  hover:-top-4 active:-top-2 transition-all ease flex flex-col md:flex-row items-center justify-start md:gap-2   text-white  rounded tracking-wider relative rounded-b-none  after:w-full  after:bg-zinc-900 after:absolute after:-bottom-2 after:left-0 after:rounded-b-md hover:after:-bottom-6 active:after:-bottom-4 after:h-[calc(.5rem+1px)] hover:after:h-[calc(1.5rem+1px)] active:after:h-[calc(1rem+1px)] after:transition-all after:ease transform after:transform">
+        <Input type={'submit'} value={'Send it!'} onChange={undefined} placeholder={undefined} additionalClasses={' !bg-zinc-800 !border-none rounded col-span-full md:col-span-1 gap-4 flex items-center justify-center bg-zinc-800 hover:bg-zinc-900 p-4 w-auto tracking-widest'} name={undefined} />
+      </label>
     </form>
   )
 }

@@ -233,18 +233,18 @@ const SkillsSection = (props:Props) => {
                     // .filter((item=>item.id < startingArrNum))
                     .map((item)=>(
 
-                        <div key={`drag-${item.id}`} id={`${item.id}`} className={`rounded-xl text-center w-[450px] max-w-[75vw] relative transition-all duration-200  font-ultra p-4 grid grid-cols-4 gap-4 `}>
+                        <div key={`drag-${item.id}`} id={`${item.id}`} className={`group rounded-xl text-center w-[450px] max-w-[75vw] relative transition-all duration-200  font-ultra p-4 grid grid-cols-4 gap-4 `}>
                             
 
-                            <H3element additionalClasses={' font-retro drop-shadow-xl shadow-red-900 absolute -top-28 -right-5 -z-10 text-[10em] transition-all tracking-widest text-red-700'} headerText={`${item.id}`} spanClasses={''} spanText={''}/>
+                            <H3element additionalClasses={' font-retro drop-shadow-xl shadow-red-900 absolute -top-28 -right-5 -z-10 text-[10em] transition-all tracking-widest group-hover:text-red-600 text-red-900'} headerText={`${item.id}`} spanClasses={''} spanText={''}/>
 
                             <div className="col-span-full relative">
                                 {item.codelinks?.map((item=>(
-                                    <a key={`codelinks-${item.id}`} className="flex items-center justify-start gap-2 absolute left-0 -top-8   md:cursor-none transition-all  active:scale-125  md:hover:-translate-y-2 md:hover:drop-shadow-md cancel-me-now" href={item.link} target="_blank" rel="noopener noreferrer"><span className=" text-3xl md:text-4xl " >{item.icon}</span> View Git</a>
+                                    <a key={`codelinks-${item.id}`} className="group-hover:-top-9 flex items-center justify-start gap-2 absolute left-0 -top-7   md:cursor-none transition-all  active:scale-105  md:hover:-translate-y-1 md:hover:drop-shadow-md cancel-me-now" href={item.link} target="_blank" rel="noopener noreferrer"><span className=" text-3xl md:text-4xl " >{item.icon}</span> View Git</a>
                                 )))}
                             </div>
 
-                            <div className="rounded col-span-3 duration-500 transition-all bg-cover bg-left w-full min-h-72 translate brightness-90"
+                            <div className="rounded col-span-3 duration-500 transition-all bg-cover bg-center w-full min-h-72 translate brightness-90 border-b-8 border-zinc-800 bg-opacity-0"
                                 style={{
                                 backgroundImage:`url(${item.projectLink})`, 
                                 }}
@@ -256,7 +256,7 @@ const SkillsSection = (props:Props) => {
 
                             <div className="col-span-4  duration-200 transition-all w-full p-0 flex flex-col items-center justify-between relative z-10 h-3/6" >
 
-                                <ButtonWhite buttonText={item.isApp ? `View App` : `View Website`} additionalClasses={"!rounded text-sm md:text-md lg:text-lg   !w-full   z-10 !bg-red-600  !text-white !py-3 top-0  hover:-top-4 transition-all ease flex flex-col md:flex-row items-center justify-start md:gap-2  p-2 px-3  tracking-wider relative !rounded-b-none  after:w-full  after:bg-red-700 after:absolute after:-bottom-2 after:left-0 after:rounded-b-md hover:after:-bottom-6 after:h-[calc(.5rem+1px)] hover:after:h-[calc(1.5rem+1px)] after:transition-all after:ease transform after:transform"} buttonLink={item.liveLink ? item.liveLink : ''} newWindow={true} clickHandle={undefined}/> 
+                                <ButtonWhite buttonText={item.isApp ? `View App` : `View Website`} additionalClasses={"!rounded text-sm md:text-md lg:text-lg   !w-full   z-10 !bg-red-600  !text-white !py-3  top-0  hover:-top-4 active:-top-2 transition-all ease flex flex-col md:flex-row items-center justify-start md:gap-2 bg-red-600 text-white p-2 px-3 rounded tracking-wider relative rounded-b-none  after:w-full  after:bg-red-700 after:absolute after:-bottom-2 after:left-0 after:rounded-b-md hover:after:-bottom-6 after:h-[calc(.5rem+3px)] hover:after:h-[calc(1.5rem+3px)]  active:after:h-[calc(1rem+3px)] active:after:-bottom-4 after:transition-all after:ease transform after:transform"} buttonLink={item.liveLink ? item.liveLink : ''} newWindow={true} clickHandle={undefined}/> 
 
                                 <Paragraph text={item.projectDexcription} classes={'mt-6 md:text-left text-sm md:text-md md:text-lg '}/>
 
