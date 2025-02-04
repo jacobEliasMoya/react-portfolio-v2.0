@@ -11,7 +11,7 @@ import p4Img from "../assets/projects/medex.webp";
 import p6Img from "../assets/projects/oceandrivedesigns.webp";
 import p7Img from "../assets/projects/venolosapparel.webp";
 import p8Img from "../assets/projects/kidskingdom1.png";
-import p9Img from "../assets/projects/guiTuner.webp";
+import p9Img from "../assets/projects/guituner.webp";
 
 import ButtonWhite from "../components/buttons/ButtonWhite";
 import Paragraph from "../components/Paragraph";
