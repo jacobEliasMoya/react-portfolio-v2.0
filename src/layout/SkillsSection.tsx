@@ -12,6 +12,7 @@ import p5Img from "../assets/projects/franklins.webp";
 import p6Img from "../assets/projects/oceandrivedesigns.webp";
 import p7Img from "../assets/projects/venolosapparel.webp";
 import p8Img from "../assets/projects/kidskingdom1.png";
+import p9Img from "../assets/projects/guiTuner.webp";
 
 import ButtonWhite from "../components/buttons/ButtonWhite";
 import Paragraph from "../components/Paragraph";
@@ -78,6 +79,21 @@ const SkillsSection = (props:Props) => {
         {
             id:3,
             animation:'animate-growProjectThree',
+            projectName: "Guituner",
+            projectLink: p9Img,
+            liveLink: "https://guituner.netlify.app/",
+            projectDexcription: "App Currently In Development, I am currently working now on a guitar tuner app using React, TypeScript, TailwindCSS and the Web Audio API.",
+            codelinks:[{
+                id:2,
+                icon:<FaGithub/>,
+                link:'https://github.com/jacobEliasMoya/ReactGuitarTuner'
+            }],            
+            isActive: false,
+            isApp: true,
+        },
+        {
+            id:4,
+            animation:'animate-growProjectThree',
             projectName: "Smith Insurance",
             projectLink: p3Img,
             liveLink: "https://insurancesic.com/",
@@ -85,11 +101,9 @@ const SkillsSection = (props:Props) => {
             codelinks:undefined,
             isActive: false,
             isApp: false,
-            
-
         },
         {
-            id:4,
+            id:5,
             animation:'animate-growProjectFour',
             projectName: "MedEstheticsRX",
             projectLink: p4Img,
@@ -98,26 +112,20 @@ const SkillsSection = (props:Props) => {
             codelinks:undefined,
             isActive: false,
             isApp: false,
-            
-
-
         },
         {
-            id:5,
+            id:6,
             animation:'animate-growProjectTwoNoDelay',
             projectName: "Ocean Drive Designs",
             projectLink: p6Img,
             liveLink: "https://oceandrivedesigns.com/",
             projectDexcription: "Ocean Drive Designs has been a premiere provider of high-end turnkey residential and hospitality interiors across the globe.",
             codelinks:undefined,
-
             isActive: false,
             isApp: false,
-            
-
         },
         {
-            id:6,
+            id:7,
             animation:'animate-growProjectFourNoDelay',
             projectName: "Kids Kingdom",
             projectLink: p8Img,
@@ -126,22 +134,6 @@ const SkillsSection = (props:Props) => {
             codelinks:undefined,
             isActive: false,
             isApp: false,
-            
-
-
-        },
-        {
-            id:7,
-            animation:'animate-growProjectOneNoDelay',
-            projectName: "Franklin’s",
-            projectLink: p5Img,
-            liveLink: "https://franklinsinproctor.com/",
-            projectDexcription: "Welcome to Franklin’s, where the motto “Food, Friends, and Fun” truly comes to life! Located in the heart of Proctor, VT.",
-            codelinks:undefined,
-            isActive: false,
-            isApp: false,
-            
-
         },
         {
             id:8,
@@ -153,8 +145,6 @@ const SkillsSection = (props:Props) => {
             codelinks:undefined,
             isActive: false,
             isApp: false,
-            
-
         },
 
     ]  
