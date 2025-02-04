@@ -81,12 +81,12 @@ const SkillsSection = (props:Props) => {
             projectName: "Guituner",
             projectLink: p9Img,
             liveLink: "https://guituner.netlify.app/",
-            projectDexcription: "App Currently In Development, I am currently working now on a guitar tuner app using React, TypeScript, TailwindCSS and the Web Audio API.",
+            projectDexcription: "App Currently IN DEVELOPMENT, will be a guitar tuner app using React, TypeScript, & TailwindCSS",
             codelinks:[{
                 id:2,
                 icon:<FaGithub/>,
                 link:'https://github.com/jacobEliasMoya/ReactGuitarTuner'
-            }],            
+            },],            
             isActive: false,
             isApp: true,
         },
