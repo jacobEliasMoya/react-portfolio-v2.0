@@ -8,7 +8,6 @@ import p1Img from "../assets/projects/qrcode.webp";
 import p2Img from "../assets/projects/pokedex.webp";
 import p3Img from "../assets/projects/smithins.webp";
 import p4Img from "../assets/projects/medex.webp";
-import p5Img from "../assets/projects/franklins.webp";
 import p6Img from "../assets/projects/oceandrivedesigns.webp";
 import p7Img from "../assets/projects/venolosapparel.webp";
 import p8Img from "../assets/projects/kidskingdom1.png";
