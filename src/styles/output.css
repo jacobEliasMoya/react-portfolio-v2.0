@@ -1315,32 +1315,6 @@ video {
   }
 }
 
-.animate-growProjectOneNoDelay {
-  animation: grow2 .4s .20s ease-out forwards;
-}
-
-@keyframes grow2 {
-  0%, {
-    scale: 0;;
-  }
-
-  40% {
-    scale: 1.2;
-  }
-
-  60% {
-    scale: 1;
-  }
-
-  80% {
-    scale: 1.1;
-  }
-
-  100% {
-    scale: 1;
-  }
-}
-
 .animate-growProjectThree {
   animation: grow2 .4s 1.4s ease-out forwards;
 }
@@ -1695,6 +1669,10 @@ video {
 
 .bg-center {
   background-position: center;
+}
+
+.bg-top {
+  background-position: top;
 }
 
 .p-0 {

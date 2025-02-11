@@ -11,7 +11,7 @@ import p4Img from "../assets/projects/medex.webp";
 import p6Img from "../assets/projects/oceandrivedesigns.webp";
 import p7Img from "../assets/projects/venolosapparel.webp";
 import p8Img from "../assets/projects/kidskingdom1.png";
-import p9Img from "../assets/projects/guituner.webp";
+import p9Img from "../assets/projects/tuner-2.webp";
 
 import ButtonWhite from "../components/buttons/ButtonWhite";
 import Paragraph from "../components/Paragraph";
@@ -233,7 +233,7 @@ const SkillsSection = (props:Props) => {
                                 )))}
                             </div>
 
-                            <div className="rounded col-span-3 duration-500 transition-all bg-cover bg-center w-full min-h-72 translate brightness-90 border-b-8 border-zinc-800 bg-opacity-0"
+                            <div className="rounded col-span-3 duration-500 transition-all bg-cover w-full min-h-72 translate brightness-90 bg-opacity-0 bg-top"
                                 style={{
                                 backgroundImage:`url(${item.projectLink})`, 
                                 }}
