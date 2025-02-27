@@ -11,7 +11,7 @@ import p4Img from "../assets/projects/medex.webp";
 import p6Img from "../assets/projects/oceandrivedesigns.webp";
 import p7Img from "../assets/projects/venolosapparel.webp";
 import p8Img from "../assets/projects/kidskingdom1.png";
-import p9Img from "../assets/projects/tuner-2.webp";
+import p9Img from "../assets/projects/tuner-main.webp";
 
 import ButtonWhite from "../components/buttons/ButtonWhite";
 import Paragraph from "../components/Paragraph";
@@ -43,8 +43,24 @@ type Props = {
 const SkillsSection = (props:Props) => {
   
     const initialProjects = [
+      
         {
             id:1,
+            animation:'animate-growProjectThree',
+            projectName: "Guituner",
+            projectLink: p9Img,
+            liveLink: "https://guituner.netlify.app/",
+            projectDexcription: "Musicians gather round and test it out - Using ReactJS, TypeScript (no 'any') , Tailwind, Redux, Web Audio API. Lets get tuned.",
+            codelinks:[{
+                id:2,
+                icon:<FaGithub/>,
+                link:'https://github.com/jacobEliasMoya/ReactGuitarTuner'
+            },],            
+            isActive: false,
+            isApp: true,
+        },
+        {
+            id:2,
             animation:'animate-growProjectOne',
             projectName: "Qr Code Generator",
             projectLink: p1Img,
@@ -59,7 +75,7 @@ const SkillsSection = (props:Props) => {
             isApp: true,
         },
         {
-            id:2,
+            id:3,
             animation:'animate-growProjectTwo',
             projectName: "Pokedex v2",
             projectLink: p2Img,
@@ -74,21 +90,6 @@ const SkillsSection = (props:Props) => {
             isApp: true,
             
 
-        },
-        {
-            id:3,
-            animation:'animate-growProjectThree',
-            projectName: "Guituner",
-            projectLink: p9Img,
-            liveLink: "https://guituner.netlify.app/",
-            projectDexcription: "App Currently IN DEVELOPMENT, will be a guitar tuner app using React, TypeScript, & TailwindCSS",
-            codelinks:[{
-                id:2,
-                icon:<FaGithub/>,
-                link:'https://github.com/jacobEliasMoya/ReactGuitarTuner'
-            },],            
-            isActive: false,
-            isApp: true,
         },
         {
             id:4,
