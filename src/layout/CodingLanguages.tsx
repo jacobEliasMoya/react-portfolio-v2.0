@@ -14,7 +14,6 @@ interface Skills {
 }
  
 type Props = {
-    animationStart: number,
     opacityStart: number,
     id:string
 }
@@ -146,11 +145,8 @@ const CodingLanguages = (props:Props) => {
 
     return (
 
-            <section id={props.id} className="relative origin-right w-11/12 rounded-lg my-8 md:my-20 bg-white flex justify-start flex-wrap flex-col overflow-hidden mx-auto pb-7 md:pb-12 pt-6 md:pt-10 px-6 md:px-8 [box-shadow:_.5em_.5em_#960707] md:[box-shadow:_1em_1em_#960707] transition-all ease-out duration-300"             
-                style={{
-                left:`${props.animationStart && props.animationStart >= 0 ? -props.animationStart : '0'}px`,
-                    opacity:props.opacityStart
-                }}
+            <section id={props.id} className=" relative origin-right w-full rounded-3xl md:rounded-[3rem] bg-white flex justify-start flex-wrap flex-col overflow-hidden mx-auto pb-14 md:pb-24 pt-10 md:pt-16 px-6 md:px-8 [box-shadow:_.5em_.5em_#960707] md:[box-shadow:_1em_1em_#960707] transition-all ease-out duration-300"             
+          
             >
 
 
@@ -170,9 +166,6 @@ const CodingLanguages = (props:Props) => {
             <div className="gap-2 md:gap-8 mt-8 w-full grid grid-cols-2 lg:grid-cols-4 font-ultra text-zinc-700  z-10 text-center md:text-left justify-start ">
             
                 <div className="w-full p-0 mb-4 md:mb-0 px-0 !pl-0 rounded-2xl col-span-2 group">
-
-                    {/* <Paragraph text={"I am a Frontend Developer who prides himself on the work I bring to the interwebs. I had to learn a lot of new technologies, loose countless hours of sleep ... Yet, I'm still doing the same - but its what I love, check out the tech I love ."} classes={'px-6 pt-6 md:pt-20 w-11/12 mx-auto font-ultra text-white text-lg  w-full md:w-max'} /> */}
-
 
                     <H2element additionalClasses={'  text-xl md:text-2xl flex flex-col pb-4 group-hover:text-red-600 text-red-900 '} headerText={"Frontend Development"} spanClasses={undefined} spanText={undefined}/>
                     <ul className='grid grid-cols-2 gap-4 gap-x-2 md:gap-x-8 md:!gap-y-4 text-sm md:text-md xl:text-lg'>

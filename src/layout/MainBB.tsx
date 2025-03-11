@@ -22,7 +22,7 @@ const MainBB = (props:Props) => {
 
 
     return (
-        <section id={props.id} className='origin-bottom transition-all ease-out duration-300 w-full min-h-screen  bg-red-600 flex items-center justify-between p-6 md:p-8 py-6 md:py-10 flex-wrap flex-col rounded-b-3xl relative'
+        <section id={props.id} className='origin-bottom transition-all ease-out duration-300 w-full min-h-screen  bg-red-600 flex items-center justify-between p-6 md:p-8 py-6 md:py-10 flex-wrap flex-col rounded-b-3xl md:rounded-b-[3rem] relative'
             style={{
                 bottom:`${props.animationStart && props.animationStart >= 0 ? props.animationStart  : '0'}px`,
                     opacity:props.opacityStart
@@ -45,8 +45,8 @@ const MainBB = (props:Props) => {
                         <Paragraph text={jakeMessage ? jakeMessage : ''} classes={'w-full md:w-11/12 font-ultra tracking-widest !text-balance'}/>
                     </div>
 
-                    <div className="shadow-[0em_0.25em_rgba(0,0,0,0.15)] hover:shadow-[0em_1em_rgba(0,0,0,0.15)] transition-all ease  bg-red-500  rounded-full min-w-52 min-h-52 md:min-w-80 md:min-h-80 lg:min-w-96 lg:min-h-96 relative md:hover:-translate-y-[15px] flex justify-center items-center z-10 group order-1 md:order-2">
-                        <div className=" bg-white rounded-full w-44 h-44 md:w-64 md:h-64 lg:w-80 lg:h-80 flex items-center justify-center animate-wiggle relative ">
+                    <div className="shadow-[0em_0.25em_rgba(0,0,0,0.15)] hover:shadow-[0em_1em_rgba(0,0,0,0.15)] transition-all ease  bg-red-500  rounded-full min-w-52 min-h-52 md:min-w-72 md:min-h-72 lg:min-w-80 lg:min-h-80 relative md:hover:-translate-y-[15px] flex justify-center items-center z-10 group order-1 md:order-2">
+                        <div className=" bg-white rounded-full w-44 h-44 md:w-56 md:h-56 lg:w-64 lg:h-64 flex items-center justify-center animate-wiggle relative ">
                             <img src={jakeCartoon} alt="jake" width="150" height="220" className="w-1/2 pointer-events-none select-none"/>
                         </div>
                     </div>

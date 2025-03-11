@@ -6,6 +6,10 @@ import ProfessionalExperience from "./layout/ProfessionalExperience"
 import Contact from "./layout/Contact"
 import SkillsSection from "./layout/SkillsSection"
 import ReactVisibilitySensor from "react-visibility-sensor"
+import CodingIntro from "./layout/CodingIntro"
+import SkillsIntro from "./layout/SkillsIntro"
+import CareerIntro from "./layout/CareerIntro"
+import ContactIntro from "./layout/ContactIntro"
 
 interface MouseXY{
   x:number | undefined,
@@ -31,24 +35,44 @@ function App() {
         isVisible: false  
       },
       {
-        section: <CodingLanguages animationStart={0} opacityStart={1} id={"coding"} />,
+        section: <CodingIntro id={"coding-intro"} />,
         isVisible: false,
         id: 1
       },
       {
-        section: <SkillsSection animationStart={0} opacityStart={1} id={"outer-scroll"} />,
+        section: <CodingLanguages opacityStart={1} id={"coding"} />,
         isVisible: false,
         id: 2
       },
       {
-        section: <ProfessionalExperience animationStart={0} opacityStart={1} id={"about"} />,
+        section: <SkillsIntro id={"skills-intro"} />,
         isVisible: false,
         id: 3
       },
       {
-        section: <Contact animationStart={0} opacityStart={1} id={"contact"} />,
+        section: <SkillsSection opacityStart={1} id={"outer-scroll"} />,
         isVisible: false,
         id: 4
+      },
+      {
+        section: <CareerIntro id={"professional-intro"} />,
+        isVisible: false,
+        id: 5
+      },
+      {
+        section: <ProfessionalExperience opacityStart={1} id={"about"} />,
+        isVisible: false,
+        id: 6
+      },
+      {
+        section: <ContactIntro id={"professional-intro"} />,
+        isVisible: false,
+        id: 7
+      },
+      {
+        section: <Contact opacityStart={1} id={"contact"} />,
+        isVisible: false,
+        id: 8
       }      
     ]);
     
@@ -85,52 +109,9 @@ function App() {
     }
   }
 
-  // const [scrollBottom,setScrollBottom] = useState<number>(0);
-  // const [animationStart, setAnimationStart] = useState<number>(120)
-  // const [opacityStart, setOpacityStart] = useState<number>(0)
-
-
-  //commenting out for now, will come back to it later if I need more precesion - 1/27/2024 
-
-  // const detectScrollDirection = () => {
-  //   const currentScrollTop = window.scrollY; // Get current scroll position
-  //   const direction = currentScrollTop > scrollBottom ? 'down' : 'up'; // Compare with the last position
-  //   setScrollBottom(currentScrollTop); // Update the last position
-  //   return direction;
-  // };
-
-  // const  setIt = (direction:string) =>{
-  //   if(direction === 'up'  && isVisible){
-  //     let x = document.querySelector('#coding');
-  //     if( x && window.innerHeight*.65 < x.getBoundingClientRect().top){
-  //       setAnimationStart( prev => prev < 110 ? prev + 5 : prev )
-  //       setOpacityStart(  prev => prev > .2 ? prev - .2 : prev)
-  //     }
-
-  //   } else if(direction === 'down' && isVisible){
-  //     setAnimationStart( prev => prev > 0 ? prev - 5 : prev )
-  //     setOpacityStart( prev =>  prev <= .8  ? prev + .2 : prev )
-  //   } 
-  // }
-
-  // useEffect(()=>{
-    
-  //   const scrollHandler = () => {
-  //     const direction = detectScrollDirection(); // Get the current scroll direction
-  //     setIt(direction)
-  //   } 
-
-  //   isVisible ? window.addEventListener("scroll", scrollHandler) : null;
-
-  //   return () => {
-  //     isVisible ? window.removeEventListener("scroll", scrollHandler) : null;  // Clean up listener
-  //   };
-
-  // },[scrollBottom,isVisible])  
-
   return (  
 
-    <div className=" scroll-smooth bg-red-800 font-retro text-zinc-800 w-full h-max relative md:cursor-none overflow-hidden">
+    <div className=" scroll-smooth bg-red-800 font-retro text-zinc-800 w-full h-max relative md:cursor-none min-h-screen">
       <Header/>
       
       {appSections ? appSections.map((item)=>(

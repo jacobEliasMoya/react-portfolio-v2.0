@@ -36,7 +36,6 @@ interface Spotlight {
 }
 
 type Props = {
-    animationStart: number,
     opacityStart: number,
     id:string
 }
@@ -150,24 +149,22 @@ const SkillsSection = (props:Props) => {
     ]  
 
 
-    // commented out code not needed for now, just to set the bounds limit 
+        // commented out code not needed for now, just to set the bounds limit 
 
-    // initial count of items in array to base measurements on
-    // const [scrollItemLeft, setScrollItemLeft] = useState<number>();
-    // const [scrollItemRight, setScrollItemRight] = useState<number>();
-    // handling the drag limites based on projects
-    // event handlers here
-    // const handleScroll = () => {
-    //     setScrollItemLeft(document.querySelector("#drag-item")?.getBoundingClientRect().left)
-    //     setScrollItemRight(document.getElementById("drag-item")?.getBoundingClientRect().right)
-    // }
+        // initial count of items in array to base measurements on
+        // const [scrollItemLeft, setScrollItemLeft] = useState<number>();
+        // const [scrollItemRight, setScrollItemRight] = useState<number>();
+        // handling the drag limites based on projects
+        // event handlers here
+        // const handleScroll = () => {
+        //     setScrollItemLeft(document.querySelector("#drag-item")?.getBoundingClientRect().left)
+        //     setScrollItemRight(document.getElementById("drag-item")?.getBoundingClientRect().right)
+        // }
 
-    const [spotlight,setSpotlight] = useState<Array<Spotlight>>() 
-    const [containerWidth, setContainerWidth] = useState<number>();
-    const [dragBoundsLeft,setDragBoundsLeft] = useState<number>();
+        const [spotlight,setSpotlight] = useState<Array<Spotlight>>() 
+        const [containerWidth, setContainerWidth] = useState<number>();
+        const [dragBoundsLeft,setDragBoundsLeft] = useState<number>();
     
-
-        // all useeffects below here --------------------------------------------------------
 
         useEffect(()=>{
             // setting spotlight
@@ -175,7 +172,6 @@ const SkillsSection = (props:Props) => {
         },[])
 
         useEffect(()=>{
-            // set the width of the container
             setContainerWidth(document.getElementById("outer-scroll")?.offsetWidth)
         },[spotlight])
 
@@ -186,16 +182,12 @@ const SkillsSection = (props:Props) => {
             }
         },[containerWidth])
 
-
-        
-        
     return (
 
-        <section id={props.id} className="relative origin-left [box-shadow:_.5em_.5em_#960707] md:[box-shadow:_1em_1em_#960707] w-11/12 rounded-lg my-8 md:my-20 bg-white flex justify-start flex-wrap flex-col overflow-hidden mx-auto py-6 md:py-10 transition-all ease-out  duration-300"        
+        <section id={props.id} className="relative origin-left [box-shadow:_.5em_.5em_#960707] md:[box-shadow:_1em_1em_#960707] w-full rounded-3xl md:rounded-[3rem] bg-white flex justify-start flex-wrap flex-col overflow-hidden mx-auto transition-all ease-out  duration-300 pb-8 md:pb-20 pt-10 md:pt-16 "        
             style={{
-                right:`${props.animationStart && props.animationStart >= 0 ? -props.animationStart : '0'}px`,
-                    opacity:props.opacityStart
-                }}
+                opacity:props.opacityStart
+            }}
         >
 
 
