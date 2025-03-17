@@ -22,7 +22,7 @@ const MainBB = (props:Props) => {
 
 
     return (
-        <section id={props.id} className='z-10 origin-bottom transition-all ease-out duration-300 w-full min-h-screen  bg-red-700 flex items-center justify-between p-6 md:p-8 py-6 md:py-10 flex-wrap flex-col rounded-b-3xl md:rounded-b-[3rem] relative'
+        <section id={props.id} className='z-1 origin-bottom transition-all ease-out duration-300 w-full min-h-screen  bg-red-700 flex items-center justify-between p-6 md:p-8 py-6 md:py-10 flex-wrap flex-col rounded-b-3xl md:rounded-b-[3rem] relative'
             style={{
                 bottom:`${props.animationStart && props.animationStart >= 0 ? props.animationStart  : '0'}px`
                 }}

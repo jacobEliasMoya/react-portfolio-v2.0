@@ -113,7 +113,7 @@ const ProfessionalExperience = (props:Props) => {
  
     return (
          
-        <section id={props.id} className="z-10 relative origin-right w-full rounded-3xl md:rounded-[3rem] bg-white flex justify-start flex-wrap flex-col overflow-hidden mx-auto pt-10 pb-4 md:pb-10 transition-all ease-out  duration-300" >
+        <section id={props.id} className="z-7 relative origin-right w-full rounded-3xl md:rounded-[3rem] bg-white flex justify-start flex-wrap flex-col overflow-hidden mx-auto pt-10 pb-4 md:pb-10 transition-all ease-out  duration-300" >
 
             <div className="w-full flex gap-8 px-6 md:px-8 relative z-10">
             
