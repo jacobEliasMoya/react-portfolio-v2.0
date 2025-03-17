@@ -145,7 +145,7 @@ const CodingLanguages = (props:Props) => {
 
     return (
 
-            <section id={props.id} className=" relative origin-right w-full rounded-3xl md:rounded-[3rem] bg-white flex justify-start flex-wrap flex-col overflow-hidden mx-auto pb-14 md:pb-24 pt-10 md:pt-16 px-6 md:px-8 [box-shadow:_.5em_.5em_#960707] md:[box-shadow:_1em_1em_#960707] transition-all ease-out duration-300">
+            <section id={props.id} className="z-10 relative origin-right w-full rounded-3xl md:rounded-[3rem] bg-white flex justify-start flex-wrap flex-col overflow-hidden mx-auto pb-14 md:pb-24 pt-10 md:pt-16 px-6 md:px-8 transition-all ease-out duration-300 ">
 
 
             <div className=" w-full gap-8  relative z-10 flex">
