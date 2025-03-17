@@ -32,46 +32,46 @@ function App() {
       {
         id:0,
         section: <MainBB id={"home"} animationStart={0} opacityStart={1} />,
-        isVisible: false  
+        isVisible: true  
       },
       {
         section: <CodingIntro id={"coding-intro"} />,
-        isVisible: false,
+        isVisible: true,
         id: 1
       },
       {
         section: <CodingLanguages opacityStart={1} id={"coding"} />,
-        isVisible: false,
+        isVisible: true,
         id: 2
       },
       {
         section: <SkillsIntro id={"skills-intro"} />,
-        isVisible: false,
+        isVisible: true,
         id: 3
       },
       {
         section: <SkillsSection opacityStart={1} id={"outer-scroll"} />,
-        isVisible: false,
+        isVisible: true,
         id: 4
       },
       {
         section: <CareerIntro id={"professional-intro"} />,
-        isVisible: false,
+        isVisible: true,
         id: 5
       },
       {
         section: <ProfessionalExperience opacityStart={1} id={"about"} />,
-        isVisible: false,
+        isVisible: true,
         id: 6
       },
       {
         section: <ContactIntro id={"professional-intro"} />,
-        isVisible: false,
+        isVisible: true,
         id: 7
       },
       {
         section: <Contact opacityStart={1} id={"contact"} />,
-        isVisible: false,
+        isVisible: true,
         id: 8
       }      
     ]);
@@ -108,7 +108,7 @@ function App() {
 
   return (  
 
-    <div className="scroll-smooth [background-image:radial-gradient(#91060c,#210303)] bg-fixed font-retro text-red-950 w-full h-max relative md:cursor-none min-h-screen">
+    <div className="scroll-smooth font-retro text-red-950 w-full h-max relative md:cursor-none min-h-screen">
       <Header/>
       
       {appSections ? appSections.map((item)=>(
