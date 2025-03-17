@@ -181,7 +181,7 @@ const SkillsSection = (props:Props) => {
 
     return (
 
-        <section id={props.id} className="z-5  relative origin-left w-full rounded-3xl md:rounded-[3rem] bg-white flex justify-start flex-wrap flex-col overflow-hidden mx-auto transition-all ease-out  duration-300 pb-8 md:pb-20 pt-10 md:pt-16 ">
+        <section id={props.id} className="z-10  relative origin-left w-full rounded-3xl md:rounded-[3rem] bg-white flex justify-start flex-wrap flex-col overflow-hidden mx-auto transition-all ease-out  duration-300 pb-8 md:pb-20 pt-10 md:pt-16 ">
 
             <div className="w-full flex gap-8 px-6 md:px-8 relative z-10">
 
