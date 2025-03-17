@@ -67,7 +67,7 @@ const ProfessionalExperience = (props:Props) => {
             companyRole:'Web Developer I',
             companyStartDate:'10/2021',
             companyEndDate: '10/2022',
-            smallExcerpt: 'While working remotely, I developed 100+ websites, earning accolades for quality, clear communication, and client-focused execution.',
+            smallExcerpt: 'While working remotely, I developed 100+ websites, earning accolades for quality, clear communication, and client-focused execution in order to develop into Web Developer II',
             companySkills: ['UI/UX','Mobile','SEO','RackSpace','Accessibility','Plugins','Themes','Migrations'],
         },
 
@@ -113,21 +113,17 @@ const ProfessionalExperience = (props:Props) => {
  
     return (
          
-        <section id={props.id} className="relative origin-right w-full rounded-3xl md:rounded-[3rem] bg-white flex justify-start flex-wrap flex-col overflow-hidden mx-auto pt-10 pb-4 md:pb-10 [box-shadow:_.5em_.5em_#960707] md:[box-shadow:_1em_1em_#960707] transition-all ease-out  duration-300"        
-            style={{
-                opacity:props.opacityStart
-            }}
-        >
+        <section id={props.id} className="relative origin-right w-full rounded-3xl md:rounded-[3rem] bg-white flex justify-start flex-wrap flex-col overflow-hidden mx-auto pt-10 pb-4 md:pb-10 [box-shadow:_.5em_.5em_#960707] md:[box-shadow:_1em_1em_#960707] transition-all ease-out  duration-300" >
 
             <div className="w-full flex gap-8 px-6 md:px-8 relative z-10">
             
                 <div className="flex flex-col" >            
-                    <H2element additionalClasses={'text-red-600 text-5xl md:text-6xl lg:text-8xl flex flex-col text-left '} headerText={"Career"} spanClasses={'text-zinc-800 -mt-5 sm:-mt-6 md:-mt-8 lg:-mt-14'} spanText={'history'}/>
+                    <H2element additionalClasses={'text-red-600 text-5xl md:text-6xl lg:text-8xl flex flex-col text-left '} headerText={"Career"} spanClasses={'text-red-950 -mt-5 sm:-mt-6 md:-mt-8 lg:-mt-14'} spanText={'history'}/>
                 </div>
 
                 <div className="flex flex-col gap-2 md:gap-4 w-full justify-center ">
                     <div className="rounded md:rounded-xl h-4 lg:h-6 bg-red-600 w-full "></div>
-                    <div className="rounded md:rounded-xl h-10 lg:h-20 bg-zinc-800 w-full "></div>
+                    <div className="rounded md:rounded-xl h-10 lg:h-20 bg-red-950 w-full "></div>
                 </div>
             </div>
 
@@ -136,11 +132,11 @@ const ProfessionalExperience = (props:Props) => {
                 {initialResume?.map((item)=>(
                     <div className=""  key={`exp-${item.experience.id}`}>
                         <div className="items-start grid grid-cols-1 md:grid-cols-2 gap-4 col-span-full md:col-span-3 group ">
-                            <H3element additionalClasses={'col-span-full font-ultra text-2xl md:text-[1.8em] hidden md:flex flex-colbg-inherit group-hover:text-red-600 text-red-900  '} headerText={item.experience.companyRole} spanClasses={undefined} spanText={undefined}/>
+                            <H3element additionalClasses={'col-span-full font-ultra text-2xl md:text-[1.8em] hidden md:flex flex-colbg-inherit group-hover:text-red-600 text-red-200  '} headerText={item.experience.companyRole} spanClasses={undefined} spanText={undefined}/>
 
                             <div className=" col-span-full gap-2 md:gap-5 rounded grid grid-cols-5">
 
-                                <div className="rounded col-span-full md:col-span-1 gap-4 flex items-center justify-center bg-zinc-800 p-4 w-auto">
+                                <div className="rounded-xl md:rounded-2xl col-span-full md:col-span-1 gap-4 flex items-center justify-center bg-red-950 group-hover:bg-red-900 p-4 w-auto ">
                                     <img src={item.experience.companyIcon} alt='' className="md:-rotate-90  min-w-28 w-3/12 md:w-full invert brightness-0"/>
                                 </div>
 
@@ -148,7 +144,7 @@ const ProfessionalExperience = (props:Props) => {
 
                                 <div className="grid grid-cols-1 col-span-full md:col-span-4 gap-2 items-start justify-end flex-col mt-0">
 
-                                    <p className=" grid text-zinc-700  items-center md:items-start justify-center md:justify-start gap-8  md:text-xl">{item.experience.companyStartDate} - {item.experience.companyEndDate ? item.experience.companyEndDate : 'Present'}</p>
+                                    <p className=" grid text-red-950  items-center md:items-start justify-center md:justify-start gap-8  md:text-xl">{item.experience.companyStartDate} - {item.experience.companyEndDate ? item.experience.companyEndDate : 'Present'}</p>
 
                                     <p className="text-sm md:text-md md:text-lg ">{item.experience.smallExcerpt}</p>
 

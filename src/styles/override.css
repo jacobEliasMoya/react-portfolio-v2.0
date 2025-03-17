@@ -4,22 +4,22 @@
 
 /* width */
 ::-webkit-scrollbar {
-  width: 17px;
+  width: 15px;
 }
 
 /* Track */
 ::-webkit-scrollbar-track {
-  background: #fff;
+  background: #200001;
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: #b91c1c;
-  border: 3px solid white;
-  border-radius: 6px;
+  background: #fff;
+  border: 5px solid #200001;
+  border-radius: 5em;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: rgba(185, 28, 28, 0.9058823529);
-}/*# sourceMappingURL=override.css.map */
+  background: #fff;
+} /*# sourceMappingURL=override.css.map */

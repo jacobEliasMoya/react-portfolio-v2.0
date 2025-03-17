@@ -31,7 +31,7 @@ function App() {
     setAppSections([
       {
         id:0,
-        section: <MainBB id={"home"} animationStart={0} opacityStart={0} />,
+        section: <MainBB id={"home"} animationStart={0} opacityStart={1} />,
         isVisible: false  
       },
       {
@@ -77,7 +77,6 @@ function App() {
     ]);
     
     const handleMove = (e:MouseEvent) => window.innerWidth > 768 ? setMouseCoordinates({ x:e.pageX, y:e.pageY}) : null; // cleaned up the handleMove function by adding a conditional statement to check if the window width is greater than 768px
-
     window.addEventListener('mousemove', handleMove); 
     return () => window.removeEventListener('mousemove', handleMove);// cleaned up by adding a return statement in the useEffect to prevent memory leaks
 
@@ -92,26 +91,24 @@ function App() {
     }
 
     const itemBottom:number = item.getBoundingClientRect().bottom;
-
     const isPast = itemBottom < 0 && !section.isVisible ? true : false;
-
     return isPast;
   }
 
   const inView = (e:boolean,section:Section) =>{
 
     const isPast = checkIfInView(section);
-
     if(!isPast){
       setAppSections(prev => prev?.map((item)=> 
         item.section ==  section.section ? {...item, isVisible:e} : item)
       )
     }
+
   }
 
   return (  
 
-    <div className=" scroll-smooth bg-red-800 font-retro text-zinc-800 w-full h-max relative md:cursor-none min-h-screen">
+    <div className="scroll-smooth [background-image:radial-gradient(#91060c,#210303)] bg-fixed font-retro text-red-950 w-full h-max relative md:cursor-none min-h-screen">
       <Header/>
       
       {appSections ? appSections.map((item)=>(
@@ -120,7 +117,7 @@ function App() {
         </ReactVisibilitySensor>
       )): null}
       
-      <div className="[filter:_drop-shadow(rgba(0,_0,_0,_0.5)_2px_4px_6px);] backdrop-invert  hidden md:block after:content-[''] after:w-[150%] after:h-[150%] after:absolute after:rounded-[100%] after:-translate-y-1/2 after:-translate-x-1/2 after:left-1/2 after:scale-125 after:top-1/2 after:border-4 after:border-white w-8 h-8 bg-zinc-900 bg-opacity-0 rounded-full absolute z-40 -translate-y-1/2 -translate-x-1/2 pointer-events-none" 
+      <div className="[filter:_drop-shadow(rgba(0,_0,_0,_0.5)_2px_4px_6px);] backdrop-invert  hidden md:block after:content-[''] after:w-[150%] after:h-[150%] after:absolute after:rounded-[100%] after:-translate-y-1/2 after:-translate-x-1/2 after:left-1/2 after:scale-125 after:top-1/2 after:border-4 after:border-zinc-900 w-8 h-8 bg-white bg-opacity-0 rounded-full absolute z-40 -translate-y-1/2 -translate-x-1/2 pointer-events-none" 
         style={{
           top:mouseCoordinates?.y, 
           left:mouseCoordinates?.x
