@@ -112,7 +112,7 @@ const Header = () => {
     >
 
       <button aria-label="mobile-navigation-toggle" onClick={window.innerWidth < 768 ? handleClick : undefined} className='absolute left-0 md:hidden z-10 ' >
-          <TiThMenu className={`${headerActive ? 'scale-75' : 'scale-100'} rounded-full text-white p-2 border-8 border-white bg-red-600 h-14 w-14 active:scale-110 transition-all` }/>
+          <TiThMenu className={`${headerActive ? 'scale-75' : 'scale-100'} rounded-full text-white p-2 border-8 border-white bg-blue-600 h-14 w-14 active:scale-110 transition-all` }/>
       </button>
 
       <ul className={` flex justify-center items-center gap-6 w-full max-w-0 `}>

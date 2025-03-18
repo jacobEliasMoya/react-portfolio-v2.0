@@ -186,12 +186,12 @@ const SkillsSection = (props:Props) => {
             <div className="w-full flex gap-8 px-6 md:px-8 relative z-10">
 
                 <div className="flex flex-col text-center" >            
-                    <H2element additionalClasses={'text-red-600 text-5xl md:text-6xl lg:text-8xl flex flex-col text-left '} headerText={"Spot"} spanClasses={'text-red-950   -mt-5 sm:-mt-6 md:-mt-8 lg:-mt-14 '} spanText={'Light'}/>
+                    <H2element additionalClasses={'text-blue-600 text-5xl md:text-6xl lg:text-8xl flex flex-col text-left '} headerText={"Spot"} spanClasses={'text-blue-950   -mt-5 sm:-mt-6 md:-mt-8 lg:-mt-14 '} spanText={'Light'}/>
                 </div>
 
                 <div className="flex flex-col gap-2 md:gap-4  w-full justify-center ">
-                    <div className="rounded md:rounded-xl h-4 lg:h-6 bg-red-600 w-full"></div>
-                    <div className="rounded md:rounded-xl h-10 lg:h-20 bg-red-950    w-full"></div>
+                    <div className="rounded md:rounded-xl h-4 lg:h-6 bg-blue-600 w-full"></div>
+                    <div className="rounded md:rounded-xl h-10 lg:h-20 bg-blue-950    w-full"></div>
                 </div>
                 
             </div>
@@ -210,11 +210,11 @@ const SkillsSection = (props:Props) => {
                         <div key={`drag-${item.id}`} id={`${item.id}`} className={`mt-6 md:mt-0 group rounded-xl text-center w-[450px] max-w-[75vw] relative transition-all duration-200  font-ultra p-4 grid grid-cols-4 gap-4 `}>
                             
 
-                            <H3element additionalClasses={' font-retro drop-shadow-xl shadow-red-900 absolute -top-28 -right-5 -z-10 text-[10em] transition-all tracking-widest group-hover:text-red-600 text-red-200 md:text-red-200'} headerText={`${item.id}`} spanClasses={''} spanText={''}/>
+                            <H3element additionalClasses={' font-retro drop-shadow-xl shadow-blue-900 absolute -top-28 -right-5 -z-10 text-[10em] transition-all tracking-widest group-hover:text-blue-600 text-blue-200 md:text-blue-200'} headerText={`${item.id}`} spanClasses={''} spanText={''}/>
 
                             <div className="col-span-full relative">
                                 {item.codelinks?.map((item=>(
-                                    <a key={`codelinks-${item.id}`} className="group-hover:-top-9 flex items-center justify-start gap-2 absolute left-0 -top-7   md:cursor-none transition-all  active:scale-105  md:hover:-translate-y-1 hover:drop-shadow-md cancel-me-now text-red-200 group-hover:text-red-950" href={item.link} target="_blank" rel="noopener noreferrer"><span className=" text-3xl md:text-4xl " >{item.icon}</span> View Git</a>
+                                    <a key={`codelinks-${item.id}`} className="group-hover:-top-9 flex items-center justify-start gap-2 absolute left-0 -top-7   md:cursor-none transition-all  active:scale-105  md:hover:-translate-y-1 hover:drop-shadow-md cancel-me-now text-blue-200 group-hover:text-blue-950" href={item.link} target="_blank" rel="noopener noreferrer"><span className=" text-3xl md:text-4xl " >{item.icon}</span> View Git</a>
                                 )))}
                             </div>
 
@@ -224,13 +224,13 @@ const SkillsSection = (props:Props) => {
                                 }}
                             ></div>
 
-                            <div className="rounded  flex justify-center items-center duration-100 text-md transition-all w-full  p-4 text-white bg-red-950 group-hover:bg-red-900  z-10">
+                            <div className="rounded  flex justify-center items-center duration-100 text-md transition-all w-full  p-4 text-white bg-blue-950 group-hover:bg-blue-900  z-10">
                                 <H3element additionalClasses={'relative transition-all tracking-widest !text-nowrap rotate-90'} headerText={item.projectName} spanClasses={''} spanText={''}/>
                             </div>
 
                             <div className="col-span-4  duration-200 transition-all w-full p-0 flex flex-col items-center justify-between relative z-10 h-3/6" >
 
-                                <ButtonWhite buttonText={item.isApp ? `View App` : `View Website`} additionalClasses={"!rounded text-sm md:text-md lg:text-lg   !w-full   z-10 !bg-red-600  !text-white !py-3  top-0  hover:-top-4 active:-top-2 transition-all ease flex flex-col md:flex-row items-center justify-start md:gap-2 bg-red-600 text-white p-2 px-3 rounded tracking-wider relative rounded-b-none  after:w-full  after:bg-red-700 after:absolute after:-bottom-2 after:left-0 after:rounded-b-md hover:after:-bottom-6 after:h-[calc(.5rem+3px)] hover:after:h-[calc(1.5rem+3px)]  active:after:h-[calc(1rem+3px)] active:after:-bottom-4 after:transition-all after:ease transform after:transform"} buttonLink={item.liveLink ? item.liveLink : ''} newWindow={true} clickHandle={undefined}/> 
+                                <ButtonWhite buttonText={item.isApp ? `View App` : `View Website`} additionalClasses={"!rounded text-sm md:text-md lg:text-lg   !w-full   z-10 !bg-blue-600  !text-white !py-3  top-0  hover:-top-4 active:-top-2 transition-all ease flex flex-col md:flex-row items-center justify-start md:gap-2 bg-blue-600 text-white p-2 px-3 rounded tracking-wider relative rounded-b-none  after:w-full  after:bg-blue-700 after:absolute after:-bottom-2 after:left-0 after:rounded-b-md hover:after:-bottom-6 after:h-[calc(.5rem+3px)] hover:after:h-[calc(1.5rem+3px)]  active:after:h-[calc(1rem+3px)] active:after:-bottom-4 after:transition-all after:ease transform after:transform"} buttonLink={item.liveLink ? item.liveLink : ''} newWindow={true} clickHandle={undefined}/> 
 
                                 <Paragraph text={item.projectDexcription} classes={' mt-6 md:text-left text-sm md:text-md md:text-lg '}/>
 

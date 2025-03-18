@@ -108,7 +108,7 @@ function App() {
 
   return (  
 
-    <div className="scroll-smooth font-retro text-red-950 w-full h-max relative md:cursor-none min-h-screen">
+    <div className="scroll-smooth font-retro text-blue-950 w-full h-max relative md:cursor-none min-h-screen">
       <Header/>
       
       {appSections ? appSections.map((item)=>(

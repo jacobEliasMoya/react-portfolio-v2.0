@@ -14,7 +14,7 @@ const TextArea = (props: Props) => {
         onChange={props.onChange}
         placeholder={props.placeholder}
         name={props.name}
-        className={`${props.additionalClasses} transition-all ease-in-out  cursor-none p-4 rounded-3xl text-center md:text-left text-balance border-none w-full placeholder-red-950  text-sm lg:text-lg tracking-widest hover:bg-red-200`}></textarea>
+        className={`${props.additionalClasses} transition-all ease-in-out  cursor-none p-4 rounded-3xl text-center md:text-left text-balance border-none w-full placeholder-blue-950  text-sm lg:text-lg tracking-widest hover:bg-blue-200`}></textarea>
   )
 }
 

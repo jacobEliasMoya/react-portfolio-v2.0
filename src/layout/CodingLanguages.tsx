@@ -152,12 +152,12 @@ const CodingLanguages = (props:Props) => {
             
 
                 <div className="flex flex-col text-center" >            
-                    <H2element additionalClasses={'text-red-600 text-5xl md:text-6xl lg:text-8xl flex flex-col text-left '} headerText={"Dev"} spanClasses={'text-red-950 -mt-5 sm:-mt-6 md:-mt-8 lg:-mt-14 '} spanText={'kit.'}/>
+                    <H2element additionalClasses={'text-blue-600 text-5xl md:text-6xl lg:text-8xl flex flex-col text-left '} headerText={"Dev"} spanClasses={'text-blue-950 -mt-5 sm:-mt-6 md:-mt-8 lg:-mt-14 '} spanText={'kit.'}/>
                 </div>
 
                 <div className="flex flex-col gap-2 md:gap-4  w-full justify-center ">
-                    <div className="rounded md:rounded-xl h-4 lg:h-6 bg-red-600 w-full"></div>
-                    <div className="rounded md:rounded-xl h-10 lg:h-20 bg-red-950 w-full"></div>
+                    <div className="rounded md:rounded-xl h-4 lg:h-6 bg-blue-600 w-full"></div>
+                    <div className="rounded md:rounded-xl h-10 lg:h-20 bg-blue-950 w-full"></div>
                 </div>
             </div>
 
@@ -165,10 +165,10 @@ const CodingLanguages = (props:Props) => {
             
                 <div className="w-full p-0 mb-4 md:mb-0 px-0 !pl-0 rounded-2xl col-span-2 group">
 
-                    <H2element additionalClasses={'  text-xl md:text-2xl flex flex-col pb-4 md:group-hover:text-red-600 text-red-900 md:text-red-200 '} headerText={"Frontend Development"} spanClasses={undefined} spanText={undefined}/>
+                    <H2element additionalClasses={'  text-xl md:text-2xl flex flex-col pb-4 md:group-hover:text-blue-600 text-blue-900 md:text-blue-200 '} headerText={"Frontend Development"} spanClasses={undefined} spanText={undefined}/>
                     <ul className='grid grid-cols-2 gap-4 gap-x-2 md:gap-x-8 md:!gap-y-4 text-sm md:text-md xl:text-lg'>
                         {usedTech ? usedTech.filter((item=>item.category == 'programming')).map((item)=>(
-                          <li key={`prg-${item.id}`} className=' top-0  hover:-top-4 active:-top-2 transition-all ease flex flex-col md:flex-row items-center justify-start md:gap-2 bg-red-600 text-white p-2 px-3 rounded tracking-wider relative rounded-b-none  after:w-full  after:bg-red-700 after:absolute after:-bottom-2 after:left-0 after:rounded-b-md hover:after:-bottom-6 after:h-[calc(.5rem+1px)] hover:after:h-[calc(1.5rem+1px)]  active:after:h-[calc(1rem+1px)] active:after:-bottom-4 after:transition-all after:ease transform after:transform'>  
+                          <li key={`prg-${item.id}`} className=' top-0  hover:-top-4 active:-top-2 transition-all ease flex flex-col md:flex-row items-center justify-start md:gap-2 bg-blue-600 text-white p-2 px-3 rounded tracking-wider relative rounded-b-none  after:w-full  after:bg-blue-700 after:absolute after:-bottom-2 after:left-0 after:rounded-b-md hover:after:-bottom-6 after:h-[calc(.5rem+1px)] hover:after:h-[calc(1.5rem+1px)]  active:after:h-[calc(1rem+1px)] active:after:-bottom-4 after:transition-all after:ease transform after:transform'>  
                             <span className='text-xl md:text-4xl'>{item.icon}</span>
                             {item.name} 
                         </li>
@@ -179,10 +179,10 @@ const CodingLanguages = (props:Props) => {
 
                 <div className="w-full group">
 
-                <H2element additionalClasses={'text-md md:text-2xl pb-4 flex flex-col  md:group-hover:text-red-600 text-red-900 md:text-red-200  '} headerText={"Web Design"} spanClasses={undefined} spanText={undefined}/>
+                <H2element additionalClasses={'text-md md:text-2xl pb-4 flex flex-col  md:group-hover:text-blue-600 text-blue-900 md:text-blue-200  '} headerText={"Web Design"} spanClasses={undefined} spanText={undefined}/>
                 <ul className='text-sm md:text-md xl:text-lg grid grid-cols-1 gap-4  '>
                     {usedTech ? usedTech.filter((item=>item.category == 'design')).map((item)=>(
-                            <li key={`design-${item.id}`} className='top-0  hover:-top-4 active:-top-2 transition-all ease flex flex-col md:flex-row items-center justify-start md:gap-2 bg-red-600 text-white p-2 px-3 rounded tracking-wider relative rounded-b-none  after:w-full  after:bg-red-700 after:absolute after:-bottom-2 after:left-0 after:rounded-b-md hover:after:-bottom-6 after:h-[calc(.5rem+1px)] hover:after:h-[calc(1.5rem+1px)]  active:after:h-[calc(1rem+1px)] active:after:-bottom-4 after:transition-all after:ease transform after:transform'>  
+                            <li key={`design-${item.id}`} className='top-0  hover:-top-4 active:-top-2 transition-all ease flex flex-col md:flex-row items-center justify-start md:gap-2 bg-blue-600 text-white p-2 px-3 rounded tracking-wider relative rounded-b-none  after:w-full  after:bg-blue-700 after:absolute after:-bottom-2 after:left-0 after:rounded-b-md hover:after:-bottom-6 after:h-[calc(.5rem+1px)] hover:after:h-[calc(1.5rem+1px)]  active:after:h-[calc(1rem+1px)] active:after:-bottom-4 after:transition-all after:ease transform after:transform'>  
                             <span className='text-xl md:text-4xl'>{item.icon}</span>
                             {item.name} 
                             </li>
@@ -194,10 +194,10 @@ const CodingLanguages = (props:Props) => {
 
             <div className="w-full group">
 
-                <H2element additionalClasses={'text-md md:text-2xl pb-4 flex flex-col  md:group-hover:text-red-600 text-red-900 md:text-red-200  '} headerText={"Web Builders"} spanClasses={undefined} spanText={undefined}/>
+                <H2element additionalClasses={'text-md md:text-2xl pb-4 flex flex-col  md:group-hover:text-blue-600 text-blue-900 md:text-blue-200  '} headerText={"Web Builders"} spanClasses={undefined} spanText={undefined}/>
                 <ul className='text-sm md:text-md xl:text-lg grid grid-cols-1 gap-4  '>
                     {usedTech ? usedTech.filter((item=>item.category == 'builder')).map((item)=>(
-                            <li key={`builder-${item.id}`} className=' top-0  hover:-top-4 active:-top-2 transition-all ease flex flex-col md:flex-row items-center justify-start md:gap-2 bg-red-600 text-white p-2 px-3 rounded tracking-wider relative rounded-b-none  after:w-full  after:bg-red-700 after:absolute after:-bottom-2 after:left-0 after:rounded-b-md hover:after:-bottom-6 after:h-[calc(.5rem+1px)] hover:after:h-[calc(1.5rem+1px)]  active:after:h-[calc(1rem+1px)] active:after:-bottom-4 after:transition-all after:ease transform after:transform '>  
+                            <li key={`builder-${item.id}`} className=' top-0  hover:-top-4 active:-top-2 transition-all ease flex flex-col md:flex-row items-center justify-start md:gap-2 bg-blue-600 text-white p-2 px-3 rounded tracking-wider relative rounded-b-none  after:w-full  after:bg-blue-700 after:absolute after:-bottom-2 after:left-0 after:rounded-b-md hover:after:-bottom-6 after:h-[calc(.5rem+1px)] hover:after:h-[calc(1.5rem+1px)]  active:after:h-[calc(1rem+1px)] active:after:-bottom-4 after:transition-all after:ease transform after:transform '>  
                             <span className='text-xl md:text-4xl'>{item.icon}</span>
                             {item.name} 
                         </li>

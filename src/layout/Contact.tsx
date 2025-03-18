@@ -12,13 +12,13 @@ type Props = {
 const Contact = (props:Props) => {
 
   return (
-    <section id={props.id} className="z-10 relative origin-bottom transition-all ease-out duration-300 rounded-t-[3rem] bg-red-700 min-h-96 md: gap-8 md:gap-16 flex justify-between flex-wrap flex-col overflow-hidden pt-10 md:pt-16 px-6 md:px-8 pb-24 md:pb-28" >
+    <section id={props.id} className="z-10 relative origin-bottom transition-all ease-out duration-300 rounded-t-[3rem] bg-blue-600 min-h-96 md: gap-8 md:gap-16 flex justify-between flex-wrap flex-col overflow-hidden pt-10 md:pt-16 px-6 md:px-8 pb-24 md:pb-28" >
         <div className="w-full flex gap-8 relative z-30 bg-inherit">
             <div className="flex flex-col" >            
                 <H2element additionalClasses={'text-5xl md:text-6xl lg:text-8xl flex flex-col text-left '} headerText={'Lets'} spanClasses={'text-white -mt-5 sm:-mt-6 md:-mt-8 lg:-mt-14 '} spanText={'Talk'}/>
             </div> 
             <div className="flex flex-col gap-2 md:gap-4  w-full justify-center ">
-                <div className="rounded md:rounded-xl h-4 lg:h-6 bg-red-950 w-full "></div>
+                <div className="rounded md:rounded-xl h-4 lg:h-6 bg-blue-950 w-full "></div>
                 <div className="rounded md:rounded-xl h-10 lg:h-20 bg-white w-full "></div>
             </div>
         </div>
