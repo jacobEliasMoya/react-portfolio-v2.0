@@ -1,6 +1,6 @@
 import { FaLinkedin } from "react-icons/fa6"
 import { FaEnvelope, FaGithub,  FaMobile } from "react-icons/fa"
-import { HiClipboardDocumentCheck } from "react-icons/hi2"
+    import { HiClipboardDocumentCheck } from "react-icons/hi2"
 import resume from "../assets/JacobResume.pdf"
 import { ReactElement, useEffect, useState } from "react"
 

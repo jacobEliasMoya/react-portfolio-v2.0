@@ -4,6 +4,7 @@ import jakeCartoon from "../assets/cartoon-jm.webp"
 import { useEffect, useState } from "react"
 import Paragraph from "../components/Paragraph"
 import Socials from "../components/Socials"
+import RandomQuote from "./RandomQuote"
 
 type Props = {
     animationStart: number,
@@ -45,7 +46,8 @@ const MainBB = (props:Props) => {
                     </div>
 
                     <div className="shadow-[0em_0.25em_rgba(0,0,0,0.15)] hover:shadow-[0em_1em_rgba(0,0,0,0.15)] transition-all ease  bg-blue-950  rounded-full min-w-52 min-h-52 md:min-w-72 md:min-h-72 lg:min-w-80 lg:min-h-80 relative md:hover:-translate-y-[15px] flex justify-center items-center z-10 group order-1 md:order-2">
-                        <div className=" bg-white rounded-full w-48 h-48 md:w-64 md:h-64 lg:w-72 lg:h-72 flex items-center justify-center animate-wiggle relative ">
+                        <div className=" bg-white rounded-full w-48 h-48 md:w-64 md:h-64 lg:w-72 lg:h-72 flex items-center justify-center animate-wiggle relative group ">
+                            <RandomQuote/>
                             <img src={jakeCartoon} alt="jake" width="150" height="220" className="w-1/2 pointer-events-none select-none"/>
                         </div>
                     </div>
@@ -70,7 +72,7 @@ const MainBB = (props:Props) => {
                     <H2element additionalClasses={'text-5xl md:text-6xl lg:text-8xl flex flex-col text-right '} headerText={"Jake"} spanClasses={' text-white -mt-5 sm:-mt-6 md:-mt-8 lg:-mt-10'} spanText={'Moya'}/>
                 </div>
             </div>
-
+            
         </section>
 
     )
