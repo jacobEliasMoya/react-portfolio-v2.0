@@ -9,9 +9,9 @@ import p2Img from "../assets/projects/pokedex.webp";
 import p3Img from "../assets/projects/smithins.webp";
 import p4Img from "../assets/projects/americanpridesecurity.webp";
 import p6Img from "../assets/projects/oceandrivedesigns.webp";
-import p8Img from "../assets/projects/kidskingdom1.png";
 import p9Img from "../assets/projects/tuner-main.webp";
 import p10Img from "../assets/projects/mygalleryfurniture.webp";
+import p11Img from "../assets/projects/cookpaintardmore.webp";
 
 import ButtonWhite from "../components/buttons/ButtonWhite";
 import Paragraph from "../components/Paragraph";
@@ -103,11 +103,11 @@ const SkillsSection = (props:Props) => {
         },
         {
             id:5,
-            animation:'animate-growProjectFourNoDelay',
-            projectName: "American Pride ",
-            projectLink: p4Img,
-            liveLink: "https://americanpridesecurity.net/",
-            projectDexcription: "American Pride Security Services Inc. isn’t your average security company we're a trusted leader in security and protection.",
+             animation:'animate-growProjectFourNoDelay',
+            projectName: "Cook Paint & Home",
+            projectLink: p11Img,
+            liveLink: "https://cookpaintardmore.com/",
+            projectDexcription: "Welcome to Cook Paint and Home Accents, where we help homeowners and businesses transform their spaces.",
             codelinks:undefined,
             isActive: false,
             isApp: false,
@@ -139,10 +139,10 @@ const SkillsSection = (props:Props) => {
         {
             id:8,
             animation:'animate-growProjectFourNoDelay',
-            projectName: "Kids Kingdom",
-            projectLink: p8Img,
-            liveLink: "https://kidskingdom1.com/",
-            projectDexcription: "Kids Kingdom Early Learning Center is the premier Biblically-based early child care center in Greenwood, IN. ",
+            projectName: "American Pride ",
+            projectLink: p4Img,
+            liveLink: "https://americanpridesecurity.net/",
+            projectDexcription: "American Pride Security Services Inc. isn’t your average security company we're a trusted leader in security and protection.",
             codelinks:undefined,
             isActive: false,
             isApp: false,
