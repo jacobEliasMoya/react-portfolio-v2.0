@@ -127,7 +127,7 @@ const SkillsSection = (props:Props) => {
             id:7,
         
             animation:'animate-growProjectFourNoDelay',
-            projectName: "PKM Associates",
+            projectName: "Gallery Furniture",
             projectLink: p10Img,
             liveLink: "https://mygalleryfurniture.com/",
             projectDexcription: "Proudly serving the Medford, NY community and beyond for over 40 years with exceptional service and unbeatable prices. ",
