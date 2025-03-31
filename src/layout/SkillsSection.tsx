@@ -7,9 +7,9 @@ import Draggable from 'react-draggable';
 import p1Img from "../assets/projects/qrcode.webp";
 import p2Img from "../assets/projects/pokedex.webp";
 import p3Img from "../assets/projects/smithins.webp";
-import p4Img from "../assets/projects/medex.webp";
+import p4Img from "../assets/projects/americanpridesecurity.webp";
 import p6Img from "../assets/projects/oceandrivedesigns.webp";
-import p7Img from "../assets/projects/venolosapparel.webp";
+import p7Img from "../assets/projects/pkmassociates.webp";
 import p8Img from "../assets/projects/kidskingdom1.png";
 import p9Img from "../assets/projects/tuner-main.webp";
 
@@ -103,11 +103,11 @@ const SkillsSection = (props:Props) => {
         },
         {
             id:5,
-            animation:'animate-growProjectFour',
-            projectName: "MedEstheticsRX",
+            animation:'animate-growProjectFourNoDelay',
+            projectName: "American Pride ",
             projectLink: p4Img,
-            liveLink: "https://medestheticsrx.com/",
-            projectDexcription: "At MedEstheticsRX, we believe that beautiful, healthy skin is more than just an aesthetic goal—it’s a science. ",
+            liveLink: "https://americanpridesecurity.net/",
+            projectDexcription: "American Pride Security Services Inc. isn’t your average security company we're a trusted leader in security and protection.",
             codelinks:undefined,
             isActive: false,
             isApp: false,
@@ -125,22 +125,24 @@ const SkillsSection = (props:Props) => {
         },
         {
             id:7,
+        
+            animation:'animate-growProjectFourNoDelay',
+            projectName: "PKM Associates",
+            projectLink: p7Img,
+            liveLink: "https://pkmassociates.com/",
+            projectDexcription: "At PKM Associates, we know that every business needs reliable funding to grow, thrive, and succeed.",
+            codelinks:undefined,
+            isActive: false,
+            isApp: false,
+       
+        },
+        {
+            id:8,
             animation:'animate-growProjectFourNoDelay',
             projectName: "Kids Kingdom",
             projectLink: p8Img,
             liveLink: "https://kidskingdom1.com/",
             projectDexcription: "Kids Kingdom Early Learning Center is the premier Biblically-based early child care center in Greenwood, IN. ",
-            codelinks:undefined,
-            isActive: false,
-            isApp: false,
-        },
-        {
-            id:8,
-            animation:'animate-growProjectThreeNoDelay',
-            projectName: "Venlos Apparal",
-            projectLink: p7Img,
-            liveLink: "https://venolosapparel.com/",
-            projectDexcription: "At Venolos Apparel, we believe that apparel, art, and music go hand in hand. Drawing inspiration from hip hop.",
             codelinks:undefined,
             isActive: false,
             isApp: false,
@@ -218,7 +220,7 @@ const SkillsSection = (props:Props) => {
                                 )))}
                             </div>
 
-                            <div className="rounded col-span-3 duration-500 transition-all bg-cover w-full min-h-72 translate brightness-90 bg-opacity-0 bg-top"
+                            <div className="rounded col-span-3 duration-500 bg-left transition-all bg-cover w-full min-h-72 translate brightness-90 bg-opacity-0 "
                                 style={{
                                 backgroundImage:`url(${item.projectLink})`, 
                                 }}
