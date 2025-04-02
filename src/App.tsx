@@ -34,23 +34,24 @@ function App() {
         section: <MainBB id={"home"} animationStart={0} opacityStart={1} />,
         isVisible: true  
       },
+     
       {
-        section: <CodingIntro id={"coding-intro"} />,
+        section: <SkillsIntro id={"skills-intro"} />,
         isVisible: true,
         id: 1
       },
       {
-        section: <CodingLanguages opacityStart={1} id={"coding"} />,
+        section: <SkillsSection opacityStart={1} id={"outer-scroll"} />,
         isVisible: true,
         id: 2
       },
       {
-        section: <SkillsIntro id={"skills-intro"} />,
+        section: <CodingIntro id={"coding-intro"} />,
         isVisible: true,
         id: 3
       },
       {
-        section: <SkillsSection opacityStart={1} id={"outer-scroll"} />,
+        section: <CodingLanguages opacityStart={1} id={"coding"} />,
         isVisible: true,
         id: 4
       },
