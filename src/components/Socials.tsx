@@ -77,7 +77,7 @@ const Socials = (props: Props) => {
 return (
 <>
     {socialElms ? socialElms.map((item)=>(
-        <a key={item.id} href={item.url} title={item.title} target={item.target} className={`md:cursor-none w-max h-max bg-blue-950 p-2 lg:p-3 rounded-full flex items-center justify-center ${item.desktopHidden ? 'md:hidden' : ''}`} aria-label={item.title} >
+        <a key={item.id} href={item.url} title={item.title} target={item.target} className={`md:cursor-none w-max h-max bg-red-100   p-2 lg:p-3 rounded-full flex items-center justify-center ${item.desktopHidden ? 'md:hidden' : ''}`} aria-label={item.title} >
             {item.icon}
         </a>
     )):''}
