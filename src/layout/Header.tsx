@@ -90,27 +90,13 @@ const Header = () => {
 
   return (
     <header
-      className={`${
-        headerActive
-          ? "min-w-[calc(100%-1em)]  pl-6 md:pl-0 bg-opacity-85"
-          : "w-full p-4"
-      } min-h-10 h-max text-white  flex items-center justify-between bg-blue-800/85 backdrop-blur-lg  mx-auto fixed top-0 md:rounded-t-none rounded-4xl z-40 flex-row transition-all ease-out duration-300 overflow-hidden md:overflow-visible mb-2 md:mb-0`}
+      className={` min-h-10 h-max text-white w-[95%] md:w-full flex items-center justify-between bg-blue-800/85 backdrop-blur-lg  mx-auto fixed top-[1.5%] md:top-0 md:left-0 left-[2.5%] md:rounded-t-none rounded-4xl z-40 flex-row transition-all ease-out duration-300 overflow-hidden md:overflow-visible mb-2 md:mb-0 p-2`}
       style={{
         bottom: `${isActive ? 0 : -200}px`,
         opacity: isActive ? 1 : 0,
       }}
     >
-      <button
-        aria-label="mobile-navigation-toggle"
-        onClick={window.innerWidth < 768 ? handleClick : undefined}
-        className="absolute left-0 md:hidden z-10 "
-      >
-        <TiThMenu
-          className={`${
-            headerActive ? "scale-75" : "scale-100"
-          } rounded-full text-white p-2 border-8 border-white bg-blue-500 h-14 w-14 active:scale-110 transition-all`}
-        />
-      </button>
+
 
       <div className="flex flex-row gap-2 md:gap-4 align-items-center justify-start w-1/2">
         <div className="transition-all ease  bg-white  rounded-full  min-w-10 min-h-10  md:min-w-18 md:min-h-18 relative md:hover:-translate-y-[15px] flex justify-center items-center z-10 group">
@@ -134,6 +120,16 @@ const Header = () => {
           spanText={""}
         />
       </div>
+
+      <button
+        aria-label="mobile-navigation-toggle"
+        onClick={window.innerWidth < 768 ? handleClick : undefined}
+        className=" md:hidden z-10"
+      >
+        <TiThMenu
+          className={`w-10 h-10 rounded-full text-white p-2 border-4 border-white bg-orange-500 active:scale-110 transition-all`}
+        />
+      </button>
 
       <ul className="hidden md:flex gap-2 justify-end items-center w-1/2">
         {navigationElms?.map((item) => (

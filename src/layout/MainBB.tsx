@@ -31,7 +31,7 @@ const MainBB = (props: Props) => {
       <Paragraph
         text="At TruePixel, we merge visual storytelling with engineered precision. As a full-service marketing agency, we blend creative design, data-driven strategy, and modern web development to craft digital experiences that don’t just look stunning — they function flawlessly and scale effortlessly.
 "
-        classes="!text-balance text-md md:text-xl text-zinc-200 font-libre leading-tight w-full text-center "
+        classes="text-md md:text-xl text-zinc-200 font-libre leading-tight w-full text-center "
       />
 
       <div className="w-full flex md:flex-row flex-col items-center justify-center gap-4 md:gap-8">

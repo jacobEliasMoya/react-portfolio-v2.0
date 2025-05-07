@@ -5,7 +5,7 @@ type Props = {
 
 const Paragraph = (props: Props) => {
   return (
-    <p className={`text-balance md:text-pretty  ${props.classes}`}>{props.text}</p>
+    <p className={`text-balance  ${props.classes}`}>{props.text}</p>
   )
 }
 

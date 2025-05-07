@@ -16,7 +16,7 @@ const WhyChoseUs = (props: Props) => {
             "capitalize text-3xl md:text-6xl lg:text-7xl flex flex-col text-center text-white"
           }
           headerText={"Why Choose"}
-          spanClasses={"text-8xl text-orange-400"}
+          spanClasses={"text-5xl md:text-8xl text-orange-400"}
           spanText={"TruePixel"}
         />
       </div>
