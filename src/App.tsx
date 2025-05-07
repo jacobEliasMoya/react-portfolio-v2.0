@@ -7,9 +7,9 @@ import Contact from "./layout/Contact"
 import SkillsSection from "./layout/SkillsSection"
 import ReactVisibilitySensor from "react-visibility-sensor"
 import CodingIntro from "./layout/CodingIntro"
-import SkillsIntro from "./layout/SkillsIntro"
 import CareerIntro from "./layout/CareerIntro"
 import ContactIntro from "./layout/ContactIntro"
+import WhyChoseUs from "./layout/WhyChoseUs"
 
 interface MouseXY{
   x:number | undefined,
@@ -36,7 +36,7 @@ function App() {
       },
      
       {
-        section: <SkillsIntro id={"skills-intro"} />,
+        section: <WhyChoseUs id={"skills-intro"} />,
         isVisible: true,
         id: 1
       },

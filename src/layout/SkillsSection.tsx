@@ -13,7 +13,7 @@ import p9Img from "../assets/projects/tuner-main.webp";
 import p10Img from "../assets/projects/mygalleryfurniture.webp";
 import p11Img from "../assets/projects/cookpaintardmore.webp";
 
-import ButtonWhite from "../components/buttons/ButtonWhite";
+import ButtonWhite from "../components/buttons/Button";
 import Paragraph from "../components/Paragraph";
 import { FaGithub } from "react-icons/fa6";
 
