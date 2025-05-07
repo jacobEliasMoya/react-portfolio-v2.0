@@ -1,18 +1,15 @@
 import { useEffect, useState, ReactElement } from "react";
-import { FaCode, FaHome } from "react-icons/fa";
-import { MdEmail } from "react-icons/md";
-import { HiQuestionMarkCircle } from "react-icons/hi2";
-import { GiRoundStar } from "react-icons/gi";
 import { TiThMenu } from "react-icons/ti";
-import jakeCartoon from "../assets/cartoon-jm.webp";
+import jakeCartoon from "../assets/truepixel.png";
 import H1element from "../components/headers/H1element";
+import { PiPhoneFill } from "react-icons/pi";
 
 interface Nav {
   id: number;
   name: string;
   url: string;
   title: string;
-  icon: ReactElement;
+  icon: ReactElement | null;
   target: string | undefined;
   additionalClasses: string;
 }
@@ -24,7 +21,7 @@ const Header = () => {
       name: "Home",
       url: "/#home",
       title: "test",
-      icon: <FaHome />,
+      icon: null,
       target: undefined,
       additionalClasses: "",
     },
@@ -32,7 +29,7 @@ const Header = () => {
       name: "Tech",
       url: "/#coding",
       title: "Technology I use",
-      icon: <FaCode />,
+      icon: null,
       target: undefined,
       additionalClasses: "",
       id: 1,
@@ -41,7 +38,7 @@ const Header = () => {
       name: "Spotlight",
       url: "/#outer-scroll",
       title: "Spotlight Work",
-      icon: <GiRoundStar />,
+      icon: null,
       target: undefined,
       additionalClasses: "",
       id: 2,
@@ -50,7 +47,7 @@ const Header = () => {
       name: "About",
       url: "/#about",
       title: "About My Work",
-      icon: <HiQuestionMarkCircle />,
+      icon: null,
       target: undefined,
       additionalClasses: "",
       id: 3,
@@ -59,7 +56,16 @@ const Header = () => {
       name: "Contact",
       url: "/#contact",
       title: "Contact Me Today",
-      icon: <MdEmail />,
+      icon: null,
+      target: undefined,
+      additionalClasses: "",
+      id: 4,
+    },
+    {
+      name: "Call Now",
+      url: "tel:+19096446073",
+      title: "Call Now",
+      icon: <PiPhoneFill />,
       target: undefined,
       additionalClasses: "",
       id: 4,
@@ -67,25 +73,11 @@ const Header = () => {
   ];
 
   const [navigationElms, setNavigationElms] = useState<Nav[]>();
-  const [headerActive, setHeaderActive] = useState<boolean>();
   const [isActive, setIsActive] = useState<boolean>(false);
 
-  const handleClick = () => {
-    setHeaderActive((prev) => !prev);
-  };
-
-  const handleMobileNav = () => {
-    window.innerWidth < 768 ? setHeaderActive(true) : setHeaderActive(false);
-  };
-
   useEffect(() => {
-    setTimeout(handleMobileNav, 975);
-
     initialNav ? setNavigationElms(initialNav) : "";
-
     !isActive ? setTimeout(() => setIsActive(true), 550) : null;
-
-    window.addEventListener("resize", handleMobileNav);
   }, []);
 
   return (
@@ -96,17 +88,25 @@ const Header = () => {
         opacity: isActive ? 1 : 0,
       }}
     >
+      <a
+        aria-label="mobile-navigation-toggle"
+        className=" md:hidden z-10"
+        href="tel:+19096446073"
+      >
+        <PiPhoneFill
+          className={`w-9 h-9 rounded-full text-white p-1 border-4 border-white bg-orange-500 active:scale-110 transition-all`}
+        />
+      </a>
 
-
-      <div className="flex flex-row gap-2 md:gap-4 align-items-center justify-start w-1/2">
+      <div className="flex flex-row gap-2 md:gap-4 align-items-center justify-center md:justify-start w-1/3">
         <div className="transition-all ease  bg-white  rounded-full  min-w-10 min-h-10  md:min-w-18 md:min-h-18 relative md:hover:-translate-y-[15px] flex justify-center items-center z-10 group">
           <div className=" rounded-full w-10 h-10 md:w-16 md:h-16 flex items-center justify-center  relative group ">
             <img
               src={jakeCartoon}
               alt="jake"
               width="150"
-              height="220"
-              className="w-1/2 pointer-events-none select-none"
+              height="150"
+              className=" pointer-events-none select-none"
             />
           </div>
         </div>
@@ -123,27 +123,28 @@ const Header = () => {
 
       <button
         aria-label="mobile-navigation-toggle"
-        onClick={window.innerWidth < 768 ? handleClick : undefined}
         className=" md:hidden z-10"
       >
         <TiThMenu
-          className={`w-10 h-10 rounded-full text-white p-2 border-4 border-white bg-orange-500 active:scale-110 transition-all`}
+          className={`w-9 h-9 rounded-full text-white p-1 border-4 border-white bg-orange-500 active:scale-110 transition-all`}
         />
       </button>
 
-      <ul className="hidden md:flex gap-2 justify-end items-center w-1/2">
+      <ul className="hidden md:flex gap-2 justify-end items-center w-2/3">
         {navigationElms?.map((item) => (
           <li
             key={`nav-${item.id}`}
-            className="first:bg-orange-500 first:hover:bg-orange-600  group cursor-none text-xl rounded-full overflow-hidden hover:bg-blue-950 "
+            className="first:bg-orange-500 first:hover:bg-orange-600  group cursor-none text-xl rounded-full overflow-hidden bg-blue-900 hover:bg-blue-950 "
           >
             <a
               aria-label={item.title}
               href={item.url}
               target={item.target ? item.target : ""}
-              className={` flex text-lg flex-row items-center justify-center  backdrop-blur-xs p-2 min-w-30 relative cursor-none transition-all ease-out duration-300  text-white ${item.additionalClasses}`}
+              className={` flex text-lg flex-row items-center justify-center p-2 px-3 min-w-30 relative cursor-none transition-all ease-out duration-300 gap-2  text-white ${item.additionalClasses}`}
             >
-              <span className="hidden">{item.icon}</span>
+              {item.icon ? (
+                <p className="bg-orange-500 p-1 rounded-full">{item.icon}</p>
+              ) : null}
               <span className="transition-all ease-out duration-300">
                 {item.name}
               </span>
