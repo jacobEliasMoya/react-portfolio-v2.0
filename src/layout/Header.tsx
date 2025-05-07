@@ -83,10 +83,6 @@ const Header = () => {
   return (
     <header
       className={` min-h-10 h-max text-white w-[95%] md:w-full flex items-center justify-between bg-blue-800/85 backdrop-blur-lg  mx-auto fixed top-[1.5%] md:top-0 md:left-0 left-[2.5%] md:rounded-t-none rounded-4xl z-40 flex-row transition-all ease-out duration-300 overflow-hidden md:overflow-visible mb-2 md:mb-0 p-2`}
-      style={{
-        bottom: `${isActive ? 0 : -200}px`,
-        opacity: isActive ? 1 : 0,
-      }}
     >
       <a
         aria-label="mobile-navigation-toggle"
