@@ -3,6 +3,8 @@ import bluBg from "../assets/blue-bg.png";
 import Button from "../components/buttons/Button";
 import H2element from "../components/headers/H2element";
 import Paragraph from "../components/Paragraph";
+import { PiCheckFill } from "react-icons/pi";
+import { TbCircleCheckFilled } from "react-icons/tb";
 
 type Props = {
   opacityStart: number;
@@ -19,7 +21,7 @@ const ServiceSection = (props: Props) => {
         <div className="col-span-2 relative">
           <div className="sticky top-0 flex flex-col items-center md:items-start gap-8 md:p-10 md:pt-20">
 
-            <BiCheckCircle className="pt-8 text-white text-8xl -ml-5 -mb-4" />
+            <TbCircleCheckFilled className="pt-8 text-green-400 text-8xl md:-ml-5 " />
 
             <H2element
               additionalClasses="text-white capitalize text-4xl md:text-6xl flex flex-col md:text-left"
