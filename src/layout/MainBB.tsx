@@ -25,12 +25,12 @@ const MainBB = (props: Props) => {
     >
       <Paragraph
         text="Designed Like an Artist. Built Like an Engineer."
-        classes="!text-balance text-2xl md:text-4xl text-orange-500 leading-tight bg-white/80 backdrop-invert rounded-full px-8 py-4 text-center "
+        classes="!text-balance text-2xl md:text-4xl text-orange-500 leading-tight bg-white/80 backdrop-invert rounded-full px-8 py-4 tex-center "
       />
       <Paragraph
         text="At TruePixel, we merge visual storytelling with engineered precision. As a full-service marketing agency, we blend creative design, data-driven strategy, and modern web development to craft digital experiences that don’t just look stunning — they function flawlessly and scale effortlessly.
 "
-        classes="text-md md:text-xl text-zinc-200 font-libre leading-tight w-full text-center "
+        classes="text-md md:text-xl text-zinc-200 leading-tight w-full text-center "
       />
 
       <div className="w-full flex md:flex-row flex-col items-center justify-center gap-4 md:gap-8">

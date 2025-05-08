@@ -45,36 +45,36 @@ function App() {
         isVisible: true,
         id: 2
       },
-      {
-        section: <CodingIntro id={"coding-intro"} />,
-        isVisible: true,
-        id: 3
-      },
-      {
-        section: <CodingLanguages opacityStart={1} id={"coding"} />,
-        isVisible: true,
-        id: 4
-      },
-      {
-        section: <CareerIntro id={"professional-intro"} />,
-        isVisible: true,
-        id: 5
-      },
-      {
-        section: <ProfessionalExperience opacityStart={1} id={"about"} />,
-        isVisible: true,
-        id: 6
-      },
-      {
-        section: <ContactIntro id={"professional-intro"} />,
-        isVisible: true,
-        id: 7
-      },
-      {
-        section: <Contact opacityStart={1} id={"contact"} />,
-        isVisible: true,
-        id: 8
-      }      
+      // {
+      //   section: <CodingIntro id={"coding-intro"} />,
+      //   isVisible: true,
+      //   id: 3
+      // },
+      // {
+      //   section: <CodingLanguages opacityStart={1} id={"coding"} />,
+      //   isVisible: true,
+      //   id: 4
+      // },
+      // {
+      //   section: <CareerIntro id={"professional-intro"} />,
+      //   isVisible: true,
+      //   id: 5
+      // },
+      // {
+      //   section: <ProfessionalExperience opacityStart={1} id={"about"} />,
+      //   isVisible: true,
+      //   id: 6
+      // },
+      // {
+      //   section: <ContactIntro id={"professional-intro"} />,
+      //   isVisible: true,
+      //   id: 7
+      // },
+      // {
+      //   section: <Contact opacityStart={1} id={"contact"} />,
+      //   isVisible: true,
+      //   id: 8
+      // }      
     ]);
     
     const handleMove = (e:MouseEvent) => window.innerWidth > 768 ? setMouseCoordinates({ x:e.pageX, y:e.pageY}) : null; // cleaned up the handleMove function by adding a conditional statement to check if the window width is greater than 768px

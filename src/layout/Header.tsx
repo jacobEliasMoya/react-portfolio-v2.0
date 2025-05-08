@@ -82,7 +82,7 @@ const Header = () => {
 
   return (
     <header
-      className={` min-h-10 h-max text-white w-[95%] md:w-full flex items-center justify-between bg-blue-800/85 backdrop-blur-lg  mx-auto fixed top-[1.5%] md:top-0 md:left-0 left-[2.5%] md:rounded-t-none rounded-4xl z-40 flex-row transition-all ease-out duration-300 overflow-hidden md:overflow-visible mb-2 md:mb-0 p-2`}
+    className={` min-h-10 h-max text-white w-[95%] md:w-full flex items-center justify-between bg-blue-800/85 backdrop-blur-lg  mx-auto fixed top-[1.5%] md:top-0 md:left-0 left-[2.5%] md:rounded-t-none rounded-none z-40 flex-row transition-all ease-out duration-300 overflow-hidden md:overflow-visible mb-2 md:mb-0 p-2`}
     >
       <a
         aria-label="mobile-navigation-toggle"
@@ -95,8 +95,8 @@ const Header = () => {
       </a>
 
       <div className="flex flex-row gap-2 md:gap-4 align-items-center justify-center md:justify-start w-1/3">
-        <div className="transition-all ease  bg-white  rounded-full  min-w-10 min-h-10  md:min-w-18 md:min-h-18 relative md:hover:-translate-y-[15px] flex justify-center items-center z-10 group">
-          <div className=" rounded-full w-10 h-10 md:w-16 md:h-16 flex items-center justify-center  relative group ">
+        <div className="transition-all ease  bg-white  rounded-full  min-w-10 min-h-10  md:min-w-15 md:min-h-15 relative md:hover:-translate-y-[15px] flex justify-center items-center z-10 group">
+          <div className=" rounded-full w-10 h-10 md:w-13 md:h-13 flex items-center justify-center  relative group ">
             <img
               src={jakeCartoon}
               alt="jake"
