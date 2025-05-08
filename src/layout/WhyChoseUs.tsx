@@ -24,4 +24,5 @@ const WhyChoseUs = (props: Props) => {
   );
 };
 
+
 export default WhyChoseUs;

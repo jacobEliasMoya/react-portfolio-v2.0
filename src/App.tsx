@@ -4,7 +4,7 @@ import CodingLanguages from "./layout/CodingLanguages"
 import Header from "./layout/Header"
 import ProfessionalExperience from "./layout/ProfessionalExperience"
 import Contact from "./layout/Contact"
-import SkillsSection from "./layout/SkillsSection"
+import ServiceSection from "./layout/ServiceSection"
 import ReactVisibilitySensor from "react-visibility-sensor"
 import CodingIntro from "./layout/CodingIntro"
 import CareerIntro from "./layout/CareerIntro"
@@ -41,7 +41,7 @@ function App() {
         id: 1
       },
       {
-        section: <SkillsSection opacityStart={1} id={"outer-scroll"} />,
+        section: <ServiceSection opacityStart={1} id={"outer-scroll"} />,
         isVisible: true,
         id: 2
       },
@@ -109,7 +109,7 @@ function App() {
 
   return (  
 
-    <div className="scroll-smooth font-poppins font-black text-red-400  w-full h-max relative md:cursor-none min-h-screen">
+    <div className="scroll-smooth font-poppins font-black w-full h-max relative md:cursor-none min-h-screen">
       <Header/>
       
       {appSections ? appSections.map((item)=>(
