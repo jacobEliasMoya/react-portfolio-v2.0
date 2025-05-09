@@ -82,11 +82,11 @@ const Header = () => {
 
   return (
     <header
-    className={` min-h-10 h-max text-white w-[95%] md:w-full flex items-center justify-between bg-blue-800/85 backdrop-blur-lg  mx-auto fixed top-[1.5%] md:top-0 md:left-0 left-[2.5%] md:rounded-t-none rounded-none z-40 flex-row transition-all ease-out duration-300 overflow-hidden md:overflow-visible mb-2 md:mb-0 p-2`}
+    className={` min-h-10 h-max text-white w-[95%] lg:w-full flex items-center justify-between bg-blue-800/85 backdrop-blur-lg  mx-auto fixed top-[1.5%] lg:top-0 lg:left-0 left-[2.5%] lg:rounded-t-none rounded-full lg:rounded-none z-40 flex-row transition-all ease-out duration-300 overflow-hidden lg:overflow-visible mb-2 lg:mb-0 p-2`}
     >
       <a
         aria-label="mobile-navigation-toggle"
-        className=" md:hidden z-10"
+        className=" lg:hidden z-10"
         href="tel:+19096446073"
       >
         <PiPhoneFill
@@ -94,9 +94,9 @@ const Header = () => {
         />
       </a>
 
-      <div className="flex flex-row gap-2 md:gap-4 align-items-center justify-center md:justify-start w-1/3">
-        <div className="transition-all ease  bg-white  rounded-full  min-w-10 min-h-10  md:min-w-15 md:min-h-15 relative md:hover:-translate-y-[15px] flex justify-center items-center z-10 group">
-          <div className=" rounded-full w-10 h-10 md:w-13 md:h-13 flex items-center justify-center  relative group ">
+      <div className="flex flex-row gap-2 lg:gap-4 align-items-center justify-center lg:justify-start w-1/3">
+        <div className="transition-all ease  bg-white  rounded-full  min-w-10 min-h-10  lg:min-w-15 lg:min-h-15 relative lg:hover:-translate-y-[15px] flex justify-center items-center z-10 group">
+          <div className=" rounded-full w-10 h-10 lg:w-13 lg:h-13 flex items-center justify-center  relative group ">
             <img
               src={jakeCartoon}
               alt="jake"
@@ -109,7 +109,7 @@ const Header = () => {
 
         <H1element
           additionalClasses={
-            "text-2xl md:text-5xl flex flex-row gap-2 items-center justify-center text-white "
+            "text-2xl lg:text-5xl flex flex-row gap-2 items-center justify-center text-white "
           }
           headerText={"TruePixel"}
           spanClasses={""}
@@ -119,14 +119,14 @@ const Header = () => {
 
       <button
         aria-label="mobile-navigation-toggle"
-        className=" md:hidden z-10"
+        className=" lg:hidden z-10"
       >
         <TiThMenu
           className={`w-9 h-9 rounded-full text-white p-1 border-4 border-white bg-orange-500 active:scale-110 transition-all`}
         />
       </button>
 
-      <ul className="hidden md:flex gap-2 justify-end items-center w-2/3">
+      <ul className="hidden lg:flex gap-2 justify-end items-center w-2/3">
         {navigationElms?.map((item) => (
           <li
             key={`nav-${item.id}`}
