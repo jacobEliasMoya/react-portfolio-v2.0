@@ -42,7 +42,7 @@ const MainBB = (props: Props) => {
         <div className="w-full flex items-center flex-col md:flex-row justify-start gap-4 md:gap-8">
           <Button
             buttonText={"Build Your Next Masterpiece"}
-            additionalClasses={"w-full order-2 md:order-1"}
+            additionalClasses={" min-w-full md:min-w-max order-2 md:order-1"}
             buttonLink={undefined}
             newWindow={false}
             clickHandle={undefined}
@@ -50,7 +50,7 @@ const MainBB = (props: Props) => {
 
           <Button
             buttonText={"Let’s Talk Strategy Today"}
-            additionalClasses={"w-full order-1 md:order-2"}
+            additionalClasses={"min-w-full md:min-w-max order-1 md:order-2"}
             buttonLink={undefined}
             newWindow={false}
             clickHandle={undefined}
