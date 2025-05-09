@@ -39,7 +39,7 @@ const MainBB = (props: Props) => {
           classes="text-md md:text-xl text-white leading-tight w-full text-center lg:text-left w-11/12 "
         />
 
-        <div className="w-full flex items-center flex-col md:flex-row justify-start gap-8">
+        <div className="w-full flex items-center flex-col md:flex-row justify-start gap-4 md:gap-8">
           <Button
             buttonText={"Build Your Next Masterpiece"}
             additionalClasses={"w-full order-2 md:order-1"}
