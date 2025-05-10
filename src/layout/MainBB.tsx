@@ -20,7 +20,7 @@ const MainBB = (props: Props) => {
   return (
     <section
       id={props.id}
-      className="z-10 origin-bottom transition-all ease-out duration-300 w-full min-h-[600px] h-screen bg-bottom bg-cover flex items-center md:items-end justify-center md:justify-end p-4 md:p-8 lg:p-12 flex-wrap flex-col rounded-b-3xl md:rounded-b-[3rem] relative gap-12 -mb-15 bg-blue-950 md:bg-fixed "
+      className="z-10 origin-bottom transition-all ease-out duration-300 w-full min-h-[600px] h-screen bg-bottom bg-cover flex items-center lg:items-end justify-center p-4 md:p-8 lg:p-12 flex-wrap flex-col rounded-b-3xl md:rounded-b-[3rem] relative gap-12 -mb-15 bg-blue-950 md:bg-fixed"
       style={{ backgroundImage: `url(${organicBG})` }}
     >
       <div className="w-full md:2/3 lg:w-1/2 flex items-center justify-start flex-col gap-8 rounded-4xl  ">
