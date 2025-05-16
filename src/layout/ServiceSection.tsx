@@ -38,7 +38,7 @@ const ServiceSection = (props: Props) => {
         </div>
 
         <div className="col-span-2 flex flex-col gap-8 md:p-4">
-          <div className="w-full min-h-[25vh] md:min-h-[50vh] rounded-4xl bg-white backdrop-blur-sm p-6 py-8 md:p-10 gap-8 flex flex-col items-start justify-center text-blue-600">
+          <div className="w-full min-h-[25vh] md:min-h-[50vh] rounded-4xl bg-white backdrop-blur-sm p-6 py-8 md:p-10 gap-8 flex flex-col items-start justify-center text-blue-800">
             <H2element
               additionalClasses="text-orange-500 capitalize text-3xl md:text-4xl w-full"
               headerText="Creative  Branding & Design: "
@@ -62,7 +62,7 @@ const ServiceSection = (props: Props) => {
             />
           </div>
 
-          <div className="w-full min-h-[25vh] md:min-h-[50vh] rounded-4xl bg-white backdrop-blur-sm p-6 py-8 md:p-10 gap-8 flex flex-col items-start justify-center text-blue-600">
+          <div className="w-full min-h-[25vh] md:min-h-[50vh] rounded-4xl bg-white backdrop-blur-sm p-6 py-8 md:p-10 gap-8 flex flex-col items-start justify-center text-blue-800">
             <H2element
               additionalClasses="text-orange-500 capitalize text-3xl md:text-4xl w-full"
               headerText="Data-Driven & Results-Focused:"
@@ -86,7 +86,7 @@ const ServiceSection = (props: Props) => {
             />
           </div>
 
-          <div className="w-full min-h-[25vh] md:min-h-[50vh] rounded-4xl bg-white backdrop-blur-sm p-6 py-8 md:p-10 gap-8 flex flex-col items-start justify-center text-blue-600">
+          <div className="w-full min-h-[25vh] md:min-h-[50vh] rounded-4xl bg-white backdrop-blur-sm p-6 py-8 md:p-10 gap-8 flex flex-col items-start justify-center text-blue-800">
             <H2element
               additionalClasses="text-orange-500 capitalize text-3xl md:text-4xl w-full"
               headerText="Developer-Led Innovation:"
@@ -109,7 +109,7 @@ const ServiceSection = (props: Props) => {
               clickHandle={undefined}
             />
           </div>
-          <div className="w-full min-h-[25vh] md:min-h-[50vh] rounded-4xl bg-white backdrop-blur-sm p-6 py-8 md:p-10 gap-8 flex flex-col items-start justify-center text-blue-600">
+          <div className="w-full min-h-[25vh] md:min-h-[50vh] rounded-4xl bg-white backdrop-blur-sm p-6 py-8 md:p-10 gap-8 flex flex-col items-start justify-center text-blue-800">
             <H2element
               additionalClasses="text-orange-500 capitalize text-3xl md:text-4xl w-full"
               headerText="Exceptional Service & Transparency:"
