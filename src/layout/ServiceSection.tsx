@@ -18,9 +18,9 @@ const ServiceSection = (props: Props) => {
         <div className="col-span-2 relative">
           <div className="sticky top-0 flex flex-col items-start gap-8 p-4 sm:p-8 md:p-6 lg:p-8 md:pt-20">
             <H2element
-              additionalClasses="mt-8 pt-8 text-white capitalize text-4xl lg:text-6xl flex flex-col items-start justify-start w-full"
+              additionalClasses="md:mt-8 pt-8 text-white capitalize text-4xl lg:text-6xl flex flex-col items-start justify-start w-full"
               headerText="Full-Service "
-              spanClasses="text-orange-400"
+              spanClasses=""
               spanText="Convenience"
             />
             <Paragraph
@@ -38,9 +38,9 @@ const ServiceSection = (props: Props) => {
         </div>
 
         <div className="col-span-2 flex flex-col gap-8 md:p-4">
-          <div className="w-full min-h-[25vh] md:min-h-[50vh] rounded-4xl bg-blue-700/60 backdrop-blur-sm p-10 gap-8 flex flex-col items-start justify-center text-white">
+          <div className="w-full min-h-[25vh] md:min-h-[50vh] rounded-4xl bg-white backdrop-blur-sm p-6 py-8 md:p-10 gap-8 flex flex-col items-start justify-center text-blue-600">
             <H2element
-              additionalClasses="text-orange-400 capitalize text-3xl md:text-4xl w-full"
+              additionalClasses="text-orange-500 capitalize text-3xl md:text-4xl w-full"
               headerText="Creative  Branding & Design: "
               spanClasses=""
               spanText=""
@@ -62,9 +62,9 @@ const ServiceSection = (props: Props) => {
             />
           </div>
 
-          <div className="w-full min-h-[25vh] md:min-h-[50vh] rounded-4xl bg-blue-700/60 backdrop-blur-sm p-10 gap-8 flex flex-col items-start justify-center text-white">
+          <div className="w-full min-h-[25vh] md:min-h-[50vh] rounded-4xl bg-white backdrop-blur-sm p-6 py-8 md:p-10 gap-8 flex flex-col items-start justify-center text-blue-600">
             <H2element
-              additionalClasses="text-orange-400 capitalize text-3xl md:text-4xl w-full"
+              additionalClasses="text-orange-500 capitalize text-3xl md:text-4xl w-full"
               headerText="Data-Driven & Results-Focused:"
               spanClasses=""
               spanText=""
@@ -86,9 +86,9 @@ const ServiceSection = (props: Props) => {
             />
           </div>
 
-          <div className="w-full min-h-[25vh] md:min-h-[50vh] rounded-4xl bg-blue-700/60 backdrop-blur-sm p-10 gap-8 flex flex-col items-start justify-center text-white">
+          <div className="w-full min-h-[25vh] md:min-h-[50vh] rounded-4xl bg-white backdrop-blur-sm p-6 py-8 md:p-10 gap-8 flex flex-col items-start justify-center text-blue-600">
             <H2element
-              additionalClasses="text-orange-400 capitalize text-3xl md:text-4xl w-full"
+              additionalClasses="text-orange-500 capitalize text-3xl md:text-4xl w-full"
               headerText="Developer-Led Innovation:"
               spanClasses=""
               spanText=""
@@ -109,29 +109,29 @@ const ServiceSection = (props: Props) => {
               clickHandle={undefined}
             />
           </div>
-            <div className="w-full min-h-[25vh] md:min-h-[50vh] rounded-4xl bg-blue-700/60 backdrop-blur-sm p-10 gap-8 flex flex-col items-start justify-center text-white">
-              <H2element
-                additionalClasses="text-orange-400 capitalize text-3xl md:text-4xl w-full"
-                headerText="Exceptional Service & Transparency:"
-                spanClasses=""
-                spanText=""
-              />
+          <div className="w-full min-h-[25vh] md:min-h-[50vh] rounded-4xl bg-white backdrop-blur-sm p-6 py-8 md:p-10 gap-8 flex flex-col items-start justify-center text-blue-600">
+            <H2element
+              additionalClasses="text-orange-500 capitalize text-3xl md:text-4xl w-full"
+              headerText="Exceptional Service & Transparency:"
+              spanClasses=""
+              spanText=""
+            />
 
-              <Paragraph
-                text={
-                  "We pride ourselves on clear communication, timeliness, and top-notch service – qualities our industry’s leading firms are praised for  . You’ll always know what we’re doing, why we’re doing it, and how it’s impacting your business growth."
-                }
-                classes={"text-lg"}
-              />
+            <Paragraph
+              text={
+                "We pride ourselves on clear communication, timeliness, and top-notch service – qualities our industry’s leading firms are praised for  . You’ll always know what we’re doing, why we’re doing it, and how it’s impacting your business growth."
+              }
+              classes={"text-lg"}
+            />
 
-              <Button
-                buttonText="Build Your Next Masterpiece"
-                additionalClasses=""
-                buttonLink={undefined}
-                newWindow={false}
-                clickHandle={undefined}
-              />
-            </div>
+            <Button
+              buttonText="Build Your Next Masterpiece"
+              additionalClasses=""
+              buttonLink={undefined}
+              newWindow={false}
+              clickHandle={undefined}
+            />
+          </div>
         </div>
       </div>
     </section>
