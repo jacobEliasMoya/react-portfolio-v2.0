@@ -82,7 +82,7 @@ const Header = () => {
 
   return (
     <header
-    className={` min-h-10 h-max text-white w-[95%] lg:w-full flex items-center justify-between bg-blue-800/85 backdrop-blur-lg  mx-auto fixed top-[1.5%] lg:top-0 lg:left-0 left-[2.5%] lg:rounded-t-none rounded-full lg:rounded-none z-40 flex-row transition-all ease-out duration-300 overflow-hidden lg:overflow-visible mb-2 lg:mb-0 p-2`}
+      className={` min-h-10 h-max text-white w-[95%] lg:w-full flex items-center justify-between bg-blue-800/85 backdrop-blur-lg  mx-auto fixed top-[1.5%] lg:top-0 lg:left-0 left-[2.5%] lg:rounded-t-none rounded-full lg:rounded-none z-40 flex-row transition-all ease-out duration-300 overflow-hidden lg:overflow-visible mb-2 lg:mb-0 p-2`}
     >
       <a
         aria-label="mobile-navigation-toggle"
@@ -117,10 +117,7 @@ const Header = () => {
         />
       </div>
 
-      <button
-        aria-label="mobile-navigation-toggle"
-        className=" lg:hidden z-10"
-      >
+      <button aria-label="mobile-navigation-toggle" className=" lg:hidden z-10">
         <TiThMenu
           className={`w-9 h-9 rounded-full text-white p-1 border-4 border-white bg-orange-500 active:scale-110 transition-all`}
         />

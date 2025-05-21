@@ -20,7 +20,7 @@ const ServiceSection = (props: Props) => {
             <H2element
               additionalClasses="md:mt-8 pt-8 text-white capitalize text-4xl lg:text-6xl flex flex-col items-start justify-start w-full"
               headerText="Full-Service "
-              spanClasses=""
+              spanClasses="text-orange-500"
               spanText="Convenience"
             />
             <Paragraph
