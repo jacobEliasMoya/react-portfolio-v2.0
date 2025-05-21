@@ -11,7 +11,7 @@ const ServiceSection = (props: Props) => {
   return (
     <section
       id={props.id}
-      className="z-10 relative origin-left w-full transition-all ease-out duration-300 rounded-4xl rounded-b-none min-h-screen bg-sky-950 backdrop-blur-lg bg-cover bg-center md:bg-fixed text-left"
+      className="z-10 relative origin-left w-full transition-all ease-out duration-300 rounded-4xl min-h-screen bg-sky-950 backdrop-blur-lg bg-cover bg-center md:bg-fixed text-left"
       style={{ backgroundImage: `url(${bluBg})` }}
     >
       <div className="grid md:grid-cols-4 gap-10 p-8 md:p-10">

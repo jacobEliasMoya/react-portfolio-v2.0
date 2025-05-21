@@ -2,13 +2,13 @@ import React, { ReactElement, useEffect, useState } from "react"
 import MainBB from "./layout/MainBB"
 import CodingLanguages from "./layout/CodingLanguages"
 import Header from "./layout/Header"
-import ProfessionalExperience from "./layout/ProfessionalExperience"
-import Contact from "./layout/Contact"
+// import ProfessionalExperience from "./layout/ProfessionalExperience"
+// import Contact from "./layout/Contact"
 import ServiceSection from "./layout/ServiceSection"
 import ReactVisibilitySensor from "react-visibility-sensor"
-import CodingIntro from "./layout/CodingIntro"
-import CareerIntro from "./layout/CareerIntro"
-import ContactIntro from "./layout/ContactIntro"
+import WhoWeServe from "./layout/WhoWeServe"
+// import CareerIntro from "./layout/CareerIntro"
+// import ContactIntro from "./layout/ContactIntro"
 import WhyChoseUs from "./layout/WhyChoseUs"
 
 interface MouseXY{
@@ -45,16 +45,16 @@ function App() {
         isVisible: true,
         id: 2
       },
-      // {
-      //   section: <CodingIntro id={"coding-intro"} />,
-      //   isVisible: true,
-      //   id: 3
-      // },
-      // {
-      //   section: <CodingLanguages opacityStart={1} id={"coding"} />,
-      //   isVisible: true,
-      //   id: 4
-      // },
+      {
+        section: <WhoWeServe id={"coding-intro"} />,
+        isVisible: true,
+        id: 3
+      },
+      {
+        section: <CodingLanguages opacityStart={1} id={"coding"} />,
+        isVisible: true,
+        id: 4
+      },
       // {
       //   section: <CareerIntro id={"professional-intro"} />,
       //   isVisible: true,
