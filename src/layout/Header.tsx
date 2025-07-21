@@ -95,7 +95,7 @@ const Header = () => {
       </a>
 
       <div className="flex flex-row gap-2 lg:gap-4 align-items-center justify-center lg:justify-start w-1/3">
-        <div className="transition-all ease  bg-white  rounded-full  min-w-10 min-h-10  lg:min-w-15 lg:min-h-15 relative lg:hover:-translate-y-[15px] flex justify-center items-center z-10 group">
+        <div className="transition-all ease  bg-white  rounded-full  min-w-10 min-h-10  lg:min-w-15 lg:min-h-15 relative flex justify-center items-center z-10 group">
           <div className=" rounded-full w-10 h-10 lg:w-13 lg:h-13 flex items-center justify-center  relative group ">
             <img
               src={jakeCartoon}
